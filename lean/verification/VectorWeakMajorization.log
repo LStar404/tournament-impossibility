@@ -1,0 +1,5 @@
+'VectorWeakMajorization.abel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.weighted_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.sum_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.Tournament.diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.Tournament.signed_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T17:24:59.574169+00:00",
+  "checked_at_utc": "2026-11-08T17:37:13.602128+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -13,6 +13,7 @@
     "QRegular",
     "Radial",
     "TournamentSequence",
+    "VectorWeakMajorization",
     "Application",
     "ColorTransportExact",
     "Evaluation",
@@ -155,6 +156,19 @@
       "source_sha256": "b499312419fae1a7506e435df4d9c3ef24f19eb2c0c7fd0a6b30bc50c5373921",
       "axiom_reports": [
         "'NonAlgebraicity.pathCount_le_maximal' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "VectorWeakMajorization",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9d2826d88b678b196c3bdb2ce98d0e935f1fc5ab4e01afffe443ec6a4f5e7b8f",
+      "axiom_reports": [
+        "'VectorWeakMajorization.abel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.weighted_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.sum_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.Tournament.diagonal' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.Tournament.signed_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -446,7 +460,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "377ea388b6841395fa78f86c2ba714b2cedb97c472406e92518e74ae72ac6317",
+      "source_sha256": "1a66aedd7f77ae169e82e763bdcbd3e76e77c1ee0537e2a3a08d169615a0e23b",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -514,9 +528,14 @@
         "'ZeroDiamondRepair.represented_energy' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ZeroDiamondRepair.flatDoubling_eq_paired' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ZeroDiamondRepair.zero_diamond_odd_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.abel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.weighted_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.sum_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.Tournament.signed_sum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'VectorWeakMajorization.Tournament.signed_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound, not optimized P_k, the K orbit, or full tournament vector majorization."
 }

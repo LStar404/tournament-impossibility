@@ -1,3 +1,4 @@
+import VectorWeakMajorization
 import ZeroDiamondRepair
 import FiniteGraphEditTransport
 import DiamondFreeRepresentation
@@ -280,3 +281,23 @@ example {V : Type*} [Fintype V] [DecidableEq V] (T : DiamondGap.Tournament V)
 #print axioms ZeroDiamondRepair.flatDoubling_eq_paired
 #print axioms ZeroDiamondRepair.zero_diamond_odd_repair
 #print axioms ZeroDiamondRepair.zero_diamond_even_repair
+
+/-! Foundational finite inequalities only, not optimized tournament majorization.
+The descending vector convention includes the endpoint coordinate n. -/
+example (n : ℕ) (x y : ℕ → ℝ)
+    (h : ∀ k ≤ n, (∑ i ∈ Finset.range k, x i) ≤ ∑ i ∈ Finset.range k, y i)
+    (hx : VectorWeakMajorization.DescendingNonnegative n x)
+    (hy : VectorWeakMajorization.DescendingNonnegative n y) :
+    (∑ i ∈ Finset.range n, (x i)^2) ≤ ∑ i ∈ Finset.range n, (y i)^2 :=
+  VectorWeakMajorization.sum_sq_le n x y h hx hy
+
+example (n : ℕ) (B : VectorWeakMajorization.Tournament n) (x y : Fin n → ℝ) :
+    2 * (∑ i, y i * (∑ j, B.entry i j * x j)) ≤
+      ∑ i, ∑ j, |y i * x j - y j * x i| :=
+  B.signed_sum_bound x y
+
+#print axioms VectorWeakMajorization.abel
+#print axioms VectorWeakMajorization.weighted_le
+#print axioms VectorWeakMajorization.sum_sq_le
+#print axioms VectorWeakMajorization.Tournament.signed_sum_identity
+#print axioms VectorWeakMajorization.Tournament.signed_sum_bound

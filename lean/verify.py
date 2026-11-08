@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'EndpointCheck',
 ]
 
 
@@ -95,7 +95,9 @@ def main():
                   'to independent carousel/doubling targets for D=0. Positive-diamond '
                   'repair and Condition R remain outside this result. '
                   'DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; '
-                  'this does not imply Condition R.'),
+                  'this does not imply Condition R. VectorWeakMajorization verifies finite Abel, '
+                  'square-sum comparison and a signed matrix bound, not optimized P_k, '
+                  'the K orbit, or full tournament vector majorization.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

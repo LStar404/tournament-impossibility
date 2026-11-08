@@ -69,3 +69,8 @@
 'ZeroDiamondRepair.flatDoubling_eq_paired' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ZeroDiamondRepair.zero_diamond_odd_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.abel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.weighted_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.sum_sq_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.Tournament.signed_sum_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VectorWeakMajorization.Tournament.signed_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
