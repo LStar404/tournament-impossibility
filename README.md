@@ -11,7 +11,7 @@
   两份 PDF 都由 `.github/workflows/paper-rebuild.yml` 从对应 `.tex` 用 tectonic 编译（推改源文件或手动触发）。
   正文与数学统一使用 STIX Two，带标题块、页眉与页码。
 - `lean/` —— 论文附录 A.1–A.4 中非代数性结论的形式化。三个生成函数 A、E、M 都被证明没有非零的复系数多项式关系，
-  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。14 个模块，
+  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。18 个模块，
   `lean/verification/result.json` 记录逐模块结果、源文件 SHA-256 与公理依赖。
 - `historical/formula-restrictions/` —— 同一主题的早期版本（中英文稿与 PDF），保留作历史对照，
   不代表当前结论，也未随本次署名与排版变更重编。
@@ -23,7 +23,7 @@
 1. 归一化极值序列趋于 `cosh(1)/cos(1)`，来自论文引用的图论渐近定理。
 2. `exp(1), exp(-1), exp(i), exp(-i)` 在代数数系数下线性无关，即 Lindemann–Weierstrass 的有限特例。
 
-修订版 v0.4 新增 A.5–A.6：有理值 q-regular 序列的幂次归一化极限必须有理，因而实际 a_n、m_n 及 P(n) 的数字线性表示可不依赖 R 排除。这两项尚未形式化。
+修订版 v0.4 新增 A.5–A.6：有理值 q-regular 序列的幂次归一化极限必须有理，因而实际 a_n、m_n 及 P(n) 的数字线性表示可不依赖 R 排除。其中 a_n、m_n 的非 q-regular 性，以及 P(n) 无固定数字线性表示现已形式化；一般“极限必为有理数”的强版本尚未形式化，Lean 证明的是足够推出实际结论的超越极限排除。
 条件 R、单位圆是自然边界、非 D-finite、非 P-recursive 及伸缩关系等结论未形式化；对实际序列的这些应用仍以 R 为假设。
 研究笔记固定于 c049e040，包含实际 R 的证明路线。F/J 到 R(C=L,r0=4) 的解析推导已核对；上游结构与恢复长链尚未全部独立复核，详见论文附录 B 的依赖说明。
 生成函数非代数不等于没有闭式，也不等于计算困难。

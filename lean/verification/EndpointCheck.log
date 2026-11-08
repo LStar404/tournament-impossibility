@@ -1,0 +1,11 @@
+'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.not_qRegular_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.digit_recursion_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.maximalPathCount_not_exponentially_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.maximalPathCount_no_linear_digit_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

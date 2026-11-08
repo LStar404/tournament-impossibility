@@ -1,0 +1,5 @@
+'NonAlgebraicity.digit_recursion_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.maximalPathCount_no_linear_digit_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NonAlgebraicity.maximalPathCount_not_exponentially_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]

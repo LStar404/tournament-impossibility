@@ -1,11 +1,12 @@
 {
-  "checked_at_utc": "2026-11-08T12:07:56.478770+00:00",
+  "checked_at_utc": "2026-11-08T14:48:15.732408+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
     "Abel",
     "Constant",
     "Descent",
+    "QRegular",
     "Radial",
     "TournamentSequence",
     "Application",
@@ -15,8 +16,11 @@
     "StandardAlgebraicity",
     "WeightedAbel",
     "Main",
+    "MatrixPowerSeries",
+    "PathCountGrowth",
     "Corollaries",
-    "Remainder"
+    "Remainder",
+    "QRegularApplications"
   ],
   "all_delivered_modules_checked": true,
   "records": [
@@ -45,6 +49,15 @@
       "source_sha256": "7d50e8d10489287d99c22bc9c72c135fedf005d9ab8a7f1d903a831f8573ecad",
       "axiom_reports": [
         "'NonAlgebraicity.rational_polynomial_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "QRegular",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e267823ec1d4a6d089a71fa8b4e9ca806fa0c50f005f6454788f947a12662104",
+      "axiom_reports": [
+        "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -136,6 +149,26 @@
       ]
     },
     {
+      "module": "MatrixPowerSeries",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "2130bb6c29baf74d797353399958dc4a88e6c4b85bae8a63193dd90da12f2539",
+      "axiom_reports": [
+        "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "PathCountGrowth",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "3e7f4567614bfcbe3d247dded4d8a61898be240c0b43fe543d82e7c69ef38919",
+      "axiom_reports": [
+        "'NonAlgebraicity.digit_recursion_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.maximalPathCount_no_linear_digit_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'NonAlgebraicity.maximalPathCount_not_exponentially_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "Corollaries",
       "exit_code": 0,
       "passed": true,
@@ -156,6 +189,18 @@
         "'NonAlgebraicity.halfScale_radial' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.halfScale_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.halfScale_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "QRegularApplications",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "245ba30ac07415dfd9c6dc16d01457ee3cc6d0e9eacfd9ef1038d0819f37a690",
+      "axiom_reports": [
+        "'NonAlgebraicity.not_qRegular_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],

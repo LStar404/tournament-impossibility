@@ -1,0 +1,2 @@
+'NonAlgebraicity.algebraic_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.no_relation_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]

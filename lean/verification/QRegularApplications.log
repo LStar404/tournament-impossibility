@@ -1,0 +1,4 @@
+'NonAlgebraicity.not_qRegular_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]

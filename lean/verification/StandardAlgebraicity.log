@@ -1,0 +1,1 @@
+'NonAlgebraicity.hasPolynomialRelation_of_isAlgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]

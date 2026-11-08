@@ -1,6 +1,6 @@
 # 竞赛图极值生成函数的非代数性
 
-> 状态：2026-11-08。14 个模块整体验证通过，A、E、M 三个生成函数的形式化都已完成。
+> 状态：2026-11-08。18 个模块整体验证通过，A、E、M 三个生成函数的形式化都已完成。
 > 验证记录见 `verification/result.json`；范围边界（两项外部前提）见下文。
 
 证明来源：刘星辰，`tournament-paths-research-notes` 的
@@ -62,7 +62,7 @@ lake exe cache get
 lake build
 ```
 
-本机验证为避免下载，复用已安装的同版本 Lean 和只读 mathlib 编译缓存：
+验证脚本按本地依赖顺序逐模块编译并记录源码哈希、公理审计及退出码：
 
 ```text
 python verify.py
@@ -79,3 +79,18 @@ python verify.py
 ## 视频状态
 
 用户已取消视频制作。此工程及交付包不包含视频成果。
+
+## 数字表示扩展（2026-11-08）
+
+- `QRegular.lean` 使用标准 q-kernel 在复数域上张成有限维空间的定义，而非把待证结论放进定义。
+  它证明 q^e 子序列具有有限矩阵幂表示。
+- `MatrixPowerSeries.lean` 通过 det(I−XM) 和伴随矩阵证明矩阵幂输出的生成函数满足非零多项式关系。
+- `QRegularApplications.lean` 证明有理序列 a_n/n^k 若趋于超越数则非 q-regular，
+  并连接真实 `normalizedCoefficient` 和 `halfScaleRemainder`。只对 q^e 子序列缩放矩阵；
+  不假设除以 n^k 保持 q-regular。这两个实际结论保留渐近与有限指数线性无关性两项显式输入。
+- `PathCountGrowth.lean` 证明真实 P(n) 无统一指数上界，再排除固定数字连续线性递归与连续线性输出；
+  此结论只需 `ExtremalAsymptotic`，不需超越性输入。
+
+论文 A.5 的更强表述“极限必为有理数”未完整形式化；本工程证明的是足够推出 A.6 实际应用的
+“极限不能是超越数”。P 的数字模型定理与 q-kernel 定义之间的一般等价关系未形式化。
+R、自然边界、非 D-finite 等仍不在 Lean 覆盖内。不得把这些边界改写成上游数学断言不成立。

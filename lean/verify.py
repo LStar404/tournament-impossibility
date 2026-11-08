@@ -17,6 +17,7 @@ MODULES = [
     'Abel', 'Constant', 'TournamentSequence', 'Application', 'Descent',
     'Radial', 'Normalization', 'Evaluation', 'StandardAlgebraicity', 'Main',
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
+    'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
 ]
 
 

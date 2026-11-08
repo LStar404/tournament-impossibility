@@ -1,0 +1,6 @@
+'NonAlgebraicity.nonalgebraic_of_rational_coefficients_tendsto_transcendental' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'NonAlgebraicity.extremal_generating_function_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.extremal_generating_function_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.nonalgebraic_of_radial_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
