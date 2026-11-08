@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this formalization or paper, please cite this work and the underlying asymptotic theorem (Divoux & Wang, 2026)."
+type: software
+title: "Non-algebraicity and Formula Restrictions for Tournament Hamiltonian Path Maxima (with Lean 4 Formalization)"
+authors:
+  - family-names: "Liu"
+    given-names: "Xingchen"
+version: "0.3.0"
+date-released: "2026-11-08"
+url: "https://github.com/LStar404/tournament-impossibility"
+license: "CC-BY-4.0"
+abstract: "Lean 4 formalization of the unconditional transcendence (over C(z)) of the ordinary, exponential, and half-scale remainder generating functions for extremal Hamiltonian path and cycle counts in tournaments, together with the accompanying mathematical paper."
