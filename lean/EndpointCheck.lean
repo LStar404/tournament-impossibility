@@ -1,3 +1,4 @@
+import ColorGraphRepair
 import ColorTransportExact
 import DiamondGap
 import ColorTransport
@@ -165,3 +166,30 @@ example (w : List Bool) (k : ℕ) (hl : w.length = 2*k)
 #print axioms ColorTransport.prefix_exact_minimum
 #print axioms ColorTransport.odd_energy_repair
 #print axioms ColorTransport.even_energy_repair
+
+/-! Actual finite differing-edge cardinality for normalized color-word tournaments.
+No general tournament normalization, named-target identification, or R follows. -/
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k+1)
+    (hc : ColorTransport.charge w = 1) :
+    ∃ e : Equiv ℕ ℕ, (∀ i, e i < w.length ↔ i < w.length) ∧
+      ((ColorTransport.mismatchEdges w.length (ColorTransport.colorGraph w)
+        (ColorTransport.colorGraph (ColorTransport.alternatingOdd k)) e).card : ℝ) ≤
+        ColorTransport.graphEnergy w.length (ColorTransport.colorGraph w) / 8 :=
+  ColorTransport.odd_edit_card_bound w k hl hc
+
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k)
+    (hc : ColorTransport.charge w = 0) :
+    ∃ e : Equiv ℕ ℕ, (∀ i, e i < w.length ↔ i < w.length) ∧
+      ((ColorTransport.mismatchEdges w.length (ColorTransport.colorGraph w)
+        (ColorTransport.colorGraph (ColorTransport.paired (ColorTransport.repairOrient w k)))
+        e).card : ℝ) ≤
+        (ColorTransport.graphEnergy w.length (ColorTransport.colorGraph w) - w.length) / 16 :=
+  ColorTransport.even_edit_card_bound w k hl hc
+
+#print axioms ColorTransport.colorGraph_row_sum
+#print axioms ColorTransport.graphEnergy_eq_wordEnergy
+#print axioms ColorTransport.adjacent_matrix_flip_changes
+#print axioms ColorTransport.graph_edits_certificate
+#print axioms ColorTransport.mismatch_card_le
+#print axioms ColorTransport.odd_edit_card_bound
+#print axioms ColorTransport.even_edit_card_bound

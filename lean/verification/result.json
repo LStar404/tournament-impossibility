@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T16:23:44.658822+00:00",
+  "checked_at_utc": "2026-11-08T16:36:04.305149+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -22,6 +22,7 @@
     "RationalRadial",
     "StandardAlgebraicity",
     "WeightedAbel",
+    "ColorGraphRepair",
     "Main",
     "MatrixPowerSeries",
     "PathCountGrowth",
@@ -244,6 +245,30 @@
       ]
     },
     {
+      "module": "ColorGraphRepair",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "3645d5f7340085984deb77d063de979e19746c113d36030c488a50f07cb6b85f",
+      "axiom_reports": [
+        "'ColorTransport.mismatch_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graph_edits_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_graph_edit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_graph_edit_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.colorGraph_tournament' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.colorGraph_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graphEnergy_eq_wordEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_matrix_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_matrix_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.adjacent_matrix_flip_changes' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.adjacent_matrix_flip' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.swaps_graph_edits' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_graph_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_graph_repair' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "Main",
       "exit_code": 0,
       "passed": true,
@@ -333,7 +358,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "dbe15a849d66f05998f6b6813db235ed0dd90207a19ba794fb8faf1e493e8c7d",
+      "source_sha256": "ceb8203b8b78927557a648e4231c342bb3a39635ecd693eb19bfd9045ec36731",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -372,9 +397,16 @@
         "'ColorTransport.prefix_area_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.prefix_exact_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.odd_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'ColorTransport.even_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'ColorTransport.even_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.colorGraph_row_sum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graphEnergy_eq_wordEnergy' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.adjacent_matrix_flip_changes' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graph_edits_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.mismatch_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths, not the matrix or graph-edit bridge. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, not general normalization or named-target identification. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
 }

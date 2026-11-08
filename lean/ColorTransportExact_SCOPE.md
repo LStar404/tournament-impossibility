@@ -75,3 +75,15 @@ ColorEnergy and ColorTransport scope notes point to these newly closed gaps.
 Final module compilation completed on 2026-11-08 with exit code 0 and no
 warnings. All nine printed core theorem axiom lists contain only the three
 standard logical axioms above, including both energy-repair bounds.
+
+## Subsequent matrix and graph-edit extension
+
+`ColorGraphRepair.lean` now proves the actual matrix row-sum and energy
+identification, the ordinary adjacent-label permutation/one-edge reversal
+bridge, and a final single ordinary permutation with finite differing-edge
+cardinality at most E/8 or (E-m)/16 for the stated normalized color-word inputs.
+Earlier matrix/edge-bridge warnings above describe this module in isolation
+and are superseded by that extension. Arbitrary-input normalization,
+identification with separately named carousel/doubling targets, general
+nonzero-diamond repair, and R remain outside these results.
+See `ColorGraphRepair_SCOPE.md` for precise assumptions and conventions.

@@ -56,3 +56,15 @@ The corresponding gaps listed above concern this module alone and are closed
 by that extension. Matrix row-score identification, graph-edge correspondence,
 full graph-edit bounds outside the word model, and R remain unproved here.
 See `ColorTransportExact_SCOPE.md` for exact statements and limits.
+
+## Subsequent matrix and graph-edit extension
+
+`ColorGraphRepair.lean` now proves the actual matrix row-sum and energy
+identification, the ordinary adjacent-label permutation/one-edge reversal
+bridge, and a final single ordinary permutation with finite differing-edge
+cardinality at most E/8 or (E-m)/16 for the stated normalized color-word inputs.
+Earlier matrix/edge-bridge warnings above describe this module in isolation
+and are superseded by that extension. Arbitrary-input normalization,
+identification with separately named carousel/doubling targets, general
+nonzero-diamond repair, and R remain outside these results.
+See `ColorGraphRepair_SCOPE.md` for precise assumptions and conventions.

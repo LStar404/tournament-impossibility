@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'EndpointCheck',
 ]
 
 
@@ -86,7 +86,9 @@ def main():
                   'kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite '
                   'prefix-energy algebra only. ColorTransport proves actual word reachability '
                   'and an area lower bound. ColorTransportExact proves attained minimum distance '
-                  'and color-word energy repair paths, not the matrix or graph-edit bridge. '
+                  'and color-word energy repair paths. ColorGraphRepair supplies matrix energy '
+                  'and actual finite differing-edge bounds for normalized color-word tournaments, '
+                  'not general normalization or named-target identification. '
                   'DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; '
                   'this does not imply Condition R.'),
     }
