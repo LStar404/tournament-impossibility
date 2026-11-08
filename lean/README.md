@@ -1,6 +1,6 @@
 # 竞赛图极值生成函数的非代数性
 
-> 状态：2026-11-08 20:08 UTC。构建记录覆盖的 70 个模块全部验证通过，A、E、M 三个生成函数的形式化都已完成。
+> 状态：2026-11-08 21:13 UTC。构建记录覆盖的 96 个模块全部验证通过，A、E、M 三个生成函数的形式化都已完成。
 > 验证记录见 `verification/result.json`；范围边界（两项外部前提）见下文。
 
 证明来源：刘星辰，`tournament-paths-research-notes` 的
@@ -111,6 +111,6 @@ R、自然边界、非 D-finite 等仍不在 Lean 覆盖内。不得把这些边
 
 ## 上游引理的新增覆盖与边界
 
-另有一组已验证的上游引理：有限有序消去、颜色词的最短交换与零菱形竞赛图修复、实际竞赛图矩阵的向量弱主序、所有非负整数次幂的Frobenius范数比较，以及全一向量源能量级数的收敛与比较。级数结果的范围是 $q\ge0$ 且 $q(n-1)^2<1$，包括 $n>0$ 时的 $q=1/n^2$，不以可求和性作为额外假设。进一步，已证明实际矩阵的预解式恒等式 $(B\mathbf{1})^{\mathsf T}(I+qB^2)^{-1}(B\mathbf{1})=\sum_{r\ge0}q^r\lVert B^{r+1}\mathbf{1}\rVert^2$ 及其与传递竞赛图的比较；参数限于上述实数范围，双边逆与级数收敛均在证明中建立。这些引理尚未接成条件R的证明；扩大到复谱域、导数比较、正菱形缺陷修复、小缺陷六阶分析和实际恢复链仍未形式化。
+另有一组已验证的上游引理：有限有序消去、颜色词的最短交换与零菱形竞赛图修复、实际竞赛图矩阵的向量弱主序、所有非负整数次幂的Frobenius范数比较，以及全一向量源能量级数的收敛与比较。级数结果的范围是 $q\ge0$ 且 $q(n-1)^2<1$，包括 $n>0$ 时的 $q=1/n^2$，不以可求和性作为额外假设。进一步，已证明实际矩阵的预解式恒等式 $(B\mathbf{1})^{\mathsf T}(I+qB^2)^{-1}(B\mathbf{1})=\sum_{r\ge0}q^r\lVert B^{r+1}\mathbf{1}\rVert^2$ 及其与传递竞赛图的比较；参数限于上述实数范围，双边逆与级数收敛均在证明中建立。此外，真实有序反对称块矩阵的六阶矩多项式、三角循环计数与源能量缺陷之间的恒等式，以及相对于全局传递竞赛图的六阶缺陷公式均已形式化。小块推论仍以块大小及缺陷参数与三角数之间的显式关系为前提，不能视为无条件小菱形缺陷定理。实际哈密顿路计数的精确偶子集卷积公式S1也已证明，并与本仓库的计数定义衔接，不再把卷积公式当作假设。零菱形情形的两永久式平均、无条件小缺陷估计、扩大的复谱域及导数比较、实际渐近恢复链与条件R仍未形式化。
 
-关键端点见 `ZeroDiamondRepair`、`VectorMajorizationEndpoint`、`ReferenceMomentEndpoint` 、`OnesEnergyEndpoint` 和 `SourceResolventEndpoint`。源代码、公理报告及 SHA-256 对应关系见 `verification/result.json`；模块数量记录一次构建快照，不代表条件 R 已完成。
+关键端点见 `ZeroDiamondRepair`、`VectorMajorizationEndpoint`、`ReferenceMomentEndpoint` 、`OnesEnergyEndpoint` 、`SourceResolventEndpoint`、`OrdinalGlobalSixthDeficit` 和 `ActualPathConvolution`。源代码、公理报告及 SHA-256 对应关系见 `verification/result.json`；模块数量记录一次构建快照，不代表条件 R 已完成。
