@@ -21,3 +21,12 @@ No `sorry`, `admit`, or added axioms. Printed theorem dependencies are only prop
 
 Integrated into `lakefile.toml`, full `verify.py`, and independent expanded-form
 endpoints in `EndpointCheck.lean`. No full selected-row/P_k/K-orbit claim is added.
+
+## Subsequent finite cone and envelope modules
+
+MajorizationCone, SelectedWeight, BalancedSignCounts, SelectedSignPairs and
+SelectedRowOptimization now prove K cone/prefix-order preservation and the
+optimized combinatorial selected envelope <= P_k. Earlier exclusions above
+about these finite ingredients concern this module alone. The actual tournament
+matrix-to-envelope interface, output order statistics, signed sorting and
+K-reference orbit remain unproved; full vector majorization and R are not claimed.

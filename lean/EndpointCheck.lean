@@ -1,3 +1,8 @@
+import MajorizationCone
+import SelectedWeight
+import BalancedSignCounts
+import SelectedSignPairs
+import SelectedRowOptimization
 import VectorWeakMajorization
 import ZeroDiamondRepair
 import FiniteGraphEditTransport
@@ -301,3 +306,36 @@ example (n : ℕ) (B : VectorWeakMajorization.Tournament n) (x y : Fin n → ℝ
 #print axioms VectorWeakMajorization.sum_sq_le
 #print axioms VectorWeakMajorization.Tournament.signed_sum_identity
 #print axioms VectorWeakMajorization.Tournament.signed_sum_bound
+
+/-! Explicit K and optimized finite envelope, not an actual Bx majorization
+endpoint. The matrix-to-selected-envelope bridge remains unproved here. -/
+example (n : ℕ) (x : ℕ → ℝ)
+    (hx : VectorWeakMajorization.DescendingNonnegative n x) (hz : x n = 0) :
+    VectorWeakMajorization.DescendingNonnegative n (MajorizationCone.K n x) :=
+  MajorizationCone.K_preserves_cone n x hx hz
+
+example (n : ℕ) (x y : ℕ → ℝ)
+    (h : VectorWeakMajorization.WeakMajorized n x y) :
+    VectorWeakMajorization.WeakMajorized n (MajorizationCone.K n x) (MajorizationCone.K n y) :=
+  MajorizationCone.K_preserves_prefix_order n x y h
+
+example (n k : ℕ) (hk : k ≤ n) (f : ℕ → ℕ)
+    (hf : ∀ i, i+1 < k → f i < f (i+1)) (hr : ∀ i < k, f i < n)
+    (x b : ℕ → ℝ) (s : ℕ → Bool)
+    (hx : ∀ a c, a ≤ c → c < n → x c ≤ x a)
+    (hb : VectorWeakMajorization.DescendingNonnegative k b)
+    (hd : ∀ i j, i<j → j<k → b j ≤ b i)
+    (hselected : ∀ j<k, b j = x (f j)) :
+    (k : ℝ) * ((∑ i ∈ Finset.range n, x i) - (∑ j ∈ Finset.range k, b j)) +
+      SelectedSignPairs.pairCost s b k ≤ MajorizationCone.P n k x :=
+  SelectedRowOptimization.envelope_le_P n k hk f hf hr x b s hx hb hd hselected
+
+#print axioms MajorizationCone.K_preserves_cone
+#print axioms MajorizationCone.K_preserves_prefix_order
+#print axioms MajorizationCone.P_tail_formula
+#print axioms SelectedWeight.selected_weight_ge
+#print axioms BalancedSignCounts.baseline_le_pairs
+#print axioms BalancedSignCounts.penalty_le
+#print axioms SelectedSignPairs.pairCost_identity
+#print axioms SelectedSignPairs.pairCost_le
+#print axioms SelectedRowOptimization.envelope_le_P

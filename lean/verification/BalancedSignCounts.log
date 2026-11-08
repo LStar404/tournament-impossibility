@@ -1,0 +1,3 @@
+'BalancedSignCounts.baseline_le_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BalancedSignCounts.weighted_baseline_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BalancedSignCounts.penalty_le' depends on axioms: [propext, Classical.choice, Quot.sound]
