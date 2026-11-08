@@ -1,3 +1,6 @@
+import DiamondFreeKernelLimit
+import DiamondFreeKernelUniform
+import DiamondFreeComplexResolvent
 import DiamondFreeKernelDeterminant
 import ActualSmallDiamondSixth
 import SmallDiamondGraphEndpoint
@@ -453,3 +456,8 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms DiamondFreeKernelDeterminant.zero_diamonds_kernel_det
 #print axioms DiamondFreeKernelDeterminant.zero_diamonds_normalized_det
+
+#print axioms DiamondFreeKernelLimit.actual_imaginary_inverse
+#print axioms DiamondFreeKernelUniform.actual_imaginary_uniformlyOn_compact
+#print axioms DiamondFreeKernelUniform.inverse_uniformlyOn_compact
+#print axioms DiamondFreeComplexResolvent.eventually_inverse

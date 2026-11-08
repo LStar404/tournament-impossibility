@@ -1,0 +1,23 @@
+DiamondFreeComplexResolvent.lean:23:10: warning: This simp argument is unused:
+  Matrix.smul_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.mul_smul, smul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DiamondFreeComplexResolvent.lean:23:27: warning: This simp argument is unused:
+  Matrix.mul_smul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Matrix.smul_mul, smul_smul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DiamondFreeComplexResolvent.lean:35:40: warning: This simp argument is unused:
+  neg_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [finiteKernel, Fintype.card_fin, sub_eq_add_neg, add_comm, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DiamondFreeComplexResolvent.factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeComplexResolvent.eventually_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
