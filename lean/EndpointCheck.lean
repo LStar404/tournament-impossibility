@@ -1,3 +1,4 @@
+import ColorTransport
 import ColorEnergy
 import OrderedCancellation
 import QRegularApplications
@@ -112,3 +113,18 @@ example (n : ℕ) (P c : ℕ → ℝ) (h0 : P 0 = 0) (hfinal : P n = 1)
 #print axioms ColorEnergy.odd_energy
 #print axioms ColorEnergy.summed_repair_budget
 #print axioms ColorEnergy.odd_prefix_transport_budget
+
+/-! Actual adjacent unlike-color swap reachability and only a lower bound on
+minimum distance. No equality or graph-edit upper bound is asserted. -/
+example (u v : List Bool) (hlen : u.length = v.length)
+    (hc : ColorTransport.charge u = ColorTransport.charge v) :
+    ∃ n, ColorTransport.Swaps n u v ∧
+      (∀ m, ColorTransport.Swaps m u v → n ≤ m) ∧
+      ColorTransport.area u v ≤ (n : ℤ) :=
+  ColorTransport.minimum_swaps_exists hlen hc
+
+#print axioms ColorTransport.equal_total_reachable
+#print axioms ColorTransport.reaches_paired
+#print axioms ColorTransport.reaches_alternatingOdd
+#print axioms ColorTransport.area_le_swaps
+#print axioms ColorTransport.minimum_swaps_exists

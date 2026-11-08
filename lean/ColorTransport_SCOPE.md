@@ -1,0 +1,66 @@
+# ColorTransport: machine-checked finite swap reachability
+
+This is an independent extension after ColorEnergy, not a proof of R.
+
+## Concrete objects, not assumed transport axioms
+
+Words are actual `List Bool` values: true means +1, false means -1.
+`charge` is the integer difference between the two color counts;
+`charge_eq_sum` proves it equals the sum of the ±1 values.
+
+`Swaps n u v` is an inductively generated derivation using exactly n
+adjacent unlike-color swaps. Its only elementary move exchanges the first
+two different colors, a `cons` constructor moves a derivation beneath a
+fixed prefix without charging a step, and transitivity adds step counts.
+Thus there is no arbitrary edge/word transition admitted as a hypothesis.
+
+## Proved
+
+* `Swaps.perm`: every such swap derivation is an actual list permutation.
+* `perm_has_swaps`: every permutation has a finite swap derivation;
+  trivial equal-letter swaps are eliminated rather than charged.
+* `perm_of_length_charge`: for binary words, equal length and charge imply
+  permutation equivalence. This follows from the two actual color counts.
+* `equal_total_reachable`: any two actual words of equal length and total
+  color can be transformed by finitely many adjacent unlike-color swaps.
+* `paired orient`: explicit list of pairs `[a, !a]`, with arbitrary chosen
+  orientation of every pair; proved length `2 * orient.length`, charge zero.
+* `paired_even_prefix` and `paired_odd_prefix`: even prefix charge is zero;
+  odd prefix charge is exactly the selected pair color, with an explicit
+  in-range hypothesis for the latter.
+* `reaches_paired`: every balanced word reaches every explicitly chosen
+  paired target of the same length.
+* `alternatingOdd k`: concrete `+ - + - ... +` target of length `2k+1`
+  and charge 1; `reaches_alternatingOdd` proves reachability from every word
+  with those length and total-color values.
+* `area`: concrete recursively summed absolute suffix +1-count discrepancy.
+  `area_triangle` proves its triangle inequality for equal-length words.
+* `area_le_swaps`: every n-step swap derivation has `area u v ≤ n`.
+* `minimum_swaps_exists`: there is a least attainable swap count, with
+  an actual derivation, minimality over all derivations, and the area
+  lower bound. The proof uses well-ordering of natural numbers, not an
+  assumed minimum or transport-distance axiom.
+
+## Still open in Lean
+
+* Attaining the area lower bound; in particular, this file does NOT prove
+  `minimum swaps = area = (1/2) Σ |P_i-P'_i|`.
+* The formal equivalence of this suffix-count area with the usual prefix
+  color-discrepancy sum (the mathematical equivalence uses equal totals).
+* Selecting the energy-optimal target from signs of the input's odd prefixes
+  and combining its budget with exact attained distance.
+* The matrix/tournament correspondence, one graph edge reversal per swap,
+  full e/16 and E/8 graph-edit bounds, or the general condition R.
+
+The new existence theorem removes the earlier gap of whether such targets
+are actual reachable finite words. It does not remove the quantitative
+optimal-transport gap, so the ColorEnergy scope must not be overclaimed.
+
+## Verification
+
+2026-11-08: `lake env lean ColorTransport.lean` completed with exit code 0,
+no compiler warnings. The seven printed exported theorem axiom sets contain
+only standard `propext`, `Classical.choice`, `Quot.sound` (some are smaller).
+No `sorry`, `admit`, new `axiom`, or unsafe declaration is introduced.
+Integrated into `lakefile.toml`, `verify.py`, and `EndpointCheck.lean`.
+Compiler/axiom log: `verification/ColorTransport.log`.

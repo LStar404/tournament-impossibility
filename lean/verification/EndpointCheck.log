@@ -22,3 +22,8 @@
 'ColorEnergy.odd_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorEnergy.summed_repair_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorEnergy.odd_prefix_transport_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.equal_total_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.reaches_paired' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.reaches_alternatingOdd' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.area_le_swaps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.minimum_swaps_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
