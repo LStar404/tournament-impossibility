@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T16:05:07.522031+00:00",
+  "checked_at_utc": "2026-11-08T16:18:30.499159+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -8,6 +8,7 @@
     "ColorTransport",
     "Constant",
     "Descent",
+    "DiamondGap",
     "OrderedCancellation",
     "QRegular",
     "Radial",
@@ -88,6 +89,19 @@
       "source_sha256": "7d50e8d10489287d99c22bc9c72c135fedf005d9ab8a7f1d903a831f8573ecad",
       "axiom_reports": [
         "'NonAlgebraicity.rational_polynomial_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "DiamondGap",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "090b4f39a81cb7bfd98b328e78459ba33d1df2ff5a745885c1e3a534d9833167",
+      "axiom_reports": [
+        "'DiamondGap.local_bool' depends on axioms: [propext]",
+        "'DiamondGap.Tournament.quad_iff_pattern' depends on axioms: [propext]",
+        "'DiamondGap.Tournament.diamond_covers' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondGap.Tournament.positive_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondGap.Tournament.zero_or_gap' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -301,7 +315,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "a8e54f7fe449ed27c3b4f8aec7e89fb875664962e09630aebbbe74e129383859",
+      "source_sha256": "ff4d1b8177784241c7edbff2b98e99f51d398a5c1737744a229a8e2aebd166b8",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -329,9 +343,13 @@
         "'ColorTransport.reaches_paired' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.reaches_alternatingOdd' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.area_le_swaps' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'ColorTransport.minimum_swaps_exists' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'ColorTransport.minimum_swaps_exists' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondGap.Tournament.quad_iff_pattern' depends on axioms: [propext]",
+        "'DiamondGap.Tournament.diamond_covers' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondGap.Tournament.positive_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondGap.Tournament.zero_or_gap' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound, not optimal area attainment or graph-edit bounds."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound, not optimal area attainment or graph-edit bounds. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
 }

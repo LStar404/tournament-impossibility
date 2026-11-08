@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'EndpointCheck',
 ]
 
 
@@ -85,7 +85,9 @@ def main():
                   'ring and finite-packet recursion only; it does not formalize tournament '
                   'kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite '
                   'prefix-energy algebra only. ColorTransport proves actual word reachability '
-                  'and an area lower bound, not optimal area attainment or graph-edit bounds.'),
+                  'and an area lower bound, not optimal area attainment or graph-edit bounds. '
+                  'DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; '
+                  'this does not imply Condition R.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

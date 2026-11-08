@@ -27,3 +27,7 @@
 'ColorTransport.reaches_alternatingOdd' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorTransport.area_le_swaps' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorTransport.minimum_swaps_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondGap.Tournament.quad_iff_pattern' depends on axioms: [propext]
+'DiamondGap.Tournament.diamond_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondGap.Tournament.positive_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondGap.Tournament.zero_or_gap' depends on axioms: [propext, Classical.choice, Quot.sound]

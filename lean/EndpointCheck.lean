@@ -1,3 +1,4 @@
+import DiamondGap
 import ColorTransport
 import ColorEnergy
 import OrderedCancellation
@@ -128,3 +129,15 @@ example (u v : List Bool) (hlen : u.length = v.length)
 #print axioms ColorTransport.reaches_alternatingOdd
 #print axioms ColorTransport.area_le_swaps
 #print axioms ColorTransport.minimum_swaps_exists
+
+/-! Finite tournament combinatorics only: the count is of unordered four-sets.
+This endpoint supplies no asymptotic recovery or Condition R implication. -/
+example {V : Type*} [DecidableEq V] [Fintype V]
+    (T : DiamondGap.Tournament V) :
+    T.diamonds.card = 0 ∨ Fintype.card V ≤ 4 * T.diamonds.card :=
+  T.zero_or_gap
+
+#print axioms DiamondGap.Tournament.quad_iff_pattern
+#print axioms DiamondGap.Tournament.diamond_covers
+#print axioms DiamondGap.Tournament.positive_gap
+#print axioms DiamondGap.Tournament.zero_or_gap
