@@ -78,3 +78,13 @@ Eight core exported endpoint axiom audits list only the standard logical
 axioms propext, Classical.choice and Quot.sound.
 No sorry/admit, new mathematical axiom, unsafe proof or external oracle.
 Included in full `verify.py`, `lakefile.toml`, and independent `EndpointCheck.lean`.
+
+## Subsequent zero-diamond representation
+
+`DiamondFreeRepresentation.lean`, with `TournamentColorEnumeration.lean`,
+now proves the missing representation for an actual finite tournament whose
+existing unordered diamond count is zero. It constructs a real Bool word and
+ordinary finite enumeration, reconstructing the ORIGINAL matrix after an
+internal sign-switch argument. Earlier diamond-free representation warnings
+above are superseded by this theorem. It does not represent all tournaments,
+repair positive-diamond tournaments, or establish the full condition R.

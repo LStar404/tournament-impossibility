@@ -53,3 +53,13 @@
 'ColorTransport.alternating_carousel_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorTransport.carousel_forward_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ColorTransport.carouselIndex_eq_mod' depends on axioms: [propext, Quot.sound]
+'ColorTransport.transitive_tournament_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.representation_of_transitive_switch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.switched_quad_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.switched_diamondFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.source_transitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.exists_transitive_switch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.diamondFree_color_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.zero_diamonds_color_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

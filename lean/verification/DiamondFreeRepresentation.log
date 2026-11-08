@@ -1,0 +1,9 @@
+'DiamondFreeRepresentation.diamondFree_color_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.zero_diamonds_color_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DiamondFreeRepresentation.switched_quad_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.switched_diamondFree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.source_transitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.exists_transitive_switch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeRepresentation.diamondFree_of_card_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

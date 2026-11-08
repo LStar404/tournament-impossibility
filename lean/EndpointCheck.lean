@@ -1,3 +1,5 @@
+import DiamondFreeRepresentation
+import TournamentColorEnumeration
 import ColorCutNormalization
 import ColorTargetModels
 import ColorGraphRepair
@@ -233,3 +235,21 @@ example (k : ℕ) (i j : Fin (2*k+1)) :
 #print axioms ColorTransport.alternating_carousel_isomorphism
 #print axioms ColorTransport.carousel_forward_distance
 #print axioms ColorTransport.carouselIndex_eq_mod
+
+/-! Actual zero-diamond representation of the ORIGINAL tournament matrix.
+No arbitrary-tournament representation, positive-diamond repair, or R claim. -/
+example {V : Type*} [Fintype V] [DecidableEq V] (T : DiamondGap.Tournament V)
+    (hT : T.diamonds.card = 0) :
+    ∃ (w : List Bool) (e : Fin (Fintype.card V) ≃ V),
+      w.length = Fintype.card V ∧
+      ∀ i j, (T.S (e i) (e j) : ℝ) = ColorTransport.colorGraph w i j :=
+  DiamondFreeRepresentation.zero_diamonds_color_representation T hT
+
+#print axioms ColorTransport.transitive_tournament_enumeration
+#print axioms ColorTransport.representation_of_transitive_switch
+#print axioms DiamondFreeRepresentation.switched_quad_sq
+#print axioms DiamondFreeRepresentation.switched_diamondFree
+#print axioms DiamondFreeRepresentation.source_transitive
+#print axioms DiamondFreeRepresentation.exists_transitive_switch
+#print axioms DiamondFreeRepresentation.diamondFree_color_representation
+#print axioms DiamondFreeRepresentation.zero_diamonds_color_representation

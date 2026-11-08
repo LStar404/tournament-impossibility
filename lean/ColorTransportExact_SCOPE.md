@@ -97,3 +97,13 @@ standard carousel and doubling definitions. Earlier cut/target warnings above
 are now closed by those modules. Neither extension proves that arbitrary or
 diamond-free tournaments have color-word representations; general diamond
 repair and R remain separate obligations.
+
+## Subsequent zero-diamond representation
+
+`DiamondFreeRepresentation.lean`, with `TournamentColorEnumeration.lean`,
+now proves the missing representation for an actual finite tournament whose
+existing unordered diamond count is zero. It constructs a real Bool word and
+ordinary finite enumeration, reconstructing the ORIGINAL matrix after an
+internal sign-switch argument. Earlier diamond-free representation warnings
+above are superseded by this theorem. It does not represent all tournaments,
+repair positive-diamond tournaments, or establish the full condition R.

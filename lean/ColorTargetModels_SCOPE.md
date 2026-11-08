@@ -73,3 +73,13 @@ use a smaller subset). No sorry/admit, new mathematical axiom or unsafe proof.
 Included in full `verify.py`, `lakefile.toml`, and independent `EndpointCheck.lean`.
 Final compilation on 2026-11-08 completed with exit code 0 and no warnings;
 all eight printed axiom lists are limited to the standard logical axioms above.
+
+## Subsequent zero-diamond representation
+
+`DiamondFreeRepresentation.lean`, with `TournamentColorEnumeration.lean`,
+now proves the missing representation for an actual finite tournament whose
+existing unordered diamond count is zero. It constructs a real Bool word and
+ordinary finite enumeration, reconstructing the ORIGINAL matrix after an
+internal sign-switch argument. Earlier diamond-free representation warnings
+above are superseded by this theorem. It does not represent all tournaments,
+repair positive-diamond tournaments, or establish the full condition R.
