@@ -1,0 +1,9 @@
+TournamentPowerComparison.lean:34:15: warning: This simp argument is unused:
+  Matrix.mulVec_single_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [basis]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'TournamentPowerComparison.trajectory_eq_mulVec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentPowerComparison.frobenius_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,3 +1,4 @@
+import ReferenceMomentEndpoint
 import VectorMajorizationEndpoint
 import MajorizationCone
 import SelectedWeight
@@ -356,3 +357,17 @@ example (n : ℕ) (A : Fin n → Fin n → ℝ)
 #print axioms SelectedTournamentMajorization.tournament_vector_majorization
 #print axioms SelectedTournamentMajorization.tournament_prefix_bound
 #print axioms actual_matrix_prefix_endpoint
+
+/-! Raw actual matrices, genuine matrix powers, all NONNEGATIVE integer exponents.
+Not a claim about negative powers, an all-ones orbit, small defects, or R. -/
+example (n r : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
+    (hskew : ∀ i j, A i j = -A j i)
+    (hunit : ∀ i j, i ≠ j → A i j = 1 ∨ A i j = -1) :
+    (∑ i : Fin n, ∑ j : Fin n, ((A^r) i j)^2) ≤
+      ∑ i : Fin n, ∑ j : Fin n, ((TransitiveOrbit.T n ^ r) i j)^2 :=
+  actual_all_integer_moments n r A hskew hunit
+
+#print axioms SignedReferenceConjugacy.concrete_square_conjugacy
+#print axioms ReferenceMomentComparison.reference_column_norm
+#print axioms ReferenceMomentComparison.frobenius_all_powers
+#print axioms actual_all_integer_moments

@@ -1,0 +1,15 @@
+SignedConjugacy.lean:15:19: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SignedConjugacy.lean:17:10: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'SignedConjugacy.column_sq_of_gram_conjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]

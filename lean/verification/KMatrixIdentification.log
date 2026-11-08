@@ -1,0 +1,10 @@
+KMatrixIdentification.lean:19:13: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+KMatrixIdentification.lean:26:16: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+'KMatrixIdentification.coefficient_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'KMatrixIdentification.comparison_power' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'EndpointCheck',
 ]
 
 
@@ -100,7 +100,9 @@ def main():
                   'prove K cone/prefix preservation and the combinatorial envelope<=P_k, '
                   'and SelectedTournamentMajorization completes actual finite tournament vector '
                   'weak majorization, independently checked from raw matrix entries. '
-                  'The K reference orbit, moment comparisons and Condition R remain unproved.'),
+                  'ReferenceMomentComparison supplies the concrete K-square conjugacy and all '
+                  'nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, '
+                  'the all-ones orbit, small-defect sixth-order identities and Condition R are not proved.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

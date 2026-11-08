@@ -19,3 +19,13 @@ and real input. `VectorMajorizationEndpoint.lean` checks the expanded inequality
 from raw matrix entries. Earlier exclusions about these particular bridges
 above are superseded. Reference K-orbit identities, moment comparisons and R
 remain separate, unproved obligations.
+
+## Subsequent concrete reference and moment comparison
+
+The ReferenceMomentComparison dependency chain now discharges the concrete
+K-square signed conjugacy, reference column-norm identities and all natural-power
+Frobenius comparisons for actual finite tournament matrices. Earlier exclusions
+about those interfaces above are superseded by that verified extension.
+Exponents are natural numbers (including zero), not arbitrary signed integers.
+The all-ones-vector orbit, small-defect sixth-order identity and full R remain
+outside these results. See `ReferenceMomentComparison_SCOPE.md`.

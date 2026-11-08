@@ -24,3 +24,13 @@ This closes the finite selected-row/vector weak-majorization bridge and composes
 
 Included in the full `verify.py` and `lakefile.toml` build, with raw-entry
 independent endpoint audit in `VectorMajorizationEndpoint.lean` and `EndpointCheck.lean`.
+
+## Subsequent concrete reference and moment comparison
+
+The ReferenceMomentComparison dependency chain now discharges the concrete
+K-square signed conjugacy, reference column-norm identities and all natural-power
+Frobenius comparisons for actual finite tournament matrices. Earlier exclusions
+about those interfaces above are superseded by that verified extension.
+Exponents are natural numbers (including zero), not arbitrary signed integers.
+The all-ones-vector orbit, small-defect sixth-order identity and full R remain
+outside these results. See `ReferenceMomentComparison_SCOPE.md`.

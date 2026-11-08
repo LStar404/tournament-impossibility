@@ -1,0 +1,26 @@
+BasisReference.lean:13:19: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [basis, hi, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BasisReference.lean:14:19: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [basis, hi, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BasisReference.lean:22:17: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [basis, hi, hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BasisReference.lean:26:24: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+'BasisReference.sortedPad_basis_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]

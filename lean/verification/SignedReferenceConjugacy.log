@@ -1,0 +1,29 @@
+SignedReferenceConjugacy.lean:17:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+SignedReferenceConjugacy.lean:17:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+SignedReferenceConjugacy.lean:25:13: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+SignedReferenceConjugacy.lean:70:19: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [sigma_sq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+SignedReferenceConjugacy.lean:72:10: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij, hp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'SignedReferenceConjugacy.concrete_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SignedReferenceConjugacy.concrete_square_conjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SignedReferenceConjugacy.Q_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]

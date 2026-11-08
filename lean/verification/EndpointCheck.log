@@ -88,3 +88,7 @@
  Quot.sound]
 'SelectedTournamentMajorization.tournament_prefix_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'actual_matrix_prefix_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SignedReferenceConjugacy.concrete_square_conjugacy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReferenceMomentComparison.reference_column_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReferenceMomentComparison.frobenius_all_powers' depends on axioms: [propext, Classical.choice, Quot.sound]
+'actual_all_integer_moments' depends on axioms: [propext, Classical.choice, Quot.sound]
