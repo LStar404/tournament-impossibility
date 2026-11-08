@@ -1,0 +1,2 @@
+'ComplexKernelDiskLower.finite_kernel_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexKernelDiskLower.eventually_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]

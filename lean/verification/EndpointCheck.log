@@ -133,3 +133,15 @@
 'DiamondFreeComplexResolvent.eventually_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ComplexBinomialRate.actual_imaginary_error' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ComplexOperatorResolventBound.normalized_source_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TransitiveKernelInverse.inverse_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MatrixEuclideanEntryBound.scalar_identity_add_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TransitiveKernelInverseBounds.inverse_operator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeKernelInverseTransfer.inverse_entry_representation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'DiamondFreeKernelOperatorBound.actual_operator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexKernelDiskLower.eventually_thresholds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeDiskResolvent.eventually_uniform_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualComplexScoreSource.inner_eq_bilinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualComplexScoreSource.norm_score_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualComplexScoreSource.eventually_uniform_actual_source' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+'MatrixEuclideanEntryBound.operator_le_frobenius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MatrixEuclideanEntryBound.scalar_identity_add_error' depends on axioms: [propext, Classical.choice, Quot.sound]

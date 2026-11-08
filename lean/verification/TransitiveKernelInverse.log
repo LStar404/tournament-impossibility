@@ -1,0 +1,186 @@
+TransitiveKernelInverse.lean:28:0: warning: automatically included section variable(s) unused in theorem `TransitiveKernelInverse.kernel_entry`:
+  [CharZero K]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero K] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TransitiveKernelInverse.lean:33:24: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [TournamentHamiltonian.transitiveKernel, TournamentHamiltonian.transitiveSkew, Matrix.add_apply,
+    Matrix.smul_apply, h, ne_of_lt h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:36:24: warning: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [TournamentHamiltonian.transitiveKernel, TournamentHamiltonian.transitiveSkew, Matrix.add_apply,
+    Matrix.smul_apply, h, ne_of_gt h, not_lt_of_ge h.le]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:47:10: warning: This simp argument is unused:
+  Fin.castSucc_lt_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ne_of_gt (Fin.castSucc_lt_succ (i := i)), not_lt_of_ge (Fin.castSucc_lt_succ (i := i)).le,
+    ne_of_lt (Fin.castSucc_lt_succ (i := i))]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:52:10: warning: This simp argument is unused:
+  Fin.castSucc_lt_succ
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [ne_of_lt (Fin.castSucc_lt_succ (i := i)), ne_of_gt (Fin.castSucc_lt_succ (i := i))]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:49:48: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:53:48: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:53:52: warning: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:53:52: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+TransitiveKernelInverse.lean:49:48: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+TransitiveKernelInverse.lean:99:68: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+TransitiveKernelInverse.lean:99:78: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+TransitiveKernelInverse.lean:112:26: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+TransitiveKernelInverse.lean:112:77: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+TransitiveKernelInverse.lean:129:50: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+TransitiveKernelInverse.lean:142:50: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+TransitiveKernelInverse.lean:142:70: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+TransitiveKernelInverse.lean:113:28: warning: This simp argument is unused:
+  he
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [numerator, if_true, ne_of_lt (Fin.castSucc_lt_succ (i := i)), if_false, Fin.castSucc_lt_succ,
+    Fin.val_succ, Fin.val_castSucc, Nat.add_sub_cancel_left, Nat.sub_self, pow_zero, mul_one, Nat.add_sub_cancel]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:97:61: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:97:65: warning: Unused tactic linter: `omega` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:110:61: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:110:65: warning: Unused tactic linter: `omega` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TransitiveKernelInverse.lean:97:65: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+TransitiveKernelInverse.lean:110:65: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+TransitiveKernelInverse.lean:183:48: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+TransitiveKernelInverse.lean:183:63: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+TransitiveKernelInverse.lean:205:45: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [add_mul, Finset.sum_add_distrib, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:205:56: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [add_mul, Finset.sum_add_distrib, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:208:15: warning: This simp argument is unused:
+  Matrix.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.smul_apply, smul_eq_mul, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:208:33: warning: This simp argument is unused:
+  Matrix.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sub_apply, smul_eq_mul, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:208:52: warning: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:219:45: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [add_mul, Finset.sum_add_distrib, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:219:56: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [add_mul, Finset.sum_add_distrib, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:222:15: warning: This simp argument is unused:
+  Matrix.sub_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.smul_apply, smul_eq_mul, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:222:33: warning: This simp argument is unused:
+  Matrix.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sub_apply, smul_eq_mul, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TransitiveKernelInverse.lean:222:52: warning: This simp argument is unused:
+  smul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.sub_apply, Matrix.smul_apply, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'TransitiveKernelInverse.kernel_mul_numerator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TransitiveKernelInverse.inverse_formula' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,3 +1,11 @@
+import TransitiveKernelInverse
+import MatrixEuclideanEntryBound
+import TransitiveKernelInverseBounds
+import DiamondFreeKernelInverseTransfer
+import DiamondFreeKernelOperatorBound
+import ComplexKernelDiskLower
+import DiamondFreeDiskResolvent
+import ActualComplexScoreSource
 import ComplexBinomialRate
 import ComplexOperatorResolventBound
 import DiamondFreeKernelLimit
@@ -466,3 +474,14 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms ComplexBinomialRate.actual_imaginary_error
 #print axioms ComplexOperatorResolventBound.normalized_source_bound
+
+#print axioms TransitiveKernelInverse.inverse_formula
+#print axioms MatrixEuclideanEntryBound.scalar_identity_add_error
+#print axioms TransitiveKernelInverseBounds.inverse_operator
+#print axioms DiamondFreeKernelInverseTransfer.inverse_entry_representation
+#print axioms DiamondFreeKernelOperatorBound.actual_operator_bound
+#print axioms ComplexKernelDiskLower.eventually_thresholds
+#print axioms DiamondFreeDiskResolvent.eventually_uniform_source
+#print axioms ActualComplexScoreSource.inner_eq_bilinear
+#print axioms ActualComplexScoreSource.norm_score_sq
+#print axioms ActualComplexScoreSource.eventually_uniform_actual_source

@@ -11,7 +11,7 @@
   两份 PDF 都由 `.github/workflows/paper-rebuild.yml` 从对应 `.tex` 用 tectonic 编译（推改源文件或手动触发）。
   正文与数学统一使用 STIX Two，带标题块、页眉与页码。
 - `lean/` —— 论文附录 A.1–A.4 中非代数性结论的形式化。三个生成函数 A、E、M 都被证明没有非零的复系数多项式关系，
-  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。截至 2026-11-08 23:26 UTC 的已核验记录覆盖 122 个模块；
+  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。截至 2026-11-08 23:50 UTC 的已核验记录覆盖 130 个模块；
   `lean/verification/result.json` 记录逐模块结果、源文件 SHA-256 与公理依赖。
 - `historical/formula-restrictions/` —— 同一主题的早期版本（中英文稿与 PDF），保留作历史对照，
   不代表当前结论，也未随本次署名与排版变更重编。
@@ -66,3 +66,10 @@ Lean 4.35.0，mathlib 版本固定在 `lean/lakefile.toml`；环境变量 `LEAN_
 `ComplexBinomialRate` 给实际零diamond虚参核在|w|≤R上的明确误差 `2 exp(R) R²/n`，前提n>0、R/n≤1/2、R²/n≤1。
 `ComplexOperatorResolventBound` 在真实Hilbert算子范数小性 `|w|² ||A||²≤q<1` 下证明双侧Neumann逆及源项界；线性能量下归一化源项≤K/[n(1−q)]。实际图族的扩大圆盘算子小性仍待证明，不能由det下界替代。
 122模块证据齐备，lake构建9169 jobs通过。verify首次误把定理名中的error当错误；修复后保留源码哈希完全匹配的99项成功记录，并实际重编剩余23项。初次及续跑日志均保留，未把中断称为一次完整成功运行。PDF仍为116模块快照。
+
+### 实际复圆盘逆算子与真实score源项（130模块）
+
+新增8模块把固定复圆盘上的算子界接到了实际零diamond竞赛图，不再额外假设谱界或算子小性。证明使用传递核显式逆条目、真实sign/relabel转移，以及拆开标量对角后的欧氏算子范数估计。
+对每个固定0≤R<π/2，一个仅依赖R的最终阶数阈值同时覆盖所有零diamond图与|w|≤R。二次核 `I+(w/n)^2 S^2` 真正双侧可逆，其欧氏逆算子范数≤C_R²，其中 `C_R=2(1+R)exp(R)/cos(R)`。
+实际score `b=S1` 的能量若≤K n，普通双线性源项满足 `|bᵀ (I+(w/n)^2 S²)^−1 b|/n²≤K C_R²/n`。实score能量、Hermitian内积与普通转置源项的相等均有形式证明。
+130模块已从头全部编译通过（未复用记录），全部源码哈希一致；聚合lake 9177 jobs通过。Gaussian参数替换、分支、源指数、导数误差、permanent恢复及完整R仍未完成。PDF仍为116模块快照。

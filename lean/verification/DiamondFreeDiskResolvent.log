@@ -1,0 +1,14 @@
+DiamondFreeDiskResolvent.lean:122:46: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+DiamondFreeDiskResolvent.lean:122:42: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+DiamondFreeDiskResolvent.lean:122:46: warning: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'DiamondFreeDiskResolvent.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeDiskResolvent.inverse_operator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeDiskResolvent.actual_score_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeDiskResolvent.eventually_uniform_resolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeDiskResolvent.eventually_uniform_source' depends on axioms: [propext, Classical.choice, Quot.sound]
