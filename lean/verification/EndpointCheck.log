@@ -11,3 +11,8 @@
  Quot.sound]
 'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
 'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrderedCancellation.difference_order' depends on axioms: [propext, Quot.sound]
+'OrderedCancellation.evaluate_words' depends on axioms: [propext]
+'OrderedCancellation.blocks_add' depends on axioms: [propext]
+'OrderedCancellation.packet_length' depends on axioms: [propext]
+'OrderedCancellation.packet_difference_order' depends on axioms: [propext, Quot.sound]

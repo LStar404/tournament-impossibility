@@ -1,3 +1,4 @@
+import OrderedCancellation
 import QRegularApplications
 import PathCountGrowth
 import QRegularRationalLimit
@@ -78,3 +79,20 @@ end NonAlgebraicity.EndpointCheck
 
 #print axioms NonAlgebraicity.qRegular_scaled_limit_rational
 #print axioms NonAlgebraicity.qRegular_limit_rational
+
+/-! Local packet endpoint: finite low-position packets of length 2^q,
+remaining recursion depth r-q. No assertion about tournament kernels or R. -/
+example {R : Type*} [Ring R] (F : OrderedCancellation.Filtration R)
+    (p m : List R) (hp : ∀ x ∈ p, F.mem 1 (x - 1))
+    (hm : ∀ x ∈ m, F.mem 1 (x - 1)) (hz : F.mem 1 0)
+    (r q : ℕ) (hq : q ≤ r) (lp : p.length = 2 ^ q) (lm : m.length = 2 ^ q) :
+    F.mem (r - q + 1)
+      ((OrderedCancellation.expandPackets p m (OrderedCancellation.words (r - q)).1).prod -
+       (OrderedCancellation.expandPackets p m (OrderedCancellation.words (r - q)).2).prod) :=
+  OrderedCancellation.packet_difference_order F p m hp hm hz r q hq lp lm
+
+#print axioms OrderedCancellation.difference_order
+#print axioms OrderedCancellation.evaluate_words
+#print axioms OrderedCancellation.blocks_add
+#print axioms OrderedCancellation.packet_length
+#print axioms OrderedCancellation.packet_difference_order

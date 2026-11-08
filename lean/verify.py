@@ -19,6 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
+    'OrderedCancellation', 'EndpointCheck',
 ]
 
 
@@ -80,7 +81,9 @@ def main():
         'records': records,
         'scope': ('The main application keeps the graph-theoretic asymptotic and the finite '
                   'Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove '
-                  'those two external theorems.'),
+                  'those two external theorems. OrderedCancellation verifies the abstract filtered '
+                  'ring and finite-packet recursion only; it does not formalize tournament '
+                  'kernel costs, permanent recovery, or Condition R.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

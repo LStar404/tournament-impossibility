@@ -1,11 +1,12 @@
 {
-  "checked_at_utc": "2026-11-08T15:10:46.649740+00:00",
+  "checked_at_utc": "2026-11-08T15:38:11.325583+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
     "Abel",
     "Constant",
     "Descent",
+    "OrderedCancellation",
     "QRegular",
     "Radial",
     "TournamentSequence",
@@ -24,7 +25,8 @@
     "RationalSeriesLimit",
     "Remainder",
     "QRegularApplications",
-    "QRegularRationalLimit"
+    "QRegularRationalLimit",
+    "EndpointCheck"
   ],
   "all_delivered_modules_checked": true,
   "records": [
@@ -53,6 +55,23 @@
       "source_sha256": "7d50e8d10489287d99c22bc9c72c135fedf005d9ab8a7f1d903a831f8573ecad",
       "axiom_reports": [
         "'NonAlgebraicity.rational_polynomial_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "OrderedCancellation",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9670bbbaeb4226703c806b563830d46ba3743ab0075991635a89974fa9b0c471",
+      "axiom_reports": [
+        "'OrderedCancellation.product_residual' depends on axioms: [propext, Quot.sound]",
+        "'OrderedCancellation.blocks_residual' depends on axioms: [propext, Quot.sound]",
+        "'OrderedCancellation.difference_order' depends on axioms: [propext, Quot.sound]",
+        "'OrderedCancellation.observable_equal' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrderedCancellation.words_length' depends on axioms: [propext]",
+        "'OrderedCancellation.evaluate_words' depends on axioms: [propext]",
+        "'OrderedCancellation.blocks_add' depends on axioms: [propext]",
+        "'OrderedCancellation.packet_length' depends on axioms: [propext]",
+        "'OrderedCancellation.packet_difference_order' depends on axioms: [propext, Quot.sound]"
       ]
     },
     {
@@ -244,7 +263,31 @@
         "'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
+    },
+    {
+      "module": "EndpointCheck",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "5a963a0eb7721f4df4a13a7a02e7324108dd20090196e483c1b4e15eecf8dd1c",
+      "axiom_reports": [
+        "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.not_qRegular_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.digit_recursion_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.maximalPathCount_not_exponentially_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.maximalPathCount_no_linear_digit_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrderedCancellation.difference_order' depends on axioms: [propext, Quot.sound]",
+        "'OrderedCancellation.evaluate_words' depends on axioms: [propext]",
+        "'OrderedCancellation.blocks_add' depends on axioms: [propext]",
+        "'OrderedCancellation.packet_length' depends on axioms: [propext]",
+        "'OrderedCancellation.packet_difference_order' depends on axioms: [propext, Quot.sound]"
+      ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R."
 }
