@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T20:08:27.017242+00:00",
+  "checked_at_utc": "2026-11-08T20:23:53.733965+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -10,6 +10,7 @@
     "Descent",
     "DiamondGap",
     "OrderedCancellation",
+    "OrdinalSixthPolynomial",
     "QRegular",
     "Radial",
     "ReferenceSquare",
@@ -22,6 +23,7 @@
     "Evaluation",
     "MajorizationCone",
     "Normalization",
+    "OrdinalSixthPolynomialEndpoint",
     "QuadraticAbel",
     "RationalLinearDescent",
     "RationalRadial",
@@ -165,6 +167,13 @@
       ]
     },
     {
+      "module": "OrdinalSixthPolynomial",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "a25be6b6b972af937f7d130d4690f8e7f71382eb74490100601a45826ffbce96",
+      "axiom_reports": []
+    },
+    {
       "module": "QRegular",
       "exit_code": 0,
       "passed": true,
@@ -290,6 +299,19 @@
       "source_sha256": "07461dc83604e8c006a4cc8f1064e7bc1c3e2cbd1181d6ea04ad46af575a388c",
       "axiom_reports": [
         "'NonAlgebraicity.algebraic_weighted_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "OrdinalSixthPolynomialEndpoint",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e744d52f889fe1ddc0a89e8c788aebe22e5d02f80d93529c16ed3d0d6334099a",
+      "axiom_reports": [
+        "'finite_sixth_polynomial_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrdinalSixthPolynomial.coefficient_deficit_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrdinalSixthPolynomial.interaction_le_total_square' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrdinalSixthPolynomial.small_block_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrdinalSixthPolynomial.small_deficit_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -850,7 +872,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "e63ef85ff08dad6244572dc4b378ba2a4e94bb8d0c5cf50bc3725dfc0cd7135e",
+      "source_sha256": "63c56c4dba865a340851167c4f1e7215c4011bb5b50a6dbb84441206ceedab95",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -947,9 +969,11 @@
         "'actual_source_resolvent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentSourceResolvent.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'finite_sixth_polynomial_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrdinalSixthPolynomial.small_deficit_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, not identification with an actual ordinal-matrix sixth coefficient."
 }

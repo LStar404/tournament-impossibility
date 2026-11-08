@@ -1,0 +1,5 @@
+'finite_sixth_polynomial_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthPolynomial.coefficient_deficit_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthPolynomial.interaction_le_total_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthPolynomial.small_block_bracket' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthPolynomial.small_deficit_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]

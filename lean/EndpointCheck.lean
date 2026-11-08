@@ -1,3 +1,4 @@
+import OrdinalSixthPolynomialEndpoint
 import SourceResolventEndpoint
 import OnesEnergyEndpoint
 import ReferenceMomentEndpoint
@@ -401,3 +402,7 @@ example (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
 #print axioms TournamentSourceResolvent.inverse_left_right
 #print axioms TournamentSourceResolvent.resolvent_eq_series
 #print axioms TournamentSourceResolvent.source_resolvent_natural
+
+/-! Polynomial-only sixth coefficient: actual matrix identification is NOT asserted. -/
+#print axioms finite_sixth_polynomial_endpoint
+#print axioms OrdinalSixthPolynomial.small_deficit_transfer
