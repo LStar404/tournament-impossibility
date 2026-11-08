@@ -1,0 +1,2 @@
+'TwoBlockEnergy.first_join' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockEnergy.second_join' depends on axioms: [propext, Classical.choice, Quot.sound]

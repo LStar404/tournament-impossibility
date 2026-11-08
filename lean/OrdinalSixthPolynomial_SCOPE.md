@@ -34,3 +34,7 @@ comparison is a separate result and does not close this missing bridge.
 Independent `verification/OrdinalSixthPolynomialEndpoint.lean` expands all
 coefficient definitions and the pair sum. Audit the corresponding verification
 logs. No new axioms, sorry, or admits are introduced.
+
+## Subsequent actual matrix bridge
+
+OrdinalSixthMatrixBridge now proves that 6 times this coefficient polynomial equals the actual squared Frobenius norm of the cube of the ordered block matrix, for all finite families of real skew blocks, via proved two-block recurrences. No determinant identity is assumed. This closes the actual sixth-moment identification but does not establish triangle-count identities, small-diamond counting estimates or R.

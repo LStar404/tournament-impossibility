@@ -1,0 +1,3 @@
+'actual_ordinal_sixth_expanded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockSixthMoment.third_join' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthMatrixBridge.sixth_eq_cumulative' depends on axioms: [propext, Classical.choice, Quot.sound]

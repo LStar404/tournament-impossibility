@@ -1,0 +1,65 @@
+TwoBlockSixthMoment.lean:14:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.inner_outer_action`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:52:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.mul_ones`:
+  [Fintype κ]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype κ] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:58:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.outer_mul_skew`:
+  [Fintype ι]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:124:10: warning: This simp argument is unused:
+  u
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [TwoBlockEnergy.first, pow_two]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TwoBlockSixthMoment.lean:127:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.sqnorm_blocks`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:130:102: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+TwoBlockSixthMoment.lean:130:102: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TwoBlockSixthMoment.lean:132:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.sqnorm_neg_transpose`:
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:136:0: warning: automatically included section variable(s) unused in theorem `TwoBlockSixthMoment.joined_skew`:
+  [Fintype ι]
+  [Fintype κ]
+  [DecidableEq ι]
+  [DecidableEq κ]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype ι] [Fintype κ] [DecidableEq ι] [DecidableEq κ] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+TwoBlockSixthMoment.lean:179:2: warning: Unused tactic linter: `change sqnorm X + sqnorm Y + sqnorm Y + sqnorm W = _` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'TwoBlockSixthMoment.diagonal_cube_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockSixthMoment.cross_cube_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockSixthMoment.third_join' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -102,3 +102,6 @@
 'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]
 'finite_sixth_polynomial_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
 'OrdinalSixthPolynomial.small_deficit_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'actual_ordinal_sixth_expanded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalSixthMatrixBridge.actual_sixth_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockSixthMoment.third_join' depends on axioms: [propext, Classical.choice, Quot.sound]

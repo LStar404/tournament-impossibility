@@ -1,3 +1,4 @@
+import OrdinalSixthMatrixEndpoint
 import OrdinalSixthPolynomialEndpoint
 import SourceResolventEndpoint
 import OnesEnergyEndpoint
@@ -406,3 +407,8 @@ example (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
 /-! Polynomial-only sixth coefficient: actual matrix identification is NOT asserted. -/
 #print axioms finite_sixth_polynomial_endpoint
 #print axioms OrdinalSixthPolynomial.small_deficit_transfer
+
+/-! Actual skew block matrices, not a postulated coefficient formula. -/
+#print axioms actual_ordinal_sixth_expanded
+#print axioms OrdinalSixthMatrixBridge.actual_sixth_coefficient
+#print axioms TwoBlockSixthMoment.third_join

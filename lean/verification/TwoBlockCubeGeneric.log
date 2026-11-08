@@ -1,0 +1,34 @@
+TwoBlockCubeGeneric.lean:27:31: warning: This simp argument is unused:
+  Matrix.mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_mul, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, pow_succ, pow_two, pow_one,
+    pow_zero, Matrix.mul_one, Matrix.one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TwoBlockCubeGeneric.lean:28:34: warning: This simp argument is unused:
+  pow_two
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_mul, Matrix.mul_add, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, pow_succ,
+    pow_one, pow_zero, Matrix.mul_one, Matrix.one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TwoBlockCubeGeneric.lean:28:43: warning: This simp argument is unused:
+  pow_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_mul, Matrix.mul_add, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, pow_succ,
+    pow_two, pow_zero, Matrix.mul_one, Matrix.one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+TwoBlockCubeGeneric.lean:28:62: warning: This simp argument is unused:
+  Matrix.mul_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.add_mul, Matrix.mul_add, Matrix.neg_mul, Matrix.mul_neg, Matrix.mul_assoc, pow_succ,
+    pow_two, pow_one, pow_zero, Matrix.one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'TwoBlockCubeGeneric.cube_raw' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TwoBlockCubeGeneric.joined_cube' depends on axioms: [propext, Classical.choice, Quot.sound]
