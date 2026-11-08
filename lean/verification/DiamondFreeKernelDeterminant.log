@@ -1,0 +1,16 @@
+DiamondFreeKernelDeterminant.lean:23:15: warning: This simp argument is unused:
+  diagonal_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, diagonal_apply, hij, one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DiamondFreeKernelDeterminant.lean:23:29: warning: This simp argument is unused:
+  diagonal_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [D, diagonal_mul, hij, one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DiamondFreeKernelDeterminant.zero_diamonds_kernel_det' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondFreeKernelDeterminant.zero_diamonds_normalized_det' depends on axioms: [propext, Classical.choice, Quot.sound]

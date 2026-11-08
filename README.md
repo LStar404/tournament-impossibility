@@ -11,7 +11,7 @@
   两份 PDF 都由 `.github/workflows/paper-rebuild.yml` 从对应 `.tex` 用 tectonic 编译（推改源文件或手动触发）。
   正文与数学统一使用 STIX Two，带标题块、页眉与页码。
 - `lean/` —— 论文附录 A.1–A.4 中非代数性结论的形式化。三个生成函数 A、E、M 都被证明没有非零的复系数多项式关系，
-  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。截至 2026-11-08 22:04 UTC 的已核验记录覆盖 116 个模块；
+  结论用 Mathlib 的标准谓词 `Transcendental (Polynomial ℂ)` 表述。截至 2026-11-08 22:54 UTC 的已核验记录覆盖 117 个模块；
   `lean/verification/result.json` 记录逐模块结果、源文件 SHA-256 与公理依赖。
 - `historical/formula-restrictions/` —— 同一主题的早期版本（中英文稿与 PDF），保留作历史对照，
   不代表当前结论，也未随本次署名与排版变更重编。
@@ -44,3 +44,12 @@ python verify.py
 Lean 4.35.0，mathlib 版本固定在 `lean/lakefile.toml`；环境变量 `LEAN_BIN` 与 `MATHLIB_PACKAGES`
 可指向已有安装，未设置时回退到 `PATH` 上的 `lean` 与本地 `.lake/packages`。
 详细说明见 `lean/README.md`。
+
+### 零 diamond 有限核行列式补证（2026-11-08）
+
+`DiamondFreeKernelDeterminant` 已验证实际零 diamond 竞赛图在任意特征零域中的完整有限恒等式
+`det(I + z S) = ((1 + z)^n + (1 - z)^n) / 2`，以及归一化负号版本。
+它不预设主子式或谱公式；证明使用实际符号切换与传递竞赛图重编号。
+117 模块 `verify.py` 和聚合 `lake build` 均实际通过，端点仅使用标准逻辑公理。
+实参数 `z/n` 对应双曲余弦，代入虚参数才对应余弦。该有限结果不等于复圆盘一致渐近、源项导数控制或完整 R。
+论文 PDF 仍是上一轮 116 模块叙述快照；本轮新增形式化的精确范围以此处和该模块 scope 为准。

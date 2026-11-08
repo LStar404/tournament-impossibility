@@ -1,3 +1,4 @@
+import DiamondFreeKernelDeterminant
 import ActualSmallDiamondSixth
 import SmallDiamondGraphEndpoint
 import DiamondFreePathAverage
@@ -449,3 +450,6 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms ActualSmallDiamondSixth.actual_small
 #print axioms TournamentOrdinalReconstruction.cycleCount_sum
+
+#print axioms DiamondFreeKernelDeterminant.zero_diamonds_kernel_det
+#print axioms DiamondFreeKernelDeterminant.zero_diamonds_normalized_det
