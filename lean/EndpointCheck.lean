@@ -1,3 +1,4 @@
+import ColorEnergy
 import OrderedCancellation
 import QRegularApplications
 import PathCountGrowth
@@ -96,3 +97,18 @@ example {R : Type*} [Ring R] (F : OrderedCancellation.Filtration R)
 #print axioms OrderedCancellation.blocks_add
 #print axioms OrderedCancellation.packet_length
 #print axioms OrderedCancellation.packet_difference_order
+
+/-! Finite prefix-energy endpoint only. No graph realization, attainable swap
+sequence, or graph-edit upper bound follows from this example alone. -/
+example (n : ℕ) (P c : ℕ → ℝ) (h0 : P 0 = 0) (hfinal : P n = 1)
+    (hstep : ∀ i < n, P (i + 1) = P i + c i)
+    (hcolor : ∀ i < n, (c i)^2 = 1) :
+    ColorEnergy.energy n 1 P c = 4 * ∑ i ∈ Finset.range n, P i * (P i - 1) :=
+  ColorEnergy.odd_energy n P c h0 hfinal hstep hcolor
+
+#print axioms ColorEnergy.energy_telescope
+#print axioms ColorEnergy.energy_identity
+#print axioms ColorEnergy.even_energy
+#print axioms ColorEnergy.odd_energy
+#print axioms ColorEnergy.summed_repair_budget
+#print axioms ColorEnergy.odd_prefix_transport_budget

@@ -1,0 +1,8 @@
+'ColorEnergy.even_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.odd_prefix_transport_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.energy_telescope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.odd_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.even_prefix_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.odd_prefix_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorEnergy.summed_repair_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
