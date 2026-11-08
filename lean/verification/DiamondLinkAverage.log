@@ -1,0 +1,9 @@
+DiamondLinkAverage.lean:49:48: warning: This simp argument is unused:
+  nsmul_eq_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, smul_eq_mul, ← mul_sum, total_link_card T] at hs
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DiamondLinkAverage.total_link_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondLinkAverage.exists_small_link' depends on axioms: [propext, Classical.choice, Quot.sound]

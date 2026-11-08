@@ -1,0 +1,2 @@
+'DiamondTriangleIncidence.diamond_contains_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]

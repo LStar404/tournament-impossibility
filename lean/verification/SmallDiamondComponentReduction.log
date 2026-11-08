@@ -1,0 +1,4 @@
+'SmallDiamondComponentReduction.exists_small_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmallDiamondComponentReduction.exists_component_fraction_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

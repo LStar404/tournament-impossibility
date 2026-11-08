@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T21:31:51.447005+00:00",
+  "checked_at_utc": "2026-11-08T21:47:17.155028+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -24,6 +24,7 @@
     "Application",
     "BalancedSignCounts",
     "ColorTransportExact",
+    "DiamondTriangleIncidence",
     "Evaluation",
     "MajorizationCone",
     "Normalization",
@@ -36,6 +37,7 @@
     "SignedVectorOrbit",
     "SmallBlockSixthEstimate",
     "StandardAlgebraicity",
+    "TournamentComponents",
     "TournamentHamiltonian.Definitions",
     "TournamentSwitching",
     "TransitiveOrbit",
@@ -77,6 +79,7 @@
     "SelectedTournamentMajorization",
     "TournamentHamiltonian.PathConvolution",
     "DiamondFreeDeterminant",
+    "DiamondLinkAverage",
     "IteratedVectorMajorization",
     "TournamentHamiltonian.PathConvolutionGenerating",
     "VectorMajorizationEndpoint",
@@ -84,21 +87,32 @@
     "ActualPathConvolution",
     "KMatrixIdentification",
     "PermanentDiagonalExpansion",
+    "PivotCycleLink",
     "TournamentPowerComparison",
     "BasisReference",
     "DiamondFreePathAverage",
+    "PivotSmallDiamond",
     "TournamentSourceEnergy",
+    "OrdinalTriangleAdditivity",
     "ReferenceMomentComparison",
+    "StrongTournamentTriangles",
+    "TriangleCountBridge",
+    "IntegerCycleSumBridge",
     "ReferenceMomentEndpoint",
     "ReferenceOnesOrbit",
+    "TournamentComponentBlocks",
+    "PivotMomentInvariant",
     "TournamentEnergySeries",
     "OrdinalTournamentDeficit",
     "ResolventSeriesIdentity",
+    "SmallDiamondPivotReduction",
     "TournamentEnergyConvergence",
     "OrdinalGlobalSixthDeficit",
+    "SmallDiamondComponentReduction",
     "TournamentEnergyRowDomain",
     "GlobalSixthDeficitEndpoint",
     "OnesEnergyEndpoint",
+    "SmallDiamondGraphEndpoint",
     "TournamentGramGeometric",
     "TournamentSourceResolvent",
     "SourceResolventEndpoint",
@@ -335,6 +349,16 @@
       ]
     },
     {
+      "module": "DiamondTriangleIncidence",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "5c7efad3206384aa2a95047d8572df3fa27a8480379fb3ca500341a9eb1c47c1",
+      "axiom_reports": [
+        "'DiamondTriangleIncidence.diamond_contains_cycle' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "Evaluation",
       "exit_code": 0,
       "passed": true,
@@ -453,6 +477,17 @@
       "source_sha256": "41232ea9f5346cdc297df7118933f184e007c1333c5f162da78080fae554f4a0",
       "axiom_reports": [
         "'NonAlgebraicity.hasPolynomialRelation_of_isAlgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TournamentComponents",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "0d2b55efbb3219be0570f91d95c4fd9f66d62a4fab2743513bca7ac3c7ef0788",
+      "axiom_reports": [
+        "'TournamentComponents.cross_edge_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponents.component_lt_iff' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponents.cross_edge_trans' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -883,6 +918,16 @@
       "axiom_reports": []
     },
     {
+      "module": "DiamondLinkAverage",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "05df00d94ff6ac4eef0997ce8da55c17baa875f7d75133cf7f25187a62e5baf6",
+      "axiom_reports": [
+        "'DiamondLinkAverage.total_link_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondLinkAverage.exists_small_link' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "IteratedVectorMajorization",
       "exit_code": 0,
       "passed": true,
@@ -949,6 +994,17 @@
       "axiom_reports": []
     },
     {
+      "module": "PivotCycleLink",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "8fd2c50905303aad46864517e0c52cc326d49b734bfa5e86245331f5abb14270",
+      "axiom_reports": [
+        "'PivotCycleLink.cycle_count_eq_link' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotCycleLink.exists_pivot_few_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotCycleLink.exists_pivot_total_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentPowerComparison",
       "exit_code": 0,
       "passed": true,
@@ -975,6 +1031,15 @@
       "axiom_reports": []
     },
     {
+      "module": "PivotSmallDiamond",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "409f40b4edc4600336c3c75788929e6fa5c4331ff272dbfa00a3e64e18df8d27",
+      "axiom_reports": [
+        "'PivotSmallDiamond.exists_small_source_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentSourceEnergy",
       "exit_code": 0,
       "passed": true,
@@ -985,6 +1050,15 @@
       ]
     },
     {
+      "module": "OrdinalTriangleAdditivity",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "416b70fe4c5138a0cb4c0098bdd5a80153db97a6b49522959075250e7ccef6cf",
+      "axiom_reports": [
+        "'OrdinalTriangleAdditivity.cycleSum_tournament_ordinal' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "ReferenceMomentComparison",
       "exit_code": 0,
       "passed": true,
@@ -992,6 +1066,39 @@
       "axiom_reports": [
         "'ReferenceMomentComparison.reference_column_norm' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ReferenceMomentComparison.frobenius_all_powers' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "StrongTournamentTriangles",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "2790d972ed40a0dfee81a17e34fee127acc96a831b8105b98afc67c9f93f0a54",
+      "axiom_reports": [
+        "'StrongTournamentTriangles.vertex_triangle' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'StrongTournamentTriangles.card_le_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TriangleCountBridge",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "82f7175b89a69ab7d85f9f1253cdd88a7982f10a605d4c38dfb4fd15318979fe",
+      "axiom_reports": [
+        "'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TriangleCountBridge.real_cycleCount_eq_three' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TriangleCountBridge.three_diamonds_le_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TriangleCountBridge.source_energy_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "IntegerCycleSumBridge",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "95c11733e4f7688a5b6d1ac1e75cdaf383c86d93e3b071b68cd82a12b167bdee",
+      "axiom_reports": [
+        "'IntegerCycleSumBridge.cycleSum_eq_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'IntegerCycleSumBridge.cycleSum_of_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'IntegerCycleSumBridge.three_diamonds_le_cycleSum' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1013,6 +1120,27 @@
       "axiom_reports": [
         "'ReferenceOnesOrbit.Q_ones_shift' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ReferenceOnesOrbit.ones_orbit_norm' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TournamentComponentBlocks",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "41506bed5ee2c0db023866735423a9992b974d632af258c163d000f3802f0bf1",
+      "axiom_reports": [
+        "'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponentBlocks.induced_cycleCount_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponentBlocks.component_size_le_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "PivotMomentInvariant",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "4ed524b44ec4f87692cbe1c6f4db4f6edeb6a16451ad98120bb0737aba0672d3",
+      "axiom_reports": [
+        "'PivotMomentInvariant.power_norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1047,6 +1175,15 @@
       ]
     },
     {
+      "module": "SmallDiamondPivotReduction",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e459e796f1a641e8ee066182a6b82ca945f9826431c9d7d7ce3fde90986bd2b0",
+      "axiom_reports": [
+        "'SmallDiamondPivotReduction.exists_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentEnergyConvergence",
       "exit_code": 0,
       "passed": true,
@@ -1064,6 +1201,16 @@
       "axiom_reports": [
         "'OrdinalGlobalSixthDeficit.actual_formula' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'OrdinalGlobalSixthDeficit.conditional_small' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "SmallDiamondComponentReduction",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "876593787eea41f898bdc2e061f760a3a72b59ca860c6bf477dbcbe0291ad7ff",
+      "axiom_reports": [
+        "'SmallDiamondComponentReduction.exists_small_components' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'SmallDiamondComponentReduction.exists_component_fraction_bound' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
       ]
     },
     {
@@ -1102,6 +1249,22 @@
       ]
     },
     {
+      "module": "SmallDiamondGraphEndpoint",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "0be5a8ef2293f0d115b4465a0a648ab171ac8b7557de58c0756f53582f601e01",
+      "axiom_reports": [
+        "'actual_small_diamond_component_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'SmallDiamondComponentReduction.exists_small_components' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotCycleLink.exists_pivot_total_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponentBlocks.component_size_le_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentGramGeometric",
       "exit_code": 0,
       "passed": true,
@@ -1137,7 +1300,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "6b356e591eb006890f9cb136cbccb1bb557f68519798efdb732e0ed46588bc61",
+      "source_sha256": "35eaa3ba6991dab24f9fda800ee7da116203ef91e028b2f0f0a40359d9b2a449",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -1248,9 +1411,14 @@
         "'TournamentSourceEnergy.first_eq_reference_sub' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TransitiveFirstEnergy.first_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
-        "'TournamentHamiltonian.diamondFree_sign_principal_det' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'TournamentHamiltonian.diamondFree_sign_principal_det' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'actual_small_diamond_component_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; actual diamond estimates and R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. Complete ordered SCC matrix reconstruction and the final unconditional sixth-deficit bound/R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied."
 }

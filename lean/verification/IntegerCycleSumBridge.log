@@ -1,0 +1,9 @@
+IntegerCycleSumBridge.lean:13:0: warning: automatically included section variable(s) unused in theorem `IntegerCycleSumBridge.directed_card_as_sum`:
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'IntegerCycleSumBridge.cycleSum_eq_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegerCycleSumBridge.cycleSum_of_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'IntegerCycleSumBridge.three_diamonds_le_cycleSum' depends on axioms: [propext, Classical.choice, Quot.sound]

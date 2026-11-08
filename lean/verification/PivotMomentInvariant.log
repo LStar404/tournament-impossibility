@@ -1,0 +1,2 @@
+'PivotMomentInvariant.power_norm_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

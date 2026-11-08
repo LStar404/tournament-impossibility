@@ -12,3 +12,7 @@ graph's diamond count, does not derive h≤n/2 from small D, and does not prove 
 The scalar D remains an arbitrary real parameter constrained by the theorem's
 stated hypothesis. Do not describe this endpoint as an unconditional
 small-diamond theorem or as a completed determinant/spectral gap estimate.
+
+## Subsequent graph-count and SCC bounds
+
+DiamondTriangleIncidence and TriangleCountBridge now supply actual unordered diamond/triangle counting identities and D≤(n−3)t. SmallDiamondComponentReduction supplies a source switch with actual maximum reachability-SCC size h≤12D/n and 2h≤n under n≥4, 0<D and 24D≤n², and PivotMomentInvariant proves actual sixth-moment invariance. The ordered full-matrix SCC join reconstruction and assembly of the unconditional final sixth-deficit bound remain unproved; R is not claimed.

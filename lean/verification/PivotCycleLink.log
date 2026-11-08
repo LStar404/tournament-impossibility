@@ -1,0 +1,69 @@
+PivotCycleLink.lean:19:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.switched_diamond_iff`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:29:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.move_second`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:34:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.move_third`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:39:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.move_fourth`:
+  [Fintype V]
+  [DecidableEq V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] [DecidableEq V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:63:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.source_quad_cycle`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:86:40: warning: This simp argument is unused:
+  Ne.symm hdist.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hdist.1, hdist.2.1, hdist.2.2.1, Ne.symm hdist.2.1, Ne.symm hdist.2.2.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PivotCycleLink.lean:86:56: warning: This simp argument is unused:
+  Ne.symm hdist.2.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hdist.1, hdist.2.1, hdist.2.2.1, Ne.symm hdist.1, Ne.symm hdist.2.2.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PivotCycleLink.lean:86:74: warning: This simp argument is unused:
+  Ne.symm hdist.2.2.1
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hdist.1, hdist.2.1, hdist.2.2.1, Ne.symm hdist.1, Ne.symm hdist.2.1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PivotCycleLink.lean:94:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.source_cycle_insert_diamond`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PivotCycleLink.lean:140:0: warning: automatically included section variable(s) unused in theorem `PivotCycleLink.cyclic_avoids_source`:
+  [Fintype V]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype V] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'PivotCycleLink.cycle_count_eq_link' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PivotCycleLink.exists_pivot_few_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PivotCycleLink.exists_pivot_total_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]

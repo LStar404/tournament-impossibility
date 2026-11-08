@@ -1,0 +1,1 @@
+'SmallDiamondPivotReduction.exists_pivot' depends on axioms: [propext, Classical.choice, Quot.sound]

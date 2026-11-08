@@ -1,0 +1,8 @@
+'actual_small_diamond_component_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SmallDiamondComponentReduction.exists_small_components' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PivotCycleLink.exists_pivot_total_cycles' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentComponentBlocks.component_size_le_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

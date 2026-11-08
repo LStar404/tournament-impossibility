@@ -1,0 +1,4 @@
+'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TriangleCountBridge.real_cycleCount_eq_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TriangleCountBridge.three_diamonds_le_ordered' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TriangleCountBridge.source_energy_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]

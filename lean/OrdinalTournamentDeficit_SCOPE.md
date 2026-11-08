@@ -24,3 +24,7 @@ from this module alone.
 
 The reference block join is subsequently normalized to a single T_n in the
 separate OrdinalTransitiveReference layer if that layer is verified.
+
+## Subsequent graph-count and SCC bounds
+
+DiamondTriangleIncidence and TriangleCountBridge now supply actual unordered diamond/triangle counting identities and D≤(n−3)t. SmallDiamondComponentReduction supplies a source switch with actual maximum reachability-SCC size h≤12D/n and 2h≤n under n≥4, 0<D and 24D≤n², and PivotMomentInvariant proves actual sixth-moment invariance. The ordered full-matrix SCC join reconstruction and assembly of the unconditional final sixth-deficit bound remain unproved; R is not claimed.

@@ -1,3 +1,4 @@
+import SmallDiamondGraphEndpoint
 import DiamondFreePathAverage
 import GlobalSixthDeficitEndpoint
 import ActualPathConvolution
@@ -437,3 +438,10 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
   NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents o h
 #print axioms NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents
 #print axioms TournamentHamiltonian.diamondFree_sign_principal_det
+
+/-! Actual graph count and actual SCCs after a proved source switch. -/
+#print axioms actual_small_diamond_component_bound
+#print axioms DiamondTriangleIncidence.diamonds_le_triangles
+#print axioms TriangleCountBridge.ordered_eq_three_unordered
+#print axioms TournamentComponentBlocks.induced_strong
+#print axioms PivotMomentInvariant.sixth_eq

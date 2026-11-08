@@ -1,0 +1,19 @@
+OrdinalTriangleAdditivity.lean:20:4: warning: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, TwoBlockEnergy.join, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂,
+    Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, sum_add_distrib, show (-1 : ℝ) ≠ 1 by norm_num, false_and,
+    and_false, true_and, and_true, ite_false, ite_true, sum_const_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+OrdinalTriangleAdditivity.lean:21:15: warning: This simp argument is unused:
+  ite_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, TwoBlockEnergy.join, Matrix.fromBlocks_apply₁₁, Matrix.fromBlocks_apply₁₂,
+    Matrix.fromBlocks_apply₂₁, Matrix.fromBlocks_apply₂₂, sum_add_distrib, show (-1 : ℝ) ≠ 1 by norm_num,
+    eq_self_iff_true, false_and, and_false, true_and, and_true, ite_false, sum_const_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'OrdinalTriangleAdditivity.cycleSum_tournament_ordinal' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,27 @@
+TournamentComponentBlocks.lean:26:7: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentComponentBlocks.lean:26:9: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentComponentBlocks.lean:27:7: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentComponentBlocks.lean:27:9: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentComponentBlocks.induced_cycleCount_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentComponentBlocks.component_size_le_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]
