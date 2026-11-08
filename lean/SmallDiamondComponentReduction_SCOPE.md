@@ -16,3 +16,10 @@ matrix, the final unconditional sixth-deficit lower bound, or R. The finite
 component order and induced strong blocks are verified separately, but the
 remaining ordered-join reconstruction must be explicitly proved before
 applying the ordinal sixth-deficit theorem to every input tournament.
+
+## Subsequent bridge
+
+The formerly outstanding ordered-join reconstruction is now proved in
+`TournamentOrdinalReconstruction.lean`, and `ActualSmallDiamondSixth.actual_small`
+uses it to derive the actual finite sixth-deficit bound under `n >= 4`, `D > 0`,
+and `24*D <= n^2`. This does not close the analytic Condition R proof.

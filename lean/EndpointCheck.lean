@@ -1,3 +1,4 @@
+import ActualSmallDiamondSixth
 import SmallDiamondGraphEndpoint
 import DiamondFreePathAverage
 import GlobalSixthDeficitEndpoint
@@ -445,3 +446,6 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms TriangleCountBridge.ordered_eq_three_unordered
 #print axioms TournamentComponentBlocks.induced_strong
 #print axioms PivotMomentInvariant.sixth_eq
+
+#print axioms ActualSmallDiamondSixth.actual_small
+#print axioms TournamentOrdinalReconstruction.cycleCount_sum

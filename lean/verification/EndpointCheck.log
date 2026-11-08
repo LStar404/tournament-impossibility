@@ -121,3 +121,5 @@
 'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]
 'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
 'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualSmallDiamondSixth.actual_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentOrdinalReconstruction.cycleCount_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

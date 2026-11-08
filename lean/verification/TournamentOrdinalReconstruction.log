@@ -1,0 +1,41 @@
+TournamentOrdinalReconstruction.lean:32:7: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentOrdinalReconstruction.lean:32:9: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentOrdinalReconstruction.lean:33:7: warning: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentOrdinalReconstruction.lean:33:9: warning: Variable name `j` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentOrdinalReconstruction.lean:40:11: warning: Variable name `v` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _v
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+TournamentOrdinalReconstruction.lean:41:12: warning: Variable name `v` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _v
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'TournamentOrdinalReconstruction.entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentOrdinalReconstruction.sum_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentOrdinalReconstruction.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentOrdinalReconstruction.block_strong' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentOrdinalReconstruction.cycleCount_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

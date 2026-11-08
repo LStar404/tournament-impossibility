@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T21:47:17.155028+00:00",
+  "checked_at_utc": "2026-11-08T22:04:33.347029+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -103,6 +103,7 @@
     "TournamentComponentBlocks",
     "PivotMomentInvariant",
     "TournamentEnergySeries",
+    "TournamentOrdinalReconstruction",
     "OrdinalTournamentDeficit",
     "ResolventSeriesIdentity",
     "SmallDiamondPivotReduction",
@@ -110,6 +111,7 @@
     "OrdinalGlobalSixthDeficit",
     "SmallDiamondComponentReduction",
     "TournamentEnergyRowDomain",
+    "ActualSmallDiamondSixth",
     "GlobalSixthDeficitEndpoint",
     "OnesEnergyEndpoint",
     "SmallDiamondGraphEndpoint",
@@ -1155,6 +1157,19 @@
       ]
     },
     {
+      "module": "TournamentOrdinalReconstruction",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "36f4de7c441e9828a30d2d1962923af4ecb3eef1391efed9ad8635bc36f910d8",
+      "axiom_reports": [
+        "'TournamentOrdinalReconstruction.entry' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentOrdinalReconstruction.sum_sizes' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentOrdinalReconstruction.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentOrdinalReconstruction.block_strong' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentOrdinalReconstruction.cycleCount_sum' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "OrdinalTournamentDeficit",
       "exit_code": 0,
       "passed": true,
@@ -1221,6 +1236,15 @@
       "axiom_reports": [
         "'TournamentEnergyRowDomain.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentEnergyRowDomain.source_series_at_inverse_square' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ActualSmallDiamondSixth",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "54e13704fc25cf2ce1e89aece793648c310390c3a9f1636454a7a759d37acf5e",
+      "axiom_reports": [
+        "'ActualSmallDiamondSixth.actual_small' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1300,7 +1324,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "35eaa3ba6991dab24f9fda800ee7da116203ef91e028b2f0f0a40359d9b2a449",
+      "source_sha256": "93144f6dcc2123d23aa3916cd425c1e6aa2833dd9d63a0815125b900d8ace784",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -1416,9 +1440,11 @@
         "'DiamondTriangleIncidence.diamonds_le_triangles' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TriangleCountBridge.ordered_eq_three_unordered' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentComponentBlocks.induced_strong' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'PivotMomentInvariant.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualSmallDiamondSixth.actual_small' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentOrdinalReconstruction.cycleCount_sum' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. Complete ordered SCC matrix reconstruction and the final unconditional sixth-deficit bound/R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied."
 }
