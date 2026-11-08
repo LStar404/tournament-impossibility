@@ -31,3 +31,7 @@ This bridge does not itself identify cyclic triangle counts with
 (e_i^0−e_i)/8, prove the transitive closed-form e_i^0, establish the small-diamond
 counting estimates, prove the final small-deficit spectral bound, or prove R.
 It also does not construct a general formal log-determinant API.
+
+## Subsequent actual global-reference deficit
+
+TransitiveFirstEnergy proves the reference energy closed form; TournamentSourceEnergy proves the actual directed-cycle-count source deficit (cycleCount/3). OrdinalGlobalSixthDeficit supplies the actual single T_n reference sixth-deficit formula. Its small-block 6n²D bound still assumes the stated block-size and D-versus-triangle conditions; it does not prove them for the actual diamond count or establish R.

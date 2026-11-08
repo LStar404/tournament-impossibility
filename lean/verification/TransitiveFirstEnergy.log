@@ -1,0 +1,2 @@
+'TransitiveFirstEnergy.first_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TransitiveFirstEnergy.action_sum_sq' depends on axioms: [propext, Classical.choice, Quot.sound]

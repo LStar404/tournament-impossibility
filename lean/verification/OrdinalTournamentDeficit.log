@@ -1,0 +1,6 @@
+OrdinalTournamentDeficit.lean:24:2: warning: Unused tactic linter: `change
+  TwoBlockEnergy.second (matrix B) ≤ TwoBlockEnergy.second (TransitiveOrbit.T n)` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'OrdinalTournamentDeficit.actual_deficit_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalTournamentDeficit.conditional_small_deficit' depends on axioms: [propext, Classical.choice, Quot.sound]

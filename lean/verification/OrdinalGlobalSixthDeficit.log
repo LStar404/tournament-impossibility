@@ -1,0 +1,2 @@
+'OrdinalGlobalSixthDeficit.actual_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalGlobalSixthDeficit.conditional_small' depends on axioms: [propext, Classical.choice, Quot.sound]

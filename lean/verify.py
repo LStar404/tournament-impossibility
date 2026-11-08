@@ -19,20 +19,20 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'SignedVectorOrbit', 'SignedCycleOnes', 'ZigzagOnes', 'ReferenceOnesOrbit', 'TournamentEnergySeries', 'TournamentEnergyConvergence', 'TournamentEnergyRowDomain', 'OnesEnergyEndpoint', 'TournamentGramGeometric', 'ResolventSeriesIdentity', 'TournamentSourceResolvent', 'SourceResolventEndpoint', 'OrdinalSixthPolynomial', 'OrdinalSixthPolynomialEndpoint', 'TwoBlockEnergy', 'RectangularFrobenius', 'TwoBlockCubeGeneric', 'TwoBlockSixthMoment', 'OrdinalMomentRecurrence', 'OrdinalBlockMatrix', 'OrdinalSixthMatrixBridge', 'OrdinalSixthMatrixEndpoint', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'SignedVectorOrbit', 'SignedCycleOnes', 'ZigzagOnes', 'ReferenceOnesOrbit', 'TournamentEnergySeries', 'TournamentEnergyConvergence', 'TournamentEnergyRowDomain', 'OnesEnergyEndpoint', 'TournamentGramGeometric', 'ResolventSeriesIdentity', 'TournamentSourceResolvent', 'SourceResolventEndpoint', 'OrdinalSixthPolynomial', 'OrdinalSixthPolynomialEndpoint', 'TwoBlockEnergy', 'RectangularFrobenius', 'TwoBlockCubeGeneric', 'TwoBlockSixthMoment', 'OrdinalMomentRecurrence', 'OrdinalBlockMatrix', 'OrdinalSixthMatrixBridge', 'OrdinalSixthMatrixEndpoint', 'TournamentHamiltonian.Packing', 'TournamentHamiltonian.Definitions', 'TournamentHamiltonian.PositiveDeterminant', 'TournamentHamiltonian.Hadamard', 'TournamentHamiltonian.Orientation', 'TournamentHamiltonian.PathConvolution', 'TournamentHamiltonian.PathConvolutionCoefficients', 'TournamentHamiltonian.PathConvolutionGenerating', 'ActualPathConvolution', 'TransitiveFirstEnergy', 'TournamentSourceEnergy', 'SmallBlockSixthEstimate', 'OrdinalTournamentDeficit', 'OrdinalTransitiveReference', 'OrdinalGlobalSixthDeficit', 'GlobalSixthDeficitEndpoint', 'EndpointCheck',
 ]
 
 
 def dependency_order(modules):
     pending = list(modules)
     for name in pending:
-        if not (ROOT / (name + '.lean')).is_file():
+        if not (ROOT / (name.replace('.', '/') + '.lean')).is_file():
             raise FileNotFoundError('Missing delivered module: ' + name)
     remaining, ordered = set(pending), []
     while remaining:
         ready = sorted(name for name in remaining if not (
-            set(re.findall(r'^import\s+(\w+)\s*$',
-                           (ROOT / (name + '.lean')).read_text(encoding='utf-8'), re.M))
+            set(re.findall(r'^import\s+([\w.]+)\s*$',
+                           (ROOT / (name.replace('.', '/') + '.lean')).read_text(encoding='utf-8'), re.M))
             & remaining))
         if not ready:
             raise RuntimeError('Cyclic local imports')
@@ -44,7 +44,7 @@ def dependency_order(modules):
 def compile_module(name, logdir):
     log = logdir / (name + '.log')
     with open(log, 'w', encoding='utf-8') as handle:
-        proc = subprocess.run([str(LEAN), '-o', name + '.olean', name + '.lean'],
+        proc = subprocess.run([str(LEAN), '-o', name.replace('.', '/') + '.olean', name.replace('.', '/') + '.lean'],
                               cwd=ROOT, env=lean_env(),
                               stdout=handle, stderr=subprocess.STDOUT)
     output = log.read_text(encoding='utf-8')
@@ -65,7 +65,7 @@ def main():
             'module': name,
             'exit_code': code,
             'passed': passed,
-            'source_sha256': hashlib.sha256((ROOT / (name + '.lean')).read_bytes()).hexdigest(),
+            'source_sha256': hashlib.sha256((ROOT / (name.replace('.', '/') + '.lean')).read_bytes()).hexdigest(),
             'axiom_reports': re.findall(r"'[^'\n]+' depends on axioms:\s*\[[^\]]*\]", output, re.S),
         })
         print(f'{name}: {"PASS" if passed else "FAIL"}', flush=True)
@@ -105,7 +105,7 @@ def main():
                   'small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit '
                   'identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy '
                   'series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 '
-                  'for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. Triangle-count identities, small-diamond estimates and R remain outside scope.'),
+                  'for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; actual diamond estimates and R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; zero-diamond two-permanent averaging is not proved.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

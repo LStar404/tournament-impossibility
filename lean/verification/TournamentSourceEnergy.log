@@ -1,0 +1,2 @@
+'TournamentSourceEnergy.eight_cycleCount' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceEnergy.first_eq_reference_sub' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'OrdinalTransitiveReference.entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalTransitiveReference.power_frobenius_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OrdinalTransitiveReference.sixth_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

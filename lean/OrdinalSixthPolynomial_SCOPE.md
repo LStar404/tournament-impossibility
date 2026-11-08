@@ -38,3 +38,7 @@ logs. No new axioms, sorry, or admits are introduced.
 ## Subsequent actual matrix bridge
 
 OrdinalSixthMatrixBridge now proves that 6 times this coefficient polynomial equals the actual squared Frobenius norm of the cube of the ordered block matrix, for all finite families of real skew blocks, via proved two-block recurrences. No determinant identity is assumed. This closes the actual sixth-moment identification but does not establish triangle-count identities, small-diamond counting estimates or R.
+
+## Subsequent actual global-reference deficit
+
+TransitiveFirstEnergy proves the reference energy closed form; TournamentSourceEnergy proves the actual directed-cycle-count source deficit (cycleCount/3). OrdinalGlobalSixthDeficit supplies the actual single T_n reference sixth-deficit formula. Its small-block 6n²D bound still assumes the stated block-size and D-versus-triangle conditions; it does not prove them for the actual diamond count or establish R.

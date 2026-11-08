@@ -1,3 +1,5 @@
+import GlobalSixthDeficitEndpoint
+import ActualPathConvolution
 import OrdinalSixthMatrixEndpoint
 import OrdinalSixthPolynomialEndpoint
 import SourceResolventEndpoint
@@ -412,3 +414,14 @@ example (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
 #print axioms actual_ordinal_sixth_expanded
 #print axioms OrdinalSixthMatrixBridge.actual_sixth_coefficient
 #print axioms TwoBlockSixthMoment.third_join
+
+/-! Actual path count, exact S1 normalization. No zero-diamond averaging claim. -/
+#print axioms NonAlgebraicity.hamiltonianPathCount_convolution
+#print axioms TournamentHamiltonian.actual_path_convolution_even_subsets
+#print axioms NonAlgebraicity.pathCount_asPathTournament
+
+/-! Actual global-reference sixth deficit; diamond/count hypotheses remain explicit. -/
+#print axioms global_sixth_deficit_expanded
+#print axioms OrdinalGlobalSixthDeficit.conditional_small
+#print axioms TournamentSourceEnergy.first_eq_reference_sub
+#print axioms TransitiveFirstEnergy.first_closed_form
