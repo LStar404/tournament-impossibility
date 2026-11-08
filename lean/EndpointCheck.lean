@@ -1,3 +1,4 @@
+import DiamondFreePathAverage
 import GlobalSixthDeficitEndpoint
 import ActualPathConvolution
 import OrdinalSixthMatrixEndpoint
@@ -425,3 +426,14 @@ example (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
 #print axioms OrdinalGlobalSixthDeficit.conditional_small
 #print axioms TournamentSourceEnergy.first_eq_reference_sub
 #print axioms TransitiveFirstEnergy.first_closed_form
+
+/-! Literal zero diamond count, original path function, exact finite normalization. -/
+example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
+    (h : (TournamentHamiltonian.asDiamondTournament (NonAlgebraicity.asPathTournament o)).diamonds.card = 0) :
+    ((2 : ℝ)^n * (NonAlgebraicity.hamiltonianPathCount o : ℝ)) / ((n+1).factorial : ℝ) =
+      (((TournamentHamiltonian.pathWeightMatrix (NonAlgebraicity.asPathTournament o))+1).permanent +
+        ((TournamentHamiltonian.pathWeightMatrix (NonAlgebraicity.asPathTournament o))-1).permanent) /
+        (2*((n+1).factorial : ℝ)) :=
+  NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents o h
+#print axioms NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents
+#print axioms TournamentHamiltonian.diamondFree_sign_principal_det

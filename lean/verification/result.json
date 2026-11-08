@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T21:13:30.235451+00:00",
+  "checked_at_utc": "2026-11-08T21:31:51.447005+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -55,6 +55,7 @@
     "TournamentHamiltonian.Orientation",
     "TournamentHamiltonian.PathConvolutionCoefficients",
     "TournamentHamiltonian.PositiveDeterminant",
+    "TournamentHamiltonian.TransitiveDeterminant",
     "TransitiveFirstEnergy",
     "ColorCutNormalization",
     "ColorTargetModels",
@@ -75,14 +76,17 @@
     "QRegularRationalLimit",
     "SelectedTournamentMajorization",
     "TournamentHamiltonian.PathConvolution",
+    "DiamondFreeDeterminant",
     "IteratedVectorMajorization",
     "TournamentHamiltonian.PathConvolutionGenerating",
     "VectorMajorizationEndpoint",
     "ZeroDiamondRepair",
     "ActualPathConvolution",
     "KMatrixIdentification",
+    "PermanentDiagonalExpansion",
     "TournamentPowerComparison",
     "BasisReference",
+    "DiamondFreePathAverage",
     "TournamentSourceEnergy",
     "ReferenceMomentComparison",
     "ReferenceMomentEndpoint",
@@ -648,6 +652,13 @@
       "axiom_reports": []
     },
     {
+      "module": "TournamentHamiltonian.TransitiveDeterminant",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e507f222af5459ce3f96b55c95b5d84c99e34f70305bbcd48e5d8b416623c320",
+      "axiom_reports": []
+    },
+    {
       "module": "TransitiveFirstEnergy",
       "exit_code": 0,
       "passed": true,
@@ -865,6 +876,13 @@
       "axiom_reports": []
     },
     {
+      "module": "DiamondFreeDeterminant",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "589c1f3acd2c71e6f526125adaa74458303c41be0b848d1ee2f9aa02e97103fc",
+      "axiom_reports": []
+    },
+    {
       "module": "IteratedVectorMajorization",
       "exit_code": 0,
       "passed": true,
@@ -924,6 +942,13 @@
       ]
     },
     {
+      "module": "PermanentDiagonalExpansion",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9e6e562662b7b5ed91b44f9dddf4bf77e7bb1d098de4328b411d5324244d4598",
+      "axiom_reports": []
+    },
+    {
       "module": "TournamentPowerComparison",
       "exit_code": 0,
       "passed": true,
@@ -941,6 +966,13 @@
       "axiom_reports": [
         "'BasisReference.sortedPad_basis_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
+    },
+    {
+      "module": "DiamondFreePathAverage",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b449edd2b2ed4691b5453c0a01bd53cae316ae38660536303703bac9fe1a7e31",
+      "axiom_reports": []
     },
     {
       "module": "TournamentSourceEnergy",
@@ -1105,7 +1137,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "63a52dee4d12443cc151da499e19de5ea8abd413f599543152981ab5a6876e93",
+      "source_sha256": "6b356e591eb006890f9cb136cbccb1bb557f68519798efdb732e0ed46588bc61",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -1214,9 +1246,11 @@
         "'global_sixth_deficit_expanded' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'OrdinalGlobalSixthDeficit.conditional_small' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentSourceEnergy.first_eq_reference_sub' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'TransitiveFirstEnergy.first_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'TransitiveFirstEnergy.first_closed_form' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.zero_diamonds_hamiltonianPathCount_two_permanents' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'TournamentHamiltonian.diamondFree_sign_principal_det' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; actual diamond estimates and R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; zero-diamond two-permanent averaging is not proved."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; actual diamond estimates and R remain outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied."
 }

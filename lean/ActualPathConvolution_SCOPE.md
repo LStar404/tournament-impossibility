@@ -20,9 +20,9 @@ In particular the generic arbitrary-real-matrix endpoint `complement_det_per_con
 
 The older positive adjacency convolution is a different normalization; the new file explicitly bridges to the supplement's `J+S` normalization rather than conflating them.
 
-## Not yet covered
+## Subsequent zero-diamond completion
 
-The zero-diamond *two-permanent average* is NOT an endpoint of this batch. It still requires formal proof that every even principal sign minor of a diamond-free tournament has determinant one, plus the diagonal-permanent subset expansion/parity average. The general S1 theorem does not remove these obligations. Nor does this batch prove R, asymptotic recovery, or global classification.
+DiamondFreeDeterminant and PermanentDiagonalExpansion now establish the actual even-principal-minor value one and diagonal permanent subset expansion/parity average. DiamondFreePathAverage combines them with S1 for the original main-paper path count under the literal zero unordered-diamond count, without assuming those identities. This finite two-permanent average does not prove asymptotic recovery, classification or R.
 
 ## Build
 
