@@ -1,0 +1,14 @@
+SignedCycleOnes.lean:23:24: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+SignedCycleOnes.lean:21:25: warning: This simp argument is unused:
+  finRotate_last
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [epsilon, step, show ¬d < k by omega]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'SignedCycleOnes.J_power_ones' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SignedCycleOnes.J_power_sum_sq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SignedCycleOnes.transitive_step_sum_sq' depends on axioms: [propext, Classical.choice, Quot.sound]

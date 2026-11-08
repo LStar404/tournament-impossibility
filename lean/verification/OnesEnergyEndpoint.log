@@ -1,0 +1,5 @@
+'actual_source_power_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'actual_source_series_small' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReferenceOnesOrbit.Q_ones_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ReferenceOnesOrbit.ones_orbit_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'actual_source_series_natural' depends on axioms: [propext, Classical.choice, Quot.sound]

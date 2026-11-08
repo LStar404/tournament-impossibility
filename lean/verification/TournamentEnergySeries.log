@@ -1,0 +1,3 @@
+'TournamentEnergySeries.energy_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentEnergySeries.finite_source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentEnergySeries.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]

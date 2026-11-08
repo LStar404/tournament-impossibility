@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'SignedVectorOrbit', 'SignedCycleOnes', 'ZigzagOnes', 'ReferenceOnesOrbit', 'TournamentEnergySeries', 'TournamentEnergyConvergence', 'TournamentEnergyRowDomain', 'OnesEnergyEndpoint', 'EndpointCheck',
 ]
 
 
@@ -102,7 +102,10 @@ def main():
                   'weak majorization, independently checked from raw matrix entries. '
                   'ReferenceMomentComparison supplies the concrete K-square conjugacy and all '
                   'nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, '
-                  'the all-ones orbit, small-defect sixth-order identities and Condition R are not proved.'),
+                  'small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit '
+                  'identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy '
+                  'series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 '
+                  'for n>0 without a Summable premise. Resolvent identification remains outside scope.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

@@ -10,3 +10,7 @@ Scope boundary: this concrete square identity is an input to nonnegative-integer
 
 Included in full `verify.py`, `lakefile.toml`, and the raw-matrix independent
 `ReferenceMomentEndpoint.lean`/`EndpointCheck.lean` audits.
+
+## Subsequent all-ones and source-energy result
+
+ReferenceOnesOrbit now proves the actual all-ones reference orbit. TournamentEnergyRowDomain proves convergence and source-energy series comparison for real q≥0 with q*(n−1)²<1 (truncated natural n−1), including q=1/n² for n>0 without a summability premise. These later modules supersede the corresponding earlier exclusions, but do not identify a resolvent or establish small-defect sixth-order identities or Condition R.

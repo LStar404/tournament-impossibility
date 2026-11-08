@@ -1,3 +1,4 @@
+import OnesEnergyEndpoint
 import ReferenceMomentEndpoint
 import VectorMajorizationEndpoint
 import MajorizationCone
@@ -371,3 +372,15 @@ example (n r : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
 #print axioms ReferenceMomentComparison.reference_column_norm
 #print axioms ReferenceMomentComparison.frobenius_all_powers
 #print axioms actual_all_integer_moments
+
+/-! Raw entries and explicit natural q, with convergence proved, not assumed. -/
+example (n : ℕ) (hn : 0 < n) (A : Matrix (Fin n) (Fin n) ℝ)
+    (hskew : ∀ i j, A i j = -A j i)
+    (hunit : ∀ i j, i ≠ j → A i j = 1 ∨ A i j = -1) :
+    (∑' r : ℕ, (1/(n : ℝ)^2)^r*(∑ i, ((A^(r+1)).mulVec (fun _ => (1:ℝ)) i)^2)) ≤
+      ∑' r : ℕ, (1/(n : ℝ)^2)^r*(∑ i, ((TransitiveOrbit.T n ^ (r+1)).mulVec (fun _ => (1:ℝ)) i)^2) :=
+  actual_source_series_natural n hn A hskew hunit
+#print axioms actual_source_power_energy
+#print axioms actual_source_series_natural
+#print axioms TournamentEnergyRowDomain.source_summable
+#print axioms TournamentEnergyRowDomain.source_series_le

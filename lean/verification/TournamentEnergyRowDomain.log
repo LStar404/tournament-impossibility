@@ -1,0 +1,2 @@
+'TournamentEnergyRowDomain.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentEnergyRowDomain.source_series_at_inverse_square' depends on axioms: [propext, Classical.choice, Quot.sound]

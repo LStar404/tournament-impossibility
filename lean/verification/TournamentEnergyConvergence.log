@@ -1,0 +1,8 @@
+TournamentEnergyConvergence.lean:12:5: warning: Variable name `hM` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hM
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'TournamentEnergyConvergence.source_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentEnergyConvergence.source_series_le_small' depends on axioms: [propext, Classical.choice, Quot.sound]
