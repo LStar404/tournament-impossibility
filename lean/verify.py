@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'EndpointCheck',
 ]
 
 
@@ -91,7 +91,9 @@ def main():
                   'extended by ColorCutNormalization to arbitrary color words. ColorTargetModels '
                   'supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation '
                   'constructs a color-word representation from the actual zero diamond count; '
-                  'positive-diamond repair and Condition R remain outside this result. '
+                  'ZeroDiamondRepair exports original-tournament finite differing-edge bounds '
+                  'to independent carousel/doubling targets for D=0. Positive-diamond '
+                  'repair and Condition R remain outside this result. '
                   'DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; '
                   'this does not imply Condition R.'),
     }

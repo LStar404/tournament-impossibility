@@ -67,3 +67,13 @@ propext, Classical.choice and Quot.sound; the enumeration dependency has two
 additional audited endpoints with the same standard axiom set.
 No sorry/admit, new mathematical axiom, unsafe proof or external oracle.
 Integrated into full `verify.py`, `lakefile.toml`, and `EndpointCheck.lean`.
+
+## Subsequent combined endpoint
+
+`ZeroDiamondRepair.lean`, using `FiniteGraphEditTransport.lean`, now combines
+this representation with all verified repair and target bridges. Its endpoints
+start directly from the original finite tournament and D=0, and give actual
+finite differing-edge bounds to the independent carousel/doubling targets in
+terms of the original squared row-sum energy. No color-word, normalization,
+or target-identification premise remains in those endpoints. Positive-D repair
+and the complete condition R remain outside the result.

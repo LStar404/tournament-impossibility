@@ -1,0 +1,5 @@
+'ZeroDiamondRepair.zero_diamond_odd_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZeroDiamondRepair.zero_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZeroDiamondRepair.represented_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZeroDiamondRepair.flatDoubling_eq_paired' depends on axioms: [propext, Classical.choice, Quot.sound]

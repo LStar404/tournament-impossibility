@@ -1,0 +1,4 @@
+'ColorTransport.restrictNatEquiv' depends on axioms: [propext, Quot.sound]
+'ColorTransport.finiteMismatch_reindex_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.finiteMismatch_nat_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.finiteMismatch_nat_identity' depends on axioms: [propext, Classical.choice, Quot.sound]

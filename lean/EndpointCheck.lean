@@ -1,3 +1,5 @@
+import ZeroDiamondRepair
+import FiniteGraphEditTransport
 import DiamondFreeRepresentation
 import TournamentColorEnumeration
 import ColorCutNormalization
@@ -253,3 +255,28 @@ example {V : Type*} [Fintype V] [DecidableEq V] (T : DiamondGap.Tournament V)
 #print axioms DiamondFreeRepresentation.exists_transitive_switch
 #print axioms DiamondFreeRepresentation.diamondFree_color_representation
 #print axioms DiamondFreeRepresentation.zero_diamonds_color_representation
+
+/-! Original-tournament D=0 edit endpoints: actual finite mismatch count and
+original squared row-sum energy, with no residual word/target premise. -/
+example {V : Type*} [Fintype V] [DecidableEq V] (T : DiamondGap.Tournament V)
+    (hD : T.diamonds.card = 0) (k : ℕ) (hN : Fintype.card V = 2*k+1) :
+    ∃ e : Fin (2*k+1) ≃ V,
+      ((ColorTransport.finiteMismatch (2*k+1) (fun i j => (T.S (e i) (e j) : ℝ))
+        (fun i j => ColorTransport.carouselMatrix k i j)).card : ℝ) ≤
+        ZeroDiamondRepair.tournamentEnergy T / 8 :=
+  ZeroDiamondRepair.zero_diamond_odd_repair T hD k hN
+
+example {V : Type*} [Fintype V] [DecidableEq V] (T : DiamondGap.Tournament V)
+    (hD : T.diamonds.card = 0) (k : ℕ) (hN : Fintype.card V = 2*k) :
+    ∃ (baseWord : List Bool) (e : Fin (2*k) ≃ V), baseWord.length = k ∧
+      ((ColorTransport.finiteMismatch (2*k) (fun i j => (T.S (e i) (e j) : ℝ))
+        (ZeroDiamondRepair.flatDoubling k (ColorTransport.colorGraph baseWord))).card : ℝ) ≤
+        (ZeroDiamondRepair.tournamentEnergy T - Fintype.card V) / 16 :=
+  ZeroDiamondRepair.zero_diamond_even_repair T hD k hN
+
+#print axioms ColorTransport.finiteMismatch_reindex_card
+#print axioms ColorTransport.finiteMismatch_nat_restriction
+#print axioms ZeroDiamondRepair.represented_energy
+#print axioms ZeroDiamondRepair.flatDoubling_eq_paired
+#print axioms ZeroDiamondRepair.zero_diamond_odd_repair
+#print axioms ZeroDiamondRepair.zero_diamond_even_repair

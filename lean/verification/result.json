@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T17:14:30.788195+00:00",
+  "checked_at_utc": "2026-11-08T17:24:59.574169+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -29,12 +29,14 @@
     "ColorCutNormalization",
     "ColorTargetModels",
     "Corollaries",
+    "FiniteGraphEditTransport",
     "RationalSeriesLimit",
     "Remainder",
     "TournamentColorEnumeration",
     "DiamondFreeRepresentation",
     "QRegularApplications",
     "QRegularRationalLimit",
+    "ZeroDiamondRepair",
     "EndpointCheck"
   ],
   "all_delivered_modules_checked": true,
@@ -347,6 +349,18 @@
       ]
     },
     {
+      "module": "FiniteGraphEditTransport",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "6191b27f9ce700b8014e16cabeb58b65744b618dfee6f2a3c05e3f63ed57e7bc",
+      "axiom_reports": [
+        "'ColorTransport.restrictNatEquiv' depends on axioms: [propext, Quot.sound]",
+        "'ColorTransport.finiteMismatch_reindex_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.finiteMismatch_nat_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.finiteMismatch_nat_identity' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "RationalSeriesLimit",
       "exit_code": 0,
       "passed": true,
@@ -416,10 +430,23 @@
       ]
     },
     {
+      "module": "ZeroDiamondRepair",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b0b600f5eac752480c8654d3027857b1c3e7e14c8e19b163c6e5346b8c847f91",
+      "axiom_reports": [
+        "'ZeroDiamondRepair.zero_diamond_odd_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.zero_word' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.represented_energy' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.flatDoubling_eq_paired' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "93fa6e6c3b3f3691b2fa200036a302cfa61d340aa856ea158b1919773903ffb6",
+      "source_sha256": "377ea388b6841395fa78f86c2ba714b2cedb97c472406e92518e74ae72ac6317",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -481,9 +508,15 @@
         "'DiamondFreeRepresentation.source_transitive' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeRepresentation.exists_transitive_switch' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeRepresentation.diamondFree_color_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'DiamondFreeRepresentation.zero_diamonds_color_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+        "'DiamondFreeRepresentation.zero_diamonds_color_representation' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'ColorTransport.finiteMismatch_reindex_card' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.finiteMismatch_nat_restriction' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.represented_energy' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.flatDoubling_eq_paired' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.zero_diamond_odd_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ZeroDiamondRepair.zero_diamond_even_repair' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
 }
