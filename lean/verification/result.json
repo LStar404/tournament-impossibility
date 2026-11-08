@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T16:18:30.499159+00:00",
+  "checked_at_utc": "2026-11-08T16:23:44.658822+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -14,6 +14,7 @@
     "Radial",
     "TournamentSequence",
     "Application",
+    "ColorTransportExact",
     "Evaluation",
     "Normalization",
     "QuadraticAbel",
@@ -156,6 +157,23 @@
       "source_sha256": "b945d3da58ccf0575b98e912e579e33d3548df413d77f8550c9c76c4e69596a1",
       "axiom_reports": [
         "'NonAlgebraicity.extremal_transcendental_boundary_limit' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ColorTransportExact",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "bf3c63a7b3dd6b23f250e5f8396be194c5459ffcb13ab93ea6fd289ee04e8ddd",
+      "axiom_reports": [
+        "'ColorTransport.odd_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_repair_path' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_repair_path' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.prefix_area_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.prefix_exact_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.exact_swaps' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.exact_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.area_descent' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -315,7 +333,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "ff4d1b8177784241c7edbff2b98e99f51d398a5c1737744a229a8e2aebd166b8",
+      "source_sha256": "dbe15a849d66f05998f6b6813db235ed0dd90207a19ba794fb8faf1e493e8c7d",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -347,9 +365,16 @@
         "'DiamondGap.Tournament.quad_iff_pattern' depends on axioms: [propext]",
         "'DiamondGap.Tournament.diamond_covers' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondGap.Tournament.positive_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'DiamondGap.Tournament.zero_or_gap' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'DiamondGap.Tournament.zero_or_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.area_descent' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.exact_swaps' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.exact_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.prefix_area_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.prefix_exact_minimum' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.odd_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.even_energy_repair' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound, not optimal area attainment or graph-edit bounds. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths, not the matrix or graph-edit bridge. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
 }

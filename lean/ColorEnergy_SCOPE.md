@@ -30,7 +30,7 @@ is not included in this file.
   if `(P_i,target_i)=(2k,0)` or `(2k+1,1)` at every index, then
   `Σ|P_i-target_i| ≤ ΣP_i(P_i-1)`.
 
-## Not proved here
+## Not proved within this module
 
 * The matrix row-score formula or tournament realization.
 * Deriving parity from ±1 increments (parity is explicit in the transport theorem).
@@ -46,3 +46,13 @@ The file is independent of OrderedCancellation. It adds no `axiom`,
 Compilation/audit log: `verification/ColorEnergy.log`.
 Standard Lean/mathlib logical axioms (`propext`, `Classical.choice`,
 `Quot.sound`) are distinguished from new mathematical axioms.
+
+## Subsequent formalized extension
+
+`ColorTransportExact.lean` now supplies actual input-prefix parity, explicit
+energy-optimal paired/alternating targets, minimum-distance attainment and its
+prefix-sum identity, and real color-word swap paths bounded by E/8 and e/16.
+The corresponding gaps listed above concern this module alone and are closed
+by that extension. Matrix row-score identification, graph-edge correspondence,
+full graph-edit bounds outside the word model, and R remain unproved here.
+See `ColorTransportExact_SCOPE.md` for exact statements and limits.

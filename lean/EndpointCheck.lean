@@ -1,3 +1,4 @@
+import ColorTransportExact
 import DiamondGap
 import ColorTransport
 import ColorEnergy
@@ -141,3 +142,26 @@ example {V : Type*} [DecidableEq V] [Fintype V]
 #print axioms DiamondGap.Tournament.diamond_covers
 #print axioms DiamondGap.Tournament.positive_gap
 #print axioms DiamondGap.Tournament.zero_or_gap
+
+/-! Attained color-word repair bounds; matrix identification and conversion
+of a word swap into a graph edge reversal remain separate obligations. -/
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k+1)
+    (hc : ColorTransport.charge w = 1) :
+    ∃ n, ColorTransport.Swaps n w (ColorTransport.alternatingOdd k) ∧
+      (n : ℝ) ≤ ColorTransport.wordEnergy w / 8 :=
+  ColorTransport.odd_energy_repair w k hl hc
+
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k)
+    (hc : ColorTransport.charge w = 0) :
+    ∃ n, ColorTransport.Swaps n w
+      (ColorTransport.paired (ColorTransport.repairOrient w k)) ∧
+      (n : ℝ) ≤ (ColorTransport.wordEnergy w - w.length) / 16 :=
+  ColorTransport.even_energy_repair w k hl hc
+
+#print axioms ColorTransport.area_descent
+#print axioms ColorTransport.exact_swaps
+#print axioms ColorTransport.exact_minimum
+#print axioms ColorTransport.prefix_area_identity
+#print axioms ColorTransport.prefix_exact_minimum
+#print axioms ColorTransport.odd_energy_repair
+#print axioms ColorTransport.even_energy_repair

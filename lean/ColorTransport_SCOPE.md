@@ -41,7 +41,7 @@ Thus there is no arbitrary edge/word transition admitted as a hypothesis.
   lower bound. The proof uses well-ordering of natural numbers, not an
   assumed minimum or transport-distance axiom.
 
-## Still open in Lean
+## Not proved within this module
 
 * Attaining the area lower bound; in particular, this file does NOT prove
   `minimum swaps = area = (1/2) Σ |P_i-P'_i|`.
@@ -64,3 +64,13 @@ only standard `propext`, `Classical.choice`, `Quot.sound` (some are smaller).
 No `sorry`, `admit`, new `axiom`, or unsafe declaration is introduced.
 Integrated into `lakefile.toml`, `verify.py`, and `EndpointCheck.lean`.
 Compiler/axiom log: `verification/ColorTransport.log`.
+
+## Subsequent formalized extension
+
+`ColorTransportExact.lean` now supplies actual input-prefix parity, explicit
+energy-optimal paired/alternating targets, minimum-distance attainment and its
+prefix-sum identity, and real color-word swap paths bounded by E/8 and e/16.
+The corresponding gaps listed above concern this module alone and are closed
+by that extension. Matrix row-score identification, graph-edge correspondence,
+full graph-edit bounds outside the word model, and R remain unproved here.
+See `ColorTransportExact_SCOPE.md` for exact statements and limits.
