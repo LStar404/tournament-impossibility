@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'EndpointCheck',
 ]
 
 
@@ -88,7 +88,9 @@ def main():
                   'and an area lower bound. ColorTransportExact proves attained minimum distance '
                   'and color-word energy repair paths. ColorGraphRepair supplies matrix energy '
                   'and actual finite differing-edge bounds for normalized color-word tournaments, '
-                  'not general normalization or named-target identification. '
+                  'extended by ColorCutNormalization to arbitrary color words. ColorTargetModels '
+                  'supplies independent carousel/doubling isomorphisms; no arbitrary-tournament '
+                  'or diamond-free representation theorem is established. '
                   'DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; '
                   'this does not imply Condition R.'),
     }

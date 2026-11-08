@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T16:36:04.305149+00:00",
+  "checked_at_utc": "2026-11-08T16:47:28.243360+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -26,6 +26,8 @@
     "Main",
     "MatrixPowerSeries",
     "PathCountGrowth",
+    "ColorCutNormalization",
+    "ColorTargetModels",
     "Corollaries",
     "RationalSeriesLimit",
     "Remainder",
@@ -301,6 +303,38 @@
       ]
     },
     {
+      "module": "ColorCutNormalization",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "c748087b6c3fb0489f4a8c5d2ecf23c38c15b1e96e1a1c70a92ab94561cbb356",
+      "axiom_reports": [
+        "'ColorTransport.arbitrary_odd_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.arbitrary_even_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graphEnergy_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.normalized_graph_energy_exists' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.charge_prefix_ivt' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.normalized_cut_parity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.cut_blocks_isomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.normalized_graph_exists' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ColorTargetModels",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "835f9e2fbe15c3b817c74625cdb7761789396e10b10019e6987d9fcbcb7422c7",
+      "axiom_reports": [
+        "'ColorTransport.paired_doubling_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.alternating_carousel_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.carouselIndex_eq_mod' depends on axioms: [propext, Quot.sound]",
+        "'ColorTransport.paired_is_doubling' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.pairLabelEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.alternating_is_carousel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.carouselLabelEquiv' depends on axioms: [propext, Quot.sound]",
+        "'ColorTransport.carousel_forward_distance' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "Corollaries",
       "exit_code": 0,
       "passed": true,
@@ -358,7 +392,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "ceb8203b8b78927557a648e4231c342bb3a39635ecd693eb19bfd9045ec36731",
+      "source_sha256": "c037c0439784ce8d3a3178e261ab167c3e73bb87ccdca29ee182ce35078b77dc",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -404,9 +438,17 @@
         "'ColorTransport.graph_edits_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.mismatch_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.odd_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'ColorTransport.even_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'ColorTransport.even_edit_card_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.arbitrary_odd_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.arbitrary_even_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.normalized_graph_exists' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.graphEnergy_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.paired_doubling_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.alternating_carousel_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.carousel_forward_distance' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ColorTransport.carouselIndex_eq_mod' depends on axioms: [propext, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, not general normalization or named-target identification. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms; no arbitrary-tournament or diamond-free representation theorem is established. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R."
 }

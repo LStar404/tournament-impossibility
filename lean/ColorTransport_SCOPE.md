@@ -86,3 +86,13 @@ and are superseded by that extension. Arbitrary-input normalization,
 identification with separately named carousel/doubling targets, general
 nonzero-diamond repair, and R remain outside these results.
 See `ColorGraphRepair_SCOPE.md` for precise assumptions and conventions.
+
+## Subsequent cut and target-model extensions
+
+`ColorCutNormalization.lean` extends the repair bounds to arbitrary finite
+color words by a proved ordinary cut isomorphism and energy invariance.
+`ColorTargetModels.lean` gives ordinary finite-label isomorphisms to independent
+standard carousel and doubling definitions. Earlier cut/target warnings above
+are now closed by those modules. Neither extension proves that arbitrary or
+diamond-free tournaments have color-word representations; general diamond
+repair and R remain separate obligations.

@@ -1,3 +1,5 @@
+import ColorCutNormalization
+import ColorTargetModels
 import ColorGraphRepair
 import ColorTransportExact
 import DiamondGap
@@ -193,3 +195,41 @@ example (w : List Bool) (k : ℕ) (hl : w.length = 2*k)
 #print axioms ColorTransport.mismatch_card_le
 #print axioms ColorTransport.odd_edit_card_bound
 #print axioms ColorTransport.even_edit_card_bound
+
+/-! Arbitrary color words, not arbitrary tournaments. No charge hypothesis
+is present here; no diamond-free representation theorem is assumed or proved. -/
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k+1) :
+    ∃ e : Equiv ℕ ℕ, (∀ i, e i < w.length ↔ i < w.length) ∧
+      ((ColorTransport.mismatchEdges w.length (ColorTransport.colorGraph w)
+        (ColorTransport.colorGraph (ColorTransport.alternatingOdd k)) e).card : ℝ) ≤
+        ColorTransport.graphEnergy w.length (ColorTransport.colorGraph w) / 8 :=
+  ColorTransport.arbitrary_odd_word_repair w k hl
+
+example (w : List Bool) (k : ℕ) (hl : w.length = 2*k) :
+    ∃ (orient : List Bool) (e : Equiv ℕ ℕ), orient.length = k ∧
+      (∀ i, e i < w.length ↔ i < w.length) ∧
+      ((ColorTransport.mismatchEdges w.length (ColorTransport.colorGraph w)
+        (ColorTransport.colorGraph (ColorTransport.paired orient)) e).card : ℝ) ≤
+        (ColorTransport.graphEnergy w.length (ColorTransport.colorGraph w) - w.length) / 16 :=
+  ColorTransport.arbitrary_even_word_repair w k hl
+
+example (w : List Bool) (p q : Fin w.length × Bool) :
+    ColorTransport.colorGraph (ColorTransport.paired w)
+      (ColorTransport.pairLabelEquiv w.length p) (ColorTransport.pairLabelEquiv w.length q) =
+    ColorTransport.doublingMatrix (ColorTransport.colorGraph w) p.1 p.2 q.1 q.2 :=
+  ColorTransport.paired_doubling_isomorphism w p q
+
+example (k : ℕ) (i j : Fin (2*k+1)) :
+    ColorTransport.colorGraph (ColorTransport.alternatingOdd k)
+      (ColorTransport.carouselLabelEquiv k i) (ColorTransport.carouselLabelEquiv k j) =
+    ColorTransport.carouselMatrix k i j :=
+  ColorTransport.alternating_carousel_isomorphism k i j
+
+#print axioms ColorTransport.arbitrary_odd_word_repair
+#print axioms ColorTransport.arbitrary_even_word_repair
+#print axioms ColorTransport.normalized_graph_exists
+#print axioms ColorTransport.graphEnergy_isomorphism
+#print axioms ColorTransport.paired_doubling_isomorphism
+#print axioms ColorTransport.alternating_carousel_isomorphism
+#print axioms ColorTransport.carousel_forward_distance
+#print axioms ColorTransport.carouselIndex_eq_mod

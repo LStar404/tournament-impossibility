@@ -89,3 +89,13 @@ Integrated into `lakefile.toml`, full `verify.py`, and `EndpointCheck.lean`.
 Earlier scope documents identify the matrix/edge bridges now closed.
 Final compilation on 2026-11-08 completed with exit code 0 and no warnings;
 all sixteen printed axiom lists contain only the standard logical axioms above.
+
+## Subsequent cut and target-model extensions
+
+`ColorCutNormalization.lean` extends the repair bounds to arbitrary finite
+color words by a proved ordinary cut isomorphism and energy invariance.
+`ColorTargetModels.lean` gives ordinary finite-label isomorphisms to independent
+standard carousel and doubling definitions. Earlier cut/target warnings above
+are now closed by those modules. Neither extension proves that arbitrary or
+diamond-free tournaments have color-word representations; general diamond
+repair and R remain separate obligations.

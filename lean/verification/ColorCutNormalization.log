@@ -1,0 +1,8 @@
+'ColorTransport.arbitrary_odd_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.arbitrary_even_word_repair' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.graphEnergy_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.normalized_graph_energy_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.charge_prefix_ivt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.normalized_cut_parity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.cut_blocks_isomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.normalized_graph_exists' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,8 @@
+'ColorTransport.paired_doubling_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.alternating_carousel_isomorphism' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.carouselIndex_eq_mod' depends on axioms: [propext, Quot.sound]
+'ColorTransport.paired_is_doubling' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.pairLabelEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.alternating_is_carousel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ColorTransport.carouselLabelEquiv' depends on axioms: [propext, Quot.sound]
+'ColorTransport.carousel_forward_distance' depends on axioms: [propext, Classical.choice, Quot.sound]
