@@ -2,14 +2,16 @@
 
 Handles the subset used by paper/nonalgebra_en.tex: the centred title block,
 \\section headings, display maths written as \\[...\\], and the inline markup
-commands \\textbf, \\emph, \\texttt. The Chinese paper keeps its hand-written
-Markdown, which also carries tables that this converter does not attempt.
+commands \\textbf, \\emph, \\texttt, \\path and \\url. Both current papers
+use this subset; arbitrary TeX tables are not supported.
 """
 import io
 import re
 import sys
 
 INLINE = [
+    (r'\\path\{([^{}]*)\}', r'`\1`'),
+    (r'\\url\{([^{}]*)\}', r'<\1>'),
     (r'\\texttt\{([^{}]*)\}', r'`\1`'),
     (r'\\textbf\{([^{}]*)\}', r'**\1**'),
     (r'\\emph\{([^{}]*)\}', r'*\1*'),
@@ -45,6 +47,7 @@ def main():
         body = body.replace(match.group(0), '', 1)
 
     body = apply_inline(body)
+    body = body.replace('\\begingroup\\small', '').replace('\\endgroup', '')
     body = body.replace('\\noindent ', '')
     body = body.replace('\\[', '$$').replace('\\]', '$$')
     body = re.sub(r'\\section\*?\{([^}]*)\}', r'## \1', body)
@@ -53,7 +56,9 @@ def main():
     body = body.replace('\\ ', ' ')
     body = re.sub(r'\n{3,}', '\n\n', body)
 
-    io.open(dst, 'w', encoding='utf-8', newline='\n').write(head + body.strip() + '\n')
+    rendered = head + body.strip() + '\n'
+    rendered = '\n'.join(line.rstrip() for line in rendered.splitlines()) + '\n'
+    io.open(dst, 'w', encoding='utf-8', newline='\n').write(rendered)
     print('wrote', dst)
 
 

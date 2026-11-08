@@ -5,7 +5,7 @@ title: "Non-algebraicity and Formula Restrictions for Tournament Hamiltonian Pat
 authors:
   - family-names: "Liu"
     given-names: "Xingchen"
-version: "0.3.0"
+version: "0.4.0"
 date-released: "2026-11-08"
 url: "https://github.com/LStar404/tournament-impossibility"
 license: "CC-BY-4.0"
