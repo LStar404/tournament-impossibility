@@ -1,0 +1,18 @@
+{
+  "language": "zh",
+  "pdf": "C:\\Users\\STAR\\Documents\\Codex\\2026-09-22\\yi-g\\outputs\\impossibility_paper_2026-11-02\\impossibility_zh.pdf",
+  "pages": 11,
+  "display_formulas": 29,
+  "minimum_display_font_pt": 13,
+  "bytes": 1120382,
+  "body_font": "Noto Serif SC, 12 pt / 20 pt",
+  "heading_font": "Noto Sans SC, semibold",
+  "latin_font": "Times New Roman, embedded",
+  "mathematics": "STIX glyph outlines rendered directly as PDF vectors",
+  "image_xobjects": 0,
+  "completed_at_utc": "2026-11-02T16:10:58.938959+00:00",
+  "editorial_changes": "Formal but readable Chinese prose; mathematical assertions and hypotheses preserved",
+  "display_formulas_unchanged": 29,
+  "english_pdf_unchanged": true,
+  "tex_compilation": "Not run; exported source retains common Windows fonts for portability"
+}

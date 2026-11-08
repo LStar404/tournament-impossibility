@@ -1,0 +1,88 @@
+{
+  "prepared_at_utc": "2026-11-02T16:12:10.815019+00:00",
+  "scope": "Local bilingual draft; no GitHub or Zenodo publication",
+  "mathematical_program_runs": 0,
+  "languages": {
+    "zh": {
+      "pages": 11,
+      "main_text_pages": 4,
+      "appendix_begins_page": 5,
+      "display_formulas": 29,
+      "theorem_labels": [
+        "A.1",
+        "A.2",
+        "A.3",
+        "A.4",
+        "B.1",
+        "C.1",
+        "C.2",
+        "C.3",
+        "C.4",
+        "D.1",
+        "D.2"
+      ],
+      "text_and_metadata_checks": "passed",
+      "visual_review": "passed: all final rendered pages inspected",
+      "page_character_counts_excluding_formula_images": [
+        603,
+        489,
+        881,
+        298,
+        552,
+        585,
+        758,
+        619,
+        824,
+        732,
+        1222
+      ],
+      "pdf_sha256": "73ca515539c1682777b2191259b7e80b2a5ad8934283217a87182c3a342e709c"
+    },
+    "en": {
+      "pages": 9,
+      "main_text_pages": 3,
+      "appendix_begins_page": 4,
+      "display_formulas": 31,
+      "theorem_labels": [
+        "A.1",
+        "A.2",
+        "A.3",
+        "A.4",
+        "B.1",
+        "C.1",
+        "C.2",
+        "C.3",
+        "C.4",
+        "D.1",
+        "D.2"
+      ],
+      "text_and_metadata_checks": "passed",
+      "visual_review": "passed: all final rendered pages inspected",
+      "page_character_counts_excluding_formula_images": [
+        2033,
+        2321,
+        3249,
+        1979,
+        1944,
+        2495,
+        2888,
+        2401,
+        1328
+      ],
+      "pdf_sha256": "840393cdf72989ff089eadfe3c42b586fa3a41214846ac28b1cd49dd4f976069"
+    }
+  },
+  "technical_scope_checks": {
+    "unconditional": "Non-algebraicity of A, E, M using the cited leading asymptotic",
+    "conditional": "Actual-sequence applications of natural-boundary and further formula obstructions require R",
+    "not_claimed": [
+      "all closed forms excluded",
+      "computational hardness",
+      "novelty priority",
+      "external peer review",
+      "formal verification of this paper"
+    ],
+    "full_proofs_retained_in_appendices": true
+  },
+  "tex_compilation": "Not run: no local TeX engine; editable sources provided"
+}

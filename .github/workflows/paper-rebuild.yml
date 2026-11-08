@@ -1,0 +1,56 @@
+name: Rebuild paper PDFs
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'paper/*.tex'
+      - 'tools/restyle.py'
+      - 'tools/tex2md.py'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Normalize the Chinese article layout
+        run: python3 tools/restyle.py paper/nonalgebra_zh.tex
+
+      - name: Normalize the English source
+        run: |
+          # amsthm supplies \qed, which the source writes as $\square$;
+          # unicode-math does not provide \square.
+          sed -i 's/\\usepackage{unicode-math}/\\usepackage{unicode-math}\n\\usepackage{amsthm}/' paper/nonalgebra_en.tex
+          sed -i 's/\$\\square\$/\\qed/g' paper/nonalgebra_en.tex
+
+      - name: Generate the readable Markdown from the English source
+        run: python3 tools/tex2md.py paper/nonalgebra_en.tex paper/nonalgebra_en.md
+
+      - name: Install tectonic
+        run: |
+          curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net | sh
+          sudo mv tectonic /usr/local/bin/tectonic
+          tectonic --version
+
+      - name: Compile every paper source
+        run: |
+          mkdir -p build
+          for src in paper/*.tex; do
+            base=$(basename "$src" .tex)
+            cp "$src" "build/$base.tex"
+            ( cd build && tectonic -X compile "$base.tex" --outdir . )
+            cp "build/$base.pdf" "paper/$base.pdf"
+          done
+          ls -l paper/*.pdf
+
+      - name: Commit the result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add paper/*.tex paper/*.pdf paper/nonalgebra_en.md
+          git commit -m 'Rebuild paper artefacts' || echo 'nothing to commit'
+          git push

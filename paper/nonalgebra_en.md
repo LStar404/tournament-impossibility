@@ -1,0 +1,300 @@
+# Non-algebraicity of the Extremal Hamiltonian Path Sequence and Formula Restrictions
+
+Xingchen Liu
+
+Independent Researcher
+
+`lxc-em5158@outlook.com`
+
+3 November 2026 · Revision v0.2.0
+
+## Abstract
+Let $P(n)$ be the largest number of directed Hamiltonian paths in a tournament on $n$ vertices. This paper studies the restrictions to which the exact expression of $P(n)$ is subject. Using an existing asymptotic theorem, we prove that three generating functions associated with $P(n)$ are all non-algebraic. Under an explicit boundary condition R we further rule out several families of fixed-order linear recurrences, contraction relations and linear digit representations. We do not prove that the actual extremal sequence satisfies R, so the latter group of conclusions stays conditional. The main text explains what the results mean and how they are proved; complete definitions and proofs are collected in the appendices. These results restrict particular forms of expression only: they do not show that no general closed form exists, and they are not a proof of computational hardness.
+
+Keywords: tournaments; Hamiltonian paths; extremal counting; generating functions; closed-form restrictions.
+
+This paper is the analytic part of the full-stage collection of results. Non-algebraicity is a completed, self-contained result whose proof is Appendix A; the natural-boundary and recurrence restrictions that follow it assume R explicitly. Other arithmetic exclusions that do not depend on R, for instance Gamma products with solvable algebraic parameters and rational ratios of low degree, appear in the arithmetic part of the collection.
+
+**Relation to the earlier proof chain.** Rounds 96--97 and the status summary of round 120 already record that, under the inherited global structure and the high-order exact recovery chain, one obtains a common periodic expansion, the leading radial singularity and the corresponding natural-boundary conclusion for the actual sequence, with the local derivation cross-checked at the time. That part should not be deleted, and it should not be conflated with the non-algebraicity that needs no graph-theoretic chain. The present self-contained paper does not re-derive that long chain from the basic inputs, and therefore packages its required output explicitly as R; every occurrence of ``R is not proved'' below refers to the scope of this paper, not a denial of what the historical chain already established.
+
+## The problem and the line of attack
+In a tournament any two distinct vertices are joined by exactly one directed edge. A directed Hamiltonian path traverses every vertex exactly once, following the edge directions. Let $H(T)$ be the number of vertex permutations of a tournament $T$ that form such a path, and set
+$$
+P(n)=\max_{|V(T)|=n}H(T).
+$$
+To study exact expressions for $P(n)$ this paper first examines several families of formulas that can be excluded.
+
+To separate the main growth of $P(n)$ we normalise by the expected number of paths in a random tournament:
+$$
+\mu_n=\frac{n!}{2^{n-1}}.
+$$
+There are $n!$ vertex permutations, and in each of them the $n-1$ consecutive edges have the required directions with probability $2^{-(n-1)}$, which gives the average above. Introduce the normalised quantity
+$$
+a_n=\frac{P(n)}{\mu_n},
+$$
+the ratio of the maximal number of paths to the random average. The asymptotic theorem of Divoux and Wang [1, Theorem 1.4] gives
+$$
+a_n\longrightarrow L=\frac{\cosh1}{\cos1}.
+$$
+We take this known limit as the starting point and do not reprove it.
+
+Define the generating function of the sequence $(a_n)$ by
+$$
+A(z)=a_1z+a_2z^2+\cdots=\sum_{n\ge1}a_nz^n.
+$$
+A generating function encodes the whole sequence as one function, which makes it possible to ask which equations it can satisfy. Restricting the form of a generating function is not the same as excluding all closed formulas for its coefficients.
+
+## Exclusions that do not depend on structural classification
+A function is called algebraic if it satisfies a nonzero polynomial equation $F(z,G(z))=0$; rational functions and algebraic expressions such as square roots belong to this class.
+
+**Result 1.** $A(z)$ is not algebraic. The exponential generating function of the original extremal sequence,
+$$
+E(z)=\sum_{n\ge1}\frac{P(n)}{n!}z^n=2A(z/2),
+$$
+is not algebraic either. The conclusion holds even when the coefficients of the equation may be arbitrary complex numbers.
+
+The proof uses two facts: the constant $L=\cosh1/\cos1$ is transcendental, that is, it is not a root of any nonzero polynomial with rational coefficients; and every $a_n$ is rational. If $A$ were algebraic, then, because its power-series coefficients are rational, the following limit, whenever it exists and is finite, would have to be algebraic:
+$$
+\lim_{z\to1^-}(1-z)A(z).
+$$
+By the known asymptotics this limit equals $L$, contradicting its transcendence. The complete argument is Appendix A.
+
+We next examine a recurrence that relates scale $n$ to scale $n/2$, and study its remainder. For the actual sequence $(a_n)$, define $m_n$ at even $n$ by
+$$
+n^2a_n=2a_{n/2}+m_n,
+$$
+and at odd $n$ by $m_n=n^2a_n$. The generating function of the remainder is
+$$
+M(z)=\sum_{n\ge1}m_nz^n.
+$$
+**Result 2.** $M(z)$ is not algebraic either. Hence the remainder of this half-scale recurrence cannot have a rational or algebraic generating function.
+
+The proof follows the same pattern as Result 1, with the limit
+$$
+\lim_{z\to1^-}(1-z)^3M(z)=2L.
+$$
+Result 2 can be used to screen candidate remainders for the recurrence above: if such a remainder had a rational or algebraic generating function, it could not recover the actual $P(n)$. The restriction concerns the form of the remainder only; it does not exclude the recurrence itself.
+
+## Further results under an additional condition
+Stronger restrictions depend on the boundary behaviour of $A(z)$ on the unit circle. Write R for the required additional condition: at a set of increasingly dense points on the unit circle, some fixed-order derivative exhibits a logarithmic divergence of prescribed strength for the first time. The boundary points, the order of the derivative and the coefficient of the divergence are given in Appendix B, which also provides a sufficient criterion for R.
+
+**Every conclusion in this section assumes that the actual $A(z)$ satisfies R. This paper does not prove that assumption.**
+
+If R holds, the unit circle is the natural boundary of $A$: $A$ cannot be continued analytically from the interior of the disc across any point of the circle. Such boundary behaviour restricts the finite equations the function can satisfy.
+
+Using the sharper boundary behaviour prescribed by R one also obtains the following three families of exclusions.
+
+- **Fixed-order linear recurrences with polynomial coefficients.** $P(n)$ cannot eventually satisfy a nontrivial relation $\sum_{j=0}^{d}p_j(n)P(n+j)=0$ with fixed order $d$ and polynomial coefficients $p_j$. This does not exclude other kinds of recurrence.
+
+- **Certain contraction formulas.** These are finite linear relations among the functions $A(z)$, $A(z^2)$, $A(z^3)$ and so on. If the relation contains no derivatives, has rational-function coefficients in $z$, and after clearing denominators its right-hand side continues analytically across every point of the unit circle except finitely many, then the relation cannot hold. When derivatives are allowed a whole family is still excluded for integer bases that are not powers of two; binary contractions are not fully excluded. The complete range is Appendix C.
+
+- **Linear digit models of fixed dimension.** Such a model stores a fixed number of numbers, updates them by fixed matrices as digits are read, and finally takes a fixed linear combination. It cannot produce the exact values of the normalised sequence $a_n$, and this holds for every fixed integer base. The restriction concerns these models only, not general algorithms. Definitions and proof are Appendix D.
+
+The three families concern linear recurrences between neighbouring terms, integer contractions of generating functions, and digit-by-digit linear representations; each applies only within the stated form.
+
+## Scope of the conclusions
+Non-algebraicity of a generating function does not imply that its coefficient sequence lacks a simple closed formula. For example $1/n$ has a simple closed formula, while its generating function $-\log(1-z)$ is not algebraic.
+
+A natural boundary does not exclude short recurrences either. Appendix E gives an example, different from the actual extremal sequence: odd indices vanish and even indices satisfy
+$$
+s_n=-\frac1n+\frac{2}{n^2}s_{n/2}.
+$$
+The generating function of this sequence has a natural boundary, yet $s_n$ can be computed exactly by repeated halving. A natural boundary and a short evaluation rule are therefore not in conflict.
+
+The scope of the results above is as follows.
+
+- **Proved:** the actual $A$, $E$ and $M$ are not algebraic. This uses the existing asymptotic theorem only and needs no additional classification of extremal tournaments.
+
+- **Available after invoking the historical chain or supplying R:** the recurrence, contraction and digit-model restrictions of the previous section. This self-contained paper does not derive from the basic inputs that the actual sequence satisfies R, so applications must cite the dependency on the historical chain.
+
+- **Still open here:** whether $P(n)$ admits an exact closed form of some other kind, whether an efficient exact algorithm exists, and whether the actual remainder $M$ has a transcendental expression that can be evaluated independently.
+
+No NP-hardness statement or general algorithmic lower bound is obtained. Turning the conditional results of this paper into self-contained theorems about the actual sequence requires incorporating and validating in full the graph-theoretic inputs that supply R in the historical chain; exact expressions outside the restrictions above also deserve further study.
+
+## Appendix A. Complete proof of the unconditional results
+This appendix proves Results 1 and 2 of the main text. We keep the notation $A,E,M$ of the main text and write $\Theta=z\frac{d}{dz}$.
+
+**Lemma A.1.** $L=\cosh1/\cos1$ is transcendental.
+
+**Proof.** If $L$ were algebraic, then
+$$
+e+e^{-1}-Le^i-Le^{-i}=0.
+$$
+The exponents $1,-1,i,-i$ are four distinct algebraic numbers and the coefficients $1,1,-L,-L$ are algebraic numbers not all zero. This contradicts the Lindemann--Weierstrass theorem [2]. Since $\cos1\ne0$ the expression is defined. 
+
+**Lemma A.2 (descent of algebraic relations).** If $B(z)\in\mathbb Q[[z]]$ is algebraic over $\mathbb C(z)$, then it is algebraic over $\mathbb Q(z)$.
+
+**Proof.** After clearing denominators take a nonzero relation $H(z,B(z))=0$ with $H\in\mathbb C[z,Y]$. Choose a rational linear basis $\beta_1,\ldots,\beta_s$ of the finitely many complex coefficients and write
+$$
+H(z,Y)=\sum_{j=1}^s\beta_jH_j(z,Y),\qquad H_j\in\mathbb Q[z,Y].
+$$
+Each $H_j(z,B(z))$ has rational power-series coefficients. Comparing coefficients and using the rational linear independence of the $\beta_j$ gives $H_j(z,B(z))=0$ for every $j$. At least one $H_j$ is nonzero, which is the required relation. 
+
+**Lemma A.3 (finite radial limits).** Let $B\in\mathbb Q[[z]]$ be analytic in the unit disc and algebraic over $\mathbb C(z)$. If some integer $d\ge0$ makes $(1-\rho)^dB(\rho)$ tend to a finite limit $c$ as $\rho\uparrow1$, then $c$ is algebraic.
+
+**Proof.** By Lemma A.2, $C(z)=(1-z)^dB(z)$ satisfies a nonzero relation $R(z,C(z))=0$ with $R\in\mathbb Q[z,Y]$. Removing the highest common power of $(z-1)$ from the coefficients of $R$ as a polynomial in $Y$, we may assume $R(1,Y)\not\equiv0$. Taking the radial limit gives $R(1,c)=0$, which proves the claim; if $R(1,Y)$ is a nonzero constant we already have a direct contradiction. 
+
+**Theorem A.4.** $A(z)$, $E(z)$ and
+$$
+M(z)=\Theta^2A(z)-2A(z^2)
+$$
+are all transcendental over $\mathbb C(z)$.
+
+**Proof.** The coefficients $a_n$ are rational and tend to $L$, so Abel's limit gives $(1-\rho)A(\rho)\to L$. Lemmas A.1 and A.3 exclude algebraicity of $A$; the rescaling identity then excludes algebraicity of $E$.
+
+Write $M(z)=\sum_{n\ge1}m_nz^n$. Then
+$$
+m_n=n^2a_n-2\mathbf1_{\{2\mid n\}}a_{n/2},\qquad m_n\in\mathbb Q,\qquad \frac{m_n}{n^2}\longrightarrow L,
+$$
+where no half-integer index is needed when the indicator vanishes. Using
+$$
+\sum_{n\ge1}n^2\rho^n=\frac{\rho(1+\rho)}{(1-\rho)^3}
+$$
+we get $(1-\rho)^3M(\rho)\to2L$. Concretely, split $m_n/n^2-L$ into a finite prefix and a tail of absolute value below any given $\varepsilon$; the finite prefix tends to zero and the tail contributes at most $2\varepsilon$ in the limit. Letting $\varepsilon\downarrow0$ finishes the argument. Lemma A.3 again contradicts the transcendence of $L$. 
+
+Consequently the concrete equation $\Theta^2A-2A(z^2)=F$ cannot have an algebraic right-hand side, even when the algebraic relation may use arbitrary complex constants. Multiplying by a nonzero rational function or adding an algebraic function cannot make $M$ algebraic either. This does not exclude $M$ being a transcendental D-finite function: for instance $e^z/(1-z)^3$ has rational Taylor coefficients and is D-finite, yet its normalised radial limit is the transcendental number $e$.
+
+## Appendix B. The radial condition R and a sufficient criterion
+Let $\nu_2(n)$ be the exponent of $2$ in a positive integer $n$, so that $\nu_2(12)=2$.
+
+In what follows $G$ is analytic in the unit disc and $C\ne0$ is a fixed complex number.
+
+**Assumption R.** There is an integer $r_0\ge1$ such that, for every fixed $r\ge r_0$ and every primitive $2^{r+1}$-th root of unity $\omega$, all derivatives of $x\mapsto G(\omega x)$ of order below $2r$ have finite limits as $x\uparrow1$ and
+$$
+\frac{d^{2r}}{dx^{2r}}G(\omega x)=C\,2^{r^2-1}\log(1-x)+O_{r,\omega}(1).
+$$
+This is an assumption about the actual derivatives; it cannot be replaced by differentiating the unknown $O$-remainder. Each time $r$ and $\omega$ are fixed first and the radial limit is taken afterwards; no uniform bound in the growth depth is required.
+
+**Proposition B.1 (criterion via periodic asymptotics).** Let $G(z)=\sum_{n\ge1}b_nz^n$ with bounded $b_n$. The following two items are sufficient for Assumption R.
+
+- For every fixed $s\ge0$ and every fixed $J$ there is a constant-coefficient expansion on the integers with $\nu_2(n)=s$,
+$$
+b_n=\sum_{j=0}^J\alpha_{s,j}n^{-j}+O_{s,J}(n^{-J-1}).
+$$
+
+- For every fixed $r\ge r_0$ there is a function $B_r$ analytic at the origin such that, uniformly for all sufficiently large $n$ with $2^r\mid n$,
+$$
+b_n=B_r(1/n)-\kappa_r\mathbf1_{\{2^{r+1}\mid n\}}n^{-2r-1}+O_r(n^{-2r-2}),\qquad \kappa_r=C\,2^{r(r+1)}.
+$$
+
+**Proof.** Fix $r$, put $q=2^{r+1}$ and $d=2r+1$. Use the first item on the finitely many valuation classes $s<r$ and the second on the remaining integers, obtaining
+$$
+b_n=\sum_{j=0}^{d}c_j(n)n^{-j}+O_r(n^{-d-1}),
+$$
+where each $c_j$ is $q$-periodic. For $j<d$ its period divides $2^r$; the top term can be written $c_d(n)=u(n)-\kappa_r\mathbf1_{\{q\mid n\}}$ with $u$ also $2^r$-periodic. Hence, with the convention
+$$
+\widehat c_j(\omega)=\frac1q\sum_{t=1}^{q}c_j(t)\omega^t,
+$$
+we have $\widehat c_j(\omega)=0$ for $j<d$ and $\widehat c_d(\omega)=-\kappa_r/q$.
+
+A finite Fourier decomposition writes the explicit part as a finite linear combination of polylogarithms $\operatorname{Li}_j(z/\zeta)$; non-positive indices are interpreted through derivatives of the geometric series. Apart from $\zeta=\omega$ these functions continue analytically near $z=\omega$ in a way compatible with the branch on the disc. The only leading resonant term is $-(\kappa_r/q)\operatorname{Li}_{2r+1}(z/\omega)$.
+
+The remainder coefficients are $O_r(n^{-2r-2})$, which is absolutely summable after $2r$ differentiations, so that derivative has a finite radial limit. On the other hand the $2r$-th derivative of $\operatorname{Li}_{2r+1}(x)$ is $-\log(1-x)+O(1)$, while all lower derivatives are finite; this follows directly from $\Theta^{2r}\operatorname{Li}_{2r+1}=\operatorname{Li}_1=-\log(1-x)$ and from the relation between the Euler operator and ordinary derivatives. Thus the leading coefficient is $\kappa_r/q=C2^{r^2-1}$, which is R. The finitely many initial terms only add a polynomial. 
+
+**Applying the criterion.** For the tournament extremum take $b_n=a_n$ and $C=L$. Proposition B.1 states precisely which inputs must be taken from the structure of the extremal graphs and from the exact-count recovery proof. This paper does not reprove those two graph-theoretic statements. The later appendices therefore keep condition R for the natural-boundary and contraction conclusions about the actual $P(n)$; Appendix A is unaffected.
+
+## Appendix C. Ruling out contraction relations
+A germ is D-finite if it satisfies a nonzero linear differential equation with polynomial coefficients. This appendix first establishes the natural boundary and then uses the exact divergence coefficients in R to study contractions.
+
+**Theorem C.1.** If $G$ satisfies R, the unit circle is its natural boundary and $G$ is not D-finite.
+
+**Proof.** R makes some fixed-order radial derivative diverge logarithmically at every primitive binary root of sufficiently high order, so $G$ cannot be continued analytically at such a point. These roots are dense on the unit circle, so no continuation across a nonempty arc is possible. Local branches of a D-finite function can have only finitely many planar singularities, located at zeros of the leading coefficient of its differential equation, so such a natural boundary is impossible. 
+
+The right-hand condition below is slightly stronger than analyticity on the disc: after clearing the common denominator of the rational coefficients, the chosen branch of the right-hand side continues analytically across every point of the unit circle except finitely many. D-finite right-hand sides satisfy it.
+
+**Theorem C.2 (necessary leading terms for mixed contractions).** Let $\mathcal M$ be a finite set of distinct positive integers and consider a nontrivial relation
+$$
+\sum_{m\in\mathcal M}Q_m(z,\Theta)[G(z^m)]=F(z),
+\qquad
+Q_m(z,\Theta)=\sum_{j=0}^{d_m}p_{m,j}(z)\Theta^j,
+$$
+where $p_{m,j}\in\mathbb C(z)$, $p_{m,d_m}\ne0$, and $F$ satisfies the right-hand condition above. The coefficients sit to the left of the operator and $\Theta$ acts on the whole composite function. Write
+$$
+m=2^{s_m}t_m,\qquad t_m\in2\mathbb Z+1,\qquad w=\max_{m\in\mathcal M}(d_m+2s_m).
+$$
+For each odd $t$ let $I_t=\{m\in\mathcal M:d_m+2s_m=w, t_m=t\}$. If $G$ satisfies R then
+$$
+\sum_{m\in I_t}2^{-s_m^2}t^{-2s_m}p_{m,d_m}(z)=0
+$$
+is an identity of rational functions.
+
+**Proof.** Clear denominators so that all coefficients are polynomials; the common denominator is multiplied on the left of the operator only and does not commute with $\Theta$. Fix $r$ large enough that $r-s_m\ge r_0$ and $K=2r-w\ge0$, and take a primitive $2^{r+1}$-th root $\omega$. Since $\omega^m$ has order $2^{r+1-s_m}$, the first derivative order at which $G(\omega^m y)$ diverges is $k_m=2(r-s_m)$.
+
+Along $z=\omega x$ we have $\Theta=x\,d/dx$. Differentiating the relation $K$ more times radially, only the terms with $d_m+2s_m=w$ reach the actual derivative order $k_m$; all other terms involve lower derivatives and have finite limits. In the product rule, the Euler expansion and the chain rule the unique leading coefficient at the endpoint is $p_{m,d_m}(\omega)m^{k_m}$. Hence the coefficient of the first logarithmic divergence of that term is
+$$
+C\,2^{(r-s_m)^2-1}m^{2(r-s_m)}p_{m,d_m}(\omega)
+=C\,2^{r^2-1}t_m^{2r}2^{-s_m^2}t_m^{-2s_m}p_{m,d_m}(\omega).
+$$
+All factors differ from their endpoint values by $O(1-x)$, which stays bounded against the logarithm. Apart from finitely many exceptional points where the same-order derivative of the right-hand side is finite, the sum of these leading coefficients vanishes.
+
+Thus for each fixed $r$ we obtain a polynomial identity in $\omega$ whose degree is controlled by the degrees of the original coefficients and does not depend on $r$. There are $2^r$ primitive $2^{r+1}$-th roots; for $r$ large enough, even after removing the finitely many exceptions, they outnumber that fixed degree, so the polynomial vanishes identically.
+
+Grouping by odd part and writing $T_t(z)=\sum_{m\in I_t}2^{-s_m^2}t^{-2s_m}p_{m,d_m}(z)$, we have $\sum_t t^{2r}T_t(z)=0$ for all sufficiently large integers $r$. Choosing as many consecutive $r$ as there are distinct $t$, the coefficient matrix is a Vandermonde matrix in the distinct $t^2$ times a nonzero diagonal matrix, hence invertible. Therefore every $T_t=0$. The proof fixes $r$ one at a time, takes the limit, and then performs only finite algebraic elimination; it never exchanges the growth depth with the radial limit. 
+
+**Corollary C.3.** Under R there is no nontrivial finite relation $\sum_m p_m(z)G(z^m)=F(z)$ with rational coefficients whose right-hand side satisfies the condition of Theorem C.2.
+
+**Proof.** Here all $d_m=0$, so the top-weight group shares the same maximal $s_m$. Distinct $m$ in it have distinct odd parts, so each nonempty $I_t$ is a singleton, contradicting a nonzero leading coefficient. 
+
+**Corollary C.4.** If the ratio of any two contraction parameters is not an integer power of two, the relation of Theorem C.2 is impossible even when derivatives of arbitrary finite order are allowed. In particular, for an integer $b\ge2$ that is not a power of two there is no linear differential--Mahler relation of finite order $\sum_jQ_j(z,\Theta)[G(z^{b^j})]=F(z)$.
+
+**Proof.** Distinct contraction parameters have distinct odd parts, so every nonempty group of top weight is a single term. For $b=2^hu$ with odd $u>1$ the odd parts of $b^j$ are the distinct values $u^j$. 
+
+Similarly, in any admissible relation every nonempty odd-part group of top weight contains at least two terms, whose differential orders must differ by $2(s_2-s_1)$. If the spread of the top differential orders is at most $1$, no relation can hold. For a two-term relation $p(z,\Theta)G(z)-q(z,\Theta)[G(z^2)]=F$ the necessary condition is exactly $\deg_\Theta p=\deg_\Theta q+2$ and $q_{\mathrm{top}}=2p_{\mathrm{top}}$. This is only a necessary condition.
+
+## Appendix D. Linear digit models and linear recurrences
+A sequence is P-recursive if it eventually satisfies a nonzero linear recurrence of finite order with polynomial coefficients. For ordinary generating functions, D-finiteness is equivalent to P-recursiveness of the coefficients [3], up to finitely many initial terms.
+
+For a sequence $(b_n)_{n\ge0}$ and a fixed integer base $q\ge2$, consider all subsequences $n\mapsto b_{q^en+t}$ with $e\ge0$ and $0\le t<q^e$. The sequence is called $q$-regular [4] if the complex span of these sequences is finite-dimensional.
+
+**Theorem D.1.** If $G(z)=\sum_{n\ge0}b_nz^n$ satisfies R, then its coefficient sequence is not regular in any fixed integer base $q\ge2$; modifying finitely many terms does not change this.
+
+**Proof.** Suppose the kernel space has dimension $D$. Choose basis vectors $v(n)$; extracting subsequences modulo $q$ preserves the space, so there are constant matrices $M_j$ with $v(qn+j)=M_jv(n)$ and $b_n=\ell v(n)$. The vector generating function $V$ satisfies
+$$
+V(z)=\left(\sum_{j=0}^{q-1}z^jM_j\right)V(z^q),\qquad G(z)=\ell V(z).
+$$
+This holds at the level of formal power series, including $n=0$; the matrices need not be invertible. Expanding $G(z),G(z^q),\ldots,G(z^{q^D})$ into the same vector $V(z^{q^D})$ produces $D+1$ row vectors in $\mathbb C(z)^D$. Linear dependence gives a nontrivial finite contraction relation without derivatives, contradicting Corollary C.3. Changing finitely many terms only changes the generating function by a polynomial, so the right-hand side stays rational and the contradiction persists. 
+
+A canonical digit representation may initialise the first nonzero digit to a fixed vector, which only adds a finite polynomial to the vector generating function; adjoining one constant direction allows the same elimination. The theorem therefore also excludes exact digit models with fixed dimension, constant matrix updates and a fixed linear readout, but not models whose state dimension varies with the input, nonlinear updates or general algorithms.
+
+**Conditional Corollary D.2.** If the actual $A$ satisfies R with $C=L$, then the natural boundary of $A$ is the unit circle, the natural boundary of $E$ is the circle of radius $2$, and $P(n)$ is not P-recursive. All contraction restrictions of Appendix C and Theorem D.1 then apply to $a_n$.
+
+Here $P(n)$ is not P-recursive because $A$ is not D-finite; the factor $P(n)=n!2^{1-n}a_n$ is hypergeometric, so substituting it into a finite-order recurrence and clearing denominators shows that P-recursiveness is equivalent for the two sequences. The exclusion of digit representations is supplied separately by Theorem D.1. What is excluded is an exact linear digit representation of the normalised sequence: a fixed constant matrix acts for $O(\log n)$ steps, so the output can be at most of the order of some fixed power of $n$. The factorial growth of $P(n)$ already excludes such models, but that growth argument does not apply to the bounded sequence $a_n$.
+
+If the actual remainder $m_n$ can be determined independently, unfolding the half-scale relation level by level gives
+$$
+a_n=\sum_{j=0}^{\nu_2(n)}\frac{2^{j(j+2)}}{n^{2j+2}}m_{n/2^j}.
+$$
+At present this is only a reconstruction identity: $m_n$ is defined as the difference of the unknown $a_n$ and substituted back, which yields no independent closed form.
+
+## Appendix E. A short formula with a natural boundary
+The example of the main text corresponds to $C=1$ below; an arbitrary fixed nonzero complex $C$ is allowed.
+
+For fixed $C\ne0$ define
+$$
+s_n=-C\sum_{j=0}^{\nu_2(n)-1}2^{j(j+1)}n^{-2j-1},\qquad S(z)=\sum_{n\ge1}s_nz^n.
+$$
+The sum is empty at odd $n$. Separating the leading term at even $n$ gives $s_n=-C/n+2s_{n/2}/n^2$, hence exactly
+$$
+\Theta^2S(z)-2S(z^2)=-\frac{2Cz^2}{(1-z^2)^2}.
+$$
+On the other hand fix $r$ and split the definition into $j<r$, $j=r$ and $j>r$. Consecutive surviving terms in the tail differ by a factor of at most $1/4$, so the tail coefficients are $O_r(n^{-2r-3})$. Put $q=2^{r+1}$. At a primitive $q$-th root the lower layers produce only non-resonant polylogarithms, the leading resonant term being $-\kappa_r\operatorname{Li}_{2r+1}(z^q)/q^{2r+1}$ with $\kappa_r=C2^{r(r+1)}$. Differentiating $2r$ times along $z=\omega x$ gives a leading chain factor $q^{2r}$, so the coefficient of the logarithm is $\kappa_r/q=C2^{r^2-1}$; the lower chain terms are finite and the tail is absolutely summable at that order. This yields condition R, so $S$ has a natural boundary.
+
+At the same time $-s_n/C$ is a rational sum of at most $\nu_2(n)$ terms. For odd $n$ the output is zero; for $\nu_2(n)\ge1$ the common denominator may be taken as $n^{2\nu_2(n)-1}$, and numerator and denominator have bit length $O((\log n)^2)$, so the value can be computed exactly in polynomial time in the input length. What is computed exactly is the rational number $-s_n/C$, or one may simply take $C=1$. This example has both a natural boundary and a short differential--binary recurrence. Its coefficients tend to zero and it is not the actual $a_n$; its rational right-hand side cannot be transplanted to the actual remainder handled by Theorem A.4.
+
+The main text also mentions the generating function of $1/n$. Term-by-term integration of the geometric series gives $\sum_{n\ge1}z^n/n=-\log(1-z)$. Continuing once around $z=1$ changes the value of the logarithm by $2\pi i$, and repeated circuits produce infinitely many branches; an algebraic function has only finitely many branches, so this generating function is not algebraic.
+
+## Research status and licence
+This is a research draft for review. AI tools took part in organising the derivations, translation, typesetting and internal consistency checks; the results stated here have not been externally peer reviewed, nor verified formally within the scope of this draft. Formalisation of earlier work should not be read as automatically covering this draft. The author remains responsible for reviewing and revising the final content.
+
+This revision reorganises existing proofs and adds no new mathematical research. The complete earlier manuscripts and the source records are kept in `historical/formula-restrictions`; the scope of the conclusions here matches the earlier version.
+
+© 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+## References
+[1] Alexander Divoux and Shouda Wang. *The maximum number of Hamiltonian cycles in tournaments*. arXiv:2610.23755v1 [math.CO], 2026, submitted 16 October 2026. Theorem 1.4 is cited here. DOI: 10.48550/arXiv.2610.23755. Full text of the fixed version.
+
+[2] Sever Angel Popescu. *A simple and self-contained proof for the Lindemann-Weierstrass theorem*. arXiv:2306.14352v2 [math.NT], 2023, revised 17 September 2023. Theorem 3.2 is cited here. DOI: 10.48550/arXiv.2306.14352. Full text of the fixed version.
+
+[3] Richard P. Stanley. *Differentiably Finite Power Series*. European Journal of Combinatorics **1**(2) (1980), 175--188. DOI: 10.1016/S0195-6698(80)80051-5. Official paper provided by the author.
+
+[4] Jean-Paul Allouche and Jeffrey Shallit. *The ring of k-regular sequences*. Theoretical Computer Science **98**(2) (1992), 163--197. DOI: 10.1016/0304-3975(92)90001-V. Preprint provided by the authors.

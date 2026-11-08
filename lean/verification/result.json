@@ -1,0 +1,163 @@
+{
+  "checked_at_utc": "2026-11-08T12:07:56.478770+00:00",
+  "lean_version": "leanprover/lean4:v4.35.0",
+  "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "modules_built": [
+    "Abel",
+    "Constant",
+    "Descent",
+    "Radial",
+    "TournamentSequence",
+    "Application",
+    "Evaluation",
+    "Normalization",
+    "QuadraticAbel",
+    "StandardAlgebraicity",
+    "WeightedAbel",
+    "Main",
+    "Corollaries",
+    "Remainder"
+  ],
+  "all_delivered_modules_checked": true,
+  "records": [
+    {
+      "module": "Abel",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "5ba1a8ebf28b64bc6c4b6db441c275ac01530883b6a678fabcf28991a66de47f",
+      "axiom_reports": [
+        "'NonAlgebraicity.abel_coefficient_limit' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Constant",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "733e6627ea86e57330add01a46b58e2f279654478866bfe887a4de24daf227c6",
+      "axiom_reports": [
+        "'NonAlgebraicity.extremalConstant_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Descent",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "7d50e8d10489287d99c22bc9c72c135fedf005d9ab8a7f1d903a831f8573ecad",
+      "axiom_reports": [
+        "'NonAlgebraicity.rational_polynomial_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Radial",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "df3c13b3cd7f8ea0eb5046681e5e2656a3361a1a94ff7433b4789ac5de218d1b",
+      "axiom_reports": [
+        "'NonAlgebraicity.algebraic_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.no_relation_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TournamentSequence",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b499312419fae1a7506e435df4d9c3ef24f19eb2c0c7fd0a6b30bc50c5373921",
+      "axiom_reports": [
+        "'NonAlgebraicity.pathCount_le_maximal' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Application",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b945d3da58ccf0575b98e912e579e33d3548df413d77f8550c9c76c4e69596a1",
+      "axiom_reports": [
+        "'NonAlgebraicity.extremal_transcendental_boundary_limit' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Evaluation",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "a99ec4e63819c457f28b3eca7901bddb2742869550ec8f65784aa1029e8fc658",
+      "axiom_reports": [
+        "'NonAlgebraicity.relation_evaluates_zero' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Normalization",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "07461dc83604e8c006a4cc8f1064e7bc1c3e2cbd1181d6ea04ad46af575a388c",
+      "axiom_reports": [
+        "'NonAlgebraicity.algebraic_weighted_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "QuadraticAbel",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "1b00b835e72f756634e532e051ff69b3060bdd0a06e0277286550608125f3f83",
+      "axiom_reports": [
+        "'NonAlgebraicity.sq_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.abel_sq_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.const_geom_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.abel_sq_weight' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "StandardAlgebraicity",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "41232ea9f5346cdc297df7118933f184e007c1333c5f162da78080fae554f4a0",
+      "axiom_reports": [
+        "'NonAlgebraicity.hasPolynomialRelation_of_isAlgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "WeightedAbel",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "bc8e25fb2bd3da4c32e0ac7254f457fb8b01ab1dddc3bd5dee5edd2444e5ae0d",
+      "axiom_reports": [
+        "'NonAlgebraicity.exponential_gf_non_algebraic' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Main",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "2598f2877dcb2225a2f240d4b41767a1bc6283a3584d018d31dcab156b77064c",
+      "axiom_reports": [
+        "'NonAlgebraicity.nonalgebraic_of_rational_coefficients_tendsto_transcendental' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'NonAlgebraicity.extremal_generating_function_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.extremal_generating_function_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.nonalgebraic_of_radial_limit' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "Corollaries",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "1fd64ddedf51e47e43656fa14052671d473465f2e3b8edbed6abb2290f220d42",
+      "axiom_reports": [
+        "'NonAlgebraicity.extremal_exponential_generating_function_nonalgebraic' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'NonAlgebraicity.extremal_exponential_generating_function_transcendental' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+      ]
+    },
+    {
+      "module": "Remainder",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "f7b72857e8ba3713d052804c2da9f2a33dbe00743b4f83a2514234701170cb83",
+      "axiom_reports": [
+        "'NonAlgebraicity.halfScaleScaled_tendsto' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.remainder_coeff_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.halfScale_radial' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.halfScale_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.halfScale_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    }
+  ],
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems."
+}
