@@ -1,0 +1,29 @@
+TournamentSwitching.lean:72:28: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+TournamentSwitching.lean:72:40: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+TournamentSwitching.lean:74:28: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+TournamentSwitching.lean:74:40: warning: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+TournamentSwitching.lean:99:26: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+TournamentSwitching.lean:115:26: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+'TournamentSwitching.switched_act' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSwitching.abs_switched_act' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSwitching.normalized_output' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSwitching.sortedPad_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSwitching.normalized_sorted_output' depends on axioms: [propext, Classical.choice, Quot.sound]

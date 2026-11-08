@@ -1,3 +1,4 @@
+import VectorMajorizationEndpoint
 import MajorizationCone
 import SelectedWeight
 import BalancedSignCounts
@@ -339,3 +340,19 @@ example (n k : ℕ) (hk : k ≤ n) (f : ℕ → ℕ)
 #print axioms SelectedSignPairs.pairCost_identity
 #print axioms SelectedSignPairs.pairCost_le
 #print axioms SelectedRowOptimization.envelope_le_P
+
+/-! Complete actual finite tournament vector-prefix bound. This closes the
+matrix/envelope/sorting interfaces, but not reference K-orbit or moment claims. -/
+example (n : ℕ) (A : Fin n → Fin n → ℝ)
+    (hskew : ∀ i j, A i j = - A j i)
+    (hunit : ∀ i j, i ≠ j → A i j = 1 ∨ A i j = -1)
+    (x : Fin n → ℝ) (k : ℕ) (hk : k ≤ n) :
+    (∑ i ∈ Finset.range k, TournamentSwitching.sortedPad (fun a => ∑ b, A a b * x b) i) ≤
+      (k : ℝ) * (∑ i ∈ Finset.range n, TournamentSwitching.sortedPad x i) -
+      ∑ j ∈ Finset.range k, (MajorizationCone.penalty j : ℝ) *
+        TournamentSwitching.sortedPad x (n-k+j) :=
+  actual_matrix_prefix_endpoint n A hskew hunit x k hk
+
+#print axioms SelectedTournamentMajorization.tournament_vector_majorization
+#print axioms SelectedTournamentMajorization.tournament_prefix_bound
+#print axioms actual_matrix_prefix_endpoint

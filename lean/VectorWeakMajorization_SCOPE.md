@@ -30,3 +30,14 @@ optimized combinatorial selected envelope <= P_k. Earlier exclusions above
 about these finite ingredients concern this module alone. The actual tournament
 matrix-to-envelope interface, output order statistics, signed sorting and
 K-reference orbit remain unproved; full vector majorization and R are not claimed.
+
+## Subsequent complete finite vector-majorization bridge
+
+TournamentEnvelope, TournamentSwitching, TopAbsoluteSelection and
+SelectedTournamentMajorization now construct the actual matrix selected-row
+envelope, selected subsets/signs, sorting and signed-permutation bridges, proving
+sortedPad(Bx) weakly majorized by K(sortedPad(x)) for every actual finite tournament
+and real input. `VectorMajorizationEndpoint.lean` checks the expanded inequality
+from raw matrix entries. Earlier exclusions about these particular bridges
+above are superseded. Reference K-orbit identities, moment comparisons and R
+remain separate, unproved obligations.

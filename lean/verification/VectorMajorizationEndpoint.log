@@ -1,0 +1,3 @@
+'actual_matrix_prefix_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MajorizationCone.K_preserves_cone' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MajorizationCone.K_preserves_prefix_order' depends on axioms: [propext, Classical.choice, Quot.sound]

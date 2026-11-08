@@ -16,3 +16,14 @@ All printed axioms: propext, Classical.choice, Quot.sound. Compiler log: verific
 
 Integrated into `lakefile.toml`, full `verify.py`, and `EndpointCheck.lean`;
 compiler/axiom output is retained in `verification/BalancedSignCounts.log`.
+
+## Subsequent complete finite vector-majorization bridge
+
+TournamentEnvelope, TournamentSwitching, TopAbsoluteSelection and
+SelectedTournamentMajorization now construct the actual matrix selected-row
+envelope, selected subsets/signs, sorting and signed-permutation bridges, proving
+sortedPad(Bx) weakly majorized by K(sortedPad(x)) for every actual finite tournament
+and real input. `VectorMajorizationEndpoint.lean` checks the expanded inequality
+from raw matrix entries. Earlier exclusions about these particular bridges
+above are superseded. Reference K-orbit identities, moment comparisons and R
+remain separate, unproved obligations.

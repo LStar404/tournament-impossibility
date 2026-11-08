@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T18:04:38.622973+00:00",
+  "checked_at_utc": "2026-11-08T18:17:26.771877+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -24,6 +24,7 @@
     "RationalLinearDescent",
     "RationalRadial",
     "StandardAlgebraicity",
+    "TournamentSwitching",
     "WeightedAbel",
     "ColorGraphRepair",
     "Main",
@@ -31,6 +32,7 @@
     "PathCountGrowth",
     "SelectedSignPairs",
     "SelectedWeight",
+    "TopAbsoluteSelection",
     "ColorCutNormalization",
     "ColorTargetModels",
     "Corollaries",
@@ -39,9 +41,12 @@
     "Remainder",
     "SelectedRowOptimization",
     "TournamentColorEnumeration",
+    "TournamentEnvelope",
     "DiamondFreeRepresentation",
     "QRegularApplications",
     "QRegularRationalLimit",
+    "SelectedTournamentMajorization",
+    "VectorMajorizationEndpoint",
     "ZeroDiamondRepair",
     "EndpointCheck"
   ],
@@ -285,6 +290,19 @@
       ]
     },
     {
+      "module": "TournamentSwitching",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b2a43bdb248404a06c8e32807dc94113b95e627dce296b5d2f2a58f5b36348a2",
+      "axiom_reports": [
+        "'TournamentSwitching.switched_act' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSwitching.abs_switched_act' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSwitching.normalized_output' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSwitching.sortedPad_cone' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSwitching.normalized_sorted_output' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "WeightedAbel",
       "exit_code": 0,
       "passed": true,
@@ -366,6 +384,15 @@
       "source_sha256": "7f66cc1f7d53d0a73b8cb029c73f775c9bcb73afb7ad95c34a2672dc50306eb4",
       "axiom_reports": [
         "'SelectedWeight.selected_weight_ge' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TopAbsoluteSelection",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "cac30d639cb3a96325491b8962cd4cfcbcf6b3e69ec98257368f31b65e3d0cac",
+      "axiom_reports": [
+        "'TopAbsoluteSelection.signed_topSet' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -464,6 +491,17 @@
       ]
     },
     {
+      "module": "TournamentEnvelope",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "6b5411768924fae05d3542ec1912d09c10879e7b7f5a31a6669cc94249cdcff4",
+      "axiom_reports": [
+        "'TournamentEnvelope.selected_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentEnvelope.abs_pair_square' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentEnvelope.selected_bound_pairCost' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "DiamondFreeRepresentation",
       "exit_code": 0,
       "passed": true,
@@ -501,6 +539,27 @@
       ]
     },
     {
+      "module": "SelectedTournamentMajorization",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "17287ec2450763666d7fb42149dd16a713374f4477d3cf40e61296e330d04c87",
+      "axiom_reports": [
+        "'SelectedTournamentMajorization.tournament_vector_majorization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'SelectedTournamentMajorization.tournament_prefix_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "VectorMajorizationEndpoint",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "afe5237dd02721231cb8a2d85cbc9596e4b62711d8d82781cfc7e0a10e69c12b",
+      "axiom_reports": [
+        "'actual_matrix_prefix_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'MajorizationCone.K_preserves_cone' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'MajorizationCone.K_preserves_prefix_order' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "ZeroDiamondRepair",
       "exit_code": 0,
       "passed": true,
@@ -517,7 +576,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "93319d61ea063489f69c2b576ea5e0c45fc67979f2e6e9f7fe98e9df06cb9ed5",
+      "source_sha256": "738f981534b1fa1a717f8ac4c9e3499fbe07bb8b44a728ec28f39df30b784a25",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -599,9 +658,12 @@
         "'BalancedSignCounts.penalty_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'SelectedSignPairs.pairCost_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'SelectedSignPairs.pairCost_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'SelectedRowOptimization.envelope_le_P' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'SelectedRowOptimization.envelope_le_P' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'SelectedTournamentMajorization.tournament_vector_majorization' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+        "'SelectedTournamentMajorization.tournament_prefix_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'actual_matrix_prefix_endpoint' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, not the actual matrix-to-envelope interface, K orbit or full vector majorization."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. The K reference orbit, moment comparisons and Condition R remain unproved."
 }

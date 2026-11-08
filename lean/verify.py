@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'EndpointCheck',
 ]
 
 
@@ -98,7 +98,9 @@ def main():
                   'this does not imply Condition R. VectorWeakMajorization verifies finite Abel, '
                   'square-sum comparison and a signed matrix bound. The cone/sign/selection modules '
                   'prove K cone/prefix preservation and the combinatorial envelope<=P_k, '
-                  'not the actual matrix-to-envelope interface, K orbit or full vector majorization.'),
+                  'and SelectedTournamentMajorization completes actual finite tournament vector '
+                  'weak majorization, independently checked from raw matrix entries. '
+                  'The K reference orbit, moment comparisons and Condition R remain unproved.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')
