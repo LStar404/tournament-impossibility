@@ -1,3 +1,5 @@
+import ComplexBinomialRate
+import ComplexOperatorResolventBound
 import DiamondFreeKernelLimit
 import DiamondFreeKernelUniform
 import DiamondFreeComplexResolvent
@@ -461,3 +463,6 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms DiamondFreeKernelUniform.actual_imaginary_uniformlyOn_compact
 #print axioms DiamondFreeKernelUniform.inverse_uniformlyOn_compact
 #print axioms DiamondFreeComplexResolvent.eventually_inverse
+
+#print axioms ComplexBinomialRate.actual_imaginary_error
+#print axioms ComplexOperatorResolventBound.normalized_source_bound

@@ -1,0 +1,123 @@
+Abel: PASS (retained exact-source check)
+ColorEnergy: PASS (retained exact-source check)
+ColorTransport: PASS (retained exact-source check)
+ComplexOperatorResolventBound: PASS (retained exact-source check)
+Constant: PASS (retained exact-source check)
+Descent: PASS (retained exact-source check)
+DiamondGap: PASS (retained exact-source check)
+OrderedCancellation: PASS (retained exact-source check)
+OrdinalSixthPolynomial: PASS (retained exact-source check)
+QRegular: PASS (retained exact-source check)
+Radial: PASS (retained exact-source check)
+RectangularFrobenius: PASS (retained exact-source check)
+ReferenceSquare: PASS (retained exact-source check)
+SignedConjugacy: PASS (retained exact-source check)
+TournamentHamiltonian.Packing: PASS (retained exact-source check)
+TournamentSequence: PASS (retained exact-source check)
+TwoBlockCubeGeneric: PASS (retained exact-source check)
+TwoBlockEnergy: PASS (retained exact-source check)
+VectorWeakMajorization: PASS (retained exact-source check)
+Application: PASS (retained exact-source check)
+BalancedSignCounts: PASS (retained exact-source check)
+ColorTransportExact: PASS (retained exact-source check)
+DiamondTriangleIncidence: PASS (retained exact-source check)
+Evaluation: PASS (retained exact-source check)
+MajorizationCone: PASS (retained exact-source check)
+Normalization: PASS (retained exact-source check)
+OrdinalMomentRecurrence: PASS (retained exact-source check)
+OrdinalSixthPolynomialEndpoint: PASS (retained exact-source check)
+QuadraticAbel: PASS (retained exact-source check)
+RationalLinearDescent: PASS (retained exact-source check)
+RationalRadial: PASS (retained exact-source check)
+ReferenceDiagonal: PASS (retained exact-source check)
+SignedVectorOrbit: PASS (retained exact-source check)
+SmallBlockSixthEstimate: PASS (retained exact-source check)
+StandardAlgebraicity: PASS (retained exact-source check)
+TournamentComponents: PASS (retained exact-source check)
+TournamentHamiltonian.Definitions: PASS (retained exact-source check)
+TournamentSwitching: PASS (retained exact-source check)
+TransitiveOrbit: PASS (retained exact-source check)
+TwoBlockSixthMoment: PASS (retained exact-source check)
+WeightedAbel: PASS (retained exact-source check)
+ZigzagReference: PASS (retained exact-source check)
+ColorGraphRepair: PASS (retained exact-source check)
+Main: PASS (retained exact-source check)
+MatrixPowerSeries: PASS (retained exact-source check)
+OrdinalBlockMatrix: PASS (retained exact-source check)
+PathCountGrowth: PASS (retained exact-source check)
+SelectedSignPairs: PASS (retained exact-source check)
+SelectedWeight: PASS (retained exact-source check)
+SignedCycleOnes: PASS (retained exact-source check)
+SignedReferenceConjugacy: PASS (retained exact-source check)
+TopAbsoluteSelection: PASS (retained exact-source check)
+TournamentHamiltonian.Orientation: PASS (retained exact-source check)
+TournamentHamiltonian.PathConvolutionCoefficients: PASS (retained exact-source check)
+TournamentHamiltonian.PositiveDeterminant: PASS (retained exact-source check)
+TournamentHamiltonian.TransitiveDeterminant: PASS (retained exact-source check)
+TransitiveFirstEnergy: PASS (retained exact-source check)
+ColorCutNormalization: PASS (retained exact-source check)
+ColorTargetModels: PASS (retained exact-source check)
+Corollaries: PASS (retained exact-source check)
+FiniteGraphEditTransport: PASS (retained exact-source check)
+OrdinalSixthMatrixBridge: PASS (retained exact-source check)
+OrdinalTransitiveReference: PASS (retained exact-source check)
+RationalSeriesLimit: PASS (retained exact-source check)
+Remainder: PASS (retained exact-source check)
+SelectedRowOptimization: PASS (retained exact-source check)
+TournamentColorEnumeration: PASS (retained exact-source check)
+TournamentEnvelope: PASS (retained exact-source check)
+TournamentHamiltonian.Hadamard: PASS (retained exact-source check)
+ZigzagOnes: PASS (retained exact-source check)
+DiamondFreeRepresentation: PASS (retained exact-source check)
+OrdinalSixthMatrixEndpoint: PASS (retained exact-source check)
+QRegularApplications: PASS (retained exact-source check)
+QRegularRationalLimit: PASS (retained exact-source check)
+SelectedTournamentMajorization: PASS (retained exact-source check)
+TournamentHamiltonian.PathConvolution: PASS (retained exact-source check)
+DiamondFreeDeterminant: PASS (retained exact-source check)
+DiamondLinkAverage: PASS (retained exact-source check)
+IteratedVectorMajorization: PASS (retained exact-source check)
+TournamentHamiltonian.PathConvolutionGenerating: PASS (retained exact-source check)
+VectorMajorizationEndpoint: PASS (retained exact-source check)
+ZeroDiamondRepair: PASS (retained exact-source check)
+ActualPathConvolution: PASS (retained exact-source check)
+DiamondFreeKernelDeterminant: PASS (retained exact-source check)
+KMatrixIdentification: PASS (retained exact-source check)
+PermanentDiagonalExpansion: PASS (retained exact-source check)
+PivotCycleLink: PASS (retained exact-source check)
+TournamentPowerComparison: PASS (retained exact-source check)
+BasisReference: PASS (retained exact-source check)
+DiamondFreeKernelLimit: PASS (retained exact-source check)
+DiamondFreePathAverage: PASS (retained exact-source check)
+PivotSmallDiamond: PASS (retained exact-source check)
+TournamentSourceEnergy: PASS (retained exact-source check)
+DiamondFreeComplexResolvent: PASS (retained exact-source check)
+DiamondFreeKernelUniform: PASS (retained exact-source check)
+OrdinalTriangleAdditivity: PASS (retained exact-source check)
+ReferenceMomentComparison: PASS (retained exact-source check)
+StrongTournamentTriangles: PASS (retained exact-source check)
+TriangleCountBridge: PASS (retained exact-source check)
+ComplexBinomialRate: PASS
+IntegerCycleSumBridge: PASS
+ReferenceMomentEndpoint: PASS
+ReferenceOnesOrbit: PASS
+TournamentComponentBlocks: PASS
+PivotMomentInvariant: PASS
+TournamentEnergySeries: PASS
+TournamentOrdinalReconstruction: PASS
+OrdinalTournamentDeficit: PASS
+ResolventSeriesIdentity: PASS
+SmallDiamondPivotReduction: PASS
+TournamentEnergyConvergence: PASS
+OrdinalGlobalSixthDeficit: PASS
+SmallDiamondComponentReduction: PASS
+TournamentEnergyRowDomain: PASS
+ActualSmallDiamondSixth: PASS
+GlobalSixthDeficitEndpoint: PASS
+OnesEnergyEndpoint: PASS
+SmallDiamondGraphEndpoint: PASS
+TournamentGramGeometric: PASS
+TournamentSourceResolvent: PASS
+SourceResolventEndpoint: PASS
+EndpointCheck: PASS
+ALL MODULES PASSED

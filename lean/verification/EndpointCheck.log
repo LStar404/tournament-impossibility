@@ -131,3 +131,5 @@
  Quot.sound]
 'DiamondFreeKernelUniform.inverse_uniformlyOn_compact' depends on axioms: [propext, Classical.choice, Quot.sound]
 'DiamondFreeComplexResolvent.eventually_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexBinomialRate.actual_imaginary_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexOperatorResolventBound.normalized_source_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
