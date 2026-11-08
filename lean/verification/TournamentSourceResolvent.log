@@ -1,0 +1,3 @@
+'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceResolvent.source_resolvent_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]

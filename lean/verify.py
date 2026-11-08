@@ -19,7 +19,7 @@ MODULES = [
     'WeightedAbel', 'Corollaries', 'QuadraticAbel', 'Remainder',
     'QRegular', 'MatrixPowerSeries', 'QRegularApplications', 'PathCountGrowth',
     'RationalRadial', 'RationalLinearDescent', 'RationalSeriesLimit', 'QRegularRationalLimit',
-    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'SignedVectorOrbit', 'SignedCycleOnes', 'ZigzagOnes', 'ReferenceOnesOrbit', 'TournamentEnergySeries', 'TournamentEnergyConvergence', 'TournamentEnergyRowDomain', 'OnesEnergyEndpoint', 'EndpointCheck',
+    'OrderedCancellation', 'ColorEnergy', 'ColorTransport', 'DiamondGap', 'ColorTransportExact', 'ColorGraphRepair', 'ColorCutNormalization', 'ColorTargetModels', 'TournamentColorEnumeration', 'DiamondFreeRepresentation', 'FiniteGraphEditTransport', 'ZeroDiamondRepair', 'VectorWeakMajorization', 'MajorizationCone', 'SelectedWeight', 'BalancedSignCounts', 'SelectedSignPairs', 'SelectedRowOptimization', 'TournamentEnvelope', 'TournamentSwitching', 'TopAbsoluteSelection', 'SelectedTournamentMajorization', 'VectorMajorizationEndpoint', 'IteratedVectorMajorization', 'TournamentPowerComparison', 'ReferenceSquare', 'TransitiveOrbit', 'KMatrixIdentification', 'ZigzagReference', 'SignedConjugacy', 'ReferenceDiagonal', 'SignedReferenceConjugacy', 'BasisReference', 'ReferenceMomentComparison', 'ReferenceMomentEndpoint', 'SignedVectorOrbit', 'SignedCycleOnes', 'ZigzagOnes', 'ReferenceOnesOrbit', 'TournamentEnergySeries', 'TournamentEnergyConvergence', 'TournamentEnergyRowDomain', 'OnesEnergyEndpoint', 'TournamentGramGeometric', 'ResolventSeriesIdentity', 'TournamentSourceResolvent', 'SourceResolventEndpoint', 'EndpointCheck',
 ]
 
 
@@ -105,7 +105,7 @@ def main():
                   'small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit '
                   'identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy '
                   'series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 '
-                  'for n>0 without a Summable premise. Resolvent identification remains outside scope.'),
+                  'for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted.'),
     }
     (logdir / 'result.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n',
                                        encoding='utf-8')

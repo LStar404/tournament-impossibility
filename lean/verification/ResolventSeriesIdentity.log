@@ -1,0 +1,2 @@
+'ResolventSeriesIdentity.inverse_eq_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ResolventSeriesIdentity.source_resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]

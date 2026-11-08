@@ -1,3 +1,4 @@
+import SourceResolventEndpoint
 import OnesEnergyEndpoint
 import ReferenceMomentEndpoint
 import VectorMajorizationEndpoint
@@ -384,3 +385,19 @@ example (n : ℕ) (hn : 0 < n) (A : Matrix (Fin n) (Fin n) ℝ)
 #print axioms actual_source_series_natural
 #print axioms TournamentEnergyRowDomain.source_summable
 #print axioms TournamentEnergyRowDomain.source_series_le
+
+/-! Genuine inverse and raw-matrix resolvent comparison on the sufficient row domain. -/
+example (n : ℕ) (A : Matrix (Fin n) (Fin n) ℝ)
+    (hskew : ∀ i j, A i j = -A j i)
+    (hunit : ∀ i j, i ≠ j → A i j = 1 ∨ A i j = -1)
+    (q : ℝ) (hq : 0 ≤ q) (hsmall : q*(((n-1 : ℕ) : ℝ)^2) < 1) :
+    dotProduct (A.mulVec (fun _ => (1:ℝ)))
+      ((1+q • (A^2))⁻¹.mulVec (A.mulVec (fun _ => (1:ℝ)))) ≤
+    dotProduct ((TransitiveOrbit.T n).mulVec (fun _ => (1:ℝ)))
+      ((1+q • ((TransitiveOrbit.T n)^2))⁻¹.mulVec
+        ((TransitiveOrbit.T n).mulVec (fun _ => (1:ℝ)))) :=
+  actual_source_resolvent_comparison n A hskew hunit q hq hsmall
+#print axioms actual_source_resolvent_comparison
+#print axioms TournamentSourceResolvent.inverse_left_right
+#print axioms TournamentSourceResolvent.resolvent_eq_series
+#print axioms TournamentSourceResolvent.source_resolvent_natural

@@ -96,3 +96,7 @@
 'actual_source_series_natural' depends on axioms: [propext, Classical.choice, Quot.sound]
 'TournamentEnergyRowDomain.source_summable' depends on axioms: [propext, Classical.choice, Quot.sound]
 'TournamentEnergyRowDomain.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'actual_source_resolvent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceResolvent.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]

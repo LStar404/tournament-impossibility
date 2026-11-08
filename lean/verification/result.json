@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T19:31:23.351286+00:00",
+  "checked_at_utc": "2026-11-08T20:08:27.017242+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -65,9 +65,13 @@
     "ReferenceMomentEndpoint",
     "ReferenceOnesOrbit",
     "TournamentEnergySeries",
+    "ResolventSeriesIdentity",
     "TournamentEnergyConvergence",
     "TournamentEnergyRowDomain",
     "OnesEnergyEndpoint",
+    "TournamentGramGeometric",
+    "TournamentSourceResolvent",
+    "SourceResolventEndpoint",
     "EndpointCheck"
   ],
   "all_delivered_modules_checked": true,
@@ -768,6 +772,16 @@
       ]
     },
     {
+      "module": "ResolventSeriesIdentity",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "38139b465883888507126489b78e7ba28845d25d7fae992535b51884386dd76f",
+      "axiom_reports": [
+        "'ResolventSeriesIdentity.inverse_eq_geometric' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ResolventSeriesIdentity.source_resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentEnergyConvergence",
       "exit_code": 0,
       "passed": true,
@@ -801,10 +815,42 @@
       ]
     },
     {
+      "module": "TournamentGramGeometric",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b9f5c2c380268e8059650001d8f01c60f0b6fa5638c55a8e0d640b20d6431c3e",
+      "axiom_reports": [
+        "'TournamentGramGeometric.geometric_summable' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "TournamentSourceResolvent",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "75a14c95024fe9d47a4afefbac63b7f884739863cd08467487a2b4b80cd624f6",
+      "axiom_reports": [
+        "'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.source_resolvent_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "SourceResolventEndpoint",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "0f443e1d49a703bd81956e73a005a075df30005d508958a5d69b9d07f1311795",
+      "axiom_reports": [
+        "'actual_source_resolvent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "ef7f52ecaada72654d88e8b7d26e12263787f43baac83a0b2cb9616d43194b06",
+      "source_sha256": "e63ef85ff08dad6244572dc4b378ba2a4e94bb8d0c5cf50bc3725dfc0cd7135e",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -897,9 +943,13 @@
         "'actual_source_power_energy' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'actual_source_series_natural' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentEnergyRowDomain.source_summable' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'TournamentEnergyRowDomain.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'TournamentEnergyRowDomain.source_series_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'actual_source_resolvent_comparison' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. Resolvent identification remains outside scope."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted."
 }

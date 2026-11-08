@@ -19,3 +19,7 @@ No summability hypothesis is imposed on the caller. The natural parameter q=1/n�
 This is a real nonnegative-parameter source-energy series comparison. It does not assert a matrix-resolvent identity, the optimal spectral convergence radius, a fixed larger complex stable neighborhood, differentiated inequalities, the small-defect sixth-order identity, or full Assumption R. Natural exponents only.
 
 Log: verification/tournament_energy_row_domain.log. Standard propext, Classical.choice and Quot.sound only; no sorryAx/new axioms. The separate verification/OnesEnergyEndpoint.lean checks raw Matrix-entry inputs and expands the all-one energies.
+
+## Subsequent actual resolvent identification
+
+TournamentSourceResolvent now proves the actual source-resolvent identity and comparison, including both inverse multiplication identities, on the same sufficient real domain q≥0, q*(n−1)²<1 (truncated Nat subtraction), including q=1/n² for n>0. This supersedes earlier exclusions of resolvent identification; no optimal/expanded complex domain, differentiated comparison, sixth-order small-defect identity or full R is proved.
