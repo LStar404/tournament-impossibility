@@ -1,5 +1,6 @@
 import QRegularApplications
 import PathCountGrowth
+import QRegularRationalLimit
 
 /-! Independent endpoint checks. These examples pin the public statements to
 actual tournament quantities and to the full q-kernel, not a substituted
@@ -47,6 +48,22 @@ example (asymptotic : ExtremalAsymptotic)
     (hout : ∀ n, (maximalPathCount n : ℂ) = f (V n)) : False :=
   maximalPathCount_no_linear_digit_representation asymptotic q hq A V f hV hout
 
+/-- Full Appendix A.5, directly stated using the entire q-kernel span.
+No graph asymptotic, transcendence input, or rationality premise is required. -/
+example (q : ℕ) (hq : 2 ≤ q) (a : ℕ → ℚ) (k : ℕ) (L : ℂ)
+    (ha : FiniteDimensional ℂ
+      (Submodule.span ℂ {f : ℕ → ℂ | ∃ e r : ℕ,
+        r < q ^ e ∧ f = fun n => (a (q ^ e * n + r) : ℂ)}))
+    (hlim : Tendsto (fun n => ((a n / (n : ℚ)^k : ℚ) : ℂ)) atTop (𝓝 L)) :
+    ∃ r : ℚ, (r : ℂ) = L :=
+  qRegular_scaled_limit_rational q hq a k L ha hlim
+
+example (q : ℕ) (hq : 2 ≤ q) (a : ℕ → ℚ) (L : ℂ)
+    (ha : IsQRegular q (fun n => (a n : ℂ)))
+    (hlim : Tendsto (fun n => (a n : ℂ)) atTop (𝓝 L)) :
+    ∃ r : ℚ, (r : ℂ) = L :=
+  qRegular_limit_rational q hq a L ha hlim
+
 end NonAlgebraicity.EndpointCheck
 
 #print axioms NonAlgebraicity.qRegular_power_representation
@@ -58,3 +75,6 @@ end NonAlgebraicity.EndpointCheck
 #print axioms NonAlgebraicity.digit_recursion_exponential_bound
 #print axioms NonAlgebraicity.maximalPathCount_not_exponentially_bounded
 #print axioms NonAlgebraicity.maximalPathCount_no_linear_digit_representation
+
+#print axioms NonAlgebraicity.qRegular_scaled_limit_rational
+#print axioms NonAlgebraicity.qRegular_limit_rational

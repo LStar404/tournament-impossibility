@@ -1,16 +1,9 @@
-⚠ [1971/2333] Replayed Abel
+⚠ [1971/1996] Replayed Abel
 warning: Abel.lean: imports `Mathlib.Analysis.Complex.AbelLimit` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Abel.lean: imports `Mathlib.Analysis.Normed.Group.Bounded` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Abel.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Abel.lean:59:0: 'NonAlgebraicity.abel_coefficient_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2315/2333] Replayed TournamentSequence
-warning: TournamentSequence.lean: imports `Mathlib.Data.Fintype.Perm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: TournamentSequence.lean: imports `Mathlib.Data.Fintype.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: TournamentSequence.lean: imports `Mathlib.Data.Finset.Lattice.Fold` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: TournamentSequence.lean: imports `Mathlib.Data.Rat.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: TournamentSequence.lean: imports `Mathlib.Data.Nat.Factorial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-info: TournamentSequence.lean:63:0: 'NonAlgebraicity.pathCount_le_maximal' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2325/2653] Replayed Constant
+⚠ [2317/2385] Replayed Constant
 warning: Constant.lean: imports `Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Constant.lean: imports `Mathlib.RingTheory.Algebraic.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Constant.lean: imports `Mathlib.RingTheory.Algebraic.Integral` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -18,41 +11,59 @@ warning: Constant.lean: imports `Mathlib.Tactic.FinCases` from package `mathlib`
 warning: Constant.lean: imports `Mathlib.Tactic.LinearCombination` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Constant.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Constant.lean:56:0: 'NonAlgebraicity.extremalConstant_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [2326/2653] Replayed Application
+⚠ [2318/2385] Replayed TournamentSequence
+warning: TournamentSequence.lean: imports `Mathlib.Data.Fintype.Perm` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TournamentSequence.lean: imports `Mathlib.Data.Fintype.Pi` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TournamentSequence.lean: imports `Mathlib.Data.Finset.Lattice.Fold` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TournamentSequence.lean: imports `Mathlib.Data.Rat.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: TournamentSequence.lean: imports `Mathlib.Data.Nat.Factorial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: TournamentSequence.lean:63:0: 'NonAlgebraicity.pathCount_le_maximal' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2319/2385] Replayed Application
 info: Application.lean:29:0: 'NonAlgebraicity.extremal_transcendental_boundary_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2339/2653] Replayed Descent
+⚠ [2339/2385] Replayed Descent
 warning: Descent.lean: imports `Mathlib.RingTheory.PowerSeries.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Descent.lean: imports `Mathlib.LinearAlgebra.Dual.Lemmas` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Descent.lean: imports `Mathlib.Analysis.Complex.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Descent.lean: imports `Mathlib.Tactic.Push` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Descent.lean:73:0: 'NonAlgebraicity.rational_polynomial_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2345/2653] Replayed Radial
+⚠ [2345/2385] Replayed Radial
 warning: Radial.lean: imports `Mathlib.Topology.Algebra.Polynomial` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Radial.lean: imports `Mathlib.RingTheory.Algebraic.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Radial.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Radial.lean: imports `Mathlib.Analysis.Complex.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Radial.lean:70:0: 'NonAlgebraicity.algebraic_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Radial.lean:71:0: 'NonAlgebraicity.no_relation_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2375/2653] Replayed Normalization
+⚠ [2375/2385] Replayed Normalization
 warning: Normalization.lean: imports `Mathlib.Algebra.Polynomial.Bivariate` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Normalization.lean: imports `Mathlib.RingTheory.Polynomial.ScaleRoots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Normalization.lean:56:0: 'NonAlgebraicity.algebraic_weighted_limit_of_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2376/2653] Replayed Evaluation
+⚠ [2376/2385] Replayed Evaluation
 warning: Evaluation.lean: imports `Mathlib.Analysis.Normed.Ring.InfiniteSum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Evaluation.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Evaluation.lean:117:0: 'NonAlgebraicity.relation_evaluates_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [2377/2653] Replayed StandardAlgebraicity
+⚠ [2377/2385] Replayed StandardAlgebraicity
 warning: StandardAlgebraicity.lean: imports `Mathlib.RingTheory.Algebraic.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: StandardAlgebraicity.lean: imports `Mathlib.Algebra.Polynomial.Eval.Degree` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: StandardAlgebraicity.lean:57:0: 'NonAlgebraicity.hasPolynomialRelation_of_isAlgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [2378/2653] Replayed Main
+ℹ [2378/2385] Replayed Main
 info: Main.lean:64:0: 'NonAlgebraicity.nonalgebraic_of_rational_coefficients_tendsto_transcendental' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 info: Main.lean:65:0: 'NonAlgebraicity.extremal_generating_function_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Main.lean:77:0: 'NonAlgebraicity.extremal_generating_function_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Main.lean:104:0: 'NonAlgebraicity.nonalgebraic_of_radial_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3158/3168] Replayed QuadraticAbel
+⚠ [2379/2385] Replayed WeightedAbel
+warning: WeightedAbel.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+warning: WeightedAbel.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: WeightedAbel.lean:73:0: 'NonAlgebraicity.exponential_gf_non_algebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [2380/2385] Replayed Corollaries
+info: Corollaries.lean:41:0: 'NonAlgebraicity.extremal_exponential_generating_function_nonalgebraic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: Corollaries.lean:50:0: 'NonAlgebraicity.extremal_exponential_generating_function_transcendental' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+⚠ [3160/3173] Replayed QuadraticAbel
 warning: QuadraticAbel.lean: imports `Mathlib.Analysis.SpecificLimits.Normed` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: QuadraticAbel.lean: imports `Mathlib.Topology.Algebra.Order.LiminfLimsup` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: QuadraticAbel.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -72,7 +83,7 @@ info: QuadraticAbel.lean:297:0: 'NonAlgebraicity.sq_tail_bound' depends on axiom
 info: QuadraticAbel.lean:298:0: 'NonAlgebraicity.abel_sq_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: QuadraticAbel.lean:299:0: 'NonAlgebraicity.const_geom_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: QuadraticAbel.lean:300:0: 'NonAlgebraicity.abel_sq_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3159/3168] Replayed Remainder
+⚠ [3161/3173] Replayed Remainder
 warning: Remainder.lean:52:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -120,20 +131,13 @@ info: Remainder.lean:249:0: 'NonAlgebraicity.remainder_coeff_bound' depends on a
 info: Remainder.lean:250:0: 'NonAlgebraicity.halfScale_radial' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Remainder.lean:251:0: 'NonAlgebraicity.halfScale_nonalgebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Remainder.lean:252:0: 'NonAlgebraicity.halfScale_transcendental' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3162/3168] Built WeightedAbel (1.9s)
-warning: WeightedAbel.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-warning: WeightedAbel.lean: imports `Mathlib.Tactic.NormNum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-info: WeightedAbel.lean:73:0: 'NonAlgebraicity.exponential_gf_non_algebraic' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3163/3168] Built QRegular (2.2s)
+⚠ [3162/3173] Replayed QRegular
 warning: QRegular.lean: imports `Mathlib.LinearAlgebra.FiniteDimensional.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: QRegular.lean: imports `Mathlib.LinearAlgebra.Matrix.ToLin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: QRegular.lean: imports `Mathlib.LinearAlgebra.Dimension.Free` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: QRegular.lean: imports `Mathlib.Analysis.Complex.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: QRegular.lean:91:0: 'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3164/3168] Built MatrixPowerSeries (2.3s)
-warning: MatrixPowerSeries.lean: imports `Mathlib.LinearAlgebra.Matrix.Adjugate` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-info: MatrixPowerSeries.lean:102:0: 'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [3165/3168] Built PathCountGrowth (2.6s)
+⚠ [3165/3173] Replayed PathCountGrowth
 warning: PathCountGrowth.lean: imports `Mathlib.Topology.Algebra.Order.Floor` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: PathCountGrowth.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: PathCountGrowth.lean:132:0: 'NonAlgebraicity.digit_recursion_exponential_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -141,16 +145,25 @@ info: PathCountGrowth.lean:133:0: 'NonAlgebraicity.maximalPathCount_no_linear_di
  Classical.choice,
  Quot.sound]
 info: PathCountGrowth.lean:134:0: 'NonAlgebraicity.maximalPathCount_not_exponentially_bounded' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [3166/3168] Built Corollaries (1.9s)
-info: Corollaries.lean:41:0: 'NonAlgebraicity.extremal_exponential_generating_function_nonalgebraic' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-info: Corollaries.lean:50:0: 'NonAlgebraicity.extremal_exponential_generating_function_transcendental' depends on axioms: [propext,
- Classical.choice,
- Quot.sound]
-ℹ [3167/3168] Built QRegularApplications (2.2s)
+⚠ [3167/3173] Built MatrixPowerSeries (2.4s)
+warning: MatrixPowerSeries.lean: imports `Mathlib.LinearAlgebra.Matrix.Adjugate` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: MatrixPowerSeries.lean:112:0: 'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3168/3173] Built RationalRadial (2.5s)
+warning: RationalRadial.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: RationalRadial.lean:67:0: 'NonAlgebraicity.rational_limit_of_linear_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RationalRadial.lean:68:0: 'NonAlgebraicity.rational_weighted_limit_of_linear_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [3169/3173] Built RationalLinearDescent (2.5s)
+warning: RationalLinearDescent.lean: imports `Mathlib.Tactic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: RationalLinearDescent.lean:48:0: 'NonAlgebraicity.rational_linear_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3170/3173] Built QRegularApplications (2.4s)
 info: QRegularApplications.lean:75:0: 'NonAlgebraicity.not_qRegular_of_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: QRegularApplications.lean:76:0: 'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: QRegularApplications.lean:77:0: 'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: QRegularApplications.lean:78:0: 'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]
-Build completed successfully (3168 jobs).
+⚠ [3171/3173] Built RationalSeriesLimit (2.5s)
+warning: RationalSeriesLimit.lean: imports `Mathlib.RingTheory.PowerSeries.Trunc` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
+info: RationalSeriesLimit.lean:60:0: 'NonAlgebraicity.rational_limit_of_rational_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3172/3173] Built QRegularRationalLimit (2.3s)
+info: QRegularRationalLimit.lean:46:0: 'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: QRegularRationalLimit.lean:47:0: 'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3173 jobs).

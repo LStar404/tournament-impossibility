@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T14:48:15.732408+00:00",
+  "checked_at_utc": "2026-11-08T15:10:46.649740+00:00",
   "lean_version": "leanprover/lean4:v4.35.0",
   "mathlib_commit": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "modules_built": [
@@ -13,14 +13,18 @@
     "Evaluation",
     "Normalization",
     "QuadraticAbel",
+    "RationalLinearDescent",
+    "RationalRadial",
     "StandardAlgebraicity",
     "WeightedAbel",
     "Main",
     "MatrixPowerSeries",
     "PathCountGrowth",
     "Corollaries",
+    "RationalSeriesLimit",
     "Remainder",
-    "QRegularApplications"
+    "QRegularApplications",
+    "QRegularRationalLimit"
   ],
   "all_delivered_modules_checked": true,
   "records": [
@@ -119,6 +123,25 @@
       ]
     },
     {
+      "module": "RationalLinearDescent",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "50d648740ec656ad0d16f768aa716ca41004c07e02e011eae32e7a9af6f4de3a",
+      "axiom_reports": [
+        "'NonAlgebraicity.rational_linear_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "RationalRadial",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "d19b160bb90ee03d661ab46eec70d6d6a5cb9fa70fd26cbf1435b96a5b04ee6b",
+      "axiom_reports": [
+        "'NonAlgebraicity.rational_limit_of_linear_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.rational_weighted_limit_of_linear_relation' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "StandardAlgebraicity",
       "exit_code": 0,
       "passed": true,
@@ -152,7 +175,7 @@
       "module": "MatrixPowerSeries",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "2130bb6c29baf74d797353399958dc4a88e6c4b85bae8a63193dd90da12f2539",
+      "source_sha256": "9662e5f67db2b59acd6ecbc997ac75bee706a40df39c94e878aae1372caeb581",
       "axiom_reports": [
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
@@ -179,6 +202,15 @@
       ]
     },
     {
+      "module": "RationalSeriesLimit",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "02e0373b1a41ad1c1db706174cf610d08767bcb915d6723356ace79f9bfc3c1f",
+      "axiom_reports": [
+        "'NonAlgebraicity.rational_limit_of_rational_series' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "Remainder",
       "exit_code": 0,
       "passed": true,
@@ -201,6 +233,16 @@
         "'NonAlgebraicity.not_qRegular_of_scaled_transcendental_limit' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.normalizedCoefficient_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "QRegularRationalLimit",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "860b0ec40f9e65f844ed27b09e39085750bc805050c740a7f7524fd53226d473",
+      "axiom_reports": [
+        "'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],

@@ -1,0 +1,2 @@
+'NonAlgebraicity.qRegular_scaled_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'NonAlgebraicity.qRegular_limit_rational' depends on axioms: [propext, Classical.choice, Quot.sound]

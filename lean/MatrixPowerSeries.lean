@@ -56,9 +56,12 @@ theorem matrixResolventPolynomial_det_ne_zero {d : ℕ}
 /-- A scalar output of powers of a finite complex matrix has an algebraic
 formal generating series over the polynomial ring.
 The adjugate identity supplies an explicit nonzero polynomial relation. -/
-theorem matrix_output_series_isAlgebraic {d : ℕ}
+theorem matrix_output_series_linear_relation {d : ℕ}
     (M : Matrix (Fin d) (Fin d) ℂ) (v l : Fin d → ℂ) :
-    IsAlgebraic ℂ[X] (PowerSeries.mk fun n => l ⬝ᵥ ((M ^ n) *ᵥ v)) := by
+    ∃ P Q : ℂ[X], Q ≠ 0 ∧
+      (algebraMap ℂ[X] (PowerSeries ℂ)) Q *
+        (PowerSeries.mk fun n => l ⬝ᵥ ((M ^ n) *ᵥ v)) =
+      (algebraMap ℂ[X] (PowerSeries ℂ)) P := by
   classical
   let f : ℂ[X] →+* PowerSeries ℂ := algebraMap ℂ[X] (PowerSeries ℂ)
   let A := matrixResolventPolynomial M
@@ -85,6 +88,13 @@ theorem matrix_output_series_isAlgebraic {d : ℕ}
     intro i _
     rw [← mul_assoc, mul_comm (f Q), mul_assoc, hcoord]
     simp [f, PowerSeries.algebraMap_apply']
+  exact ⟨P, Q, hQ, hrel⟩
+
+theorem matrix_output_series_isAlgebraic {d : ℕ}
+    (M : Matrix (Fin d) (Fin d) ℂ) (v l : Fin d → ℂ) :
+    IsAlgebraic ℂ[X] (PowerSeries.mk fun n => l ⬝ᵥ ((M ^ n) *ᵥ v)) := by
+  obtain ⟨P, Q, hQ, hrel⟩ := matrix_output_series_linear_relation M v l
+  let f : ℂ[X] →+* PowerSeries ℂ := algebraMap ℂ[X] (PowerSeries ℂ)
   refine ⟨Polynomial.C Q * Polynomial.X - Polynomial.C P, ?_, ?_⟩
   · intro hz
     have hh := congrArg (Polynomial.coeff · 1) hz

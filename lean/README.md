@@ -1,6 +1,6 @@
 # 竞赛图极值生成函数的非代数性
 
-> 状态：2026-11-08。18 个模块整体验证通过，A、E、M 三个生成函数的形式化都已完成。
+> 状态：2026-11-08。22 个模块整体验证通过，A、E、M 三个生成函数的形式化都已完成。
 > 验证记录见 `verification/result.json`；范围边界（两项外部前提）见下文。
 
 证明来源：刘星辰，`tournament-paths-research-notes` 的
@@ -91,6 +91,20 @@ python verify.py
 - `PathCountGrowth.lean` 证明真实 P(n) 无统一指数上界，再排除固定数字连续线性递归与连续线性输出；
   此结论只需 `ExtremalAsymptotic`，不需超越性输入。
 
-论文 A.5 的更强表述“极限必为有理数”未完整形式化；本工程证明的是足够推出 A.6 实际应用的
-“极限不能是超越数”。P 的数字模型定理与 q-kernel 定义之间的一般等价关系未形式化。
+论文 A.5 的完整强结论现已形式化，见下节。P 的数字模型定理与 q-kernel 定义之间的一般等价关系未形式化。
 R、自然边界、非 D-finite 等仍不在 Lean 覆盖内。不得把这些边界改写成上游数学断言不成立。
+
+
+## A.5 完整有理极限（续做）
+
+`QRegularRationalLimit.lean` 中的 `NonAlgebraicity.qRegular_scaled_limit_rational` 对所有整数 q≥2、自然数 k、有理值序列 a，
+从标准 q-kernel 的复数线性张成有限维以及 a_n/n^k→L，推出存在 r∈ℚ 使 r=L。
+本定理没有图论渐近、Lindemann–Weierstrass 或极限超越性的额外假设。
+
+- `MatrixPowerSeries.matrix_output_series_linear_relation` 从伴随矩阵抽出显式线性关系 Q·B=P，Q≠0。
+- `RationalLinearDescent` 用 ℚ-线性对偶逐系数降域，保留非零分母，未把线性关系弱化为一般代数关系。
+- `RationalRadial` 同时消去分子分母在端点的公共根，按分母次数严格递降，证明有限极限为有理数。
+- `RationalSeriesLimit` 形式化多项式关系的绝对收敛求值并结合 Abel 极限。
+- `QRegularRationalLimit` 连接标准 q-kernel、几何子序列与矩阵缩放，完成任意 k 的强版 A.5。
+
+此前较弱的超越极限排除端点保留，作为 A.6 的直接应用链；更强结论并非由排除超越数偷换而来。

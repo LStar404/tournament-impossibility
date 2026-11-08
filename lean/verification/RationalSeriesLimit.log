@@ -1,0 +1,1 @@
+'NonAlgebraicity.rational_limit_of_rational_series' depends on axioms: [propext, Classical.choice, Quot.sound]

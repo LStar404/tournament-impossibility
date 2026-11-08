@@ -1,0 +1,1 @@
+'NonAlgebraicity.rational_linear_relation_descends' depends on axioms: [propext, Classical.choice, Quot.sound]
