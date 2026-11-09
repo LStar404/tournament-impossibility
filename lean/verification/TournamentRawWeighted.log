@@ -1,0 +1,13 @@
+TournamentRawWeighted.lean:53:32: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+TournamentRawWeighted.lean:56:30: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+TournamentRawWeighted.lean:53:32: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+TournamentRawWeighted.lean:56:30: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'TournamentRawWeighted.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]

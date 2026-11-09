@@ -1,0 +1,7 @@
+ComplexifiedSkewBound.lean:8:0: warning: automatically included section variable(s) unused in theorem `ComplexifiedSkewBound.vector_squared`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'ComplexifiedSkewBound.operator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,3 +1,11 @@
+import SkewLagrangeBound
+import ComplexifiedSkewBound
+import TournamentSkewMargin
+import BipartiteOperatorBound
+import BinaryBalancedTensor
+import TournamentRawWeighted
+import BinaryGraphTransport
+import BinaryRawGraphWeighted
 import RawBlockNeumannInverse
 import BalancedTensorScores
 import RawCoordinateTaylor
@@ -1036,3 +1044,12 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms RawPhysicalWeightedNorm.bounds
 
 #print axioms RawActivityLabelNorm.label_bound
+
+#print axioms SkewLagrangeBound.bilinear_squared
+#print axioms ComplexifiedSkewBound.operator_bound
+#print axioms TournamentSkewMargin.branch_bound
+#print axioms BipartiteOperatorBound.bound
+#print axioms BinaryBalancedTensor.branch_scores
+#print axioms TournamentRawWeighted.weighted
+#print axioms BinaryGraphTransport.graph_entry
+#print axioms BinaryRawGraphWeighted.weighted
