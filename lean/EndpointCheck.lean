@@ -1,3 +1,8 @@
+import MixedEvenMatrix
+import MixedEvenCandidate
+import ActualMixedEvenDescent
+import RawFormalMixedSpecialization
+import TournamentRawFormalWick
 import DerivationFiniteProduct
 import DerivationDeterminantColumns
 import FullJacobiDerivation
@@ -769,3 +774,14 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms MixedDeterminantCandidateODE.candidate_derivative
 
 #print axioms ActualMixedDeterminantFormula.actual_formula
+
+#print axioms MixedEvenMatrix.expand_inverse
+
+#print axioms MixedEvenCandidate.expand_candidate
+
+#print axioms ActualMixedEvenDescent.formula
+#print axioms ActualMixedEvenDescent.odd_coeff
+
+#print axioms RawFormalMixedSpecialization.actual_formula
+
+#print axioms TournamentRawFormalWick.formulaProof

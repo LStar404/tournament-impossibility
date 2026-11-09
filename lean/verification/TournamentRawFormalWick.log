@@ -1,0 +1,17 @@
+TournamentRawFormalWick.lean:5:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+TournamentRawFormalWick.lean:19:0: warning: Definition `formulaProof` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+TournamentRawFormalWick.formulaProof {n : ℕ} (T : DiamondGap.Tournament (Fin n)) (v : ℂ) :
+  ActualMixedEvenDescent.series (BlockGaussianDeterminant.blockQ T v) ⋯ (fun x => 1)
+      RawFormalMixedSpecialization.identityInteraction =
+    NormalizedDeterminantBranch.branch
+        (MixedEvenMatrix.block (BlockGaussianDeterminant.blockQ T v)
+            RawFormalMixedSpecialization.identityInteraction).det *
+      PowerSeries.subst
+        (RawFormalMixedSpecialization.rawSource
+          (MixedEvenMatrix.block (BlockGaussianDeterminant.blockQ T v)
+            RawFormalMixedSpecialization.identityInteraction))
+        (PowerSeries.exp ℂ)
+'TournamentRawFormalWick.formulaProof' depends on axioms: [propext, Classical.choice, Quot.sound]
