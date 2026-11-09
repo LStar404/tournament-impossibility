@@ -555,7 +555,7 @@ $$
  \begin{aligned}
  f_M(z)&=\frac{n^n}{n!}\operatorname{per}(J/n+zM)
        =\frac{\operatorname{per}(J+nzM)}{n!},\\
- [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n,\ n>0).
+ [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n, n>0).
  \end{aligned}
 $$
 The $F_k$ retain their earlier subset-pairing definition. The proof counts $(n-k)!$ completions of a selected minor and checks the row--column indexing. Above degree $n$, both the actual coefficient and $F_k$ vanish separately; the empty-matrix polynomial is one. Writing $G_M$ for the actual core, the finite projection identifies $F_k(M)$ with $[z^k]\sum_{j=0}^{m}G_MC_j$ whenever $k\le m$; terms with $j>k$ vanish. The same normalized polynomial is explicitly identified with the object in the unweighted graph-tail theorem. No infinite activity sum is used.
@@ -596,9 +596,9 @@ $$
        -\sum_{k=0}^{\infty}(k)_\ell U_k\right|
  \le E_{d,p,\ell}n^{-p-1},
 $$
-including summability of the approximant terms. This is a derivative-ready coefficient statement at $z=1$, not an analytic iteratedDeriv theorem. Identifying both coefficient sums with the required derivatives of the polynomial and the evaluation function of $U$ remains unproved here; a unit-disk value bound alone would not justify boundary differentiation.
+including summability of the approximant terms. This is a derivative-ready coefficient statement at $z=1$, not an analytic `iteratedDeriv` theorem. Identifying both coefficient sums with the required derivatives of the polynomial and the evaluation function of $U$ remains unproved here; a unit-disk value bound alone would not justify boundary differentiation.
 
-The paper's full raw_fixed_order_recovery theorem covers all matrices under abstract $C,K,q$ assumptions and every radius $r<1/q$; this fixed-depth graph result does not establish it. No new larger-disk analytic estimate, infinite activity convergence or edit-Lipschitz remainder is claimed. The analytic derivative identification, structural projection, canonical numbering, global extremal classification and full Condition R remain unresolved.
+The paper's full `raw\_fixed\_order\_recovery` theorem covers all matrices under abstract $C,K,q$ assumptions and every radius $r<1/q$; this fixed-depth graph result does not establish it. No new larger-disk analytic estimate, infinite activity convergence or edit-Lipschitz remainder is claimed. The analytic derivative identification, structural projection, canonical numbering, global extremal classification and full Condition R remain unresolved.
 
 Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 
