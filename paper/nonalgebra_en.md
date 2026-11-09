@@ -447,7 +447,7 @@ $$
 $$
 $$
  \left|P(T,v,z)-\sum_{k<m}c_kz^k\right|
- \le\frac{M(\rho/s)^m}{1-\rho/s}\quad(m\ge0,\ |z|\le\rho).
+ \le\frac{M(\rho/s)^m}{1-\rho/s}\quad(m\ge0, |z|\le\rho).
 $$
 The sphere bound is derived from the actual product estimate, not assumed. The last inequality is the analytic Wick-core Taylor remainder; it is not the true tail estimate for the finite matching polynomial or permanent.
 
