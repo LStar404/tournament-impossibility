@@ -1,0 +1,23 @@
+BalancedTensorScores.lean:16:42: warning: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← Finset.mul_sum, ht, mul_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+BalancedTensorScores.lean:29:37: warning: Variable name `hn` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hn
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+BalancedTensorScores.lean:39:0: warning: automatically included section variable(s) unused in theorem `BalancedTensorScores.transpose_matrix`:
+  [Fintype C]
+  [Fintype F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype C] [Fintype F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'BalancedTensorScores.score_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BalancedTensorScores.branch_score' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BalancedTensorScores.branch_column_score' depends on axioms: [propext, Classical.choice, Quot.sound]

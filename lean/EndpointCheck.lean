@@ -1,3 +1,9 @@
+import RawBlockNeumannInverse
+import BalancedTensorScores
+import RawCoordinateTaylor
+import RawCoordinateDisk
+import RawPhysicalWeightedNorm
+import RawActivityLabelNorm
 import WeightedCoefficientNorm
 import WeightedCoefficientProducts
 import PartialMatchingWeightedBound
@@ -1015,3 +1021,18 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms RawResolventMeanBound.vector_bound
 
 #print axioms RawBlockInverseScaling.bounds
+
+#print axioms RawBlockNeumannInverse.inverse_bound
+
+#print axioms BalancedTensorScores.score_bound
+#print axioms BalancedTensorScores.branch_score
+#print axioms BalancedTensorScores.branch_column_score
+
+#print axioms RawCoordinateTaylor.covariance_series
+#print axioms RawCoordinateTaylor.mean_series
+
+#print axioms RawCoordinateDisk.disk
+
+#print axioms RawPhysicalWeightedNorm.bounds
+
+#print axioms RawActivityLabelNorm.label_bound
