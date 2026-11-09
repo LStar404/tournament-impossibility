@@ -539,18 +539,18 @@ For the chosen-enumeration graph family at positive depth $d$, take $M=(1025/2)(
 For the actual ratio $\rho(n,k)=n^k/(n)_k$, $n>0$, $k\le n$, the order-$p$ geometric-product remainder is nonnegative and at most $\rho(n,k)(k^2/n)^{p+1}$. Spare-radius estimates give an $n^{-p-1}$ multiplier error for each graph activity $1\le j\le p$, expanded through order $p-j$, on a proved linear window; the zeroth activity has zero error. Core multiplication and summation of the complete approximation remain open.
 
 The permanent polynomial has a proved tail bound conditional on a circle envelope. Eleven additional modules establish positive radial-phase factorial moments, integrability, permanent polarization and AM--GM. Together with the spectral factors $XY^*=A$ and $X^*X=Y^*Y=\operatorname{diag}(s)$, these give
-\[
+$$
  |\operatorname{per}A|\le(n!/n^n)h_n(s_1,\ldots,s_n) \qquad(n>0).
-\]
+$$
 Here $A$ is any complex $n\times n$ matrix, including singular matrices, $s_i$ are its singular values, and $h_n$ is the complete homogeneous polynomial. The positive auxiliary measure is separate from the indefinite formal covariance.
 
 Fixed-activity bounds do not establish infinite-activity convergence; core tails do not replace permanent tails.
 
 Thirteen further modules, included in the completed 347-module verification, extend this finite inequality to the actual permanent tail. For $P=J/n$ and the branch matrix $M$ of the chosen-enumeration positive-depth graph family, the verified endpoint bounds the coefficients of the literal polynomial $F(z)=\operatorname{per}(P+zM)$ beyond $\lfloor\delta n\rfloor$. With $D_n=n!/n^n$, it gives
-\[
+$$
  D_n^{-1}\sum_{k>\lfloor\delta n\rfloor}|[z^k]F(z)|
- \le B_{d,\delta,p}n^{-p}\qquad(\delta>0,\ p\in\mathbb N),
-\]
+ \le B_{d,\delta,p}n^{-p}\qquad(\delta>0, p\in\mathbb N),
+$$
 under the existing graph hypotheses $n\ge24$, fixed positive depth $d$, real skew coarse entries bounded by one, the specified enumeration and relabeling, and real $|v|\le1$. The constant is explicit and uniform over that graph class. Its inputs are the derived circle estimate at radius $5/4$, with $K=2^d+1$, entry constant one and operator bound $3/4$; the circle estimate is not an extra graph assumption. This is the unweighted absolute tail of the actual permanent polynomial, not a Gaussian-core tail.
 
 Weighted tails, core multiplication, activity-window summation, the exact factorial coefficient bridge, final recovery, projection, canonical numbering and the global extremal-structure argument remain separate obligations. These results do not establish Condition R.
