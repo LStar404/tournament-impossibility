@@ -1,0 +1,23 @@
+GlobalLogDegreeAssignments.lean:9:0: warning: automatically included section variable(s) unused in theorem `GlobalLogDegreeAssignments.local_coefficient`:
+  [CharZero S]
+  [Algebra ℚ S]
+  [Algebra ℚ P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] [Algebra ℚ S] [Algebra ℚ P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalLogDegreeAssignments.lean:32:0: warning: automatically included section variable(s) unused in theorem `GlobalLogDegreeAssignments.degree_small_zero`:
+  [CharZero S]
+  [Algebra ℚ S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] [Algebra ℚ S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+GlobalLogDegreeAssignments.lean:36:0: warning: automatically included section variable(s) unused in theorem `GlobalLogDegreeAssignments.assignment_zero`:
+  [Algebra ℚ P]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra ℚ P] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'GlobalLogDegreeAssignments.actual_ordered_degrees' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GlobalLogDegreeAssignments.assignment_zero' depends on axioms: [propext, Classical.choice, Quot.sound]

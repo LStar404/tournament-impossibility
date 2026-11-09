@@ -1,3 +1,10 @@
+import PairingEdgeCard
+import PartialMatchingWeightOrder
+import PhysicalActivityOrder
+import ZeroConstantFormalExp
+import GlobalResidualLog
+import GlobalLogFiniteVertices
+import GlobalLogDegreeAssignments
 import AffineWickWord
 import PartialMatchingAffine
 import PhysicalPartialMatching
@@ -951,3 +958,18 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms StructuralPartialMatchingCounts.structural_bounds
 
 #print axioms ResidualPartialMatchingExpansion.actual_coefficient
+
+#print axioms PairingEdgeCard.partial_card
+
+#print axioms PartialMatchingWeightOrder.below
+
+#print axioms PhysicalActivityOrder.below
+
+#print axioms ZeroConstantFormalExp.finite_sum
+
+#print axioms GlobalResidualLog.actual_identity
+
+#print axioms GlobalLogFiniteVertices.ordered_vertices
+
+#print axioms GlobalLogDegreeAssignments.actual_ordered_degrees
+#print axioms GlobalLogDegreeAssignments.assignment_zero
