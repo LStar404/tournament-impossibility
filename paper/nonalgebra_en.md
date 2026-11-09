@@ -322,7 +322,7 @@ $$
 \frac{\left|b^{\mathsf T}(I+(w/n)^2S^2)^{-1}b\right|}{n^2}
 \le\frac{KC_R^2}{n}.
 $$
-The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption. 
+The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption.
 
 For the branch-defined Gaussian/source factor, put
 $$
