@@ -1,3 +1,14 @@
+import FiniteFactorialRecovery
+import RecoveryHomogeneousList
+import RecoveryHomogeneousEvaluation
+import RecoveryFiniteOrderRemainder
+import WeightedPolynomialMultiplier
+import FactorialWeightedRemainder
+import ActivityFactorialMultiplier
+import FactorialLinearWindow
+import PermanentPolynomialCircleTail
+import PermanentSpectralFrame
+import PermanentSpectralFactors
 import PartialMatchingFiberCount
 import ActivityFactorialSuppression
 import OrderedDegreeCompositionCount
@@ -1084,3 +1095,18 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms QuantitativeFixedActivity.labeled_uniform
 #print axioms BinaryGraphActivityBound.bound
 #print axioms ActivityZeroNormalization.zero
+
+#print axioms FiniteFactorialRecovery.factorialRecoveryRatio_sub_one_bound
+#print axioms RecoveryHomogeneousList.shift_bound
+#print axioms RecoveryHomogeneousEvaluation.remainder
+#print axioms RecoveryFiniteOrderRemainder.remainder
+#print axioms WeightedPolynomialMultiplier.finite_window
+#print axioms FactorialWeightedRemainder.bound
+#print axioms ActivityFactorialMultiplier.graph_order_bound
+#print axioms FactorialLinearWindow.graph
+#print axioms PermanentPolynomialCircleTail.actual_permanent_tail
+#print axioms PermanentSpectralFrame.spectral_representation
+#print axioms PermanentSpectralFrame.zero_eigenvalue_column
+#print axioms PermanentSpectralFrame.factors_reconstruct
+#print axioms PermanentSpectralFrame.leftFactor_gram
+#print axioms PermanentSpectralFrame.rightFactor_gram

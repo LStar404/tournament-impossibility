@@ -1,0 +1,13 @@
+FactorialWeightedRemainder.lean:25:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+FactorialWeightedRemainder.lean:25:57: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+FactorialWeightedRemainder.lean:25:25: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+FactorialWeightedRemainder.lean:25:57: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'FactorialWeightedRemainder.bound' depends on axioms: [propext, Classical.choice, Quot.sound]

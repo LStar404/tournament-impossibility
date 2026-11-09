@@ -1,0 +1,2 @@
+'PermanentSpectralFrame.spectral_representation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentSpectralFrame.zero_eigenvalue_column' depends on axioms: [propext, Classical.choice, Quot.sound]

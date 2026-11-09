@@ -1,0 +1,3 @@
+'FiniteFactorialRecovery.factorialRecoveryRatio_sub_one_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
