@@ -501,7 +501,7 @@ The actual physical moments now have a genuine partial-matching representation. 
 
 For $b$ structural vertices of degrees at least three, let $D$ be the number of occurrence positions, $e$ half the cardinality of the paired subset, and $h$ the number of unpaired positions. The actual pairing gives $D=2e+h$. With $j=e+h-b$, the proved counting bounds are $b\le2j$, $D\le6j$ and $e+h=j+b$. The existing unordered edge set is now proved to have cardinality $e$. Since each actual covariance and mean has zero constant coefficient, the physical partial-matching weight is divisible by $z^{e+h}$; its coefficients below degree $j+b$ vanish. Repeated numerical labels and internal pairs are retained. This is a formal order bound, not a norm estimate, and $j$ is not the power of $z$.
 
-The actual polynomial-valued residual product is also proved to equal the formal exponential of the sum of its local logarithms. At degree $m$, its coefficient has a finite expansion over $b\le\lfloor m/3\rfloor$, with the exact factor $1/b!$, ordered vertex-label maps and degree assignments summing to $m$. Repeated labels are allowed, and any term with a structural degree below three vanishes. This is an identity for the previously defined residual, not a replacement definition. 
+The actual polynomial-valued residual product is also proved to equal the formal exponential of the sum of its local logarithms. At degree $m$, its coefficient has a finite expansion over $b\le\lfloor m/3\rfloor$, with the exact factor $1/b!$, ordered vertex-label maps and degree assignments summing to $m$. Repeated labels are allowed, and any term with a structural degree below three vanishes. This is an identity for the previously defined residual, not a replacement definition.
 
 The global finite structural regrouping is now proved for the actual residual coefficients. The actual additive tilted functional is applied to the ordered-vertex expansion, without assuming that Wick or tilted insertion is multiplicative. A genuine word-to-occurrence-position identity transports each term to the physical partial-matching sum. The resulting coefficient $[z^k]T_Z$ is a finite sum over total degree $m\le2k$, vertex count $b\le\lfloor m/3\rfloor$, arbitrary vertex labels, degree assignments and actual partial matchings, retaining the factor $1/b!$ and the logarithm coefficients. The finite sum over $j$ can then be put outermost. Terms outside $b\le2j$, $m\le6j$ or $j+b\le k$ vanish by the proved coefficient-order and counting results, rather than by an imposed truncation. Empty structures, repeated labels, same-vertex pairs and singleton positions remain included; $j$ is not the coefficient degree $k$.
 
@@ -511,6 +511,7 @@ Earlier manuscripts remain in `historical/formula-restrictions` for comparison. 
 
 © 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
+\clearpage
 ## References
 
 [1] Alexander Divoux and Shouda Wang. *The maximum number of Hamiltonian cycles in tournaments*. arXiv:2610.23755v1 [math.CO], 2026, submitted 16 October 2026. Theorem 1.4 is cited here. DOI: 10.48550/arXiv.2610.23755. Full text of the fixed version.
