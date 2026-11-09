@@ -539,9 +539,9 @@ For the chosen-enumeration graph family at positive depth $d$, take $M=(1025/2)(
 For the actual ratio $\rho(n,k)=n^k/(n)_k$, $n>0$, $k\le n$, the order-$p$ geometric-product remainder is nonnegative and at most $\rho(n,k)(k^2/n)^{p+1}$. Spare-radius estimates give an $n^{-p-1}$ multiplier error for each graph activity $1\le j\le p$, expanded through order $p-j$, on a proved linear window; the zeroth activity has zero error. Core multiplication and summation of the complete approximation remain open.
 
 The permanent polynomial has a proved tail bound conditional on a circle envelope. Eleven additional modules establish positive radial-phase factorial moments, integrability, permanent polarization and AM--GM. Together with the spectral factors $XY^*=A$ and $X^*X=Y^*Y=\operatorname{diag}(s)$, these give
-\[
+$$
  |\operatorname{per}A|\le(n!/n^n)h_n(s_1,\ldots,s_n) \qquad(n>0).
-\]
+$$
 Here $A$ is any complex $n\times n$ matrix, including singular matrices, $s_i$ are its singular values, and $h_n$ is the complete homogeneous polynomial. The positive auxiliary measure is separate from the indefinite formal covariance.
 
 The actual circle envelope, unconditional permanent tail, core multiplication and full approximation sum, canonical popcount identification, normalized recovery and full Condition R remain open. Fixed-activity bounds do not establish infinite-activity convergence; core tails do not replace permanent tails.
@@ -550,7 +550,6 @@ Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a r
 
 © 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-\clearpage
 ## References
 
 [1] Alexander Divoux and Shouda Wang. *The maximum number of Hamiltonian cycles in tournaments*. arXiv:2610.23755v1 [math.CO], 2026, submitted 16 October 2026. Theorem 1.4 is cited here. DOI: 10.48550/arXiv.2610.23755. Full text of the fixed version.
