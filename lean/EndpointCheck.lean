@@ -1,3 +1,8 @@
+import RepeatedLabelPairing
+import FullFourthMoment
+import SymmetricPairingTransport
+import PairingRepresentativeBridge
+import OccurrenceWickPolynomial
 import SubsetPairingScaling
 import FrozenPartialPairingPolynomial
 import ShiftedProductSubsetExpansion
@@ -585,3 +590,17 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms FrozenPairingEndpoints.F0
 #print axioms FrozenPairingEndpoints.degree_le
+
+#print axioms RepeatedLabelPairing.repeated_four
+#print axioms RepeatedLabelPairing.color_permutation_invariant
+
+#print axioms FullFourthMoment.fourth
+#print axioms FullFourthMoment.repeated_xxyy
+
+#print axioms SymmetricPairingTransport.moment_transport
+
+#print axioms PairingRepresentativeBridge.occurrence_moment_eq
+#print axioms PairingRepresentativeBridge.arbitrary_reordering
+
+#print axioms OccurrenceWickPolynomial.wick_monomial
+#print axioms OccurrenceWickPolynomial.monomialMoment_enumeration

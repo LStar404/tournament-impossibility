@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 04:04 UTC, covers 159 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 04:39 UTC, covers 164 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -364,7 +364,13 @@ $$
 $$
 The scaling and regrouping by subset size are proved, with $F_0(M)=1$ and degree at most $n$. This contraction agrees with the proved finite pairing weights on squarefree monomials, but its definition ignores nonsquarefree monomials. It is not yet a Wick functional for repeated indices, and cannot be applied to an exponential or logarithmic series as though that extension had been established.
 
-The remaining formal pairing step is the repeated-index moment functional and the linear/quadratic exponential resummation. Projection, activity estimates, true coefficient tails, falling-factorial recovery to the actual permanent, and full Condition R also remain unformalised. No probability-measure expectation is asserted.
+A separate full polynomial Wick functional now retains repeated labels. For a monomial with exponent vector $d$, its pairing positions are the distinct occurrences $(i,a)$ with $0\le a<d_i$, not merely the support of $d$. The monomial value is the sum over all perfect pairings of these positions, and linear extension defines a functional on multivariate polynomials. For symmetric covariance its value is unchanged by any enumeration of the occurrences, including permutations mixing the two colours. Separately, the complete fourth-order occurrence-pairing formula is proved, including
+$$
+ m_C(x,x,y,y)=C_{xx}C_{yy}+2C_{xy}^2,
+$$
+with no zero-diagonal assumption; the diagonal contribution is not discarded.
+
+This establishes the occurrence-based polynomial definition, its monomial evaluation and enumeration invariance. A general all-order deletion recurrence, full compatibility with the earlier squarefree contraction, and extension to the linear/quadratic exponential resummation remain unformalised. It is a formal linear functional, not a probability expectation or a multiplicative map. Projection, activity estimates, true coefficient tails, falling-factorial recovery and full Condition R remain incomplete.
 
 The formal covariance $zQ_v$ is generally indefinite; it is not used as the covariance of a positive Gaussian measure.
 

@@ -1,0 +1,2 @@
+'RepeatedLabelPairing.repeated_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RepeatedLabelPairing.color_permutation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]

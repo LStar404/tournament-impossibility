@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-09T04:04:42.645836+00:00",
+  "checked_at_utc": "2026-11-09T04:39:38.000417+00:00",
   "retained_exact_source_checks": [],
   "retained_checks_from_utc": null,
   "lean_version": "leanprover/lean4:v4.35.0",
@@ -91,12 +91,14 @@
     "QRegularApplications",
     "QRegularRationalLimit",
     "RectangularPairing",
+    "RepeatedLabelPairing",
     "SelectedTournamentMajorization",
     "TournamentHamiltonian.PathConvolution",
     "TransitiveKernelInverseBounds",
     "DiamondFreeDeterminant",
     "DiamondLinkAverage",
     "FinitePairingTransport",
+    "FullFourthMoment",
     "IteratedVectorMajorization",
     "TournamentHamiltonian.PathConvolutionGenerating",
     "VectorMajorizationEndpoint",
@@ -107,17 +109,20 @@
     "KMatrixIdentification",
     "PermanentDiagonalExpansion",
     "PivotCycleLink",
+    "SymmetricPairingTransport",
     "TournamentPowerComparison",
     "BasisReference",
     "DiamondFreeKernelInverseTransfer",
     "DiamondFreeKernelLimit",
     "DiamondFreePathAverage",
+    "PairingRepresentativeBridge",
     "PivotSmallDiamond",
     "SubsetPairingPermanent",
     "TournamentSourceEnergy",
     "DiamondFreeComplexResolvent",
     "DiamondFreeKernelOperatorBound",
     "DiamondFreeKernelUniform",
+    "OccurrenceWickPolynomial",
     "OrdinalTriangleAdditivity",
     "ReferenceMomentComparison",
     "StrongTournamentTriangles",
@@ -1065,6 +1070,16 @@
       ]
     },
     {
+      "module": "RepeatedLabelPairing",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e755343ff6eb51b84038a70183524f2d510208cb51461257142c22947016c5e7",
+      "axiom_reports": [
+        "'RepeatedLabelPairing.repeated_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'RepeatedLabelPairing.color_permutation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "SelectedTournamentMajorization",
       "exit_code": 0,
       "passed": true,
@@ -1116,6 +1131,16 @@
       "source_sha256": "cf2e8425de97f828e81081cdae351f621d3a69faac4572875ac29cc79ad9390c",
       "axiom_reports": [
         "'FinitePairingTransport.sum_transport' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "FullFourthMoment",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "2385e80b47daafbac1f685c3e26a4c6f6ca3c34ae5713f4f9ad2d3116d6aacff",
+      "axiom_reports": [
+        "'FullFourthMoment.fourth' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'FullFourthMoment.repeated_xxyy' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1216,6 +1241,15 @@
       ]
     },
     {
+      "module": "SymmetricPairingTransport",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "11f1de5fafbbe13abb128d60520625189305e34d371b16b836e02e340c970459",
+      "axiom_reports": [
+        "'SymmetricPairingTransport.moment_transport' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentPowerComparison",
       "exit_code": 0,
       "passed": true,
@@ -1260,6 +1294,16 @@
       "passed": true,
       "source_sha256": "b449edd2b2ed4691b5453c0a01bd53cae316ae38660536303703bac9fe1a7e31",
       "axiom_reports": []
+    },
+    {
+      "module": "PairingRepresentativeBridge",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "2a438da79c2f3faab9eed564d2ade507ea6a107dc02da3d5ed6f8a5a8496d3a7",
+      "axiom_reports": [
+        "'PairingRepresentativeBridge.occurrence_moment_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PairingRepresentativeBridge.arbitrary_reordering' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
     },
     {
       "module": "PivotSmallDiamond",
@@ -1318,6 +1362,16 @@
         "'DiamondFreeKernelUniform.uniformlyOn_compact' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeKernelUniform.inverse_uniformlyOn_compact' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeKernelUniform.actual_imaginary_uniformlyOn_compact' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+      ]
+    },
+    {
+      "module": "OccurrenceWickPolynomial",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "d0dd9ab8d71d5d789f5e6f94c09bf428cc0692ca3a05280538345acb415645b0",
+      "axiom_reports": [
+        "'OccurrenceWickPolynomial.wick_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OccurrenceWickPolynomial.monomialMoment_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1798,7 +1852,7 @@
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "978fb53ed2e3f0e2d991296da2551471ad55dfdb563ffe730271c2d0c2e92fad",
+      "source_sha256": "e39c5408d152f3b8d2e29618c2107a8a9f6b0e22649dae349737b0288c564a12",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -1985,9 +2039,18 @@
         "'SquarefreePairingContraction.contraction_shifted_product' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'SquarefreePairingContraction.contraction_scaled_product' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'FrozenPairingEndpoints.F0' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'FrozenPairingEndpoints.degree_le' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'FrozenPairingEndpoints.degree_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'RepeatedLabelPairing.repeated_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'RepeatedLabelPairing.color_permutation_invariant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'FullFourthMoment.fourth' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'FullFourthMoment.repeated_xxyy' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'SymmetricPairingTransport.moment_transport' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PairingRepresentativeBridge.occurrence_moment_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PairingRepresentativeBridge.arbitrary_reordering' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OccurrenceWickPolynomial.wick_monomial' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OccurrenceWickPolynomial.monomialMoment_enumeration' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. The Gaussian modules additionally prove parameter substitution with the principal logarithm of beta, the origin-normalized determinant branch identity, and uniform O(1/n) errors for the explicit Gaussian/source proxy and each fixed derivative on nested disks, uniformly in actual zero-diamond graphs and |v|<=1 under stated linear score energy. Actual analyticity and source estimates are proved internally. ActualBlockGaussianSource now proves the true doubled-block bilinear source elimination and determinant-branch bridge for v^2=1, n>0, beta nonzero and a true quadratic resolvent unit, exactly identifying the algebraic factor with the analytic proxy. This is finite algebra, not formal Gaussian pairing resummation or a probability integral with indefinite covariance. WickPairingPermanent additionally proves the finite sum over all fixed-point-free involutive pairings for a bipartite covariance equals the matrix permanent, with monochromatic weights eliminated, a proved pairing-permutation equivalence, unique edge representatives and the empty case. This is not a probability expectation or partial-pairing/exponential resummation theorem. The finite pairing modules further prove actual transport over arbitrary finite left/right types, vanishing for unequal cardinalities, and equal-cardinality subset pairing sums as enumerated submatrix permanents. The next finite modules prove actual subset-weight scaling, frozen coefficient grouping, the shifted-product subset expansion, and an explicit linear squarefree coefficient contraction connecting that product to the frozen polynomial, including F0=1 and degree at most n. This is not a probability expectation or a repeated-index Wick theorem. Exponential resummation, projection, activities, true tails, permanent recovery and full Condition R remain outside these results."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. The Gaussian modules additionally prove parameter substitution with the principal logarithm of beta, the origin-normalized determinant branch identity, and uniform O(1/n) errors for the explicit Gaussian/source proxy and each fixed derivative on nested disks, uniformly in actual zero-diamond graphs and |v|<=1 under stated linear score energy. Actual analyticity and source estimates are proved internally. ActualBlockGaussianSource now proves the true doubled-block bilinear source elimination and determinant-branch bridge for v^2=1, n>0, beta nonzero and a true quadratic resolvent unit, exactly identifying the algebraic factor with the analytic proxy. This is finite algebra, not formal Gaussian pairing resummation or a probability integral with indefinite covariance. WickPairingPermanent additionally proves the finite sum over all fixed-point-free involutive pairings for a bipartite covariance equals the matrix permanent, with monochromatic weights eliminated, a proved pairing-permutation equivalence, unique edge representatives and the empty case. This is not a probability expectation or partial-pairing/exponential resummation theorem. The finite pairing modules further prove actual transport over arbitrary finite left/right types, vanishing for unequal cardinalities, and equal-cardinality subset pairing sums as enumerated submatrix permanents. The next finite modules prove actual subset-weight scaling, frozen coefficient grouping, the shifted-product subset expansion, and an explicit linear squarefree coefficient contraction connecting that product to the frozen polynomial, including F0=1 and degree at most n. The occurrence-pairing modules additionally retain repeated labels, prove the full fourth pairing formula, arbitrary position transport for symmetric covariance, compatibility with unique edge representatives, and the full polynomial linear Wick definition via occurrence types with monomial and enumeration theorems. These do not yet prove all-order deletion recursion, complete compatibility with the earlier squarefree contraction, probability expectations or exponential identities. Exponential resummation, projection, activities, true tails, permanent recovery and full Condition R remain outside these results."
 }
