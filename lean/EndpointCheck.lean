@@ -1,3 +1,9 @@
+import OrderedVertexWord
+import OrderedResidualPolynomial
+import OrderedResidualTilted
+import PartialMatchingActivityGrouping
+import OrderedResidualActivities
+import GlobalActivityFiniteRegroup
 import PairingEdgeCard
 import PartialMatchingWeightOrder
 import PhysicalActivityOrder
@@ -973,3 +979,16 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms GlobalLogDegreeAssignments.actual_ordered_degrees
 #print axioms GlobalLogDegreeAssignments.assignment_zero
+
+#print axioms OrderedVertexWord.physical_matching
+
+#print axioms OrderedResidualPolynomial.coefficient
+
+#print axioms OrderedResidualTilted.eq_old
+
+#print axioms PartialMatchingActivityGrouping.grouped
+
+#print axioms OrderedResidualActivities.actual_coefficient
+
+#print axioms GlobalActivityFiniteRegroup.actual_regroup
+#print axioms GlobalActivityFiniteRegroup.activity_constraints

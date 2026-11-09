@@ -1,0 +1,3 @@
+OrderedResidualPolynomial.lean:4:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+'OrderedResidualPolynomial.coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]

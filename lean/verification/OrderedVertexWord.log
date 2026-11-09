@@ -1,0 +1,21 @@
+OrderedVertexWord.lean:7:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+OrderedVertexWord.lean:14:0: warning: automatically included section variable(s) unused in theorem `OrderedVertexWord.length`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+OrderedVertexWord.lean:18:0: warning: automatically included section variable(s) unused in theorem `OrderedVertexWord.product`:
+  [Fintype I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+OrderedVertexWord.lean:31:0: warning: automatically included section variable(s) unused in theorem `OrderedVertexWord.polynomial`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'OrderedVertexWord.physical_matching' depends on axioms: [propext, Classical.choice, Quot.sound]

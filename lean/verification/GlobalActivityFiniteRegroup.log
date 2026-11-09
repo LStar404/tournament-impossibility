@@ -1,0 +1,28 @@
+GlobalActivityFiniteRegroup.lean:4:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+GlobalActivityFiniteRegroup.lean:30:15: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+GlobalActivityFiniteRegroup.lean:30:15: warning: This simp argument is unused:
+  if_pos hdeg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GlobalActivityFiniteRegroup.lean:31:10: warning: This simp argument is unused:
+  hdeg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+GlobalActivityFiniteRegroup.lean:33:0: warning: automatically included section variable(s) unused in theorem `GlobalActivityFiniteRegroup.activity_constraints`:
+  [Algebra ℚ S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra ℚ S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'GlobalActivityFiniteRegroup.actual_regroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GlobalActivityFiniteRegroup.activity_constraints' depends on axioms: [propext, Classical.choice, Quot.sound]
