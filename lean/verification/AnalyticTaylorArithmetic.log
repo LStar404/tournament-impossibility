@@ -1,0 +1,2 @@
+'AnalyticTaylorArithmetic.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AnalyticTaylorArithmetic.hasSeries' depends on axioms: [propext, Classical.choice, Quot.sound]

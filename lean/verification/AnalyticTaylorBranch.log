@@ -1,0 +1,1 @@
+'AnalyticTaylorBranch.branch_series' depends on axioms: [propext, Classical.choice, Quot.sound]

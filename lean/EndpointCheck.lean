@@ -1,3 +1,10 @@
+import AnalyticNormalizedBranch
+import AnalyticTaylorArithmetic
+import AnalyticTaylorFinite
+import AnalyticTaylorInverse
+import AffineMatrixTaylorBridge
+import AnalyticTaylorBranch
+import ActualGaussianTaylorBranch
 import MixedEvenMatrix
 import MixedEvenCandidate
 import ActualMixedEvenDescent
@@ -785,3 +792,19 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms RawFormalMixedSpecialization.actual_formula
 
 #print axioms TournamentRawFormalWick.formulaProof
+
+#print axioms AnalyticNormalizedBranch.eventually_eq
+
+#print axioms AnalyticTaylorArithmetic.mul
+#print axioms AnalyticTaylorArithmetic.hasSeries
+
+#print axioms AnalyticTaylorFinite.determinant
+
+#print axioms AnalyticTaylorInverse.inverse_transport
+
+#print axioms AffineMatrixTaylorBridge.inverse_series
+#print axioms AffineMatrixTaylorBridge.determinant_series
+
+#print axioms AnalyticTaylorBranch.branch_series
+
+#print axioms ActualGaussianTaylorBranch.actual_branch
