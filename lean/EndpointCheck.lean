@@ -1,3 +1,9 @@
+import AffineWickWord
+import PartialMatchingAffine
+import PhysicalPartialMatching
+import PartialMatchingInvolution
+import StructuralPartialMatchingCounts
+import ResidualPartialMatchingExpansion
 import ResidualLogarithm
 import ResidualLogFiniteVertices
 import ResidualFirstCoefficient
@@ -931,3 +937,17 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms BipartiteResidualSecondZero.actual_second_zero
 #print axioms BipartiteResidualSecondZero.low_frozen_core_match
+
+#print axioms AffineWickWord.recurrence
+
+#print axioms PartialMatchingAffine.affine_identity
+
+#print axioms PhysicalPartialMatching.actual_matching
+
+#print axioms PartialMatchingInvolution.to_from
+#print axioms PartialMatchingInvolution.moved_iff
+#print axioms PartialMatchingInvolution.from_to
+
+#print axioms StructuralPartialMatchingCounts.structural_bounds
+
+#print axioms ResidualPartialMatchingExpansion.actual_coefficient
