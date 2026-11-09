@@ -1,3 +1,9 @@
+import OccurrenceSquarefreeEquiv
+import OrderedUnorderedSubsetPairing
+import FullWickSquarefreeCompatibility
+import PairingDeletion
+import PairingMomentRecurrence
+import PairingMomentParity
 import RepeatedLabelPairing
 import FullFourthMoment
 import SymmetricPairingTransport
@@ -604,3 +610,19 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms OccurrenceWickPolynomial.wick_monomial
 #print axioms OccurrenceWickPolynomial.monomialMoment_enumeration
+
+#print axioms OccurrenceSquarefreeEquiv.equivalence
+
+#print axioms OrderedUnorderedSubsetPairing.subsetWeight_eq
+
+#print axioms FullWickSquarefreeCompatibility.wick_squarefree_monomial
+#print axioms FullWickSquarefreeCompatibility.wick_scaled_product
+
+#print axioms PairingDeletion.insert_restrict
+#print axioms PairingDeletion.deletionEquiv
+
+#print axioms PairingMomentRecurrence.moment_recurrence
+
+#print axioms PairingMomentParity.pairing_even
+#print axioms PairingMomentParity.odd_moment_zero
+#print axioms PairingMomentParity.empty_moment_one
