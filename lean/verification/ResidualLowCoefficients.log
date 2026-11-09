@@ -1,0 +1,24 @@
+ResidualLowCoefficients.lean:10:4: warning: This simp argument is unused:
+  Finset.Nat.antidiagonal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [FactorizedResidualIdentity.residual, mixed, PowerSeries.coeff_mul, PowerSeries.coeff_expand]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ResidualLowCoefficients.lean:14:33: warning: This simp argument is unused:
+  Finset.Nat.antidiagonal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [FactorizedResidualIdentity.residual, mixed, PowerSeries.coeff_mul, PowerSeries.coeff_expand,
+    Finset.Nat.antidiagonal_succ, divided]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ResidualLowCoefficients.lean:18:33: warning: This simp argument is unused:
+  Finset.Nat.antidiagonal_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [FactorizedResidualIdentity.residual, mixed, PowerSeries.coeff_mul, PowerSeries.coeff_expand,
+    Finset.Nat.antidiagonal_succ, divided]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ResidualLowCoefficients.residual_two' depends on axioms: [propext, Classical.choice, Quot.sound]

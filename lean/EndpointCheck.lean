@@ -1,3 +1,7 @@
+import AlgebraFormalExponential
+import FactorizedResidualIdentity
+import ResidualLowCoefficients
+import ResidualInsertionConvolution
 import PhysicalTiltedCovariance
 import OccurrenceWordDerivative
 import PhysicalWordRecurrence
@@ -863,3 +867,13 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms PhysicalWordCoefficientOrder.coefficient_below_order
 #print axioms PhysicalWordCoefficientOrder.permutation
+
+#print axioms AlgebraFormalExponential.mixed_sum
+#print axioms AlgebraFormalExponential.mixed_opposite
+
+#print axioms FactorizedResidualIdentity.actual_factorization
+
+#print axioms ResidualLowCoefficients.residual_two
+
+#print axioms ResidualInsertionConvolution.actual_shifted_identity
+#print axioms ResidualInsertionConvolution.normalized_identity

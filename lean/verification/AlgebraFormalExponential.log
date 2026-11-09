@@ -1,0 +1,25 @@
+AlgebraFormalExponential.lean:37:15: warning: This simp argument is unused:
+  map_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [← PowerSeries.coeff_zero_eq_constantCoeff_apply, coeff_exponential, divided_zero,
+    PowerSeries.coeff_zero_one, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AlgebraFormalExponential.lean:37:129: warning: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, ← PowerSeries.coeff_zero_eq_constantCoeff_apply, coeff_exponential, divided_zero,
+    PowerSeries.coeff_zero_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+AlgebraFormalExponential.lean:46:102: warning: This simp argument is unused:
+  PowerSeries.coeff_zero_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [map_mul, ← PowerSeries.coeff_zero_eq_constantCoeff_apply, coeff_exponential, divided_zero, one_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'AlgebraFormalExponential.mixed_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AlgebraFormalExponential.mixed_opposite' depends on axioms: [propext, Classical.choice, Quot.sound]

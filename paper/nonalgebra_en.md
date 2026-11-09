@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 12:20 UTC, covers 240 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 12:46 UTC, covers 244 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -464,7 +464,23 @@ $$
 $$
 reconstructs that actual moment under $z=u^2$. For $A=I$, true two-sided inverse identities also give $W=zK(I+zK)^{-1}$. Both $W$ and $\eta$ have zero constant term. The empty moment is one; all odd $u$ coefficients vanish, and the descended coefficient of degree $k$ vanishes when $2k<|w|$. Invariance under word permutations is transported from the actual commutative polynomial product, not assumed of the recurrence. Repeated labels and empty words are included. These are finite formal identities; they introduce no graph-energy or size hypotheses.
 
-The residual exponential and structural activity expansion, finite recovery with uniform bounds, the permanent's true tail, factorial restoration and full Condition R remain unfinished. The earlier core Taylor tail is not a substitute for these recovery estimates. The analytic identification remains restricted to $v^2=1$, with no positive-measure interpretation of the generally indefinite formal covariance.
+The residual factorization is now proved at the $u$-graded polynomial-series level. Independently define
+$$
+ r_i=(1+uX_i)\exp(-uX_i+u^2X_i^2/2),\qquad R=\prod_i r_i.
+$$
+Formal exponential addition and inversion in the polynomial algebra give $ER=\prod_i(1+uX_i)$ for the existing core with $A=I$, $h=\mathbf1$. Direct coefficient calculations give $[u^0]r_i=1$ and $[u]r_i=[u^2]r_i=0$. The residual is not defined by dividing the desired answer by the core.
+
+For $R=\sum_aR_au^a$, define the normalized insertion convolution by
+$$
+ [u^n]\mathcal T(R)=\sum_{a+b=n}[u^b]\widetilde{\mathcal W}(R_a).
+$$
+Actual Wick linearity and the proved unit normalization then give
+$$
+ \mathcal W\!\left(\prod_i(1+uX_i)\right)=Z_W\mathcal T(R).
+$$
+Every coefficient sum is finite. This uses neither multiplicativity of Wick nor analytic summation, and keeps repeated labels and self-pairings.
+
+Residual coefficient homogeneity, the full residual descent to $z=u^2$ and identification with the frozen $F_k$ polynomial, logarithmic structural activities and their uniform bounds remain to be proved. The permanent's true tail, factorial restoration and full Condition R also remain unfinished; the core Taylor tail does not replace them. The analytic identification remains restricted to $v^2=1$, with no positive-measure interpretation of the indefinite formal covariance.
 
 Earlier manuscripts remain in `historical/formula-restrictions` for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 
