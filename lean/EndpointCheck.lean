@@ -1,3 +1,7 @@
+import MixedWardUnit
+import MixedFormalTimeDerivative
+import MixedWardSolution
+import ActualMixedSourceTimeODE
 import FormalLinearLift
 import FormalDividedPowers
 import FormalMixedExponential
@@ -711,3 +715,15 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms ActualMixedWardMatrix.first_system
 #print axioms ActualMixedWardMatrix.second_system
+
+#print axioms MixedWardUnit.block_isUnit
+#print axioms MixedWardUnit.left_inverse
+
+#print axioms MixedFormalTimeDerivative.quadratic_time_derivative
+
+#print axioms MixedWardSolution.G_solution
+#print axioms MixedWardSolution.H_solution
+
+#print axioms ActualMixedSourceTimeODE.Z_initial
+#print axioms ActualMixedSourceTimeODE.Z_derivative
+#print axioms ActualMixedSourceTimeODE.scalar_ode

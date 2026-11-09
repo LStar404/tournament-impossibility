@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 07:11 UTC, covers 194 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 07:35 UTC, covers 198 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -408,7 +408,16 @@ is defined by finite coefficient sums. Applying the actual Wick functional coeff
 $$
  B G=u(Kh)Z_W,\qquad B H=KZ_W+u(Kh)G^{\mathsf T},\qquad B=I+u^2KA.
 $$
-These identities retain the covariance $K$ and concern the actual coefficientwise Wick series; they are not assumptions defining $Z_W,G,H$. Derivatives with respect to $u$, formal invertibility of $B$ and the general determinant–exponential solution are not established by this step. No analytic convergence or positive Gaussian measure is asserted.
+The formal matrix $B$ is proved to be a unit with a genuine two-sided inverse. Set $r=B^{-1}Kh$ and $D=B^{-1}K$. Solving these actual Ward systems, without dividing by $Z_W$, gives
+$$
+ G=urZ_W,\qquad H=(D+u^2rr^{\mathsf T})Z_W.
+$$
+The parameter derivative is also proved coefficientwise, together with $Z_W(0)=1$:
+$$
+ Z_W'=q(u)Z_W,\qquad
+ q(u)=u h^{\mathsf T}r-u\sum_{i,j}A_{ij}(D_{ij}+u^2r_ir_j).
+$$
+The initial value follows from the actual empty pairing moment. This proves an ODE for the genuine Wick series, not merely a candidate solution. Jacobi's determinant derivative and the general determinant–exponential solution remain to be established; no analytic convergence or positive Gaussian measure is asserted.
 
 For a rank-one quadratic perturbation $A=a hh^{\mathsf T}$, a further formal determinant bridge is proved. Define
 $$

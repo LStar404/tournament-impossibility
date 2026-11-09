@@ -1,0 +1,24 @@
+ActualMixedSourceTimeODE.lean:15:2: warning: Try this: 
+  letI̵
+
+The goal is a proposition, so `let` is preferred over `letI`.
+The difference between `let` and `letI` is that `letI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+ActualMixedSourceTimeODE.lean:12:0: warning: automatically included section variable(s) unused in theorem `ActualMixedSourceTimeODE.wick_one`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ActualMixedSourceTimeODE.lean:54:13: warning: This simp argument is unused:
+  G
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [H]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ActualMixedSourceTimeODE.Z_initial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMixedSourceTimeODE.Z_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMixedSourceTimeODE.scalar_ode' depends on axioms: [propext, Classical.choice, Quot.sound]
