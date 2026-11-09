@@ -1,3 +1,16 @@
+import PermanentCircleSpectralCoordinates
+import PermanentCircleRankOne
+import PermanentCircleCentering
+import PermanentCircleSpectralFrobenius
+import PermanentCircleExceptional
+import PermanentCircleRootSum
+import PermanentHomogeneousEnvelope
+import PermanentCircleActualCentering
+import PermanentCircleEnvelope
+import PermanentCirclePolynomialDecay
+import PermanentActualCircleTail
+import BinaryGraphPermanentCircle
+import BinaryGraphPermanentTail
 import PermanentPositiveMoments
 import PermanentPhasePowers
 import PermanentRadialPhaseMoment
@@ -1135,3 +1148,26 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms PermanentPositiveMoments.actual_pointwise
 #print axioms PermanentPositiveMoments.energy_integral
 #print axioms PermanentPositiveMoments.spectral_permanent_bound
+
+#print axioms PermanentSpectralFrame.image_frame_energy
+#print axioms PermanentSpectralFrame.bad_card_le_one
+#print axioms PermanentSpectralFrame.orthogonal_block_contraction
+#print axioms PermanentSpectralFrame.singular_square_sum
+#print axioms PermanentSpectralFrame.exists_exceptional_root
+#print axioms PermanentSpectralFrame.singular_root_sum_le_of_entry
+#print axioms PermanentPositiveMoments.homogeneous_le_geometric_product
+#print axioms PermanentPositiveMoments.homogeneous_exceptional_exp_bound
+#print axioms PermanentPositiveMoments.spectral_permanent_exceptional_exp_bound
+#print axioms PermanentSpectralFrame.actual_centering_error
+#print axioms PermanentSpectralFrame.actual_circle_operator_bound
+#print axioms PermanentSpectralFrame.actual_permanent_circle_envelope
+#print axioms PermanentSpectralFrame.normalized_permanent_circle_envelope
+#print axioms PermanentCirclePolynomialDecay.sqrt_exponential_decay
+#print axioms PermanentCirclePolynomialDecay.circle_floor_cutoff_decay
+#print axioms PermanentCirclePolynomialDecay.actual_permanent_floor_tail
+#print axioms PermanentActualCircleTail.actual_tail_bound
+#print axioms PermanentActualCircleTail.normalized_actual_tail_bound
+#print axioms PermanentActualCircleTail.normalized_actual_tail_three_quarters
+#print axioms BinaryGraphPermanentCircle.envelope
+#print axioms BinaryGraphPermanentCircle.normalized_envelope
+#print axioms BinaryGraphPermanentTail.normalized_tail

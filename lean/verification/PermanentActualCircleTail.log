@@ -1,0 +1,23 @@
+PermanentActualCircleTail.lean:54:20: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PermanentActualCircleTail.lean:54:45: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PermanentActualCircleTail.lean:54:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PermanentActualCircleTail.lean:54:45: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+PermanentActualCircleTail.lean:73:20: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+PermanentActualCircleTail.lean:73:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'PermanentActualCircleTail.actual_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentActualCircleTail.normalized_actual_tail_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentActualCircleTail.normalized_actual_tail_three_quarters' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

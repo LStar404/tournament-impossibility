@@ -1,0 +1,17 @@
+PermanentHomogeneousEnvelope.lean:67:28: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+PermanentHomogeneousEnvelope.lean:90:20: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+PermanentHomogeneousEnvelope.lean:93:45: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+'PermanentPositiveMoments.homogeneous_le_geometric_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentPositiveMoments.homogeneous_exceptional_exp_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentPositiveMoments.spectral_permanent_exceptional_exp_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

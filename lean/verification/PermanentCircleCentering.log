@@ -1,0 +1,1 @@
+'PermanentSpectralFrame.orthogonal_block_contraction' depends on axioms: [propext, Classical.choice, Quot.sound]

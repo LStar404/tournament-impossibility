@@ -1,0 +1,31 @@
+PermanentCircleRankOne.lean:41:17: warning: This simp argument is unused:
+  Ne.symm hij
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PermanentCircleRankOne.lean:44:14: warning: This simp argument is unused:
+  hij
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Ne.symm hij]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PermanentCircleRankOne.lean:66:52: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [elli, ellj, vi, vj, Matrix.mulVec_add, Matrix.mulVec_single, dotProduct, mul_add,
+    Finset.sum_add_distrib, Finset.mul_sum, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PermanentCircleRankOne.lean:66:62: warning: This simp argument is unused:
+  mul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [elli, ellj, vi, vj, Matrix.mulVec_add, Matrix.mulVec_single, dotProduct, mul_add,
+    Finset.sum_add_distrib, Finset.mul_sum, mul_assoc, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'PermanentSpectralFrame.bad_card_le_one' depends on axioms: [propext, Classical.choice, Quot.sound]

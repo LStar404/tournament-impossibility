@@ -1,0 +1,1 @@
+'PermanentSpectralFrame.singular_square_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

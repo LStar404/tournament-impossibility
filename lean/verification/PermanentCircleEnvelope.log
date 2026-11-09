@@ -1,0 +1,15 @@
+PermanentCircleEnvelope.lean:25:5: warning: Variable name `hC` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hC
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+PermanentCircleEnvelope.lean:32:46: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'PermanentSpectralFrame.actual_permanent_circle_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentSpectralFrame.normalized_permanent_circle_envelope' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+'PermanentCirclePolynomialDecay.sqrt_exponential_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentCirclePolynomialDecay.circle_floor_cutoff_decay' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentCirclePolynomialDecay.actual_permanent_floor_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
