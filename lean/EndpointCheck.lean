@@ -1,3 +1,7 @@
+import FrozenSeriesGrouping
+import ShiftedWickFrozenSeries
+import EvenUnitResidualDescent
+import ActualResidualFrozenFactorization
 import AlgebraFormalExponential
 import FactorizedResidualIdentity
 import ResidualLowCoefficients
@@ -877,3 +881,13 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms ResidualInsertionConvolution.actual_shifted_identity
 #print axioms ResidualInsertionConvolution.normalized_identity
+
+#print axioms FrozenSeriesGrouping.weighted_group
+
+#print axioms ShiftedWickFrozenSeries.shifted_identity
+
+#print axioms EvenUnitResidualDescent.factorization
+
+#print axioms ActualResidualFrozenFactorization.frozen_factorization
+#print axioms ActualResidualFrozenFactorization.residual_reconstruction
+#print axioms ActualResidualFrozenFactorization.polynomial_factorization

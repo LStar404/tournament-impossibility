@@ -1,0 +1,17 @@
+FrozenSeriesGrouping.lean:5:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+FrozenSeriesGrouping.lean:49:32: warning: This simp argument is unused:
+  PowerSeries.coeff_C_mul_X_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [series, frozenPolynomial, Polynomial.coeff_sum, Polynomial.coeff_monomial, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+FrozenSeriesGrouping.lean:49:62: warning: This simp argument is unused:
+  Polynomial.coeff_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [series, frozenPolynomial, PowerSeries.coeff_C_mul_X_pow, Polynomial.coeff_monomial, eq_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'FrozenSeriesGrouping.weighted_group' depends on axioms: [propext, Classical.choice, Quot.sound]

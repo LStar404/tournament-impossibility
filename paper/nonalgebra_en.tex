@@ -327,7 +327,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 \section*{Research status and licence}
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 12:46 UTC, covers 244 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 13:14 UTC, covers 248 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules \texttt{RationalRadial}, \texttt{RationalLinearDescent}, \texttt{RationalSeriesLimit} and \texttt{QRegularRationalLimit} supply the additional bridges and endpoint. The hypotheses \texttt{ExtremalAsymptotic} and \texttt{FourExponentialIndependence} remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under \path{lean/verification}; the source files alone do not certify a successful verification run.
 
@@ -505,13 +505,18 @@ Actual Wick linearity and the proved unit normalization then give
 \]
 Every coefficient sum is finite. This uses neither multiplicativity of Wick nor analytic summation, and keeps repeated labels and self-pairings.
 
-Residual coefficient homogeneity, the full residual descent to $z=u^2$ and identification with the frozen $F_k$ polynomial, logarithmic structural activities and their uniform bounds remain to be proved. The permanent's true tail, factorial restoration and full Condition R also remain unfinished; the core Taylor tail does not replace them. The analytic identification remains restricted to $v^2=1$, with no positive-measure interpretation of the indefinite formal covariance.
+The finite frozen polynomial is now connected to this actual residual. Grouping the true subset pairing weights proves that Wick of the shifted product is the degree-doubling expansion of the canonical power-series image of the existing frozen polynomial. Unequal subset sizes contribute zero by the pairing theorem. Let $T_U$ denote the actual insertion convolution above and define $T_Z$ by $[z^k]T_Z=[u^{2k}]T_U$. Unit cancellation using the actual core's constant term one proves that the odd coefficients of $T_U$ vanish and that expansion by two reconstructs $T_U$. Consequently, for the original bipartite covariance built from $M$,
+\[
+ \operatorname{frozenPolynomial}(M)=\operatorname{core}(M)\,T_Z(M)
+\]
+as formal power series. Here the core is the actual descended Wick series; the residual is defined by finite insertion coefficients and even extraction, not by dividing the desired polynomial by the core. Its explicit finite antidiagonal coefficient formula and the core's determinant–source formula are proved. The empty case and constant coefficient are retained, with no graph-energy or asymptotic hypothesis.
+
+This closes the exact finite formal factorization, not quantitative recovery. Residual homogeneity and physical-word transport, logarithmic structural activities with their exact multiplicities, uniform activity bounds, the permanent's true tail, factorial restoration and full Condition R remain unfinished. The core Taylor tail does not replace the finite-polynomial tail. No evaluation at $u=1$ or convergence of the full activity sum is claimed; the analytic identification remains restricted to $v^2=1$, without a positive-measure interpretation of the indefinite covariance.
 
 Earlier manuscripts remain in \path{historical/formula-restrictions} for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 
 © 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-\clearpage
 \section*{References}
 \begingroup\small
 [1] Alexander Divoux and Shouda Wang. \emph{The maximum number of Hamiltonian cycles in tournaments}. arXiv:2610.23755v1 [math.CO], 2026, submitted 16 October 2026. Theorem 1.4 is cited here. DOI: 10.48550/arXiv.2610.23755. Full text of the fixed version.
