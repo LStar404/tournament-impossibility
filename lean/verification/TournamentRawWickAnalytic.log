@@ -1,0 +1,17 @@
+TournamentRawWickAnalytic.lean:7:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+TournamentRawWickAnalytic.lean:75:0: warning: Definition `hasSeries` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+TournamentRawWickAnalytic.hasSeries {n : ℕ} (T : DiamondGap.Tournament (Fin n)) (hT : T.diamonds.card = 0) (v : ℂ)
+  (hv : v ^ 2 = 1) :
+  HasFPowerSeriesAt
+    (fun z =>
+      GaussianScalarFactor.gaussian n z *
+        Complex.exp (RawSourceTaylorBridge.source (BlockGaussianDeterminant.blockQ T v) z))
+    (FormalMultilinearSeries.ofScalars ℂ fun k =>
+      (PowerSeries.coeff k)
+        (ActualMixedEvenDescent.series (BlockGaussianDeterminant.blockQ T v) ⋯ (fun x => 1)
+          RawFormalMixedSpecialization.identityInteraction))
+    0
+'TournamentRawWickAnalytic.hasSeries' depends on axioms: [propext, Classical.choice, Quot.sound]

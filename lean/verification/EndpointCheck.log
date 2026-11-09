@@ -291,3 +291,8 @@
 'AffineMatrixTaylorBridge.determinant_series' depends on axioms: [propext, Classical.choice, Quot.sound]
 'AnalyticTaylorBranch.branch_series' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ActualGaussianTaylorBranch.actual_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TaylorDerivativeExponential.exp_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RawSourceTaylorBridge.source_series' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RawSourceTaylorBridge.analytic_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'TournamentRawWickAnalytic.hasSeries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualProductWickGerm.hasSeries' depends on axioms: [propext, Classical.choice, Quot.sound]

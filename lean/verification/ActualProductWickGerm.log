@@ -1,0 +1,12 @@
+ActualProductWickGerm.lean:50:0: warning: Definition `hasSeries` is a proposition; use `theorem` instead of `def`
+
+Note: This linter can be disabled with `set_option linter.defProp false`
+ActualProductWickGerm.hasSeries {n : ℕ} (hn : 0 < n) (T : DiamondGap.Tournament (Fin n)) (hT : T.diamonds.card = 0)
+  (v : ℂ) (hv : v ^ 2 = 1) :
+  HasFPowerSeriesAt (GaussianSourceProduct.product T v)
+    (FormalMultilinearSeries.ofScalars ℂ fun k =>
+      (PowerSeries.coeff k)
+        (ActualMixedEvenDescent.series (BlockGaussianDeterminant.blockQ T v) ⋯ (fun x => 1)
+          RawFormalMixedSpecialization.identityInteraction))
+    0
+'ActualProductWickGerm.hasSeries' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,3 +1,7 @@
+import TaylorDerivativeExponential
+import RawSourceTaylorBridge
+import TournamentRawWickAnalytic
+import ActualProductWickGerm
 import AnalyticNormalizedBranch
 import AnalyticTaylorArithmetic
 import AnalyticTaylorFinite
@@ -808,3 +812,12 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms AnalyticTaylorBranch.branch_series
 
 #print axioms ActualGaussianTaylorBranch.actual_branch
+
+#print axioms TaylorDerivativeExponential.exp_series
+
+#print axioms RawSourceTaylorBridge.source_series
+#print axioms RawSourceTaylorBridge.analytic_source
+
+#print axioms TournamentRawWickAnalytic.hasSeries
+
+#print axioms ActualProductWickGerm.hasSeries
