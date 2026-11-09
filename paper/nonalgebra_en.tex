@@ -327,7 +327,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 \section*{Research status and licence}
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 11:54 UTC, covers 235 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 12:20 UTC, covers 240 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules \texttt{RationalRadial}, \texttt{RationalLinearDescent}, \texttt{RationalSeriesLimit} and \texttt{QRegularRationalLimit} supply the additional bridges and endpoint. The hypotheses \texttt{ExtremalAsymptotic} and \texttt{FourExponentialIndependence} remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under \path{lean/verification}; the source files alone do not certify a successful verification run.
 
@@ -483,13 +483,18 @@ For every polynomial insertion $F$, the inserted Ward system and its solution by
    +u r_i\widetilde{\mathcal W}(F),\qquad
  \widetilde{\mathcal W}(1)=1.
 \]
-Normalization uses the proved unit $Z_W$, and repeated indices are retained. This recurrence is for unscaled $X$; physical scaling $y=uX$ and its exact $z$-descended parameters remain to be established. Activity enumeration and recovery, the permanent's true tail, factorial restoration and full Condition R remain unfinished. The analytic identification remains restricted to $v^2=1$, with no positive-measure interpretation of the generally indefinite formal covariance.
+Normalization uses the proved unit $Z_W$, and repeated indices are retained. Physical scaling and even descent are now proved for actual polynomial insertions. For a label word $w$, the physical moment is defined as $u^{|w|}\widetilde{\mathcal W}(\prod_{i\in w}X_i)$, with one factor per occurrence. Its first-occurrence deletion recurrence follows from the polynomial Ward identity. An independently defined terminating $z$-recurrence, with
+\[
+ W=z(I+zKA)^{-1}K,\qquad \eta=Wh,
+\]
+reconstructs that actual moment under $z=u^2$. For $A=I$, true two-sided inverse identities also give $W=zK(I+zK)^{-1}$. Both $W$ and $\eta$ have zero constant term. The empty moment is one; all odd $u$ coefficients vanish, and the descended coefficient of degree $k$ vanishes when $2k<|w|$. Invariance under word permutations is transported from the actual commutative polynomial product, not assumed of the recurrence. Repeated labels and empty words are included. These are finite formal identities; they introduce no graph-energy or size hypotheses.
+
+The residual exponential and structural activity expansion, finite recovery with uniform bounds, the permanent's true tail, factorial restoration and full Condition R remain unfinished. The earlier core Taylor tail is not a substitute for these recovery estimates. The analytic identification remains restricted to $v^2=1$, with no positive-measure interpretation of the generally indefinite formal covariance.
 
 Earlier manuscripts remain in \path{historical/formula-restrictions} for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 
 © 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
-\clearpage
 \section*{References}
 \begingroup\small
 [1] Alexander Divoux and Shouda Wang. \emph{The maximum number of Hamiltonian cycles in tournaments}. arXiv:2610.23755v1 [math.CO], 2026, submitted 16 October 2026. Theorem 1.4 is cited here. DOI: 10.48550/arXiv.2610.23755. Full text of the fixed version.

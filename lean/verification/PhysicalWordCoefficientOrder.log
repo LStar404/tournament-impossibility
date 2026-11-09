@@ -1,0 +1,11 @@
+PhysicalWordCoefficientOrder.lean:4:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+PhysicalWordCoefficientOrder.lean:29:0: warning: automatically included section variable(s) unused in theorem `PhysicalWordCoefficientOrder.polynomial_prod`:
+  [Fintype I]
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'PhysicalWordCoefficientOrder.coefficient_below_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PhysicalWordCoefficientOrder.permutation' depends on axioms: [propext, Classical.choice, Quot.sound]

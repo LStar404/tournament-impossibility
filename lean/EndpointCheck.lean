@@ -1,3 +1,8 @@
+import PhysicalTiltedCovariance
+import OccurrenceWordDerivative
+import PhysicalWordRecurrence
+import PhysicalWordEvenDescent
+import PhysicalWordCoefficientOrder
 import ActualWickCoefficientBounds
 import WickGeometricTruncation
 import ActualWickTruncation
@@ -846,3 +851,15 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms PolynomialTiltedRecurrence.tilted_recurrence
 #print axioms PolynomialTiltedRecurrence.tilted_one
+
+#print axioms PhysicalTiltedCovariance.raw_covariance
+#print axioms PhysicalTiltedCovariance.expand_mean
+
+#print axioms OccurrenceWordDerivative.derivative
+
+#print axioms PhysicalWordRecurrence.recurrence
+
+#print axioms PhysicalWordEvenDescent.expand_moment
+
+#print axioms PhysicalWordCoefficientOrder.coefficient_below_order
+#print axioms PhysicalWordCoefficientOrder.permutation
