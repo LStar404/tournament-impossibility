@@ -1,3 +1,12 @@
+import PermanentSubsetMinorBridge
+import CoreActivityFactorialBridge
+import PermanentFrozenCoefficientExpansion
+import PermanentRestrictionFiber
+import PermanentFrozenCoefficientBridge
+import PermanentNormalizedFrozenBridge
+import CoreActivityFiniteProjection
+import PermanentNormalizedTailBridge
+import PermanentCoreFiniteRecovery
 import PermanentCircleSpectralCoordinates
 import PermanentCircleRankOne
 import PermanentCircleCentering
@@ -1171,3 +1180,22 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms BinaryGraphPermanentCircle.envelope
 #print axioms BinaryGraphPermanentCircle.normalized_envelope
 #print axioms BinaryGraphPermanentTail.normalized_tail
+
+#print axioms PermanentSubsetMinorBridge.selected_eq_subsetWeight
+#print axioms PermanentSubsetMinorBridge.Fk_eq_minorSum
+#print axioms CoreActivityFactorialBridge.product_order_bound
+#print axioms CoreActivityFactorialBridge.zeroth_order_bound
+#print axioms PermanentFrozenCoefficientExpansion.coefficient_expansion
+#print axioms PermanentRestrictionFiber.card_fiber
+#print axioms PermanentRestrictionFiber.sum_fiber
+#print axioms PermanentRestrictionFiber.sum_permutations
+#print axioms PermanentFrozenCoefficientBridge.selected_degree_sum
+#print axioms PermanentFrozenCoefficientBridge.coefficient_Fk
+#print axioms PermanentNormalizedFrozenBridge.coefficient
+#print axioms PermanentNormalizedFrozenBridge.coefficient_all
+#print axioms CoreActivityFiniteProjection.coefficient_projection
+#print axioms CoreActivityFiniteProjection.activity_below
+#print axioms PermanentNormalizedTailBridge.eval_actual
+#print axioms PermanentNormalizedTailBridge.graph_tail
+#print axioms PermanentCoreFiniteRecovery.exact_coefficient
+#print axioms PermanentCoreFiniteRecovery.graph_order_bound

@@ -1,0 +1,2 @@
+'PermanentSubsetMinorBridge.selected_eq_subsetWeight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentSubsetMinorBridge.Fk_eq_minorSum' depends on axioms: [propext, Classical.choice, Quot.sound]

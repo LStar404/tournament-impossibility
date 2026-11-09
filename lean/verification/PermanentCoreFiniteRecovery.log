@@ -1,0 +1,2 @@
+'PermanentCoreFiniteRecovery.exact_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentCoreFiniteRecovery.graph_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

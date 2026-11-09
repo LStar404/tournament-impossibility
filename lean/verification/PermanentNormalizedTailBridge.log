@@ -1,0 +1,2 @@
+'PermanentNormalizedTailBridge.eval_actual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentNormalizedTailBridge.graph_tail' depends on axioms: [propext, Classical.choice, Quot.sound]

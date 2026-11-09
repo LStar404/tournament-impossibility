@@ -1,0 +1,3 @@
+'PermanentRestrictionFiber.card_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentRestrictionFiber.sum_fiber' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentRestrictionFiber.sum_permutations' depends on axioms: [propext, Classical.choice, Quot.sound]

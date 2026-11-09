@@ -1,0 +1,15 @@
+PermanentFrozenCoefficientExpansion.lean:61:10: warning: This simp argument is unused:
+  Polynomial.coeff_monomial
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h, hcomp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+PermanentFrozenCoefficientExpansion.lean:62:40: warning: This simp argument is unused:
+  Ne.symm h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Polynomial.coeff_monomial, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'PermanentFrozenCoefficientExpansion.coefficient_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

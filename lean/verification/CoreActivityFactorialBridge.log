@@ -1,0 +1,2 @@
+'CoreActivityFactorialBridge.product_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoreActivityFactorialBridge.zeroth_order_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

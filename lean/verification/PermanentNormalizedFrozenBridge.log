@@ -1,0 +1,2 @@
+'PermanentNormalizedFrozenBridge.coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentNormalizedFrozenBridge.coefficient_all' depends on axioms: [propext, Classical.choice, Quot.sound]
