@@ -1,0 +1,25 @@
+ResidualHomogeneity.lean:11:41: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [divided, mul_pow, Algebra.smul_def, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ResidualHomogeneity.lean:31:26: warning: This simp argument is unused:
+  pow_one
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [FactorizedResidualIdentity.residual, map_mul, map_add, map_one,
+    show PowerSeries.C (1 : P) = 1 from map_one _, PowerSeries.rescale_X, rescale_mixed, mul_one, one_pow, one_mul,
+    mul_neg]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ResidualHomogeneity.lean:49:73: warning: This simp argument is unused:
+  PowerSeries.map_C
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [FactorizedResidualIdentity.residual, map_mul, map_add, map_one, PowerSeries.map_X, map_mixed,
+    map_neg, one_pow, Algebra.smul_def]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ResidualHomogeneity.coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]

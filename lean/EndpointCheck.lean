@@ -1,3 +1,8 @@
+import ResidualHomogeneity
+import PhysicalLowMoments
+import ResidualDegreeAssignments
+import ResidualPhysicalAssignments
+import ResidualScalarActivities
 import FrozenSeriesGrouping
 import ShiftedWickFrozenSeries
 import EvenUnitResidualDescent
@@ -891,3 +896,18 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualResidualFrozenFactorization.frozen_factorization
 #print axioms ActualResidualFrozenFactorization.residual_reconstruction
 #print axioms ActualResidualFrozenFactorization.polynomial_factorization
+
+#print axioms ResidualHomogeneity.coefficient
+
+#print axioms PhysicalLowMoments.fourth
+
+#print axioms ResidualDegreeAssignments.residual_coefficient
+#print axioms ResidualDegreeAssignments.length_assignment
+
+#print axioms ResidualPhysicalAssignments.expansion
+#print axioms ResidualPhysicalAssignments.below_order
+#print axioms ResidualPhysicalAssignments.actual_coefficient
+
+#print axioms ResidualScalarActivities.scalar_four
+#print axioms ResidualScalarActivities.active_degree
+#print axioms ResidualScalarActivities.active_coordinates_bound

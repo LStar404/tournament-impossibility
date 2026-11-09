@@ -1,0 +1,9 @@
+ResidualPhysicalAssignments.lean:5:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+ResidualPhysicalAssignments.lean:58:72: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+'ResidualPhysicalAssignments.expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ResidualPhysicalAssignments.below_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ResidualPhysicalAssignments.actual_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]
