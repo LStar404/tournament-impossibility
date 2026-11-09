@@ -1,0 +1,31 @@
+RankOneQuadraticDeterminant.lean:6:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+RankOneQuadraticDeterminant.lean:22:17: warning: This simp argument is unused:
+  smul_mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rankOne, mul_smul_comm, smul_smul, mul_assoc, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RankOneQuadraticDeterminant.lean:22:33: warning: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rankOne, smul_mul_assoc, smul_smul, mul_assoc, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RankOneQuadraticDeterminant.lean:22:59: warning: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rankOne, smul_mul_assoc, mul_smul_comm, smul_smul, mul_comm, mul_left_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+RankOneQuadraticDeterminant.lean:50:0: warning: automatically included section variable(s) unused in theorem `RankOneQuadraticDeterminant.block_det`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RankOneQuadraticDeterminant.det_rankOne' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RankOneQuadraticDeterminant.actual_wick_det_identity' depends on axioms: [propext, Classical.choice, Quot.sound]

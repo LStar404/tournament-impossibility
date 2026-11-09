@@ -1,0 +1,18 @@
+RankOneQuadraticCoefficients.lean:6:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+RankOneQuadraticCoefficients.lean:41:2: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RankOneQuadraticCoefficients.lean:41:6: warning: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+RankOneQuadraticCoefficients.lean:41:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+RankOneQuadraticCoefficients.lean:47:8: warning: automatically included section variable(s) unused in theorem `RankOneQuadraticCoefficients.coeff_series`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'RankOneQuadraticCoefficients.coefficient_step' depends on axioms: [propext, Classical.choice, Quot.sound]
