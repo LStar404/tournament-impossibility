@@ -1,3 +1,10 @@
+import WeightedFormalExponential
+import ActualCoreTracePrimitive
+import ActualCoreWeightedBound
+import ActivityFiniteWindowBound
+import ActualGraphCoreRecovery
+import PermanentTruncatedRecoveryAlgebra
+import ActualTruncatedPermanentRecovery
 import PermanentSubsetMinorBridge
 import CoreActivityFactorialBridge
 import PermanentFrozenCoefficientExpansion
@@ -1199,3 +1206,20 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms PermanentNormalizedTailBridge.graph_tail
 #print axioms PermanentCoreFiniteRecovery.exact_coefficient
 #print axioms PermanentCoreFiniteRecovery.graph_order_bound
+
+#print axioms WeightedFormalExponential.bound
+#print axioms ActualCoreTracePrimitive.branch_eq_exp
+#print axioms ActualCoreTracePrimitive.source_eq_half_mean
+#print axioms ActualCoreWeightedBound.candidate_bound
+#print axioms ActualCoreWeightedBound.graph
+#print axioms ActivityFiniteWindowBound.sum_floor_window
+#print axioms ActivityFiniteWindowBound.dominated_floor_window
+#print axioms ActualGraphCoreRecovery.positive_order
+#print axioms ActualGraphCoreRecovery.low_sum
+#print axioms ActualGraphCoreRecovery.high_sum
+#print axioms PermanentTruncatedRecoveryAlgebra.finite_window_error
+#print axioms PermanentTruncatedRecoveryAlgebra.full_coefficient_split
+#print axioms PermanentTruncatedRecoveryAlgebra.eval_error_le_coefficients
+#print axioms ActualTruncatedPermanentRecovery.coefficient_error
+#print axioms ActualTruncatedPermanentRecovery.evaluation_error
+#print axioms ActualTruncatedPermanentRecovery.actual_permanent_error

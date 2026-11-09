@@ -1,0 +1,3 @@
+'ActualTruncatedPermanentRecovery.coefficient_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualTruncatedPermanentRecovery.evaluation_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualTruncatedPermanentRecovery.actual_permanent_error' depends on axioms: [propext, Classical.choice, Quot.sound]

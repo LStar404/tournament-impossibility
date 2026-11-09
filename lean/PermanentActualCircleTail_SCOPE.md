@@ -1,6 +1,6 @@
 # Actual permanent circle and coefficient tail
 
-The thirteen modules are included in the completed 356-module aggregate verification. The checked build record of 9 November 2026, 22:59 UTC covers 356 Lean modules: 18 exact-source checkpoint records were reused and 338 modules were recompiled. Full Condition R remains unresolved.
+The thirteen modules are included in the completed 363-module aggregate verification. The checked build record of 9 November 2026, 23:23 UTC covers 363 Lean modules: 275 exact-source checkpoint records were reused and 88 modules were recompiled. Full Condition R remains unresolved.
 
 `PermanentSpectralFrame.actual_permanent_circle_envelope` bounds the literal permanent of P+zM, with P=J/n. It assumes n>0, nonnegative K,C,T,q, row and column sum norms at most K/n, entry norms at most C/n, Euclidean operator norm at most q, |z|≤T and Tq<1. The bound is (n!/n^n) exp(2TK+(1+TC)sqrt(n)/(1−Tq)). The spectral ordering, moments and circle envelope are derived rather than assumed.
 

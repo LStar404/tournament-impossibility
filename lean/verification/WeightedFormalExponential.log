@@ -1,0 +1,15 @@
+WeightedFormalExponential.lean:56:31: warning: This simp argument is unused:
+  norm_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PowerSeries.coeff_exp, Complex.norm_natCast]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+WeightedFormalExponential.lean:56:41: warning: This simp argument is unused:
+  Complex.norm_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [PowerSeries.coeff_exp, norm_div]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'WeightedFormalExponential.bound' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,11 @@
+ActivityFiniteWindowBound.lean:32:4: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActivityFiniteWindowBound.lean:32:8: warning: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActivityFiniteWindowBound.lean:32:8: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+'ActivityFiniteWindowBound.sum_floor_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActivityFiniteWindowBound.dominated_floor_window' depends on axioms: [propext, Classical.choice, Quot.sound]

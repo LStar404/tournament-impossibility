@@ -1,0 +1,21 @@
+ActualCoreTracePrimitive.lean:12:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+ActualCoreTracePrimitive.lean:30:6: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+ActualCoreTracePrimitive.lean:30:2: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualCoreTracePrimitive.lean:30:6: warning: Unused tactic linter: `ring` does nothing.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualCoreTracePrimitive.lean:60:64: warning: This simp argument is unused:
+  Matrix.smul_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [FullJacobiDerivation.entryDerivative, Matrix.add_apply, constantMatrix, Matrix.one_apply, apply_ite,
+    Derivation.leibniz, smul_eq_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ActualCoreTracePrimitive.branch_eq_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualCoreTracePrimitive.source_eq_half_mean' depends on axioms: [propext, Classical.choice, Quot.sound]

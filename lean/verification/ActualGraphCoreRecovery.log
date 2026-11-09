@@ -1,0 +1,3 @@
+'ActualGraphCoreRecovery.positive_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualGraphCoreRecovery.low_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualGraphCoreRecovery.high_sum' depends on axioms: [propext, Classical.choice, Quot.sound]

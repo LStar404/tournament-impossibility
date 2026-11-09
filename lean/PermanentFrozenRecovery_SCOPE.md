@@ -63,7 +63,9 @@ error is retained rather than incorrectly set to zero.
 8. PermanentNormalizedTailBridge
 9. PermanentCoreFiniteRecovery
 
-These nine modules are included in the completed 356-module aggregate verification.
-The checked build record of 9 November 2026, 22:59 UTC covers 356 Lean modules: 18 exact-source checkpoint records were reused and 338 modules were recompiled.
-This record does not itself certify a Lake build or publication. The actual-core
-uniform norm remains a premise, and full Condition R remains unproved.
+These nine modules are included in the completed 363-module aggregate verification.
+The checked build record of 9 November 2026, 23:23 UTC covers 363 Lean modules: 275 exact-source checkpoint records were reused and 88 modules were recompiled.
+This note describes the nine-module conditional-recovery layer, whose core norm
+is an explicit premise. The verified seven-module extension in
+ActualTruncatedRecovery_SCOPE.md derives that norm and assembles finite truncated
+recovery. Untruncated recovery and boundary differentiation are not established. Full Condition R is unproved.

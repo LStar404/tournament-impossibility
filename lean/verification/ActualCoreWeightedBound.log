@@ -1,0 +1,24 @@
+ActualCoreWeightedBound.lean:11:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+ActualCoreWeightedBound.lean:21:27: warning: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mass, primitive, PowerSeries.coeff_mk, Nat.cast_zero, mul_zero, div_zero, norm_zero, pow_zero,
+    mul_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ActualCoreWeightedBound.lean:145:8: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualCoreWeightedBound.lean:155:8: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualCoreWeightedBound.lean:145:8: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualCoreWeightedBound.lean:155:8: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'ActualCoreWeightedBound.candidate_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualCoreWeightedBound.graph' depends on axioms: [propext, Classical.choice, Quot.sound]

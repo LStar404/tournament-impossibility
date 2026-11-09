@@ -1,0 +1,5 @@
+'PermanentTruncatedRecoveryAlgebra.finite_window_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentTruncatedRecoveryAlgebra.full_coefficient_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentTruncatedRecoveryAlgebra.eval_error_le_coefficients' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

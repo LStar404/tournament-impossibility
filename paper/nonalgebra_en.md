@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 22:59 UTC covers 356 Lean modules: 18 exact-source checkpoint records were reused and 338 modules were recompiled. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 23:23 UTC covers 363 Lean modules: 275 exact-source checkpoint records were reused and 88 modules were recompiled. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -550,19 +550,46 @@ $$
 $$
 Here $\delta>0$, $p\in\mathbb N$, $n\ge24$, the depth $d$ is positive and fixed, the coarse matrix is real skew with entries bounded by one, the enumeration and relabeling are specified, and $v$ is real with $|v|\le1$. The constants are explicit and uniform over this graph class: the circle inputs are $K=2^d+1$, entry constant one and operator bound $3/4$, all derived from the graph hypotheses. This verified tail is unweighted and concerns the actual permanent, not its Gaussian core.
 
-Nine further modules are included in the completed 356-module verification. For a complex $n\times n$ matrix $M$, its exact coefficient bridge concerns
+For a complex $n\times n$ matrix $M$, the verified exact coefficient bridge concerns
 $$
  \begin{aligned}
  f_M(z)&=\frac{n^n}{n!}\operatorname{per}(J/n+zM)
        =\frac{\operatorname{per}(J+nzM)}{n!},\\
- [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n, n>0).
+ [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n,\ n>0).
  \end{aligned}
 $$
 The $F_k$ retain their earlier subset-pairing definition. The proof counts $(n-k)!$ completions of a selected minor and checks the row--column indexing. Above degree $n$, both the actual coefficient and $F_k$ vanish separately; the empty-matrix polynomial is one. Writing $G_M$ for the actual core, the finite projection identifies $F_k(M)$ with $[z^k]\sum_{j=0}^{m}G_MC_j$ whenever $k\le m$; terms with $j>k$ vanish. The same normalized polynomial is explicitly identified with the object in the unweighted graph-tail theorem. No infinite activity sum is used.
 
-For the preceding positive-depth graph family, these modules also treat factorial recovery of the products $G_MC_j$, with multiplication performed before the recovery operator. Assuming the actual core has a finite weighted coefficient norm at radius $9/8$, bounded by $L$, each $0\le j\le p$ has an explicit order-$n^{-p-1}$ finite-window error when expanded through order $p-j$. The window is any finite set of indices satisfying $2k\le n$ and $k/n\le\log\sigma$, with $\sigma>1$, $r\ge0$ and $\sigma r<9/8$. The graph theorem supplies the positive-activity bounds internally. A graph-uniform bound on the actual core remains an explicit premise: the earlier diamond-free theorem requires its energy hypothesis and $v^2=1$ and does not cover arbitrary coarse graphs. Since $G_MC_0=G_M$, the zeroth recovery error is retained, not set to zero.
+The following seven-module extension is included in the completed 363-module verification. For this endpoint write the fixed positive construction depth as $d+1$, $d\in\mathbb N$, retaining the graph hypotheses above. For the original core, it derives
+$$
+ \|G_M\|_{9/8}\le\exp\!\left(\frac{1025}{2}(2^{d+1}+2)\right),
+$$
+including finiteness of the weighted coefficient norm. The bound is uniform in the coarse matrix, enumerations, $n$ and real $|v|\le1$; it assumes neither zero diamonds nor an external core estimate. It supplies the core input to the earlier recovery lemmas. The term $G_MC_0=G_M$ retains its multiplier error.
 
-The actual-core uniform bound, the full recovery-error sum, a depth-dependent activity cutoff, the finite-order approximant's tail, weighted true tails at arbitrary radius greater than one, final normalized recovery, structural projection, canonical numbering and the global extremal-structure argument remain unresolved. The separate activity-window draft is outside this build. These results do not establish Condition R.
+An explicit finite recovery polynomial is defined as follows. Put
+$$
+ \begin{aligned}
+ D_d&=2^{15}6^3e\left(\frac{1025}{2}(2^{d+1}+1)\right)^3,\\
+ \alpha_d&=\min\!\left\{\frac12\log\frac{17}{16},\frac1{4eD_d}\right\},
+ \qquad m=\lfloor\alpha_dn\rfloor,
+ \end{aligned}
+$$
+and, using the actual geometric-product coefficients $H(k,a)$ of the factorial multiplier, define
+$$
+ A(z)=\sum_{k=0}^{m}z^k\sum_{j=0}^{p}
+ \left(\sum_{a=0}^{p-j}\frac{H(k,a)}{n^a}\right)[z^k](G_MC_j).
+$$
+For natural $p\le m$ and $|z|\le1$, the verified endpoint gives
+$$
+ \begin{aligned}
+ \sum_{k=0}^{n}|[z^k](f_M-A)|&\le E_{d,p}n^{-p-1},\\
+ \left|\frac{\operatorname{per}(J+nzM)}{n!}-A(z)\right|
+ &\le E_{d,p}n^{-p-1}.
+ \end{aligned}
+$$
+The constant $E_{d,p}$ is explicit and depends only on fixed $d,p$. The proof sums the low-activity multiplier errors, bounds the actual $\rho(n,k)$-weighted high-activity double sum in the depth-dependent window, and uses the actual permanent tail above $m$, where $A$ is exactly zero. Thus the estimate concerns the literal normalized permanent and the existing core and activities, without an infinite activity expansion.
+
+This is a finite truncated recovery result, not the paper's full raw_fixed_order_recovery endpoint. The condition $p\le\lfloor\alpha_dn\rfloor$ is explicit; no claim covers a shorter window. A closed-unit-disk value bound alone does not justify differentiation at the boundary point $z=1$. Removing the approximation cutoff, proving a larger-disk estimate or an equivalent explicitly $k^a$-weighted coefficient error, and identifying the required derivative/evaluation remain separate steps. Untruncated recovery, structural projection, canonical numbering, global extremal classification and full Condition R remain unresolved.
 
 Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 
