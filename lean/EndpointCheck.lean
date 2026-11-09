@@ -1,3 +1,8 @@
+import ActualWickCoefficientBounds
+import WickGeometricTruncation
+import ActualWickTruncation
+import PolynomialInsertionWard
+import PolynomialTiltedRecurrence
 import WickAnalyticDiskTransfer
 import ActualWickUniformDisk
 import WickCoefficientCauchy
@@ -830,3 +835,14 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualWickUniformDisk.eventually_hasSum
 
 #print axioms WickCoefficientCauchy.weighted_tsum_bound
+
+#print axioms ActualWickCoefficientBounds.eventually_weighted
+
+#print axioms WickGeometricTruncation.remainder_bound
+
+#print axioms ActualWickTruncation.eventually_remainder
+
+#print axioms PolynomialInsertionWard.system
+
+#print axioms PolynomialTiltedRecurrence.tilted_recurrence
+#print axioms PolynomialTiltedRecurrence.tilted_one
