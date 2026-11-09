@@ -1,0 +1,35 @@
+MixedDeterminantCandidateODE.lean:7:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+MixedDeterminantCandidateODE.lean:18:0: warning: automatically included section variable(s) unused in theorem `MixedDeterminantCandidateODE.logarithmic_trace`:
+  [Algebra ℚ S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra ℚ S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+MixedDeterminantCandidateODE.lean:45:0: warning: automatically included section variable(s) unused in theorem `MixedDeterminantCandidateODE.source_ode_match`:
+  [Algebra ℚ S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Algebra ℚ S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedDeterminantCandidateODE.lean:60:20: warning: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [odeCoefficient, traceTerm, dotProduct, mul_add, Finset.sum_add_distrib, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+MixedDeterminantCandidateODE.lean:63:17: warning: This simp argument is unused:
+  Finset.mul_sum
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [he]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'MixedDeterminantCandidateODE.candidate_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]

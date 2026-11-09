@@ -1,0 +1,15 @@
+DerivationDeterminantColumns.lean:13:37: warning: This simp argument is unused:
+  Function.update_self
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Matrix.updateCol_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+DerivationDeterminantColumns.lean:17:8: warning: This simp argument is unused:
+  Matrix.updateCol_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [(Finset.mem_erase.mp hi).1]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'DerivationDeterminantColumns.determinant_columns' depends on axioms: [propext, Classical.choice, Quot.sound]

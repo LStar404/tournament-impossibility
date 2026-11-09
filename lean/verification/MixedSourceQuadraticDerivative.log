@@ -1,0 +1,21 @@
+MixedSourceQuadraticDerivative.lean:5:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+MixedSourceQuadraticDerivative.lean:15:0: warning: automatically included section variable(s) unused in theorem `MixedSourceQuadraticDerivative.response_eq`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedSourceQuadraticDerivative.lean:21:0: warning: automatically included section variable(s) unused in theorem `MixedSourceQuadraticDerivative.constant_bilinear_derivative`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedSourceQuadraticDerivative.lean:35:0: warning: automatically included section variable(s) unused in theorem `MixedSourceQuadraticDerivative.source_constant`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'MixedSourceQuadraticDerivative.source_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]

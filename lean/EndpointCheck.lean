@@ -1,3 +1,16 @@
+import DerivationFiniteProduct
+import DerivationDeterminantColumns
+import FullJacobiDerivation
+import FormalFirstOrderUniqueness
+import NormalizedDeterminantBranch
+import ActualMixedDeterminantJacobi
+import ActualDeterminantBranchDerivative
+import MatrixDerivationInverse
+import MixedCovarianceSymmetry
+import MixedCovarianceDerivative
+import MixedSourceQuadraticDerivative
+import MixedDeterminantCandidateODE
+import ActualMixedDeterminantFormula
 import MixedWardUnit
 import MixedFormalTimeDerivative
 import MixedWardSolution
@@ -727,3 +740,32 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualMixedSourceTimeODE.Z_initial
 #print axioms ActualMixedSourceTimeODE.Z_derivative
 #print axioms ActualMixedSourceTimeODE.scalar_ode
+
+#print axioms DerivationFiniteProduct.product
+
+#print axioms DerivationDeterminantColumns.determinant_columns
+
+#print axioms FullJacobiDerivation.adjugate_trace
+#print axioms FullJacobiDerivation.unit_jacobi
+
+#print axioms FormalFirstOrderUniqueness.unique
+
+#print axioms NormalizedDeterminantBranch.branch_square
+#print axioms NormalizedDeterminantBranch.branch_constant
+
+#print axioms ActualMixedDeterminantJacobi.actual_jacobi
+#print axioms ActualMixedDeterminantJacobi.actual_branch_square
+
+#print axioms ActualDeterminantBranchDerivative.branch_differential
+
+#print axioms MatrixDerivationInverse.inverse_derivative
+
+#print axioms MixedCovarianceSymmetry.covariance_symm
+
+#print axioms MixedCovarianceDerivative.covariance_derivative
+
+#print axioms MixedSourceQuadraticDerivative.source_derivative
+
+#print axioms MixedDeterminantCandidateODE.candidate_derivative
+
+#print axioms ActualMixedDeterminantFormula.actual_formula

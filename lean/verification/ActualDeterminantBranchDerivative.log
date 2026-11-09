@@ -1,0 +1,21 @@
+ActualDeterminantBranchDerivative.lean:4:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+ActualDeterminantBranchDerivative.lean:18:4: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [F, actual_branch_constant] at hh
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ActualDeterminantBranchDerivative.lean:22:4: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [d, constant_det] at hh
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ActualDeterminantBranchDerivative.lean:28:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualDeterminantBranchDerivative.lean:28:23: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'ActualDeterminantBranchDerivative.branch_differential' depends on axioms: [propext, Classical.choice, Quot.sound]

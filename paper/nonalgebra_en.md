@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 07:35 UTC, covers 198 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 08:26 UTC, covers 211 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -417,20 +417,17 @@ $$
  Z_W'=q(u)Z_W,\qquad
  q(u)=u h^{\mathsf T}r-u\sum_{i,j}A_{ij}(D_{ij}+u^2r_ir_j).
 $$
-The initial value follows from the actual empty pairing moment. This proves an ODE for the genuine Wick series, not merely a candidate solution. Jacobi's determinant derivative and the general determinant–exponential solution remain to be established; no analytic convergence or positive Gaussian measure is asserted.
+The initial value follows from the actual empty pairing moment. Full Jacobi differentiation, the inverse derivative and uniqueness for the formal scalar ODE now yield the general mixed-source identity
+$$
+ \begin{aligned}
+ Z_W(u)&=\Delta(u)\exp(\Phi(u)),&
+ \Phi(u)&=\frac{u^2}{2}h^{\mathsf T}B(u)^{-1}Kh,\\
+ \Delta(u)^2\det B(u)&=1,& \Delta(0)&=1.
+ \end{aligned}
+$$
+This holds for every finite label set, symmetric $K,A$ over a characteristic-zero field with its rational algebra structure, and arbitrary $h$. The covariance $K$ need not be invertible. The determinant branch is constructed from the universal binomial series of exponent $-1/2$ by substituting $\det B-1$; the formal exponential is substituted at $\Phi$. Both substituted series have proved zero constant term. The proof derives full Jacobi differentiation from the permutation determinant, proves $B^{-1}K$ symmetric without assuming $B$ symmetric, and checks that the candidate and the actual Wick series satisfy the same ODE and initial value. Thus this is an identity for the original finite Wick coefficients, including repeated indices, not an assumed Gaussian formula. The earlier rank-one quadratic branch is also proved separately.
 
-For a rank-one quadratic perturbation $A=a hh^{\mathsf T}$, a further formal determinant bridge is proved. Define
-$$
- F(t)=\sum_{k\ge0}\frac{\mathcal W_C((-a\ell_h^2/2)^k)}{k!}t^k,
- \qquad q=a h^{\mathsf T}Ch.
-$$
-Over a field of characteristic zero, the actual Wick coefficients satisfy a proved recurrence, yielding $(1+qt)F'(t)=-qF(t)/2$ and $F(0)=1$. Consequently
-$$
- F(t)^2\det(I+tCA)=1.
-$$
-The determinant is that of the actual matrix $A=a hh^{\mathsf T}$, not an assumed scalar denominator. The constant term selects the unique formal unit branch. This covers rank-one quadratic perturbations without a linear source; the general quadratic determinant formula, the mixed linear–quadratic resummation, analytic convergence and uniform recovery estimates remain unfinished. Projection, activities, true coefficient tails, permanent recovery and full Condition R remain outside this result.
-
-The formal covariance $zQ_v$ is generally indefinite; it is not used as the covariance of a positive Gaussian measure.
+This completes the general formal mixed determinant identity, but not its analytic use in the raw core. Even-series descent to $z=u^2$, specialization to the original raw block, convergence and branch matching on the target complex disk, and uniform recovery estimates remain to be proved. Projection, activities, true coefficient tails, permanent recovery and full Condition R remain unfinished. The formal covariance $zQ_v$ is generally indefinite and is not interpreted as a positive Gaussian measure.
 
 Earlier manuscripts remain in `historical/formula-restrictions` for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 

@@ -1,0 +1,24 @@
+MixedCovarianceDerivative.lean:5:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+MixedCovarianceDerivative.lean:11:0: warning: automatically included section variable(s) unused in theorem `MixedCovarianceDerivative.constant_derivative`:
+  [Fintype I]
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype I] [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedCovarianceDerivative.lean:17:0: warning: automatically included section variable(s) unused in theorem `MixedCovarianceDerivative.block_derivative`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+MixedCovarianceDerivative.lean:23:71: warning: This simp argument is unused:
+  PowerSeries.derivative_pow
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [entryDerivative, block, constantMatrix, Matrix.add_apply, Matrix.smul_apply, Matrix.mul_apply,
+    Matrix.one_apply, apply_ite, Derivation.leibniz]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'MixedCovarianceDerivative.covariance_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
