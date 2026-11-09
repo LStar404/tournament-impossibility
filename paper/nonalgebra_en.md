@@ -344,7 +344,7 @@ $$
  \left(P_{v,S}(z)-\frac{e^{vz}}{\cos z}\right)\right|
  \le \frac{C_{j,r,R,K}}n.
 $$
-This holds eventually in $n$, uniformly over actual zero-diamond tournaments satisfying $\|S\mathbf1\|_2^2\le Kn$ and complex $|v|\le1$. Derivative estimates follow from a larger-disk value bound and Cauchy's estimate, not from formal differentiation of a pointwise error term. 
+This holds eventually in $n$, uniformly over actual zero-diamond tournaments satisfying $\|S\mathbf1\|_2^2\le Kn$ and complex $|v|\le1$. Derivative estimates follow from a larger-disk value bound and Cauchy's estimate, not from formal differentiation of a pointwise error term.
 
 For the original two branches $v^2=1$, the finite block bridge is also proved. Set $M_v=(S+vI)/n$, $Q_v=\left(\begin{smallmatrix}0&M_v\\M_v^{\mathsf T}&0\end{smallmatrix}\right)$, and $B_v=I+zQ_v$. Under the stated nonvanishing and invertibility conditions, $B_v$ has a genuine two-sided inverse, and the original $2n$-dimensional source satisfies
 $$
