@@ -384,7 +384,7 @@ $$
  \sum_{m\ge0}\frac{\mathcal W_c(X^m)}{m!}t^m
  =\exp(ct^2/2).
 $$
-Here the right side is the formal exponential with rescaling and degree doubling; no analytic convergence or probability measure is asserted. 
+Here the right side is the formal exponential with rescaling and degree doubling; no analytic convergence or probability measure is asserted.
 
 The scalar identity extends to every finite linear source $\ell_h(X)=\sum_i h_iX_i$ and symmetric covariance $C$. Expansion into labelled occurrences, a genuine pairing-endpoint bijection, and the factorization of each fixed pairing prove
 $$
