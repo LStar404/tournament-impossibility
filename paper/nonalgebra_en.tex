@@ -5,7 +5,6 @@
 \usepackage{xurl}
 \usepackage{unicode-math}
 \usepackage{amsthm}
-\usepackage{amsthm}
 \setmainfont{STIXTwoText}[Extension=.otf,
   UprightFont=*-Regular, BoldFont=*-Bold,
   ItalicFont=*-Italic, BoldItalicFont=*-BoldItalic]
@@ -328,11 +327,27 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 \section*{Research status and licence}
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 8 November 2026, 22:04 UTC, covers 116 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 8 November 2026, 23:50 UTC, covers 130 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules \texttt{RationalRadial}, \texttt{RationalLinearDescent}, \texttt{RationalSeriesLimit} and \texttt{QRegularRationalLimit} supply the additional bridges and endpoint. The hypotheses \texttt{ExtremalAsymptotic} and \texttt{FourExponentialIndependence} remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under \path{lean/verification}; the source files alone do not certify a successful verification run.
 
-A separate group of checked upstream lemmas covers finite ordered cancellation, shortest color-word swaps and zero-diamond tournament repair, vector weak majorization for actual tournament matrices, Frobenius-norm comparisons for all nonnegative integer powers, and convergence and comparison of all-ones source-energy series. The series result holds for $q\ge0$ with $q(n-1)^2<1$, including $q=1/n^2$ when $n>0$, without an additional summability hypothesis. The actual matrix resolvent identity $(B\mathbf{1})^{\mathsf T}(I+qB^2)^{-1}(B\mathbf{1})=\sum_{r\ge0}q^r\lVert B^{r+1}\mathbf{1}\rVert^2$ and its comparison with the transitive tournament are also proved on this real-parameter domain; the two-sided inverse and series convergence are established in the proofs. Further checked results identify the sixth-moment polynomial of actual ordered skew-block matrices, relate directed triangle counts to source-energy deficits, and give the sixth-deficit formula relative to the global transitive tournament. The exact even-subset convolution S1 and the zero-diamond two-permanent average are now proved for this repository's actual Hamiltonian path count, without convolution or principal-minor assumptions. An ordered-block reconstruction of the actual strongly connected components also discharges the extra structural and counting assumptions in the sixth-order small-block corollary: for an actual tournament on $n\ge4$ vertices with $D>0$ unordered four-vertex diamonds and $24D\le n^2$, one has $6n^2D\le\lVert T_n^3\rVert_F^2-\lVert S^3\rVert_F^2$, where $S$ is the original skew sign matrix and $T_n$ is the transitive sign matrix. This finite small-defect theorem does not cover large defects or complete Condition R. Enlarged complex domains and derivative comparisons, actual asymptotic recovery and Condition R remain unformalised.
+A separate group of checked upstream lemmas covers finite ordered cancellation, shortest color-word swaps and zero-diamond tournament repair, vector weak majorization for actual tournament matrices, and Frobenius-norm comparisons for all nonnegative integer powers. The all-ones source-energy series and the actual resolvent identity are proved for $q\ge0$ with $q(n-1)^2<1$, including $q=1/n^2$ for $n>0$, with convergence and two-sided invertibility established internally. The exact even-subset convolution S1 and zero-diamond two-permanent average use this repository's actual Hamiltonian path count. Ordered strongly connected component reconstruction also gives, for $n\ge4$, $D>0$ and $24D\le n^2$, the finite small-defect bound $6n^2D\le\lVert T_n^3\rVert_F^2-\lVert S^3\rVert_F^2$. Here $S$ is the original skew sign matrix, $T_n$ is transitive, and $D$ counts unordered four-vertex diamonds.
+
+For actual zero-diamond tournaments, the formalisation now reaches fixed complex disks. The finite kernel identity is
+\[
+\det(I+aS)=\frac{(1+a)^n+(1-a)^n}{2}.
+\]
+Its imaginary-parameter normalisation converges uniformly to $\cos w$ on compact sets; for $|w|\le R$, the error is at most $2e^R R^2/n$ once $n>0$, $R/n\le1/2$ and $R^2/n\le1$. For each fixed $0\le R<\pi/2$, one further order threshold, independent of the graph and $w$, gives genuine two-sided inverses and
+\[
+\left\|(I+(w/n)^2S^2)^{-1}\right\|_{2\to2}\le C_R^2,
+\qquad C_R=\frac{2(1+R)e^R}{\cos R}.
+\]
+This bound follows from an explicit inverse-entry formula and a Euclidean operator-norm estimate, not from the determinant lower bound alone. For the actual real score vector $b=S\mathbf1$, the additional energy assumption $\lVert b\rVert_2^2\le Kn$ yields
+\[
+\frac{\left|b^{\mathsf T}(I+(w/n)^2S^2)^{-1}b\right|}{n^2}
+\le\frac{KC_R^2}{n}.
+\]
+The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption. Gaussian parameter substitutions and branch choices, the composed exponential product and its derivative errors, asymptotic permanent recovery, and full Condition R remain outside this checked snapshot.
 
 Earlier manuscripts remain in \path{historical/formula-restrictions} for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 
