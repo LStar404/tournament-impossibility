@@ -1,3 +1,10 @@
+import WeightedCoefficientNorm
+import WeightedCoefficientProducts
+import PartialMatchingWeightedBound
+import EuclideanBilinearContraction
+import RawResolventEntryBound
+import RawResolventMeanBound
+import RawBlockInverseScaling
 import OrderedVertexWord
 import OrderedResidualPolynomial
 import OrderedResidualTilted
@@ -992,3 +999,19 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms GlobalActivityFiniteRegroup.actual_regroup
 #print axioms GlobalActivityFiniteRegroup.activity_constraints
+
+#print axioms WeightedCoefficientNorm.mul_bound
+
+#print axioms WeightedCoefficientProducts.product_bound
+#print axioms WeightedCoefficientProducts.analytic_bound
+
+#print axioms PartialMatchingWeightedBound.labels
+
+#print axioms EuclideanBilinearContraction.matrix_entry
+
+#print axioms RawResolventEntryBound.entry
+
+#print axioms RawResolventMeanBound.mean
+#print axioms RawResolventMeanBound.vector_bound
+
+#print axioms RawBlockInverseScaling.bounds
