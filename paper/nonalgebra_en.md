@@ -392,7 +392,7 @@ $$
  \sum_{m\ge0}\frac{\mathcal W_C(\ell_h^m)}{m!}t^m
  =\exp\!\left(\tfrac12 h^{\mathsf T}Ch\,t^2\right).
 $$
-The second identity is a formal power-series identity over a commutative $\mathbb Q$-algebra, derived from the actual repeated-index polynomial functional. It requires symmetry, not positive definiteness or a Gaussian probability measure. 
+The second identity is a formal power-series identity over a commutative $\mathbb Q$-algebra, derived from the actual repeated-index polynomial functional. It requires symmetry, not positive definiteness or a Gaussian probability measure.
 
 For a rank-one quadratic perturbation $A=a hh^{\mathsf T}$, a further formal determinant bridge is proved. Define
 $$
