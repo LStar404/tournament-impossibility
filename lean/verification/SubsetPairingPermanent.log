@@ -1,0 +1,2 @@
+'SubsetPairingPermanent.unequal_subsets_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SubsetPairingPermanent.equal_subsets_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+'FinitePairingPermanent.unequal_sum_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinitePairingPermanent.equal_sum_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]

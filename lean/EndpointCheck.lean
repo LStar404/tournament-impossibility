@@ -1,3 +1,7 @@
+import RectangularPairing
+import FinitePairingTransport
+import FinitePairingPermanent
+import SubsetPairingPermanent
 import BipartitePairingPermanent
 import WickPairingZero
 import WickBipartiteEquiv
@@ -553,3 +557,13 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms WickBipartiteEquiv.pairingEquiv
 
 #print axioms WickPairingPermanent.all_pairings_eq_permanent
+
+#print axioms RectangularPairing.unequal_sum_zero
+
+#print axioms FinitePairingTransport.sum_transport
+
+#print axioms FinitePairingPermanent.unequal_sum_zero
+#print axioms FinitePairingPermanent.equal_sum_permanent
+
+#print axioms SubsetPairingPermanent.unequal_subsets_zero
+#print axioms SubsetPairingPermanent.equal_subsets_permanent
