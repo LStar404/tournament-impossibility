@@ -1,3 +1,7 @@
+import BipartitePairingPermanent
+import WickPairingZero
+import WickBipartiteEquiv
+import WickPairingPermanent
 import ComplexSkewSourceIdentity
 import BlockGaussianDeterminant
 import BlockGaussianSourceElimination
@@ -540,3 +544,12 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualBlockGaussianSource.rawSource_eq_actualExponent
 #print axioms ActualBlockGaussianSource.branch_square
 #print axioms ActualBlockGaussianSource.factor_eq_product
+
+#print axioms BipartitePairingPermanent.pairingSum_eq_permanent
+
+#print axioms WickPairingZero.nonbipartite_weight_eq_zero
+#print axioms WickPairingZero.sum_eq_bipartite_filter
+
+#print axioms WickBipartiteEquiv.pairingEquiv
+
+#print axioms WickPairingPermanent.all_pairings_eq_permanent

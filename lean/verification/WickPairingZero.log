@@ -1,0 +1,2 @@
+'WickPairingZero.nonbipartite_weight_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WickPairingZero.sum_eq_bipartite_filter' depends on axioms: [propext, Classical.choice, Quot.sound]

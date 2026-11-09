@@ -177,3 +177,8 @@
 'ActualBlockGaussianSource.rawSource_eq_actualExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ActualBlockGaussianSource.branch_square' depends on axioms: [propext, Classical.choice, Quot.sound]
 'ActualBlockGaussianSource.factor_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BipartitePairingPermanent.pairingSum_eq_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WickPairingZero.nonbipartite_weight_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WickPairingZero.sum_eq_bipartite_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WickBipartiteEquiv.pairingEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+'WickPairingPermanent.all_pairings_eq_permanent' depends on axioms: [propext, Classical.choice, Quot.sound]
