@@ -235,3 +235,8 @@
 'RankOneQuadraticUnitBranch.unique_branch' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RankOneQuadraticDeterminant.det_rankOne' depends on axioms: [propext, Classical.choice, Quot.sound]
 'RankOneQuadraticDeterminant.actual_wick_det_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AssignmentDeletionExponent.delete_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AssignmentDeletionExponent.occurrence_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OptionPairingDeletion.option_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FullWickMonomialRecurrence.monomial_recurrence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FullWickPolynomialIBP.wick_X_mul' depends on axioms: [propext, Classical.choice, Quot.sound]

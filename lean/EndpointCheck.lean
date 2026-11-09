@@ -1,3 +1,7 @@
+import AssignmentDeletionExponent
+import OptionPairingDeletion
+import FullWickMonomialRecurrence
+import FullWickPolynomialIBP
 import RankOneQuadraticCoefficients
 import RankOneQuadraticODE
 import RankOneQuadraticUnitBranch
@@ -672,3 +676,12 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms RankOneQuadraticDeterminant.det_rankOne
 #print axioms RankOneQuadraticDeterminant.actual_wick_det_identity
+
+#print axioms AssignmentDeletionExponent.delete_sub
+#print axioms AssignmentDeletionExponent.occurrence_exponent
+
+#print axioms OptionPairingDeletion.option_moment
+
+#print axioms FullWickMonomialRecurrence.monomial_recurrence
+
+#print axioms FullWickPolynomialIBP.wick_X_mul

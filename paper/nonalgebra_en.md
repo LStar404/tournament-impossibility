@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 06:06 UTC, covers 183 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 06:30 UTC, covers 187 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -393,6 +393,12 @@ $$
  =\exp\!\left(\tfrac12 h^{\mathsf T}Ch\,t^2\right).
 $$
 The second identity is a formal power-series identity over a commutative $\mathbb Q$-algebra, derived from the actual repeated-index polynomial functional. It requires symmetry, not positive definiteness or a Gaussian probability measure.
+
+The full pairing functional also satisfies the algebraic integration-by-parts identity
+$$
+ \mathcal W_C(X_iP)=\sum_j C_{ij}\mathcal W_C(\partial_jP)
+$$
+for every polynomial $P$, finite label set and symmetric covariance over a commutative semiring. The proof deletes actual paired occurrence positions; the monomial multiplicity $d_j$ is obtained by summing the $d_j$ possible occurrences, including the empty fibre when $d_j=0$. Polynomial induction then gives the displayed identity. Thus repeated labels are retained, and the recurrence is derived from the pairing definition rather than assumed. Here “integration by parts” names a formal algebraic identity, not a probability integral.
 
 For a rank-one quadratic perturbation $A=a hh^{\mathsf T}$, a further formal determinant bridge is proved. Define
 $$
