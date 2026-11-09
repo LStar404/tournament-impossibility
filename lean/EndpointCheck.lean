@@ -1,3 +1,9 @@
+import ComplexSkewSourceIdentity
+import BlockGaussianDeterminant
+import BlockGaussianSourceElimination
+import RawBlockSourceIdentity
+import RawGaussianSourceScalar
+import ActualBlockGaussianSource
 import GaussianParameterBranch
 import GaussianSourceExponent
 import ComplexResolventAnalytic
@@ -517,3 +523,20 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms GaussianSourceAnalytic.eventually_differentiable_disk
 #print axioms GaussianSourceDerivative.eventually_uniform_derivative
 #print axioms GaussianSourceDerivative.exists_uniform_derivative_constant
+
+#print axioms ComplexSkewSourceIdentity.bilinear_source
+#print axioms ComplexSkewSourceIdentity.ones_source
+
+#print axioms BlockGaussianDeterminant.determinant
+#print axioms BlockGaussianDeterminant.inverse_left_right
+
+#print axioms BlockGaussianSourceElimination.eliminate_block
+
+#print axioms RawBlockSourceIdentity.source_eq_reduced
+
+#print axioms RawGaussianSourceScalar.reducedSource_eq_exponent
+#print axioms RawGaussianSourceScalar.reducedSource_eq_actualExponent
+
+#print axioms ActualBlockGaussianSource.rawSource_eq_actualExponent
+#print axioms ActualBlockGaussianSource.branch_square
+#print axioms ActualBlockGaussianSource.factor_eq_product

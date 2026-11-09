@@ -1,0 +1,2 @@
+'RawGaussianSourceScalar.reducedSource_eq_exponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RawGaussianSourceScalar.reducedSource_eq_actualExponent' depends on axioms: [propext, Classical.choice, Quot.sound]

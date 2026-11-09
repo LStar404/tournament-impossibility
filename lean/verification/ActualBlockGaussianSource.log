@@ -1,0 +1,3 @@
+'ActualBlockGaussianSource.rawSource_eq_actualExponent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualBlockGaussianSource.branch_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualBlockGaussianSource.factor_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]

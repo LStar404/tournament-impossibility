@@ -1,0 +1,2 @@
+'BlockGaussianDeterminant.determinant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'BlockGaussianDeterminant.inverse_left_right' depends on axioms: [propext, Classical.choice, Quot.sound]

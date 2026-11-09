@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 00:25 UTC, covers 140 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 00:52 UTC, covers 146 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -344,7 +344,16 @@ $$
  \left(P_{v,S}(z)-\frac{e^{vz}}{\cos z}\right)\right|
  \le \frac{C_{j,r,R,K}}n.
 $$
-This holds eventually in $n$, uniformly over actual zero-diamond tournaments satisfying $\|S\mathbf1\|_2^2\le Kn$ and complex $|v|\le1$. Derivative estimates follow from a larger-disk value bound and Cauchy's estimate, not from formal differentiation of a pointwise error term. These are results for the displayed branch-defined factor. Its identification with the original block Gaussian integral and the original source-elimination formula is not formalised; the extension to complex $|v|\le1$ concerns only the displayed factor and does not extend the original two-branch block formula, which requires $v^2=1$. Nor are the projected factor $Z$, nonzero-activity estimates, asymptotic permanent recovery, or full Condition R.
+This holds eventually in $n$, uniformly over actual zero-diamond tournaments satisfying $\|S\mathbf1\|_2^2\le Kn$ and complex $|v|\le1$. Derivative estimates follow from a larger-disk value bound and Cauchy's estimate, not from formal differentiation of a pointwise error term. 
+
+For the original two branches $v^2=1$, the finite block bridge is also proved. Set $M_v=(S+vI)/n$, $Q_v=\left(\begin{smallmatrix}0&M_v\\M_v^{\mathsf T}&0\end{smallmatrix}\right)$, and $B_v=I+zQ_v$. Under the stated nonvanishing and invertibility conditions, $B_v$ has a genuine two-sided inverse, and the original $2n$-dimensional source satisfies
+$$
+ \tfrac12\mathbf1^{\mathsf T}(B_v-I)B_v^{-1}\mathbf1=\Lambda_{v,S}(z),
+ \qquad G_n(z)^2\det B_v=1.
+$$
+The source on the left is defined independently from the block matrix; its equality to the reduced expression follows by solving the block equations and using skew-symmetry. The extension to complex $|v|\le1$ above concerns the branch-defined factor only: these block identities require $v^2=1$.
+
+What remains is the coefficientwise formal Gaussian pairing and resummation that connects this factor to the permanent expansion, followed by the projected factor $Z$, nonzero-activity estimates and the true coefficient-tail and recovery estimates. The pairing covariance $zQ_v$ is generally indefinite, so this step is not an integral against a positive Gaussian measure with that covariance. Full Condition R remains unformalised.
 
 Earlier manuscripts remain in `historical/formula-restrictions` for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
 
