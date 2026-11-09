@@ -1,3 +1,7 @@
+import WeightedRecoveryMultiplier
+import RecoveryMomentTail
+import WeightedRecoveryClosure
+import ActualWeightedUntruncatedRecovery
 import WeightedFormalExponential
 import ActualCoreTracePrimitive
 import ActualCoreWeightedBound
@@ -1223,3 +1227,12 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualTruncatedPermanentRecovery.coefficient_error
 #print axioms ActualTruncatedPermanentRecovery.evaluation_error
 #print axioms ActualTruncatedPermanentRecovery.actual_permanent_error
+
+#print axioms WeightedRecoveryMultiplier.order_bound
+#print axioms WeightedRecoveryMultiplier.recovered_window
+#print axioms RecoveryMomentTail.approximation_tail
+#print axioms WeightedRecoveryClosure.global_bound
+#print axioms WeightedRecoveryClosure.falling_factorial_error
+#print axioms ActualWeightedUntruncatedRecovery.coefficient_error
+#print axioms ActualWeightedUntruncatedRecovery.derivative_coefficients_at_one
+#print axioms ActualWeightedUntruncatedRecovery.weighted_summable

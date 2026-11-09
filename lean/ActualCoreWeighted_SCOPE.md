@@ -1,6 +1,6 @@
 # Actual core weighted bound
 
-Three modules in the completed 363-module verification:
+Three modules in the completed 367-module verification:
 
 1. WeightedFormalExponential
 2. ActualCoreTracePrimitive
@@ -32,7 +32,8 @@ convergence.
 
 ## Verification record
 
-The checked build record of 9 November 2026, 23:23 UTC covers 363 Lean modules: 275 exact-source checkpoint records were reused and 88 modules were recompiled.
+The checked build record of 9 November 2026, 23:31 UTC covers 367 Lean modules: 362 exact-source checkpoint records were reused and 5 modules were recompiled.
 This record does not certify a Lake build, CI, or publication. The fixed-depth
-actual-core norm is proved; untruncated recovery, the required boundary
-derivative passage, and full Condition R are not proved by this extension.
+actual-core norm is proved. The later verified extension described in
+WeightedUntruncatedRecovery_SCOPE.md supplies all-k weighted untruncated recovery.
+Analytic derivative identification and full Condition R remain unproved.

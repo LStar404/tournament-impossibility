@@ -1,0 +1,35 @@
+ActualWeightedUntruncatedRecovery.lean:83:98: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualWeightedUntruncatedRecovery.lean:91:54: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualWeightedUntruncatedRecovery.lean:92:49: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualWeightedUntruncatedRecovery.lean:83:98: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualWeightedUntruncatedRecovery.lean:91:54: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualWeightedUntruncatedRecovery.lean:92:49: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualWeightedUntruncatedRecovery.lean:165:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualWeightedUntruncatedRecovery.lean:165:47: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ActualWeightedUntruncatedRecovery.lean:165:22: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ActualWeightedUntruncatedRecovery.lean:165:47: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'ActualWeightedUntruncatedRecovery.coefficient_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualWeightedUntruncatedRecovery.derivative_coefficients_at_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'ActualWeightedUntruncatedRecovery.weighted_summable' depends on axioms: [propext, Classical.choice, Quot.sound]

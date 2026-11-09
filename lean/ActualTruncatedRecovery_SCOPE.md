@@ -1,6 +1,6 @@
 # Actual fixed-depth truncated permanent recovery
 
-This seven-module extension is included in the completed 363-module verification:
+This seven-module extension is included in the completed 367-module verification:
 
 1. WeightedFormalExponential
 2. ActualCoreTracePrimitive
@@ -66,20 +66,20 @@ on the closed unit disk.
   this condition using alpha_d>0.
 - This is a truncated polynomial result. It does not assert convergence of an
   infinite activity expansion, nor the corresponding estimate for an untruncated
-  recovery power series. An untruncated endpoint still needs its own coefficient
-  tail proof, outlined separately in the migration plan.
+  recovery power series. The later verified extension described in
+  WeightedUntruncatedRecovery_SCOPE.md supplies its separate all-k weighted tail
+  proof and untruncated endpoint; this note retains the earlier finite theorem.
 - The evaluation disk here is |z|≤1. No wider-disk conclusion is claimed.
 - This finite truncated theorem is not the full paper raw_fixed_order_recovery
   endpoint. Uniform value error on the closed unit disk alone does not justify
-  fixed-order differentiation at the boundary point z=1. That use still needs
-  removal of the approximation cutoff and either a larger analytic disk or
-  an equivalent explicit k^a-weighted coefficient error estimate, followed by
-  the required derivative/evaluation identification. These strengthening steps
-  are outside this seven-module batch.
+  fixed-order differentiation at the boundary point z=1. The subsequent weighted
+  untruncated extension removes the cutoff and proves every fixed k^ell error
+  moment, but analytic derivative/evaluation identification remains separate.
+  These strengthening steps are outside this seven-module batch.
 
 ## Validation
 
-The checked build record of 9 November 2026, 23:23 UTC covers 363 Lean modules: 275 exact-source checkpoint records were reused and 88 modules were recompiled.
+The checked build record of 9 November 2026, 23:31 UTC covers 367 Lean modules: 362 exact-source checkpoint records were reused and 5 modules were recompiled.
 Source hashes and printed axiom reports are recorded in verification/result.json.
 This aggregate record is distinct from Lake, CI, and publication status.
 The theorem remains explicitly finite and truncated, with p<=floor(alpha_d*n)
