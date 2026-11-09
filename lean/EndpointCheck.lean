@@ -1,3 +1,8 @@
+import SubsetPairingScaling
+import FrozenPartialPairingPolynomial
+import ShiftedProductSubsetExpansion
+import SquarefreePairingContraction
+import FrozenPairingEndpoints
 import RectangularPairing
 import FinitePairingTransport
 import FinitePairingPermanent
@@ -567,3 +572,16 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms SubsetPairingPermanent.unequal_subsets_zero
 #print axioms SubsetPairingPermanent.equal_subsets_permanent
+
+#print axioms SubsetPairingScaling.smul
+
+#print axioms FrozenPartialPairingPolynomial.global_smul
+#print axioms FrozenPartialPairingPolynomial.eval_frozenPolynomial
+
+#print axioms ShiftedProductSubsetExpansion.polynomial_expansion
+
+#print axioms SquarefreePairingContraction.contraction_shifted_product
+#print axioms SquarefreePairingContraction.contraction_scaled_product
+
+#print axioms FrozenPairingEndpoints.F0
+#print axioms FrozenPairingEndpoints.degree_le

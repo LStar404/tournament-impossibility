@@ -1,0 +1,1 @@
+'ShiftedProductSubsetExpansion.polynomial_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]

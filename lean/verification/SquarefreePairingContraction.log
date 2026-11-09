@@ -1,0 +1,2 @@
+'SquarefreePairingContraction.contraction_shifted_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'SquarefreePairingContraction.contraction_scaled_product' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+'FrozenPairingEndpoints.F0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FrozenPairingEndpoints.degree_le' depends on axioms: [propext, Classical.choice, Quot.sound]
