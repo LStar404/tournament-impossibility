@@ -1,0 +1,14 @@
+FormalDividedPowers.lean:11:8: warning: automatically included section variable(s) unused in theorem `FormalDividedPowers.coeff_exponential`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+FormalDividedPowers.lean:19:8: warning: automatically included section variable(s) unused in theorem `FormalDividedPowers.coeff_derivLift`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'FormalDividedPowers.divided_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FormalDividedPowers.exponential_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]

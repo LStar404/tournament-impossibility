@@ -1,0 +1,24 @@
+ActualMixedSourceWard.lean:42:26: warning: This simp argument is unused:
+  mul_smul_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ActualMixedSourceWard.lean:82:35: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [MvPolynomial.pderiv_X, Z]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ActualMixedSourceWard.lean:84:35: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [MvPolynomial.pderiv_X, Ne.symm hk, moment_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ActualMixedSourceWard.inserted_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMixedSourceWard.first_ward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMixedSourceWard.second_ward' depends on axioms: [propext, Classical.choice, Quot.sound]

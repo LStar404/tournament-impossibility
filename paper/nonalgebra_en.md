@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 06:30 UTC, covers 187 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 07:11 UTC, covers 194 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -398,7 +398,17 @@ The full pairing functional also satisfies the algebraic integration-by-parts id
 $$
  \mathcal W_C(X_iP)=\sum_j C_{ij}\mathcal W_C(\partial_jP)
 $$
-for every polynomial $P$, finite label set and symmetric covariance over a commutative semiring. The proof deletes actual paired occurrence positions; the monomial multiplicity $d_j$ is obtained by summing the $d_j$ possible occurrences, including the empty fibre when $d_j=0$. Polynomial induction then gives the displayed identity. Thus repeated labels are retained, and the recurrence is derived from the pairing definition rather than assumed. Here “integration by parts” names a formal algebraic identity, not a probability integral.
+for every polynomial $P$, finite label set and symmetric covariance over a commutative semiring. Deleting actual paired occurrence positions gives each monomial multiplicity; polynomial induction completes the proof. Repeated labels are retained. This is an algebraic identity, not a probability integral.
+
+For symmetric matrices $K,A$ over a field of characteristic zero, the mixed formal series
+$$
+ E(u,X)=\exp(u h^{\mathsf T}X)\exp(-u^2X^{\mathsf T}AX/2)
+$$
+is defined by finite coefficient sums. Applying the actual Wick functional coefficientwise defines $Z_W=\mathcal W_K(E)$, $G_i=\mathcal W_K(X_iE)$ and $H_{ij}=\mathcal W_K(X_iX_jE)$. Polynomial-variable differentiation and algebraic integration by parts give the two Ward systems
+$$
+ B G=u(Kh)Z_W,\qquad B H=KZ_W+u(Kh)G^{\mathsf T},\qquad B=I+u^2KA.
+$$
+These identities retain the covariance $K$ and concern the actual coefficientwise Wick series; they are not assumptions defining $Z_W,G,H$. Derivatives with respect to $u$, formal invertibility of $B$ and the general determinant–exponential solution are not established by this step. No analytic convergence or positive Gaussian measure is asserted.
 
 For a rank-one quadratic perturbation $A=a hh^{\mathsf T}$, a further formal determinant bridge is proved. Define
 $$

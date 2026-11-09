@@ -1,0 +1,16 @@
+ActualMixedWardMatrix.lean:6:17: warning: Definition `Classical.typeDecidableEq` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
+definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
+ActualMixedWardMatrix.lean:15:0: warning: automatically included section variable(s) unused in theorem `ActualMixedWardMatrix.block_mulVec`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ActualMixedWardMatrix.lean:39:0: warning: automatically included section variable(s) unused in theorem `ActualMixedWardMatrix.H_symm`:
+  [CharZero S]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [CharZero S] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+'ActualMixedWardMatrix.first_system' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualMixedWardMatrix.second_system' depends on axioms: [propext, Classical.choice, Quot.sound]

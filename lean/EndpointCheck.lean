@@ -1,3 +1,10 @@
+import FormalLinearLift
+import FormalDividedPowers
+import FormalMixedExponential
+import MixedSourcePolynomials
+import FormalWickInsertion
+import ActualMixedSourceWard
+import ActualMixedWardMatrix
 import AssignmentDeletionExponent
 import OptionPairingDeletion
 import FullWickMonomialRecurrence
@@ -685,3 +692,22 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms FullWickMonomialRecurrence.monomial_recurrence
 
 #print axioms FullWickPolynomialIBP.wick_X_mul
+
+#print axioms FormalLinearLift.lift_scalar_series
+
+#print axioms FormalDividedPowers.divided_derivative
+#print axioms FormalDividedPowers.exponential_derivative
+
+#print axioms FormalMixedExponential.mixed_derivative
+#print axioms FormalMixedExponential.coeff_mixed
+
+#print axioms MixedSourcePolynomials.interaction_derivative
+
+#print axioms FormalWickInsertion.ibp
+
+#print axioms ActualMixedSourceWard.inserted_derivative
+#print axioms ActualMixedSourceWard.first_ward
+#print axioms ActualMixedSourceWard.second_ward
+
+#print axioms ActualMixedWardMatrix.first_system
+#print axioms ActualMixedWardMatrix.second_system

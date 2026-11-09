@@ -1,0 +1,2 @@
+'FormalMixedExponential.mixed_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FormalMixedExponential.coeff_mixed' depends on axioms: [propext, Classical.choice, Quot.sound]
