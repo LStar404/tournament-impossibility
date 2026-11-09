@@ -1,3 +1,6 @@
+import WickAnalyticDiskTransfer
+import ActualWickUniformDisk
+import WickCoefficientCauchy
 import TaylorDerivativeExponential
 import RawSourceTaylorBridge
 import TournamentRawWickAnalytic
@@ -821,3 +824,9 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms TournamentRawWickAnalytic.hasSeries
 
 #print axioms ActualProductWickGerm.hasSeries
+
+#print axioms WickAnalyticDiskTransfer.hasSum_on_disk
+
+#print axioms ActualWickUniformDisk.eventually_hasSum
+
+#print axioms WickCoefficientCauchy.weighted_tsum_bound
