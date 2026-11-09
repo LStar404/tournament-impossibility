@@ -377,7 +377,7 @@ $$
  m_C(V)=\sum_{s\in V\setminus\{o\}} C(o,s)\,
  m_{C|_{V\setminus\{o,s\}}}(V\setminus\{o,s\}).
 $$
-The proof constructs a genuine bijection between pairings and the choice of the distinguished point's partner together with a residual pairing, and derives the edge-weight factorization. Odd-cardinality moments vanish; the empty moment equals one. These are finite algebraic results. 
+The proof constructs a genuine bijection between pairings and the choice of the distinguished point's partner together with a residual pairing, and derives the edge-weight factorization. Odd-cardinality moments vanish; the empty moment equals one. These are finite algebraic results.
 
 For constant covariance $c$, the recurrence gives the actual pairing moments $m_c(2k)=(2k-1)!!c^k$ and $m_c(2k+1)=0$, with the empty moment one. The pairing count and its factorial normalization are proved, rather than supplied as hypotheses. An explicit occurrence equivalence identifies these moments with the full one-variable polynomial Wick functional $\mathcal W_c(X^m)$. Over a commutative $\mathbb Q$-algebra this yields the formal power-series identity
 $$
