@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-09T17:54:57.759579+00:00",
+  "checked_at_utc": "2026-11-09T18:50:12.459171+00:00",
   "retained_exact_source_checks": [],
   "retained_checks_from_utc": null,
   "lean_version": "leanprover/lean4:v4.35.0",
@@ -283,26 +283,39 @@
     "BipartiteResidualSecondZero",
     "GlobalResidualLog",
     "PairingEdgeCard",
+    "PartialMatchingFiberCount",
     "WeightedCoefficientNorm",
     "GlobalLogFiniteVertices",
     "PartialMatchingWeightOrder",
+    "StructuralActivityCount",
     "WeightedCoefficientProducts",
     "WickGeometricTruncation",
     "ActualWickTruncation",
     "GlobalLogDegreeAssignments",
     "PhysicalActivityOrder",
     "RawPhysicalWeightedNorm",
+    "WeightedCoefficientSums",
     "OrderedVertexWord",
     "PartialMatchingWeightedBound",
     "TournamentRawWeighted",
     "BinaryGraphTransport",
     "OrderedResidualPolynomial",
     "RawActivityLabelNorm",
+    "ActivityFactorialSuppression",
     "BinaryRawGraphWeighted",
+    "OrderedDegreeCompositionCount",
     "OrderedResidualTilted",
+    "ActivityNumericalBound",
     "PartialMatchingActivityGrouping",
     "OrderedResidualActivities",
     "GlobalActivityFiniteRegroup",
+    "StructuralActivitySeries",
+    "ActualFiniteActivity",
+    "StructuralActivityWeighted",
+    "ActivityZeroNormalization",
+    "ActualDegreeAssignmentCount",
+    "QuantitativeFixedActivity",
+    "BinaryGraphActivityBound",
     "EndpointCheck"
   ],
   "all_delivered_modules_checked": true,
@@ -3067,6 +3080,16 @@
       ]
     },
     {
+      "module": "PartialMatchingFiberCount",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "48d4ace8442dc473cf3ccff1af3576715d0290c0df10fe573bc8178e08d27eba",
+      "axiom_reports": [
+        "'PartialMatchingFiberCount.fiber_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PartialMatchingFiberCount.fiber_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "WeightedCoefficientNorm",
       "exit_code": 0,
       "passed": true,
@@ -3091,6 +3114,15 @@
       "source_sha256": "b36943ee848d3d74432510903d3443fce3a1547fb11579e98179bb66febb0c8c",
       "axiom_reports": [
         "'PartialMatchingWeightOrder.below' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "StructuralActivityCount",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "c3c2dec5bee6e963ddb128334685d019fda0ab97619ed821e5c58b125ec926b0",
+      "axiom_reports": [
+        "'StructuralActivityCount.count' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -3150,6 +3182,15 @@
       ]
     },
     {
+      "module": "WeightedCoefficientSums",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "8e0a25c87a19d4eefbb5d214f7110477211d9904b60f56ba339239bfe22efc74",
+      "axiom_reports": [
+        "'WeightedCoefficientSums.sum_norm' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "OrderedVertexWord",
       "exit_code": 0,
       "passed": true,
@@ -3204,6 +3245,16 @@
       ]
     },
     {
+      "module": "ActivityFactorialSuppression",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "27e13fa5dcde41d7892f1a0ca5f83d6bcf0473ac8389d9bc0c9cb2056fa4ac33",
+      "axiom_reports": [
+        "'ActivityFactorialSuppression.scalar_norm' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActivityFactorialSuppression.suppression' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "BinaryRawGraphWeighted",
       "exit_code": 0,
       "passed": true,
@@ -3213,12 +3264,30 @@
       ]
     },
     {
+      "module": "OrderedDegreeCompositionCount",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9c3b650f407a376c301473153089bec51612175fe264addcaa619d2c7ca12c62",
+      "axiom_reports": [
+        "'OrderedDegreeCompositionCount.degree_count' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "OrderedResidualTilted",
       "exit_code": 0,
       "passed": true,
       "source_sha256": "a91c92858ef3f6f56c41993b5e70c5510a418bfa901dbbd7a7973642835ff120",
       "axiom_reports": [
         "'OrderedResidualTilted.eq_old' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ActivityNumericalBound",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "22f5e5e61d11d0ca24b7550acc4cf62e8522040c7259423436a5e2e87903d7d3",
+      "axiom_reports": [
+        "'ActivityNumericalBound.scaled' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -3250,10 +3319,75 @@
       ]
     },
     {
+      "module": "StructuralActivitySeries",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "98c67a6614db5e98fdcb13b20d6eeb7058378080b33560ff1964a8343dc21f2d",
+      "axiom_reports": [
+        "'StructuralActivitySeries.degree_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ActualFiniteActivity",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "aef06b412166a5bcd77f19ae395a8c5df5fbff452282de17610e88571751689d",
+      "axiom_reports": [
+        "'ActualFiniteActivity.actual_residual' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "StructuralActivityWeighted",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "137f20da85aed47be390991929b1e4b2eb4396a74e7ea90768e2dd6abbc4c3e4",
+      "axiom_reports": [
+        "'StructuralActivityWeighted.word_bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ActivityZeroNormalization",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "bbe3301273f8c42aebe1c2eea190ef831e4ac3e63cbd597fc0d4215db4f6183a",
+      "axiom_reports": [
+        "'ActivityZeroNormalization.zero' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ActualDegreeAssignmentCount",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "d101f7eeb9fd7b48ffb6ddd13a5e6e636d265780a930f4fa2fb2f10a610438b6",
+      "axiom_reports": [
+        "'ActualDegreeAssignmentCount.count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualDegreeAssignmentCount.degree_eq' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "QuantitativeFixedActivity",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "0d41b81e8640df6c085eadf3756701af0e34cd0815cb5b9f300788fbace38e11",
+      "axiom_reports": [
+        "'QuantitativeFixedActivity.bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'QuantitativeFixedActivity.labeled_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "BinaryGraphActivityBound",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9a0e49dca761ab3bb8057abf1e984d5d708d734a358a1fda72412dd0fc205d12",
+      "axiom_reports": [
+        "'BinaryGraphActivityBound.bound' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "88fc20faa667ac79083eaac0374e0fbdc15ef2122bdccc25d9c3f97a315753c0",
+      "source_sha256": "fd95bc6c2b8a53f040a665e870ca6158da9b76a76f3315e9d4841ee5f3bb7dca",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -3635,9 +3769,26 @@
         "'BinaryBalancedTensor.branch_scores' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentRawWeighted.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'BinaryGraphTransport.graph_entry' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'BinaryRawGraphWeighted.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'BinaryRawGraphWeighted.weighted' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PartialMatchingFiberCount.fiber_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'PartialMatchingFiberCount.fiber_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActivityFactorialSuppression.scalar_norm' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActivityFactorialSuppression.suppression' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'OrderedDegreeCompositionCount.degree_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'StructuralActivitySeries.degree_coefficient' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualFiniteActivity.actual_residual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'WeightedCoefficientSums.sum_norm' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'StructuralActivityCount.count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'StructuralActivityWeighted.word_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActivityNumericalBound.scaled' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualDegreeAssignmentCount.count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualDegreeAssignmentCount.degree_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'QuantitativeFixedActivity.bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'QuantitativeFixedActivity.labeled_uniform' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'BinaryGraphActivityBound.bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActivityZeroNormalization.zero' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. The Gaussian modules additionally prove parameter substitution with the principal logarithm of beta, the origin-normalized determinant branch identity, and uniform O(1/n) errors for the explicit Gaussian/source proxy and each fixed derivative on nested disks, uniformly in actual zero-diamond graphs and |v|<=1 under stated linear score energy. Actual analyticity and source estimates are proved internally. ActualBlockGaussianSource now proves the true doubled-block bilinear source elimination and determinant-branch bridge for v^2=1, n>0, beta nonzero and a true quadratic resolvent unit, exactly identifying the algebraic factor with the analytic proxy. This is finite algebra, not formal Gaussian pairing resummation or a probability integral with indefinite covariance. WickPairingPermanent additionally proves the finite sum over all fixed-point-free involutive pairings for a bipartite covariance equals the matrix permanent, with monochromatic weights eliminated, a proved pairing-permutation equivalence, unique edge representatives and the empty case. This is not a probability expectation or partial-pairing/exponential resummation theorem. The finite pairing modules further prove actual transport over arbitrary finite left/right types, vanishing for unequal cardinalities, and equal-cardinality subset pairing sums as enumerated submatrix permanents. The next finite modules prove actual subset-weight scaling, frozen coefficient grouping, the shifted-product subset expansion, and an explicit linear squarefree coefficient contraction connecting that product to the frozen polynomial, including F0=1 and degree at most n. The occurrence-pairing modules additionally retain repeated labels, prove the full fourth pairing formula, arbitrary position transport for symmetric covariance, compatibility with unique edge representatives, and the full polynomial linear Wick definition via occurrence types with monomial and enumeration theorems. FullWickSquarefreeCompatibility now identifies full Wick on the actual shifted product with the squarefree contraction and frozen polynomial. PairingDeletion and PairingMomentRecurrence derive the all-order deletion recurrence from a genuine sigma decomposition and edge-weight factorization; PairingMomentParity proves odd moments zero and empty moments one. The constant-covariance modules now derive actual all-order moments and pairing counts from deletion, prove factorial normalization and a coefficientwise formal exponential identity, and connect these moments to the actual one-variable full polynomial Wick map. The multivariate linear-source modules prove actual assignment/occurrence transport, full Wick linear-power expansion, the pairing endpoint equivalence and assignment-weight factorization, yielding actual Wick moments W_m(h^T C h) and the formal exponential series for symmetric covariance. For rank-one quadratic sources, actual Wick coefficients yield a proved first-order formal ODE, the unique constant-one unit branch, and an exact bridge to the actual matrix determinant det(I+tCA) for A=a h h^T. General full polynomial Wick integration-by-parts is now derived from actual occurrence deletion, Option pairing decomposition and monomial multiplicities, without an assumed IBP identity. The actual mixed-source modules construct finite divided-power coefficients, lift Wick linearly (not as a ring homomorphism), prove polynomial-direction derivatives and insertion identities, and derive both matrix Ward systems with the second-moment covariance term retained. The actual parameter derivative and initial condition are now proved; constant determinant coefficient one yields a genuine matrix unit and two-sided inverse, the actual Ward systems are solved without division by Z, and their substitution gives an actual scalar formal ODE. Full Jacobi, a genuine normalized determinant branch, inverse/source differentiation and first-order formal ODE uniqueness now prove the actual general mixed full-Wick series equals that branch times the formal exponential of the actual quadratic source. The actual even coefficient extraction now has a proved z-graded determinant/exponential formula, vanishing odd coefficients and expand-two reconstruction, with actual inverse/source transport and specialization to the existing doubled tournament block covariance. Actual analytic Taylor arithmetic, finite determinant and genuine inverse transport now identify the existing zero-diamond Gaussian factor Taylor series with the normalized formal determinant branch for v squared equal to one. Actual raw-source and exponential Taylor identities now yield a HasFPowerSeriesAt expansion of the original GaussianSourceProduct.product with the actual descended Wick coefficients for positive n, zero diamonds and v squared equal to one. The actual Wick series now converges to the original product throughout each closed inner disk with radii zero at most r less than R less than pi/2, after one graph-independent order threshold, uniformly quantified over zero-diamond graphs and v squared equal to one without an energy premise. The graph-uniform boundary constant, actual coefficient and weighted l1 estimates, and geometric core Taylor truncation remainder are now instantiated under the explicit linear score-energy bound. A genuine arbitrary-polynomial insertion Ward system and its true-inverse tilted recurrence are proved; their unscaled variable has mean u times response and covariance V. The actual physical-variable scaling, position-deletion recurrence, even-series descent, true-inverse W/eta identification, coefficient minimum-order bounds and permutation invariance are now proved, including repeated labels. These core estimates are not permanent true-tail estimates, and genuine polynomial-valued exponential addition/inversion, residual product factorization, low-order residual cancellation and normalized insertion convolution are now proved at the u-series level. Actual residual even-coefficient descent and the exact factorization of the existing canonical frozen finite polynomial series into the actual Wick core times the actual residual series are now proved. The residual is extracted from the true insertion convolution, not defined as the desired quotient. The actual residual coefficients are now identified with finite degree-assignment sums of genuine W/eta occurrence moments, with assignments above twice the coefficient order vanishing. Actual residual homogeneity, cubic and quartic scalar coefficients, active-coordinate degree restrictions and one-label moments through degree four are proved. The actual scalar residual is now proved equal to the exponential of its explicit degree-at-least-three logarithmic series, with finite local structural-vertex coefficient enumeration and factorial weights. The actual bipartite residual first and second coefficients vanish, so the existing frozen finite polynomial and actual core match exactly through order two. Actual affine Wick expansion now identifies the old physical moments and actual residual coefficients with genuine partial-matching sums, including an explicit bijection with involutions allowing fixed points. The actual unique Sym2 edge count now equals paired-cardinality divided by two, and the actual physical matching weight is divisible by X to the power e+h, giving coefficient vanishing below j+b. Genuine zero-constant exponential addition and the actual global residual logarithmic identity yield a finite ordered structural-vertex polynomial coefficient expansion, with repeated labels and the true factorial weight. The actual residual coefficient is now transported through the true tilted map to Sigma-position partial matchings and regrouped with structural j outermost. The exact factorial weights, repeated labels and loops are retained, and terms outside b at most 2j, total degree at most 6j, or j+b at most the coefficient index vanish. This is a finite formal identity, not the required quantitative activity estimate. Genuine weighted coefficient l1 convolution/product bounds, partial-matching weight and label-sum bounds, and Euclidean bilinear raw-resolvent bounds are now proved. In dimension 2n the W and eta bounds have explicit 1/n scaling under a true inverse operator bound, entry bound C/n and an additional pointwise Q-one bound K/n; the latter is not inferred from source energy. Under explicit raw spectral, entry and pointwise score bounds, the true Neumann inverse, actual disk coordinate analyticity, Taylor identity with the old physical W/eta series, weighted coefficient bounds and actual partial-matching label bound are now proved in one chain. Balanced tensor row and column score identities and normalized bounds are also proved. The actual real skew spectral margin q=3/4 for n>=24 and real |v|<=1 is now proved by Lagrange and complexification. The explicit chosen-enumeration balanced bit graph is transported to Fin n and gives end-to-end existing physical-series weighted bounds at radius 9/8, with W bound 1025/(2n) and mean bound 1025(2^depth+1)/(2n), without raw score, spectral, inverse or analyticity premises. Canonical manuscript popcount identification, final factorial activity count and true permanent tails remain unproved. These are not a complete global structural Cj graph enumeration; structural activity order is not the z coefficient order. Logarithmic activity graph expansion, quantitative finite recovery and true permanent tails remain separate. Finite polynomial recovery, projection, activities, true tails, permanent recovery and full Condition R remain outside these results. No probability expectation with indefinite covariance is asserted."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. The Gaussian modules additionally prove parameter substitution with the principal logarithm of beta, the origin-normalized determinant branch identity, and uniform O(1/n) errors for the explicit Gaussian/source proxy and each fixed derivative on nested disks, uniformly in actual zero-diamond graphs and |v|<=1 under stated linear score energy. Actual analyticity and source estimates are proved internally. ActualBlockGaussianSource now proves the true doubled-block bilinear source elimination and determinant-branch bridge for v^2=1, n>0, beta nonzero and a true quadratic resolvent unit, exactly identifying the algebraic factor with the analytic proxy. This is finite algebra, not formal Gaussian pairing resummation or a probability integral with indefinite covariance. WickPairingPermanent additionally proves the finite sum over all fixed-point-free involutive pairings for a bipartite covariance equals the matrix permanent, with monochromatic weights eliminated, a proved pairing-permutation equivalence, unique edge representatives and the empty case. This is not a probability expectation or partial-pairing/exponential resummation theorem. The finite pairing modules further prove actual transport over arbitrary finite left/right types, vanishing for unequal cardinalities, and equal-cardinality subset pairing sums as enumerated submatrix permanents. The next finite modules prove actual subset-weight scaling, frozen coefficient grouping, the shifted-product subset expansion, and an explicit linear squarefree coefficient contraction connecting that product to the frozen polynomial, including F0=1 and degree at most n. The occurrence-pairing modules additionally retain repeated labels, prove the full fourth pairing formula, arbitrary position transport for symmetric covariance, compatibility with unique edge representatives, and the full polynomial linear Wick definition via occurrence types with monomial and enumeration theorems. FullWickSquarefreeCompatibility now identifies full Wick on the actual shifted product with the squarefree contraction and frozen polynomial. PairingDeletion and PairingMomentRecurrence derive the all-order deletion recurrence from a genuine sigma decomposition and edge-weight factorization; PairingMomentParity proves odd moments zero and empty moments one. The constant-covariance modules now derive actual all-order moments and pairing counts from deletion, prove factorial normalization and a coefficientwise formal exponential identity, and connect these moments to the actual one-variable full polynomial Wick map. The multivariate linear-source modules prove actual assignment/occurrence transport, full Wick linear-power expansion, the pairing endpoint equivalence and assignment-weight factorization, yielding actual Wick moments W_m(h^T C h) and the formal exponential series for symmetric covariance. For rank-one quadratic sources, actual Wick coefficients yield a proved first-order formal ODE, the unique constant-one unit branch, and an exact bridge to the actual matrix determinant det(I+tCA) for A=a h h^T. General full polynomial Wick integration-by-parts is now derived from actual occurrence deletion, Option pairing decomposition and monomial multiplicities, without an assumed IBP identity. The actual mixed-source modules construct finite divided-power coefficients, lift Wick linearly (not as a ring homomorphism), prove polynomial-direction derivatives and insertion identities, and derive both matrix Ward systems with the second-moment covariance term retained. The actual parameter derivative and initial condition are now proved; constant determinant coefficient one yields a genuine matrix unit and two-sided inverse, the actual Ward systems are solved without division by Z, and their substitution gives an actual scalar formal ODE. Full Jacobi, a genuine normalized determinant branch, inverse/source differentiation and first-order formal ODE uniqueness now prove the actual general mixed full-Wick series equals that branch times the formal exponential of the actual quadratic source. The actual even coefficient extraction now has a proved z-graded determinant/exponential formula, vanishing odd coefficients and expand-two reconstruction, with actual inverse/source transport and specialization to the existing doubled tournament block covariance. Actual analytic Taylor arithmetic, finite determinant and genuine inverse transport now identify the existing zero-diamond Gaussian factor Taylor series with the normalized formal determinant branch for v squared equal to one. Actual raw-source and exponential Taylor identities now yield a HasFPowerSeriesAt expansion of the original GaussianSourceProduct.product with the actual descended Wick coefficients for positive n, zero diamonds and v squared equal to one. The actual Wick series now converges to the original product throughout each closed inner disk with radii zero at most r less than R less than pi/2, after one graph-independent order threshold, uniformly quantified over zero-diamond graphs and v squared equal to one without an energy premise. The graph-uniform boundary constant, actual coefficient and weighted l1 estimates, and geometric core Taylor truncation remainder are now instantiated under the explicit linear score-energy bound. A genuine arbitrary-polynomial insertion Ward system and its true-inverse tilted recurrence are proved; their unscaled variable has mean u times response and covariance V. The actual physical-variable scaling, position-deletion recurrence, even-series descent, true-inverse W/eta identification, coefficient minimum-order bounds and permutation invariance are now proved, including repeated labels. These core estimates are not permanent true-tail estimates, and genuine polynomial-valued exponential addition/inversion, residual product factorization, low-order residual cancellation and normalized insertion convolution are now proved at the u-series level. Actual residual even-coefficient descent and the exact factorization of the existing canonical frozen finite polynomial series into the actual Wick core times the actual residual series are now proved. The residual is extracted from the true insertion convolution, not defined as the desired quotient. The actual residual coefficients are now identified with finite degree-assignment sums of genuine W/eta occurrence moments, with assignments above twice the coefficient order vanishing. Actual residual homogeneity, cubic and quartic scalar coefficients, active-coordinate degree restrictions and one-label moments through degree four are proved. The actual scalar residual is now proved equal to the exponential of its explicit degree-at-least-three logarithmic series, with finite local structural-vertex coefficient enumeration and factorial weights. The actual bipartite residual first and second coefficients vanish, so the existing frozen finite polynomial and actual core match exactly through order two. Actual affine Wick expansion now identifies the old physical moments and actual residual coefficients with genuine partial-matching sums, including an explicit bijection with involutions allowing fixed points. The actual unique Sym2 edge count now equals paired-cardinality divided by two, and the actual physical matching weight is divisible by X to the power e+h, giving coefficient vanishing below j+b. Genuine zero-constant exponential addition and the actual global residual logarithmic identity yield a finite ordered structural-vertex polynomial coefficient expansion, with repeated labels and the true factorial weight. The actual residual coefficient is now transported through the true tilted map to Sigma-position partial matchings and regrouped with structural j outermost. The exact factorial weights, repeated labels and loops are retained, and terms outside b at most 2j, total degree at most 6j, or j+b at most the coefficient index vanish. This is a finite formal identity, not the required quantitative activity estimate. Genuine weighted coefficient l1 convolution/product bounds, partial-matching weight and label-sum bounds, and Euclidean bilinear raw-resolvent bounds are now proved. In dimension 2n the W and eta bounds have explicit 1/n scaling under a true inverse operator bound, entry bound C/n and an additional pointwise Q-one bound K/n; the latter is not inferred from source energy. Under explicit raw spectral, entry and pointwise score bounds, the true Neumann inverse, actual disk coordinate analyticity, Taylor identity with the old physical W/eta series, weighted coefficient bounds and actual partial-matching label bound are now proved in one chain. Balanced tensor row and column score identities and normalized bounds are also proved. The actual real skew spectral margin q=3/4 for n>=24 and real |v|<=1 is now proved by Lagrange and complexification. The explicit chosen-enumeration balanced bit graph is transported to Fin n and gives end-to-end existing physical-series weighted bounds at radius 9/8, with W bound 1025/(2n) and mean bound 1025(2^depth+1)/(2n), without raw score, spectral, inverse or analyticity premises. Actual finite structural activities Cj, their coefficientwise sum recovering the original residualZ, and C0=1 are now proved. True pairing-fiber and all-length composition counts retain the factor 1/b! and yield the weighted bound (C0(M)*j/n)^j with C0(M)=2^15*6^3*exp(1)*M^3 for j>=1. The chosen-enumeration positive-depth graph endpoint discharges all raw score/spectral/inverse/analytic premises. This fixed-activity bound does not assert infinite-j summability at fixed n. Canonical manuscript popcount identification, true permanent circle envelopes/tails, finite falling-factorial recovery, normalized final error transfer, projection and full Condition R remain unproved. Structural activity order is not the z coefficient order. No probability expectation with indefinite covariance is asserted."
 }

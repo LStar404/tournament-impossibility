@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 17:54 UTC, covers 299 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 18:50 UTC, covers 312 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -523,9 +523,22 @@ $$
 $$
 where these norms denote weighted sums of absolute coefficients, with summability proved. The hypotheses are positive depth, the chosen enumeration and relabeling, a real skew coarse matrix with entries bounded by one, real $|v|\le1$ and $n\ge24$. The relabeling enforces the actual cardinality $n=|C|2^d$. No raw score, spectral, inverse or analytic premise remains. This is an end-to-end result for the defined chosen-enumeration family; identification with the manuscript's canonical finite-index popcount convention is still unproved.
 
-Complete factorial activity estimates, quantitative recovery, the permanent's true tail and full Condition R remain unfinished. In particular, the diagram counts and factorial suppression needed for a bound of the form $(C_0j/n)^j$ are still missing. No convergence of the full activity sum is claimed. Core Taylor tails do not replace the finite-polynomial tail. The analytic core identification remains restricted to $v^2=1$, without a positive-measure interpretation of the indefinite covariance. Neither general diamond-freeness nor an energy bound alone supplies the required score control.
+The finite structural activities $C_j$ are now defined directly from the existing physical partial-matching weights, with total degrees at most $6j$, the original logarithm coefficients and the factor $1/b!$. Their coefficients recover the original residual:
+$$
+ [z^k]T_Z=\sum_{j=0}^{k}[z^k]C_j,\qquad C_0=1.
+$$
+The actual pairing fiber has cardinality $\binom{D}{2e}\operatorname{pairFactor}(e)$ and is bounded by $2^D D^e$. Admissible ordered degrees across all lengths inject into compositions of $D$, without an additional length factor. These counts, the identity $e+h=j+b$, and the retained factorial weight yield the quantitative theorem: if the index type has size $2n$, $n>0$, $M\ge1$, and the actual covariance and mean have finite weighted coefficient norms at most $M/n$ at radius $\rho\ge0$, then every $j\ge1$ satisfies
+$$
+ \|C_j\|_\rho\le\left(\frac{A(M)j}{n}\right)^j,
+ \qquad A(M)=2^{15}\,6^3\exp(1)M^3.
+$$
+The activity is summable in this norm. The bound $j^b/b!\le\exp(j)$ supplies the power $j^j$; repeated labels and loops are retained.
 
-Earlier manuscripts remain in `historical/formula-restrictions` for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
+For the chosen-enumeration graph family at positive depth $d$, take $M=(1025/2)(2^d+1)$ and radius $9/8$. The activity bound holds for every $j\ge1$ under the graph hypotheses above, without external score, spectral, inverse or analyticity assumptions.
+
+This fixed-activity estimate does not establish convergence of the infinite sum over $j$ at fixed $n$. Identification with the canonical popcount convention, the permanent's circle envelope and true tail, finite-$n$ falling-factorial restoration, the final normalized error transfer and full Condition R remain unfinished. Core Taylor tails do not replace the finite-polynomial tail. The analytic core identification remains restricted to $v^2=1$, without a positive-measure interpretation of the indefinite covariance. Neither general diamond-freeness nor an energy bound alone supplies the required score control.
+
+Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 
 © 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 

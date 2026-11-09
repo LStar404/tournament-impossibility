@@ -1,0 +1,16 @@
+ActivityFactorialSuppression.lean:14:32: warning: This simp argument is unused:
+  Complex.norm_natCast
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [ResidualLogarithm.logarithm, PowerSeries.coeff_mk, norm_div, norm_pow, norm_neg, norm_one, one_pow]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ActivityFactorialSuppression.lean:27:10: warning: This simp argument is unused:
+  map_div
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'ActivityFactorialSuppression.scalar_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActivityFactorialSuppression.suppression' depends on axioms: [propext, Classical.choice, Quot.sound]

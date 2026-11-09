@@ -1,0 +1,8 @@
+WeightedCoefficientSums.lean:8:37: warning: This simp argument is unused:
+  norm_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mass, PowerSeries.coeff_C_mul, mul_assoc]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'WeightedCoefficientSums.sum_norm' depends on axioms: [propext, Classical.choice, Quot.sound]

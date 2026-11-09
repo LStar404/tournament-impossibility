@@ -1,3 +1,16 @@
+import PartialMatchingFiberCount
+import ActivityFactorialSuppression
+import OrderedDegreeCompositionCount
+import StructuralActivitySeries
+import ActualFiniteActivity
+import WeightedCoefficientSums
+import StructuralActivityCount
+import StructuralActivityWeighted
+import ActivityNumericalBound
+import ActualDegreeAssignmentCount
+import QuantitativeFixedActivity
+import BinaryGraphActivityBound
+import ActivityZeroNormalization
 import SkewLagrangeBound
 import ComplexifiedSkewBound
 import TournamentSkewMargin
@@ -1053,3 +1066,21 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms TournamentRawWeighted.weighted
 #print axioms BinaryGraphTransport.graph_entry
 #print axioms BinaryRawGraphWeighted.weighted
+
+#print axioms PartialMatchingFiberCount.fiber_count
+#print axioms PartialMatchingFiberCount.fiber_bound
+#print axioms ActivityFactorialSuppression.scalar_norm
+#print axioms ActivityFactorialSuppression.suppression
+#print axioms OrderedDegreeCompositionCount.degree_count
+#print axioms StructuralActivitySeries.degree_coefficient
+#print axioms ActualFiniteActivity.actual_residual
+#print axioms WeightedCoefficientSums.sum_norm
+#print axioms StructuralActivityCount.count
+#print axioms StructuralActivityWeighted.word_bound
+#print axioms ActivityNumericalBound.scaled
+#print axioms ActualDegreeAssignmentCount.count
+#print axioms ActualDegreeAssignmentCount.degree_eq
+#print axioms QuantitativeFixedActivity.bound
+#print axioms QuantitativeFixedActivity.labeled_uniform
+#print axioms BinaryGraphActivityBound.bound
+#print axioms ActivityZeroNormalization.zero
