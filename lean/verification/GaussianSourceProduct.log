@@ -1,0 +1,8 @@
+GaussianSourceProduct.lean:24:50: warning: Variable name `hCs` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hCs
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'GaussianSourceProduct.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GaussianSourceProduct.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

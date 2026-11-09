@@ -1,0 +1,1 @@
+'GaussianDeterminantBranch.gaussian_branch_square' depends on axioms: [propext, Classical.choice, Quot.sound]

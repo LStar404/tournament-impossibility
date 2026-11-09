@@ -1,0 +1,14 @@
+ComplexCauchyErrorTransfer.lean:32:20: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ComplexCauchyErrorTransfer.lean:32:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ComplexCauchyErrorTransfer.lean:56:20: warning: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ComplexCauchyErrorTransfer.lean:56:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'ComplexCauchyErrorTransfer.derivative_error_full_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexCauchyErrorTransfer.derivative_difference_half_gap' depends on axioms: [propext, Classical.choice, Quot.sound]

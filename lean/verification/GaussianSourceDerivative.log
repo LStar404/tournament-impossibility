@@ -1,0 +1,2 @@
+'GaussianSourceDerivative.eventually_uniform_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'GaussianSourceDerivative.exists_uniform_derivative_constant' depends on axioms: [propext, Classical.choice, Quot.sound]

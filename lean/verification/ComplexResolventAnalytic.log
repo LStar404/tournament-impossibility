@@ -1,0 +1,1 @@
+'ComplexResolventAnalytic.eventually_analytic_disk' depends on axioms: [propext, Classical.choice, Quot.sound]

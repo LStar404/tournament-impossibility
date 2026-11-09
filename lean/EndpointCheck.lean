@@ -1,3 +1,13 @@
+import GaussianParameterBranch
+import GaussianSourceExponent
+import ComplexResolventAnalytic
+import ComplexCauchyErrorTransfer
+import GaussianScalarFactor
+import ActualGaussianSourceExponent
+import GaussianDeterminantBranch
+import GaussianSourceProduct
+import GaussianSourceAnalytic
+import GaussianSourceDerivative
 import TransitiveKernelInverse
 import MatrixEuclideanEntryBound
 import TransitiveKernelInverseBounds
@@ -485,3 +495,25 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualComplexScoreSource.inner_eq_bilinear
 #print axioms ActualComplexScoreSource.norm_score_sq
 #print axioms ActualComplexScoreSource.eventually_uniform_actual_source
+
+#print axioms GaussianParameterBranch.root_identity
+#print axioms GaussianParameterBranch.parameter_error
+#print axioms GaussianParameterBranch.prefactor_error
+#print axioms GaussianParameterBranch.differentiableOn_parameter
+#print axioms GaussianParameterBranch.differentiableOn_prefactor
+#print axioms GaussianSourceExponent.denominator_bound
+#print axioms GaussianSourceExponent.exponent_error
+#print axioms GaussianSourceExponent.exp_exponent_error
+#print axioms ComplexResolventAnalytic.eventually_analytic_disk
+#print axioms ComplexCauchyErrorTransfer.derivative_error_full_gap
+#print axioms ComplexCauchyErrorTransfer.derivative_difference_half_gap
+#print axioms GaussianScalarFactor.gaussian_error
+#print axioms GaussianScalarFactor.eventually_uniform_gaussian_error
+#print axioms ActualGaussianSourceExponent.eventually_uniform_error
+#print axioms ActualGaussianSourceExponent.exists_uniform_constant
+#print axioms GaussianDeterminantBranch.gaussian_branch_square
+#print axioms GaussianSourceProduct.eventually_uniform_error
+#print axioms GaussianSourceProduct.exists_uniform_constant
+#print axioms GaussianSourceAnalytic.eventually_differentiable_disk
+#print axioms GaussianSourceDerivative.eventually_uniform_derivative
+#print axioms GaussianSourceDerivative.exists_uniform_derivative_constant

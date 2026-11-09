@@ -1,5 +1,5 @@
 {
-  "checked_at_utc": "2026-11-08T23:50:27.188634+00:00",
+  "checked_at_utc": "2026-11-09T00:25:40.434474+00:00",
   "retained_exact_source_checks": [],
   "retained_checks_from_utc": null,
   "lean_version": "leanprover/lean4:v4.35.0",
@@ -8,6 +8,7 @@
     "Abel",
     "ColorEnergy",
     "ColorTransport",
+    "ComplexCauchyErrorTransfer",
     "ComplexOperatorResolventBound",
     "Constant",
     "Descent",
@@ -115,25 +116,34 @@
     "ReferenceOnesOrbit",
     "TournamentComponentBlocks",
     "ComplexKernelDiskLower",
+    "GaussianParameterBranch",
+    "GaussianSourceExponent",
     "PivotMomentInvariant",
     "TournamentEnergySeries",
     "TournamentOrdinalReconstruction",
     "DiamondFreeDiskResolvent",
+    "GaussianScalarFactor",
     "OrdinalTournamentDeficit",
     "ResolventSeriesIdentity",
     "SmallDiamondPivotReduction",
     "TournamentEnergyConvergence",
     "ActualComplexScoreSource",
+    "GaussianDeterminantBranch",
     "OrdinalGlobalSixthDeficit",
     "SmallDiamondComponentReduction",
     "TournamentEnergyRowDomain",
+    "ActualGaussianSourceExponent",
     "ActualSmallDiamondSixth",
+    "ComplexResolventAnalytic",
     "GlobalSixthDeficitEndpoint",
     "OnesEnergyEndpoint",
     "SmallDiamondGraphEndpoint",
     "TournamentGramGeometric",
+    "GaussianSourceProduct",
     "TournamentSourceResolvent",
+    "GaussianSourceAnalytic",
     "SourceResolventEndpoint",
+    "GaussianSourceDerivative",
     "EndpointCheck"
   ],
   "all_delivered_modules_checked": true,
@@ -176,6 +186,16 @@
         "'ColorTransport.equal_total_reachable' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.reaches_paired' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ColorTransport.reaches_alternatingOdd' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ComplexCauchyErrorTransfer",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "95984f6721d6077f8ebf7f1f5fa82fbcf1875f2c1b0f207354872bf9435cb923",
+      "axiom_reports": [
+        "'ComplexCauchyErrorTransfer.derivative_error_full_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ComplexCauchyErrorTransfer.derivative_difference_half_gap' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1274,6 +1294,30 @@
       ]
     },
     {
+      "module": "GaussianParameterBranch",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9225fc25875e38d0eee488c43f46ec01c251b7a6ab6482ff6aad6ed74bc611ea",
+      "axiom_reports": [
+        "'GaussianParameterBranch.root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.parameter_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.prefactor_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.differentiableOn_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.differentiableOn_prefactor' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "GaussianSourceExponent",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "4762f4be9c1265f0902b8399e306a1d2529675b45c0d074fd68e91afbaf1ff72",
+      "axiom_reports": [
+        "'GaussianSourceExponent.denominator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceExponent.exponent_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceExponent.exp_exponent_error' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "PivotMomentInvariant",
       "exit_code": 0,
       "passed": true,
@@ -1318,6 +1362,16 @@
         "'DiamondFreeDiskResolvent.actual_score_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeDiskResolvent.eventually_uniform_resolvent' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'DiamondFreeDiskResolvent.eventually_uniform_source' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "GaussianScalarFactor",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "e50aa55df2548090cf90f6960e1405f4c4049102a28c95aca63bdd1ae2d999e3",
+      "axiom_reports": [
+        "'GaussianScalarFactor.gaussian_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianScalarFactor.eventually_uniform_gaussian_error' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1371,6 +1425,15 @@
       ]
     },
     {
+      "module": "GaussianDeterminantBranch",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9759ff38e4efdf86df8ce1f9cc5d36b08e3e1cb831443948000cfcc745ed13ba",
+      "axiom_reports": [
+        "'GaussianDeterminantBranch.gaussian_branch_square' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "OrdinalGlobalSixthDeficit",
       "exit_code": 0,
       "passed": true,
@@ -1401,12 +1464,31 @@
       ]
     },
     {
+      "module": "ActualGaussianSourceExponent",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "cc5b5982e750f465a8abacc24e00e8263d194495f42aaeeb3bd2053a9591d4dd",
+      "axiom_reports": [
+        "'ActualGaussianSourceExponent.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualGaussianSourceExponent.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "ActualSmallDiamondSixth",
       "exit_code": 0,
       "passed": true,
       "source_sha256": "54e13704fc25cf2ce1e89aece793648c310390c3a9f1636454a7a759d37acf5e",
       "axiom_reports": [
         "'ActualSmallDiamondSixth.actual_small' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "ComplexResolventAnalytic",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "7cd7dcc868ded7714f9070316fc3b3a71c8c3ae26f170442c455cf7505b1597a",
+      "axiom_reports": [
+        "'ComplexResolventAnalytic.eventually_analytic_disk' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1460,6 +1542,16 @@
       ]
     },
     {
+      "module": "GaussianSourceProduct",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "b40135bf39e0e27aaa2d73d2cbb510b0bd55d76797516e546935f887bae13ba2",
+      "axiom_reports": [
+        "'GaussianSourceProduct.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceProduct.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "TournamentSourceResolvent",
       "exit_code": 0,
       "passed": true,
@@ -1468,6 +1560,15 @@
         "'TournamentSourceResolvent.resolvent_eq_series' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentSourceResolvent.source_resolvent_le' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'TournamentSourceResolvent.source_resolvent_natural' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
+      "module": "GaussianSourceAnalytic",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "9d5e2ccd8163d7fd0238423b8df83ef29e7b6244c46102bb992bdd1f993b42e3",
+      "axiom_reports": [
+        "'GaussianSourceAnalytic.eventually_differentiable_disk' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     },
     {
@@ -1483,10 +1584,20 @@
       ]
     },
     {
+      "module": "GaussianSourceDerivative",
+      "exit_code": 0,
+      "passed": true,
+      "source_sha256": "13eab1c5469ddd61b1f8fa8fa963aba4b46da12c114f6b5b0e99d8760d3cf3ca",
+      "axiom_reports": [
+        "'GaussianSourceDerivative.eventually_uniform_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceDerivative.exists_uniform_derivative_constant' depends on axioms: [propext, Classical.choice, Quot.sound]"
+      ]
+    },
+    {
       "module": "EndpointCheck",
       "exit_code": 0,
       "passed": true,
-      "source_sha256": "d332d2e5f3fd4136726e19ba89e73bf37598b024ea8e900b77842a933d796441",
+      "source_sha256": "7ef352abed0494fce87351bb018b58cb2e9830c8f5f3a07bf2fd39b35cd0a2a1",
       "axiom_reports": [
         "'NonAlgebraicity.qRegular_power_representation' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'NonAlgebraicity.matrix_output_series_relation' depends on axioms: [propext, Classical.choice, Quot.sound]",
@@ -1622,9 +1733,30 @@
         "'DiamondFreeDiskResolvent.eventually_uniform_source' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ActualComplexScoreSource.inner_eq_bilinear' depends on axioms: [propext, Classical.choice, Quot.sound]",
         "'ActualComplexScoreSource.norm_score_sq' depends on axioms: [propext, Classical.choice, Quot.sound]",
-        "'ActualComplexScoreSource.eventually_uniform_actual_source' depends on axioms: [propext, Classical.choice, Quot.sound]"
+        "'ActualComplexScoreSource.eventually_uniform_actual_source' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.root_identity' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.parameter_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.prefactor_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.differentiableOn_parameter' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianParameterBranch.differentiableOn_prefactor' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceExponent.denominator_bound' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceExponent.exponent_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceExponent.exp_exponent_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ComplexResolventAnalytic.eventually_analytic_disk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ComplexCauchyErrorTransfer.derivative_error_full_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ComplexCauchyErrorTransfer.derivative_difference_half_gap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianScalarFactor.gaussian_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianScalarFactor.eventually_uniform_gaussian_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualGaussianSourceExponent.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'ActualGaussianSourceExponent.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianDeterminantBranch.gaussian_branch_square' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceProduct.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceProduct.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceAnalytic.eventually_differentiable_disk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceDerivative.eventually_uniform_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]",
+        "'GaussianSourceDerivative.exists_uniform_derivative_constant' depends on axioms: [propext, Classical.choice, Quot.sound]"
       ]
     }
   ],
-  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. Gaussian parameter substitution, branches, derivative rates, permanent recovery and full Condition R remain outside these results."
+  "scope": "The main application keeps the graph-theoretic asymptotic and the finite Lindemann-Weierstrass input as explicit hypotheses. Passing does not prove those two external theorems. OrderedCancellation verifies the abstract filtered ring and finite-packet recursion only; it does not formalize tournament kernel costs, permanent recovery, or Condition R. ColorEnergy verifies finite prefix-energy algebra only. ColorTransport proves actual word reachability and an area lower bound. ColorTransportExact proves attained minimum distance and color-word energy repair paths. ColorGraphRepair supplies matrix energy and actual finite differing-edge bounds for normalized color-word tournaments, extended by ColorCutNormalization to arbitrary color words. ColorTargetModels supplies independent carousel/doubling isomorphisms. DiamondFreeRepresentation constructs a color-word representation from the actual zero diamond count; ZeroDiamondRepair exports original-tournament finite differing-edge bounds to independent carousel/doubling targets for D=0. Positive-diamond repair and Condition R remain outside this result. DiamondGap proves only finite tournament diamond coverage and D=0 or n<=4D; this does not imply Condition R. VectorWeakMajorization verifies finite Abel, square-sum comparison and a signed matrix bound. The cone/sign/selection modules prove K cone/prefix preservation and the combinatorial envelope<=P_k, and SelectedTournamentMajorization completes actual finite tournament vector weak majorization, independently checked from raw matrix entries. ReferenceMomentComparison supplies the concrete K-square conjugacy and all nonnegative-integer-power Frobenius comparisons. Negative/fractional powers, small-defect sixth-order identities and Condition R are not proved. ReferenceOnesOrbit identifies the actual all-ones orbit; TournamentEnergyRowDomain proves source-energy series convergence and comparison for q>=0 with q*(n-1)^2<1, including q=1/n^2 for n>0 without a Summable premise. TournamentSourceResolvent proves the actual source resolvent identity, both inverse identities, and comparison on that same real nonnegative row domain. No enlarged complex domain or full R is asserted. OrdinalSixthPolynomial proves only explicit polynomial subtraction and conditional scalar transfer, with the actual ordinal-matrix sixth-moment identification now supplied by OrdinalSixthMatrixBridge for arbitrary finite skew block families. TournamentSourceEnergy identifies directed cycle counts/3 with the source deficit, and OrdinalGlobalSixthDeficit proves the actual global-transitive-reference sixth deficit formula. The small-block bound retains explicit size and D-versus-triangle assumptions; DiamondTriangleIncidence proves D<=(n-3)t for actual unordered counts, and SmallDiamondComponentReduction proves actual source-switched SCC size bounds for positive small D. TournamentOrdinalReconstruction proves actual ordered SCC matrix reconstruction. ActualSmallDiamondSixth proves the actual sixth-deficit lower bound 6*n^2*D for n>=4, D>0, 24*D<=n^2 with no decomposition/count/moment assumptions. Full analytic R remains outside scope. ActualPathConvolution proves exact S1 even-subset convolution for this repository hamiltonianPathCount, with no convolution assumption; DiamondFreePathAverage proves the exact normalized two-permanent average for the original hamiltonianPathCount under the actual zero diamond count, without principal-minor or convolution assumptions; no asymptotic recovery or R is implied. DiamondFreeKernelDeterminant proves the full finite determinant polynomial for actual zero-diamond tournaments over every characteristic-zero field; no complex-domain convergence or analytic R follows from that finite module alone. DiamondFreeKernelLimit proves moving-parameter cosh/cos determinant limits and eventual true inverses; DiamondFreeKernelUniform upgrades to qualitative compact-uniform convergence and scalar reciprocal convergence off cosine zeros. DiamondFreeComplexResolvent proves exact quadratic-kernel factorization and eventual two-sided matrix inverses off limiting cosine zeros. No rate, inverse operator norm, source-quadratic-form estimate, derivative limit, or analytic R is asserted by those qualitative modules. ComplexBinomialRate separately proves the actual zero-diamond imaginary determinant error <=2*exp(R)*R^2/n when n>0, R/n<=1/2 and R^2/n<=1. ComplexOperatorResolventBound proves true Hilbert operator Neumann inverse and source bounds under an explicit operator-norm smallness hypothesis; that generic module alone does not supply the graph-to-operator bound. The TransitiveKernelInverse and bounds modules now derive exact inverse entries, and MatrixEuclideanEntryBound plus actual sign-switch/relabel transfer prove a genuine graph inverse norm bound. ComplexKernelDiskLower proves explicit and eventual graph-independent disk thresholds. DiamondFreeDiskResolvent proves true two-sided quadratic inverses and uniform Euclidean inverse/source bounds on each fixed disk R<pi/2, conditional only on zero diamonds and stated linear source energy. ActualComplexScoreSource identifies real score energy and the ordinary transpose source expression. The Gaussian modules additionally prove parameter substitution with the principal logarithm of beta, the origin-normalized determinant branch identity, and uniform O(1/n) errors for the explicit Gaussian/source proxy and each fixed derivative on nested disks, uniformly in actual zero-diamond graphs and |v|<=1 under stated linear score energy. Actual analyticity and source estimates are proved internally. The raw block Gaussian integral and original source-elimination identities, projection, permanent recovery and full Condition R remain outside these results."
 }

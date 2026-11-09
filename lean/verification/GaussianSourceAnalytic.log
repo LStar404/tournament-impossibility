@@ -1,0 +1,1 @@
+'GaussianSourceAnalytic.eventually_differentiable_disk' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,2 @@
+'ActualGaussianSourceExponent.eventually_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ActualGaussianSourceExponent.exists_uniform_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
