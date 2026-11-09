@@ -1,0 +1,21 @@
+PermanentFiniteMixedIntegral.lean:17:0: warning: automatically included section variable(s) unused in theorem `PermanentPositiveMoments.mixedMonomial_integrable`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PermanentFiniteMixedIntegral.lean:32:51: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+PermanentFiniteMixedIntegral.lean:21:0: warning: automatically included section variable(s) unused in theorem `PermanentPositiveMoments.mixedMonomial_integral`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PermanentFiniteMixedIntegral.lean:40:6: warning: `MeasureTheory.integral_finset_sum` has been deprecated: Use `MeasureTheory.integral_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integral_finset_̵s̵S̲um
+'PermanentPositiveMoments.finite_mixed_integral' depends on axioms: [propext, Classical.choice, Quot.sound]

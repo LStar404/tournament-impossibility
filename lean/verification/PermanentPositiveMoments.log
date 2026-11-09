@@ -1,0 +1,2 @@
+'PermanentPositiveMoments.radial_factorial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PermanentPositiveMoments.phase_orthogonality' depends on axioms: [propext, Classical.choice, Quot.sound]

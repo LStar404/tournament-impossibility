@@ -1,0 +1,17 @@
+PermanentLinearProductIntegral.lean:15:0: warning: automatically included section variable(s) unused in theorem `PermanentPositiveMoments.product_coordinates`:
+  [DecidableEq J]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq J] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PermanentLinearProductIntegral.lean:29:0: warning: automatically included section variable(s) unused in theorem `PermanentPositiveMoments.density_monomial`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PermanentLinearProductIntegral.lean:63:10: warning: `MeasureTheory.integrable_finset_sum` has been deprecated: Use `MeasureTheory.integrable_finsetSum` instead
+
+Hint: Replace the deprecated name:
+  integrable_finset_̵s̵S̲um
+'PermanentPositiveMoments.linearProduct_mixed_integral' depends on axioms: [propext, Classical.choice, Quot.sound]

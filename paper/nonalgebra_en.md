@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 20:00 UTC, covers 323 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 20:44 UTC, covers 334 Lean modules: 153 exact-source checks were retained after interruption and 181 modules were recompiled. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -538,7 +538,13 @@ For the chosen-enumeration graph family at positive depth $d$, take $M=(1025/2)(
 
 For the actual ratio $\rho(n,k)=n^k/(n)_k$, $n>0$, $k\le n$, the order-$p$ geometric-product remainder is nonnegative and at most $\rho(n,k)(k^2/n)^{p+1}$. Spare-radius estimates give an $n^{-p-1}$ multiplier error for each graph activity $1\le j\le p$, expanded through order $p-j$, on a proved linear window; the zeroth activity has zero error. Core multiplication and summation of the complete approximation remain open.
 
-An assumed circle bound now yields a tail bound for the actual permanent polynomial. Concrete factors satisfy $XY^*=A$ and $X^*X=Y^*Y=\operatorname{diag}(s)$, including singular matrices. The positive moment/AM--GM argument, actual circle envelope and unconditional permanent tail remain unproved, as do canonical popcount identification, final normalized recovery and full Condition R. The fixed-activity bound does not establish infinite-activity convergence; core Taylor tails do not replace the permanent tail.
+The permanent polynomial has a proved tail bound conditional on a circle envelope. Eleven additional modules establish positive radial-phase factorial moments, integrability, permanent polarization and AM--GM. Together with the spectral factors $XY^*=A$ and $X^*X=Y^*Y=\operatorname{diag}(s)$, these give
+\[
+ |\operatorname{per}A|\le(n!/n^n)h_n(s_1,\ldots,s_n) \qquad(n>0).
+\]
+Here $A$ is any complex $n\times n$ matrix, including singular matrices, $s_i$ are its singular values, and $h_n$ is the complete homogeneous polynomial. The positive auxiliary measure is separate from the indefinite formal covariance.
+
+The actual circle envelope, unconditional permanent tail, core multiplication and full approximation sum, canonical popcount identification, normalized recovery and full Condition R remain open. Fixed-activity bounds do not establish infinite-activity convergence; core tails do not replace permanent tails.
 
 Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 

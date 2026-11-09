@@ -1,0 +1,14 @@
+PermanentPolarization.lean:22:0: warning: automatically included section variable(s) unused in theorem `PermanentPositiveMoments.permutation_assignment_sum`:
+  [DecidableEq I]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq I] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+PermanentPolarization.lean:34:62: warning: This simp argument is unused:
+  Function.comp_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [e, Equiv.coe_fn_mk, assignmentWeight, star_prod]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'PermanentPositiveMoments.polarization' depends on axioms: [propext, Classical.choice, Quot.sound]

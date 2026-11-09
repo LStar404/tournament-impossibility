@@ -1,3 +1,14 @@
+import PermanentPositiveMoments
+import PermanentPhasePowers
+import PermanentRadialPhaseMoment
+import PermanentFiniteMixedIntegral
+import PermanentLinearProductIntegral
+import PermanentAssignmentFiberCount
+import PermanentPolarization
+import PermanentFactorEnergy
+import PermanentPointwiseAMGM
+import PermanentEnergyIntegral
+import PermanentSpectralBound
 import FiniteFactorialRecovery
 import RecoveryHomogeneousList
 import RecoveryHomogeneousEvaluation
@@ -1110,3 +1121,17 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms PermanentSpectralFrame.factors_reconstruct
 #print axioms PermanentSpectralFrame.leftFactor_gram
 #print axioms PermanentSpectralFrame.rightFactor_gram
+
+#print axioms PermanentPositiveMoments.radial_factorial
+#print axioms PermanentPositiveMoments.phase_orthogonality
+#print axioms PermanentPositiveMoments.phase_mixed_moment
+#print axioms PermanentPositiveMoments.radial_fractional_integrable
+#print axioms PermanentPositiveMoments.mixed_moment
+#print axioms PermanentPositiveMoments.finite_mixed_integral
+#print axioms PermanentPositiveMoments.linearProduct_mixed_integral
+#print axioms PermanentPositiveMoments.matchingPerm_count
+#print axioms PermanentPositiveMoments.polarization
+#print axioms PermanentSpectralFrame.actual_factor_energy
+#print axioms PermanentPositiveMoments.actual_pointwise
+#print axioms PermanentPositiveMoments.energy_integral
+#print axioms PermanentPositiveMoments.spectral_permanent_bound
