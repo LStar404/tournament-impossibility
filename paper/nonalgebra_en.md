@@ -555,7 +555,7 @@ $$
  \begin{aligned}
  f_M(z)&=\frac{n^n}{n!}\operatorname{per}(J/n+zM)
        =\frac{\operatorname{per}(J+nzM)}{n!},\\
- [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n,\ n>0).
+ [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n, n>0).
  \end{aligned}
 $$
 The $F_k$ retain their earlier subset-pairing definition. The proof counts $(n-k)!$ completions of a selected minor and checks the row--column indexing. Above degree $n$, both the actual coefficient and $F_k$ vanish separately; the empty-matrix polynomial is one. Writing $G_M$ for the actual core, the finite projection identifies $F_k(M)$ with $[z^k]\sum_{j=0}^{m}G_MC_j$ whenever $k\le m$; terms with $j>k$ vanish. The same normalized polynomial is explicitly identified with the object in the unweighted graph-tail theorem. No infinite activity sum is used.
@@ -589,7 +589,7 @@ $$
 $$
 The constant $E_{d,p}$ is explicit and depends only on fixed $d,p$. The proof sums the low-activity multiplier errors, bounds the actual $\rho(n,k)$-weighted high-activity double sum in the depth-dependent window, and uses the actual permanent tail above $m$, where $A$ is exactly zero. Thus the estimate concerns the literal normalized permanent and the existing core and activities, without an infinite activity expansion.
 
-This is a finite truncated recovery result, not the paper's full raw_fixed_order_recovery endpoint. The condition $p\le\lfloor\alpha_dn\rfloor$ is explicit; no claim covers a shorter window. A closed-unit-disk value bound alone does not justify differentiation at the boundary point $z=1$. Removing the approximation cutoff, proving a larger-disk estimate or an equivalent explicitly $k^a$-weighted coefficient error, and identifying the required derivative/evaluation remain separate steps. Untruncated recovery, structural projection, canonical numbering, global extremal classification and full Condition R remain unresolved.
+This is a finite truncated recovery result, not the paper's full `raw\_fixed\_order\_recovery` endpoint. The condition $p\le\lfloor\alpha_dn\rfloor$ is explicit; no claim covers a shorter window. A closed-unit-disk value bound alone does not justify differentiation at the boundary point $z=1$. Removing the approximation cutoff, proving a larger-disk estimate or an equivalent explicitly $k^a$-weighted coefficient error, and identifying the required derivative/evaluation remain separate steps. Untruncated recovery, structural projection, canonical numbering, global extremal classification and full Condition R remain unresolved.
 
 Earlier manuscripts are in `historical/formula-restrictions`. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 
