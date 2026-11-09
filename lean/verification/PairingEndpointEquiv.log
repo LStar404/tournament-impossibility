@@ -1,0 +1,2 @@
+'PairingEndpointEquiv.equivalence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PairingEndpointEquiv.card_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

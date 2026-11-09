@@ -1,3 +1,8 @@
+import LinearSourceOccurrences
+import LinearSourceExpansion
+import PairingEndpointEquiv
+import LinearSourcePairingFactor
+import MultivariateLinearFormalExponential
 import ConstantPairingMoments
 import ConstantPairingCount
 import ConstantPairingFormalExponential
@@ -640,3 +645,15 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 
 #print axioms ScalarWickFormalExponential.wick_power
 #print axioms ScalarWickFormalExponential.wickSeries_eq_exp
+
+#print axioms LinearSourceOccurrences.moment_assignment
+
+#print axioms LinearSourceExpansion.wick_source_power
+
+#print axioms PairingEndpointEquiv.equivalence
+#print axioms PairingEndpointEquiv.card_eq
+
+#print axioms LinearSourcePairingFactor.fixed_pairing
+
+#print axioms MultivariateLinearFormalExponential.wick_power
+#print axioms MultivariateLinearFormalExponential.wickSeries_eq_exp
