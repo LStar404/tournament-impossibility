@@ -555,7 +555,7 @@ $$
  \begin{aligned}
  f_M(z)&=\frac{n^n}{n!}\operatorname{per}(J/n+zM)
        =\frac{\operatorname{per}(J+nzM)}{n!},\\
- [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n,\ n>0).
+ [z^k]f_M&=\rho(n,k)F_k(M)\qquad(0\le k\le n, n>0).
  \end{aligned}
 $$
 The $F_k$ retain their earlier subset-pairing definition. The proof counts $(n-k)!$ completions of a selected minor and checks the row--column indexing. Above degree $n$, both the actual coefficient and $F_k$ vanish separately; the empty-matrix polynomial is one. Writing $G_M$ for the actual core, the finite projection identifies $F_k(M)$ with $[z^k]\sum_{j=0}^{m}G_MC_j$ whenever $k\le m$; terms with $j>k$ vanish. The same normalized polynomial is explicitly identified with the object in the unweighted graph-tail theorem. No infinite activity sum is used.
