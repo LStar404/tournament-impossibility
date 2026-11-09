@@ -1,3 +1,9 @@
+import ResidualLogarithm
+import ResidualLogFiniteVertices
+import ResidualFirstCoefficient
+import PhysicalCovarianceInitial
+import ResidualSingleAssignment
+import BipartiteResidualSecondZero
 import ResidualHomogeneity
 import PhysicalLowMoments
 import ResidualDegreeAssignments
@@ -911,3 +917,17 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ResidualScalarActivities.scalar_four
 #print axioms ResidualScalarActivities.active_degree
 #print axioms ResidualScalarActivities.active_coordinates_bound
+
+#print axioms ResidualLogarithm.actual_exp_identity
+
+#print axioms ResidualLogFiniteVertices.finite_vertices
+
+#print axioms ResidualFirstCoefficient.actual_first_zero
+
+#print axioms PhysicalCovarianceInitial.fourth_second_zero
+
+#print axioms ResidualSingleAssignment.single_assignment
+#print axioms ResidualSingleAssignment.single_moment
+
+#print axioms BipartiteResidualSecondZero.actual_second_zero
+#print axioms BipartiteResidualSecondZero.low_frozen_core_match
