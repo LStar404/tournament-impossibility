@@ -55,8 +55,8 @@ jobs:
       - name: Restore verified Tectonic archive
         uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
-          path: ~/.cache/paper-tectonic
-          key: tectonic-${{ runner.os }}-${{ runner.arch }}-0.17.0-1a715688baf591e650c8aeb160ae934e181685eecbb38b317de30b269ac5d606
+          path: ~/.cache/paper-tectonic/tectonic-0.17.0-x86_64-unknown-linux-gnu.tar.gz
+          key: tectonic-archive-v2-${{ runner.os }}-${{ runner.arch }}-0.17.0-1a715688baf591e650c8aeb160ae934e181685eecbb38b317de30b269ac5d606
 
       - name: Install tectonic
         id: primary_tectonic
