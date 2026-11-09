@@ -309,19 +309,19 @@ The general rational-limit assertion of Theorem A.5 is also formalised in full: 
 A separate group of checked upstream lemmas covers finite ordered cancellation, shortest color-word swaps and zero-diamond tournament repair, vector weak majorization for actual tournament matrices, and Frobenius-norm comparisons for all nonnegative integer powers. The all-ones source-energy series and the actual resolvent identity are proved for $q\ge0$ with $q(n-1)^2<1$, including $q=1/n^2$ for $n>0$, with convergence and two-sided invertibility established internally. The exact even-subset convolution S1 and zero-diamond two-permanent average use this repository's actual Hamiltonian path count. Ordered strongly connected component reconstruction also gives, for $n\ge4$, $D>0$ and $24D\le n^2$, the finite small-defect bound $6n^2D\le\lVert T_n^3\rVert_F^2-\lVert S^3\rVert_F^2$. Here $S$ is the original skew sign matrix, $T_n$ is transitive, and $D$ counts unordered four-vertex diamonds.
 
 For actual zero-diamond tournaments, the formalisation now reaches fixed complex disks. The finite kernel identity is
-\[
+$$
 \det(I+aS)=\frac{(1+a)^n+(1-a)^n}{2}.
-\]
+$$
 Its imaginary-parameter normalisation converges uniformly to $\cos w$ on compact sets; for $|w|\le R$, the error is at most $2e^R R^2/n$ once $n>0$, $R/n\le1/2$ and $R^2/n\le1$. For each fixed $0\le R<\pi/2$, one further order threshold, independent of the graph and $w$, gives genuine two-sided inverses and
-\[
+$$
 \left\|(I+(w/n)^2S^2)^{-1}\right\|_{2\to2}\le C_R^2,
 \qquad C_R=\frac{2(1+R)e^R}{\cos R}.
-\]
+$$
 This bound follows from an explicit inverse-entry formula and a Euclidean operator-norm estimate, not from the determinant lower bound alone. For the actual real score vector $b=S\mathbf1$, the additional energy assumption $\lVert b\rVert_2^2\le Kn$ yields
-\[
+$$
 \frac{\left|b^{\mathsf T}(I+(w/n)^2S^2)^{-1}b\right|}{n^2}
 \le\frac{KC_R^2}{n}.
-\]
+$$
 The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption. Gaussian parameter substitutions and branch choices, the composed exponential product and its derivative errors, asymptotic permanent recovery, and full Condition R remain outside this checked snapshot.
 
 Earlier manuscripts remain in `historical/formula-restrictions` for comparison. The pinned research notes [7] supply a route to R; the dependency discussion after Proposition B.1 distinguishes its verified analytic implication from the upstream arguments not fully rechecked in this revision.
