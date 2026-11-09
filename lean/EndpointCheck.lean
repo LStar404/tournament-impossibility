@@ -1,3 +1,7 @@
+import ConstantPairingMoments
+import ConstantPairingCount
+import ConstantPairingFormalExponential
+import ScalarWickFormalExponential
 import OccurrenceSquarefreeEquiv
 import OrderedUnorderedSubsetPairing
 import FullWickSquarefreeCompatibility
@@ -626,3 +630,13 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms PairingMomentParity.pairing_even
 #print axioms PairingMomentParity.odd_moment_zero
 #print axioms PairingMomentParity.empty_moment_one
+
+#print axioms ConstantPairingMoments.W_even
+#print axioms ConstantPairingMoments.factor_factorial
+
+#print axioms ConstantPairingCount.actual_pairing_count
+
+#print axioms ConstantPairingFormalExponential.actual_eq_exp
+
+#print axioms ScalarWickFormalExponential.wick_power
+#print axioms ScalarWickFormalExponential.wickSeries_eq_exp

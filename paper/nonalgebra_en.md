@@ -302,7 +302,7 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 ## Research status and licence
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-The checked build record of 9 November 2026, 05:00 UTC, covers 170 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
+The checked build record of 9 November 2026, 05:23 UTC, covers 174 Lean modules. In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
 The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules `RationalRadial`, `RationalLinearDescent`, `RationalSeriesLimit` and `QRegularRationalLimit` supply the additional bridges and endpoint. The hypotheses `ExtremalAsymptotic` and `FourExponentialIndependence` remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. Condition R and the complete arguments of Appendices B--E remain outside the formalisation. Build results and axiom audits are recorded under `lean/verification`; the source files alone do not certify a successful verification run.
 
@@ -377,7 +377,14 @@ $$
  m_C(V)=\sum_{s\in V\setminus\{o\}} C(o,s)\,
  m_{C|_{V\setminus\{o,s\}}}(V\setminus\{o,s\}).
 $$
-The proof constructs a genuine bijection between pairings and the choice of the distinguished point's partner together with a residual pairing, and derives the edge-weight factorization. Odd-cardinality moments vanish; the empty moment equals one. These are finite algebraic results. Formal linear/quadratic exponential identities and their resummation, general factorial moment counting, analytic tail estimates and permanent recovery remain unformalised, as do projection, activity comparisons and full Condition R.
+The proof constructs a genuine bijection between pairings and the choice of the distinguished point's partner together with a residual pairing, and derives the edge-weight factorization. Odd-cardinality moments vanish; the empty moment equals one. These are finite algebraic results. 
+
+For constant covariance $c$, the recurrence gives the actual pairing moments $m_c(2k)=(2k-1)!!c^k$ and $m_c(2k+1)=0$, with the empty moment one. The pairing count and its factorial normalization are proved, rather than supplied as hypotheses. An explicit occurrence equivalence identifies these moments with the full one-variable polynomial Wick functional $\mathcal W_c(X^m)$. Over a commutative $\mathbb Q$-algebra this yields the formal power-series identity
+$$
+ \sum_{m\ge0}\frac{\mathcal W_c(X^m)}{m!}t^m
+ =\exp(ct^2/2).
+$$
+Here the right side is the formal exponential with rescaling and degree doubling; no analytic convergence or probability measure is asserted. The multivariate linear-source identity, quadratic determinant resummation, activity estimates, projection, true coefficient tails and permanent recovery remain unformalised. Full Condition R remains incomplete.
 
 The formal covariance $zQ_v$ is generally indefinite; it is not used as the covariance of a positive Gaussian measure.
 
