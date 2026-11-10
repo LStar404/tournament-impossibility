@@ -1,0 +1,232 @@
+{
+  "scope": "30 comment-corrected modules freshly compiled, 527 unchanged original objects hash-verified and reused; all 557 modules and 7907 declarations newly audited. Not a second full 557-module compilation.",
+  "finished": "2026-11-10T09:36:48.279101+00:00",
+  "all_noncomment_bytes_unchanged": true,
+  "all_raw_expr_types_identical": true,
+  "all_audit_records_identical": true,
+  "final_check": {
+    "passed": true,
+    "fresh_compile_count": 30,
+    "unchanged_upstream_reused": 527,
+    "fresh_audit_count": 557,
+    "all_exact_declarations_equal": 7907,
+    "evidence_file_count": 2377,
+    "status_sha256": "88ce33ee2604ed85d49a09da4156ce089cd331f9bd420e68fab1fdaba8299b13",
+    "report_sha256": "6a525c8a8d3b3601854c1aa97fa62935ff006d0065951c2627439088aa3b4967",
+    "evidence_index_sha256": "469a526fe293a91033c04f407b9a4436ab8d1a87d6389edaa14a5d91c688b05f"
+  },
+  "changed_sources": [
+    {
+      "path": "lean/IndependentCenteredRestrictionCandidate.lean",
+      "old_sha256": "6d849428df5197f0713acc965abe9e9e057f9be6e8d47d54084285fa25013dae",
+      "new_sha256": "34a451b9acfaa27b974dda2e96b73e63248188f76419e0e0f04dd690c1f9c7e5",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/DeletionRenormalizationCandidate.lean",
+      "old_sha256": "5e8974de3e4a79333d1cb5a7590efa65215d06ed1c5d465910e529bc2baddfeb",
+      "new_sha256": "fd7852f1673971f5334e7cad869ad90e18503bb0a0d53901096bd60b7ce8045f",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/NormalizedCenteredRestrictionCandidate.lean",
+      "old_sha256": "5c80fbf1962a805cdeaa11e1a7cfad4732c7efed9d8a08eab328b94e7f971a3d",
+      "new_sha256": "2a26cd05881c540107823e7962d900edc6e3545a1afcd6d108e479dd419134f6",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ExpRemainderLipschitz.lean",
+      "old_sha256": "464444bb3e746757d70f13c67c8ab693c1dc5a46c07b08f9a6098d122e7cb1e0",
+      "new_sha256": "e18deb9129fa177ff375025273dba80e3486cfba81eada6ccff17653e8290417",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualMarginalRemainder.lean",
+      "old_sha256": "eb487341140b9a832b1a23642c36d1d84e40d647c89818f96ba96ee72829c2f7",
+      "new_sha256": "7467d1499c9e85edebd75229239d7f0398bc15818b7cd7f8133512a19b2f766e",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualScalingContraction.lean",
+      "old_sha256": "dc6c411a16e4342e21f8819f6a85bd101f87b6be657af93de95b580a6dd16b6a",
+      "new_sha256": "12adbfb2718ce3433ec0748dcbc2172991f8ff1ccbe98906679354fc791e492c",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualHessianFinite.lean",
+      "old_sha256": "dc6b225a1be1f4decfcc1b81e1d7403a2b6a1d31b0a5cd634ca36896dd08cefe",
+      "new_sha256": "aa742e1a413677bc159e37c94deffd2fe1e846a547d6f1c233701b6778e1628e",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualHessianComplex.lean",
+      "old_sha256": "368a785f1b95222d52c421df7abdeb98ebd059f3aa5c53e48f50cd63ee8206c3",
+      "new_sha256": "bd0352ea983ffd386a45304671ef5f6d559908faa4b642b6aab514fa1417680c",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/RawMatrixScalingExistence.lean",
+      "old_sha256": "9eaa5f52dc27c85a8ffa12d50f6ed8a4387e8decf03adb138c378f5f5d888cb2",
+      "new_sha256": "da9dec5e9b11862c4b1e6dcd88e20246b03493e0371c0b4af4bfa55c6a381a40",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/RawScalingThreshold.lean",
+      "old_sha256": "a200e7490aa81c05724839675cbfacb849a472b174d481d73acea9a02e7dbc52",
+      "new_sha256": "c907c21a27e0fb35a6ee62edf7dd5c7f5eb09b8fbe49149a5e4f924f4cd59189",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/FiniteSymmetricQuadratic.lean",
+      "old_sha256": "ed6632855999bdcd435556c02bca469c9625031a9b629d157169011882f11015",
+      "new_sha256": "94031e619d4bba90ec29024703ad6a7d73fcbb1fd2d7ba47e5f5c91b8b8aae71",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualRootEnergy.lean",
+      "old_sha256": "6575029f52e1adc6011e8edbcc0d5e41a0a421a6c8e3005cc227a4c5c6c421c1",
+      "new_sha256": "0c60c21c89d7697601e822f4ccdd088406b7b854b2fb274e3fe9fd870fbced72",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualRootCoercivity.lean",
+      "old_sha256": "cead03d6933fd8c5aecedabcc0b861fd4b3502399025ac5f97119231f564c001",
+      "new_sha256": "b31640ffdfaab63e2156be1ae52654f7dd510cca9bf3f0a747aa3b951f73aa2f",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ScalingDensityFrobenius.lean",
+      "old_sha256": "dc1436ec6fe99fc75a03edb33e023c4d643b4243854cb2004b398a4301273249",
+      "new_sha256": "edec365bbf3b96c72cf3d97fc9068c3f61512b2709b7d781d7cefaa642119972",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/FiniteSchurBound.lean",
+      "old_sha256": "7ad23308383df8efc148cb35fe6f569696919071f06287b5aa353d0a315ae7d6",
+      "new_sha256": "3af33685b9d754b56651d3b84757e72ebe1de14ae5f71e22048b6d9548d5d197",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ScalingOperatorPerturbation.lean",
+      "old_sha256": "b2b1ee45dba9714918d8aa0f8ebe95987186198e5b8ecd18f2226018c86b1143",
+      "new_sha256": "449d279544ab18b57e3fb43f12d3d0cf5abead0e07cb5a032bc3dfea1d402325",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ScalingCenteredGap.lean",
+      "old_sha256": "8a5b97f6d05b196d274069c384182f328e789824e663ce798c988b7f961455db",
+      "new_sha256": "bf4282c55d9360ffe99676ffae07b3d0454fd8f7c4c98d41bed4552ba6ea43f9",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/DeletedScalingSynthesisCandidate.lean",
+      "old_sha256": "80ee5f6824a60faaa1478d9d0243e0df33b700fa9682452e6e0cfff370414c33",
+      "new_sha256": "2a2d0b324deb52955e162282c8792f4b0159e9983651f66af69a8b841f92087f",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/LogWindowScalarGateCandidate.lean",
+      "old_sha256": "378aa0bc4680ac2af9180b907ac0c2365c781930a127881cb45035a5cefc98dc",
+      "new_sha256": "594e0cdcb775dab47f2bd6d237bd8115fb14c85f2fb6908e2ae2d954ac7b1caf",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/LogWindowDeletionBudgetCandidate.lean",
+      "old_sha256": "19620a4a0e7918c83839640c49d398da5d2ffbe785fa4307b13d17826efc4774",
+      "new_sha256": "b550c1b3243a074ad655013ec0802c5222f00028fb32dd6408313f73442851d8",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/ActualAffineLogDetCandidate.lean",
+      "old_sha256": "f53a43acf77aed7af4715d751ed7e2a271775aeb6baef7d7dd700ea2e537f010",
+      "new_sha256": "26d7c5a8925dcff7ee31a3d1f7b9a7143e9eaa3e1959bad1df1e7db416c95838",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/RectangularGramLossCandidate.lean",
+      "old_sha256": "2b0f9b4d3e2985788fe5c30d2e4d50c15426d9bcb80f81b06d9c4fd498cefb5b",
+      "new_sha256": "40d615552b967c0a349dec05e025186ef43c43aa68a8796cd04e4f449e22b41c",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/SkewBaselineGramDifferenceCandidate.lean",
+      "old_sha256": "f39b64ce025910a65651e4c1c25e0dc9cf187ed3597ad57adea0c3a441fcd021",
+      "new_sha256": "8e130eb608493394396e85752b1409bbb5ce2333ce341b948bfa700ce1e06917",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PolynomialLogDetCandidate.lean",
+      "old_sha256": "387f1055169a98edba13088300c84cca63ae297f13729a9be80dcda1d1dd7c7b",
+      "new_sha256": "5b8768969a2239e3b4fe3b6b7a6eb976b96789b4c3f849169ce5b8ca512c90c4",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PermanentCircleExceptional.lean",
+      "old_sha256": "0f47d0fb5892bb7e5c74ef0d89ca8d3090f37bb30170aaf0e522b7d0d08066de",
+      "new_sha256": "ac012429cad4c1a6aeec62bb4b4db37b4943da6e82aa009b3e98d0da0f178d7a",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PermanentCircleRootSum.lean",
+      "old_sha256": "f990ccb6490bb31b9771d34372ba977649bd2d55054ca61bede09b6f397b0d49",
+      "new_sha256": "158f7970ffa52cfa9494e31c893c380fb6bdda588df9e9533a5d3e52c80f2144",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PermanentCircleEnvelope.lean",
+      "old_sha256": "e2dc516a2a6c9056b99a88d5b860217da956cb055ed39ce42d9e484db6c187cd",
+      "new_sha256": "7808dcdc624563216c20c6e84542e50a97ccd00bcd03c8559769593a6738bd08",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/BinaryGraphPermanentCircle.lean",
+      "old_sha256": "45ad4a1bd5d27b1d0768de8a06cee176838d2e0701d5404b2aa3066b8d743ff9",
+      "new_sha256": "9c4272b45f616eddf91d0f0bbe493f9e635cdf2322aa5bb894f8cd5f25dd0c0e",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PermanentCirclePolynomialDecay.lean",
+      "old_sha256": "fee8d17a6d48e2f773d87a72eb9496b2232b61fbd6f9bf29269922cdf356b3d8",
+      "new_sha256": "43d6e8070769a13e1d9bb66c816d62f2057bf1336ae0d83e364521fac65a209a",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    },
+    {
+      "path": "lean/PermanentActualCircleTail.lean",
+      "old_sha256": "c35349df8459b6ead54c9e34f7cadbe6d868488160b2d84a7b789dac00d937c2",
+      "new_sha256": "f2bc98b3346980b943eca4d31d61719ae7d66e4f8dc41497d35cd151b088b708",
+      "original_compile_exit": 0,
+      "original_audit_exit": 0
+    }
+  ],
+  "audit_comparison_sha256": "e6e4371513e8e7e22dc515fc7ea3f5ac7cc8f33c0e7604c648a9f6d487aa2f98",
+  "revision_manifest_sha256": "b120f111e03eb85dc6ccbab8aa236f9d1f2f248bdaa4fcb7c7df576dcd6c5a25"
+}

@@ -1,7 +1,7 @@
 import PermanentCircleRankOne
 
 /-! Selecting the exceptional singular root without imposing an ordering on
-    the actual Gram spectrum. This file is an uncompiled candidate. -/
+    the actual Gram spectrum. Verified in the 557-module direct-Lean compilation and declaration audit. -/
 noncomputable section
 namespace PermanentSpectralFrame
 open Matrix

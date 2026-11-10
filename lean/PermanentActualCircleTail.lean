@@ -1,7 +1,7 @@
 import PermanentCircleEnvelope
 import PermanentCirclePolynomialDecay
 
-/-! Uncompiled integration candidate. The polynomial below is the literal
+/-! Verified in the 557-module direct-Lean compilation and declaration audit. The polynomial below is the literal
 finite permanent of P + X M, not a core or formal Gaussian proxy. -/
 noncomputable section
 namespace PermanentActualCircleTail

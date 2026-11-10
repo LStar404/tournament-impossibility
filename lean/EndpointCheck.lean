@@ -1,3 +1,49 @@
+import DenseResolventRowBound
+import BalancedHessianInverse
+import MatrixScalingMassPotential
+import DiagonalScalingPermanent
+import FJFallingCorrection
+import FJSparseRadialLog
+import FJLaurentRadial
+import FJPeriodicJumpRadial
+import FJFiniteValuationGlue
+import RealGaugeSolution
+import RealGaugeOperator
+import ActualHessianFinite
+import ActualHessianComplex
+import ExpRemainderLipschitz
+import ActualMarginalRemainder
+import ActualScalingContraction
+import RawMatrixScalingExistence
+import ScalingEpsilonThreshold
+import RawScalingThreshold
+import FiniteSymmetricQuadratic
+import ActualRootEnergy
+import ActualRootCoercivity
+import ScalingDensityFrobenius
+import FiniteSchurBound
+import ScalingOperatorPerturbation
+import ScalingCenteredGap
+import RawScalingSynthesis
+import ActualTournamentPrescalingBounds
+import ActualPrescalingNormalization
+import FJRadialFinite
+import FJSparseHarmonic
+import FJAntiperiodicRational
+import FJAntiperiodicAbel
+import FJRadialTail
+import ProjectedTournamentDisk
+import BinaryCanonicalNumbering
+import CanonicalGraphRecovery
+import TournamentPrescalingMassBound
+import IndependentDeletionMass
+import RawFourBlockResolvent
+import ProjectedTwoColorWoodbury
+import FormalSeriesDerivativeAtOne
+import RecoveryApproximationOuterRadius
+import ActualRecoveryDerivativeBridge
+import ActualTournamentDeletionEnergy
+import TournamentPrescalingMass
 import WeightedRecoveryMultiplier
 import RecoveryMomentTail
 import WeightedRecoveryClosure
@@ -1236,3 +1282,173 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms ActualWeightedUntruncatedRecovery.coefficient_error
 #print axioms ActualWeightedUntruncatedRecovery.derivative_coefficients_at_one
 #print axioms ActualWeightedUntruncatedRecovery.weighted_summable
+
+#print axioms FormalSeriesDerivativeAtOne.at_one
+#print axioms FormalSeriesDerivativeAtOne.polynomial_at_one
+#print axioms RecoveryApproximationOuterRadius.finite
+#print axioms RecoveryApproximationOuterRadius.graph
+#print axioms ActualRecoveryDerivativeBridge.approximation_at_one
+#print axioms ActualRecoveryDerivativeBridge.normalized_derivative_error
+#print axioms ActualRecoveryDerivativeBridge.actual_permanent_derivative_error
+#print axioms ActualTournamentDeletionEnergy.retainedEnergy_upper
+#print axioms ActualTournamentDeletionEnergy.linear_window_retainedEnergy
+#print axioms ActualTournamentDeletionEnergy.retainedEnergy_lower
+#print axioms ActualTournamentDeletionEnergy.retainedEnergy_eq_submatrix
+#print axioms TournamentPrescalingMass.rawMass_identity
+#print axioms TournamentPrescalingMass.massExcess_identity
+#print axioms TournamentPrescalingMass.actual_tournament_massExcess
+
+#print axioms BinaryCanonicalNumbering.sign_eq_tm
+#print axioms BinaryCanonicalNumbering.localMatrix_eq_canonicalReal
+#print axioms BinaryCanonicalNumbering.canonicalReal_succ_pair
+#print axioms BinaryCanonicalNumbering.canonicalTensor_succ_pair
+#print axioms BinaryCanonicalNumbering.realGraph_eq_canonicalFinGraph
+#print axioms CanonicalGraphRecovery.outer_radius
+#print axioms CanonicalGraphRecovery.coefficient_error
+#print axioms CanonicalGraphRecovery.weighted_summable
+#print axioms CanonicalGraphRecovery.derivative_coefficients_at_one
+#print axioms CanonicalGraphRecovery.approximation_at_one
+#print axioms CanonicalGraphRecovery.normalized_derivative_error
+#print axioms CanonicalGraphRecovery.actual_permanent_derivative_error
+#print axioms TournamentPrescalingMassBound.cross_term_bound
+#print axioms TournamentPrescalingMassBound.massExcess_bound_exact
+#print axioms TournamentPrescalingMassBound.massExcess_bound
+#print axioms TournamentPrescalingMassBound.actual_tournament_massExcess_bound
+#print axioms TournamentPrescalingMassBound.actual_tau_identity
+#print axioms IndependentDeletionMass.remainingMass_exact
+#print axioms IndependentDeletionMass.deletionExcess_exact
+#print axioms IndependentDeletionMass.deletionExcess_bound
+#print axioms IndependentDeletionMass.uniform_deletionExcess
+#print axioms IndependentDeletionMass.deletionExcess_factored
+#print axioms RawFourBlockResolvent.inverse_four_blocks
+#print axioms RawFourBlockResolvent.kernel_four_blocks
+#print axioms RawFourBlockResolvent.raw_covariance_four_blocks
+#print axioms RawFourBlockResolvent.source_eq_existing_reduction
+#print axioms ProjectedTwoColorWoodbury.inverse_woodbury
+#print axioms ProjectedTwoColorWoodbury.innerMatrix_apply
+#print axioms ProjectedTwoColorWoodbury.source_difference
+#print axioms ProjectedTwoColorWoodbury.actual_covariance_difference
+
+#print axioms ActualTournamentPrescalingBounds.base_total
+#print axioms ActualTournamentPrescalingBounds.actual_marginals
+#print axioms ActualTournamentPrescalingBounds.actual_entry_bound
+#print axioms ActualTournamentPrescalingBounds.actual_entry_lower
+#print axioms ActualTournamentPrescalingBounds.actual_frobenius_bound
+#print axioms ActualPrescalingNormalization.prescaled_total
+#print axioms ActualPrescalingNormalization.normalizer_bounds
+#print axioms ActualPrescalingNormalization.normalizer_error_bound
+#print axioms ActualPrescalingNormalization.normalized_total
+#print axioms ActualPrescalingNormalization.normalized_marginals
+#print axioms ActualPrescalingNormalization.normalized_frobenius_bound
+#print axioms ActualPrescalingNormalization.actual_independent_deletion_bound
+
+#print axioms FJRadialFinite.primitive_half_power
+#print axioms FJRadialFinite.half_period_sum_zero
+#print axioms FJRadialFinite.first_resonance
+#print axioms FJSparseHarmonic.hasSum_sparse_harmonic
+#print axioms FJSparseHarmonic.sparse_harmonic_regular_part
+#print axioms FJSparseHarmonic.sparse_harmonic_regular_part_tendsto
+#print axioms FJAntiperiodicRational.antiperiodic_bound
+#print axioms FJAntiperiodicRational.series_eq_rational
+#print axioms FJAntiperiodicRational.rational_analyticAt_one
+#print axioms FJAntiperiodicRational.radial_derivatives_tendsto
+#print axioms FJAntiperiodicAbel.partial_sums_bounded
+#print axioms FJAntiperiodicAbel.weighted_abel
+#print axioms FJAntiperiodicAbel.inverse_weighted_abel
+#print axioms FJRadialTail.iterated_radial
+#print axioms FJRadialTail.iterated_radial_tendsto
+#print axioms FJRadialTail.falling_moment_summable
+#print axioms ProjectedTournamentDisk.projectedInteraction_bound
+#print axioms ProjectedTournamentDisk.raw_inverse_disk
+#print axioms ProjectedTournamentDisk.projected_inverse_disk
+#print axioms ProjectedTournamentDisk.finite_interface_disk
+#print axioms ProjectedTournamentDisk.parameter_disk
+#print axioms ProjectedTournamentDisk.actual_parameter_disk
+#print axioms ProjectedTournamentDisk.projected_scores
+
+#print axioms DenseResolventRowBound.inverse_entry_bound
+#print axioms DenseResolventRowBound.inverse_row_bound
+#print axioms DenseResolventRowBound.inverse_infinity_bound
+#print axioms DenseResolventRowBound.neumann_data
+#print axioms BalancedHessianInverse.gauge_kernel_iff
+#print axioms BalancedHessianInverse.centered_block_balanced
+#print axioms BalancedHessianInverse.base_inverse_data
+#print axioms BalancedHessianInverse.base_inverse_infinity_bound
+#print axioms BalancedHessianInverse.perturbed_gauge_solution
+#print axioms MatrixScalingMassPotential.weighted_theta
+#print axioms MatrixScalingMassPotential.theta_ge_neg_kappa
+#print axioms MatrixScalingMassPotential.exp_neg_theta_le_exp_kappa
+#print axioms MatrixScalingMassPotential.theta_nonneg_of_exact_mass
+#print axioms MatrixScalingMassPotential.theta_ge_neg_kappa_of_doublyStochastic
+#print axioms MatrixScalingMassPotential.deletionMatrix_kappa
+#print axioms MatrixScalingMassPotential.theta_ge_neg_deletionExcess
+#print axioms DiagonalScalingPermanent.permanent_expScaled
+#print axioms DiagonalScalingPermanent.permanent_recovery
+#print axioms DiagonalScalingPermanent.permanent_le_exp_kappa
+#print axioms FJFallingCorrection.correction_bound
+#print axioms FJFallingCorrection.weighted_jet_identity
+#print axioms FJFallingCorrection.inverse_power_log_tendsto
+#print axioms FJSparseRadialLog.correction_norm_summable
+#print axioms FJSparseRadialLog.lower_radial_tendsto
+#print axioms FJSparseRadialLog.highest_radial_log_tendsto
+#print axioms FJLaurentRadial.positivePolynomial_finite
+#print axioms FJLaurentRadial.inverse_radial_derivatives_finite
+#print axioms FJPeriodicJumpRadial.derivative_linear_assembly
+#print axioms FJPeriodicJumpRadial.periodicJumpJet_radial
+#print axioms FJFiniteValuationGlue.fixedValuation_uniformJump_jet
+#print axioms FJFiniteValuationGlue.fixedValuation_uniformJump_radial
+#print axioms FJFiniteValuationGlue.jump_amplitude
+#print axioms FJFiniteValuationGlue.fixedValuation_uniformJump_R
+#print axioms RealGaugeSolution.perturbed_real_gauge_solution
+#print axioms RealGaugeOperator.complex_inverse_operator
+#print axioms RealGaugeOperator.real_inverse_matrix
+#print axioms ActualHessianFinite.centered_projection
+#print axioms ActualHessianFinite.perturbation_row_bound
+#print axioms ActualHessianFinite.gauge_perturbation
+#print axioms ActualHessianComplex.realComplex_gap
+#print axioms ActualHessianComplex.cast_model
+#print axioms ActualHessianComplex.actual_complex_solution
+#print axioms ExpRemainderLipschitz.remainder_sub_bound
+#print axioms ActualMarginalRemainder.marginal_decomposition
+#print axioms ActualMarginalRemainder.residual_sub_bound
+#print axioms ActualScalingContraction.exists_gauge_root
+#print axioms ActualScalingContraction.exists_actual_scaling
+#print axioms RawMatrixScalingExistence.hessian_eq
+#print axioms RawMatrixScalingExistence.exists_scaling
+#print axioms ScalingEpsilonThreshold.threshold_pos
+#print axioms ScalingEpsilonThreshold.exp_sub_one_le
+#print axioms ScalingEpsilonThreshold.smallness
+#print axioms ScalingEpsilonThreshold.inverse_constant_pos
+#print axioms RawScalingThreshold.epsilonThreshold_pos
+#print axioms RawScalingThreshold.exists_scaling
+#print axioms FiniteSymmetricQuadratic.symmetric_row_quadratic
+#print axioms FiniteSymmetricQuadratic.spectral_quadratic_lower
+#print axioms ActualRootEnergy.exp_secant_lower
+#print axioms ActualRootEnergy.root_identity
+#print axioms ActualRootEnergy.actual_quadratic
+#print axioms ActualRootEnergy.root_energy
+#print axioms ActualRootEnergy.root_l2_from_coercivity
+#print axioms ActualRootCoercivity.perturbation_symmetric
+#print axioms ActualRootCoercivity.model_quadratic
+#print axioms ActualRootCoercivity.actual_coercivity
+#print axioms ActualRootCoercivity.actual_root_l2
+#print axioms ScalingDensityFrobenius.exp_sub_one_bound
+#print axioms ScalingDensityFrobenius.scaled_density
+#print axioms ScalingDensityFrobenius.frobenius_energy_fin
+#print axioms FiniteSchurBound.energy_bound
+#print axioms FiniteSchurBound.operator_bound
+#print axioms FiniteSchurBound.complex_operator_bound
+#print axioms ScalingOperatorPerturbation.real_operator_bound
+#print axioms ScalingOperatorPerturbation.complex_operator_bound
+#print axioms ScalingCenteredGap.projection_data
+#print axioms ScalingCenteredGap.doubly_stochastic_centering
+#print axioms ScalingCenteredGap.actual_scaled_centered_gap
+#print axioms RawScalingSynthesis.cast_l2_norm
+#print axioms RawScalingSynthesis.real_gap_of_complex
+#print axioms RawScalingSynthesis.raw_centered_block_gap
+#print axioms RawScalingSynthesis.epsilonThreshold
+#print axioms RawScalingSynthesis.radius
+#print axioms RawScalingSynthesis.epsilonThreshold_pos
+#print axioms RawScalingSynthesis.rawK_gap_product
+#print axioms RawScalingSynthesis.spectral_increment_bound
+#print axioms RawScalingSynthesis.exists_controlled_scaling

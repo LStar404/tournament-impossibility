@@ -2,7 +2,7 @@ import PermanentPolynomialCircleTail
 import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 import Mathlib.Algebra.Order.Floor.Semiring
 
-/-! Uncompiled scalar tail draft. Explicit constants avoid any hidden
+/-! Verified in the 557-module direct-Lean compilation and declaration audit. Scalar tail estimate. Explicit constants avoid any hidden
 asymptotic premise or reliance on a proxy generating function. -/
 noncomputable section
 namespace PermanentCirclePolynomialDecay

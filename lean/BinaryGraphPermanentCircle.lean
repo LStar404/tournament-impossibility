@@ -1,7 +1,7 @@
 import BinaryRawGraphWeighted
 import PermanentCircleEnvelope
 
-/-! Candidate, not yet compiled. A concrete fixed positive-depth graph circle bound.
+/-! Verified in the 557-module direct-Lean compilation and declaration audit. A concrete fixed positive-depth graph circle bound.
 The enumeration remains arbitrary; this does not identify the manuscript's canonical
 popcount numbering or prove the final normalized path-count recovery. -/
 noncomputable section

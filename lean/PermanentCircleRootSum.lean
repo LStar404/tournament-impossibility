@@ -1,8 +1,7 @@
 import PermanentCircleSpectralFrobenius
 import Mathlib.Analysis.Real.Sqrt
 
-/-! Actual singular-root sum estimates. Uncompiled candidate, kept outside the
-    current aggregate verification until the compilation owner checks it. -/
+/-! Actual singular-root sum estimates. Verified in the 557-module direct-Lean compilation and declaration audit. -/
 noncomputable section
 namespace PermanentSpectralFrame
 open Matrix

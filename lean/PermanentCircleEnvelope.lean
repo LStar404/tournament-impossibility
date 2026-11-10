@@ -3,7 +3,8 @@ import PermanentCircleExceptional
 import PermanentCircleRootSum
 import PermanentHomogeneousEnvelope
 
-/-! Uncompiled candidate for a genuine permanent circle envelope.
+/-! Verified in the 557-module direct-Lean compilation and declaration audit.
+A genuine permanent circle envelope.
 All hypotheses concern entries, scores and the Euclidean norm of M. -/
 noncomputable section
 namespace PermanentSpectralFrame
