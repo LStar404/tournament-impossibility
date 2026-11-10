@@ -1,7 +1,6 @@
 # 竞赛图极值生成函数的非代数性
 
-> 状态：2026-11-09 23:31 UTC。构建记录覆盖的 367 个模块全部验证通过，A、E、M 三个生成函数的形式化都已完成。
-> 验证记录见 `verification/result.json`；范围边界（两项外部前提）见下文。
+> 当前状态：563 个项目模块、7,970 条声明的完整审计已通过。本轮新编译六个 sharp 模块与 EndpointCheck，复用并逐一校验556个未改模块对象，不是全563源码重编。精确范围、源码哈希和复现入口见 `verification563/README.md`。原557/367记录保留为历史证据。
 
 证明来源：刘星辰，`tournament-paths-research-notes` 的
 [非代数性论文附录 A](https://github.com/LStar404/tournament-paths-research-notes/blob/b8cc8eb251c0c85ba9d177ec9e9ba612c11ca582/docs/nonalgebra_zh.md)。
@@ -20,15 +19,11 @@
 通常将这称为在 ℂ(z) 上超越：多项式关系与有理函数关系可通过清分母互相转换。
 本工程采用 ℂ[X] 上的标准表述，没有另建 ℂ(z) 到 Laurent 级数域的嵌入。
 
-三个生成函数的主结论都保留同样两个**显式外部前提**：
+当前实际图论渐近前提已由 `ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic` 证明：两种有限最大值编码一致，实际归一化极值序列趋于 `cosh(1)/cos(1)`，且有统一 `O(1/n)` 误差。`ActualSharpPathEnergyCandidate` 还证明实际所有竞赛图的 sharp 上界及实际极大图的 `τ=O(1/n)`，对应原始得分能量 `O(n)`。
 
-- `ExtremalAsymptotic`：归一化极值序列趋于 `cosh(1)/cos(1)`，对应原论文引用的图论渐近定理。
-- `FourExponentialIndependence`：`exp(1), exp(-1), exp(i), exp(-i)` 在代数数系数下线性无关，
-  对应 Lindemann–Weierstrass 定理的有限特例。
+旧通用定理保留 `ExtremalAsymptotic` 参数，新实际端点已提供它。A、E、M 的非代数性及归一化序列非 q-regular 应用仍显式需要 `FourExponentialIndependence`，即四个指数值在代数数系数下线性无关的 Lindemann–Weierstrass 特例。该前提没有被声明成新增公理，也未在本工程内重新证明。E/M/m_n 的具体代入检查见 `../tools/SharpApplicationFullyApplied.lean`。实际原始计数无统一指数上界不需要超越性输入。
 
-这里没有把这两个前提声明成公理，也没有在本工程中重新证明它们。
-所以本工程是**以两项外部定理为前提的形式化证明**，不是从 Lean 基础公理直接推出全部图论和超越数论结果的无前提工程。
-条件 R 不参与这里的证明；本工程不声称证明自然边界、非 D-finite 或一般闭式不存在。
+本轮没有证明结构分类、实际 F/J、完整条件 R、自然边界、非 D-finite 或一般闭式不存在。下文历史模块和阶段说明中的旧计数与尚缺接口以本节及 `verification563/` 新证书为准；`verification557/` 和 `verification/` 保留原始历史字节。
 
 ## 模块
 
@@ -57,15 +52,15 @@
 标准环境使用 Lean 4.35.0，mathlib 固定到 `lakefile.toml` 中的 commit：
 
 ```text
-lake update
 lake exe cache get
 lake build
 ```
 
-验证脚本按本地依赖顺序逐模块编译并记录源码哈希、公理审计及退出码：
+当前可移植脚本从仓库根目录按依赖顺序全新编译、导出原始类型并审计；其全量复现尚未实际运行，已完成的本轮核验范围见开头：
 
 ```text
-python verify.py
+python3 tools/verify563.py --check-sources-only
+python3 tools/verify563.py --output /tmp/tournament563-new
 ```
 
 `check.py` 通过环境变量 `LEAN_BIN` 与 `MATHLIB_PACKAGES` 定位 Lean 与 mathlib；
@@ -87,9 +82,9 @@ python verify.py
 - `MatrixPowerSeries.lean` 通过 det(I−XM) 和伴随矩阵证明矩阵幂输出的生成函数满足非零多项式关系。
 - `QRegularApplications.lean` 证明有理序列 a_n/n^k 若趋于超越数则非 q-regular，
   并连接真实 `normalizedCoefficient` 和 `halfScaleRemainder`。只对 q^e 子序列缩放矩阵；
-  不假设除以 n^k 保持 q-regular。这两个实际结论保留渐近与有限指数线性无关性两项显式输入。
+  不假设除以 n^k 保持 q-regular。旧通用接口接收渐近与有限指数线性无关性；新实际渐近定理已提供前者，后者仍显式保留。
 - `PathCountGrowth.lean` 证明真实 P(n) 无统一指数上界，再排除固定数字连续线性递归与连续线性输出；
-  此结论只需 `ExtremalAsymptotic`，不需超越性输入。
+  旧通用接口只需 `ExtremalAsymptotic`；新实际端点提供它，故实际增长障碍无需额外输入。
 
 论文 A.5 的完整强结论现已形式化，见下节。P 的数字模型定理与 q-kernel 定义之间的一般等价关系未形式化。
 R、自然边界、非 D-finite 等仍不在 Lean 覆盖内。不得把这些边界改写成上游数学断言不成立。

@@ -26,7 +26,7 @@
 \vspace{1.2em}
 {\large Xingchen Liu\par}
 \vspace{0.5em}
-{\normalsize Independent Researcher\par}
+{\normalsize School of Mathematics, Sichuan University\par}
 {\normalsize \texttt{lxc-em5158@outlook.com}\par}
 \vspace{0.5em}
 {\small 10 November 2026 · Local revision v0.4.0\par}
@@ -34,7 +34,7 @@
 \vspace{1em}
 
 \section*{Abstract}
-Let $P(n)$ be the maximum number of directed Hamiltonian paths in an $n$-vertex tournament, and put $a_n=2^{n-1}P(n)/n!$. An existing asymptotic theorem gives $a_n\to L=\cosh1/\cos1$. Rationality of the coefficients and transcendence of $L$ imply non-algebraicity of the ordinary, exponential and half-scale remainder generating functions. The same limit also excludes finite-dimensional linear digit representations in every integer base: more generally, a rational-valued $q$-regular sequence with a finite limit after division by an integer power of $n$ has a rational limit. Separately, an explicit radial boundary condition R implies a natural boundary, non-P-recursiveness and necessary cancellation identities for mixed derivative--contraction relations. R is an additional hypothesis for the actual extremal sequence, not a consequence of its asymptotic limit. These results exclude specified classes of formulas, not all closed forms or efficient algorithms.
+Let $P(n)$ be the maximum number of directed Hamiltonian paths in an $n$-vertex tournament, and put $a_n=2^{n-1}P(n)/n!$. An existing asymptotic theorem gives $a_n\to L=\cosh1/\cos1$. We supplement it with a formal sharp bound $a_n=L+O(1/n)$ and linear raw score energy for actual maximizers, using a spectral-moment comparison and a positive log-ratio expansion. Rationality of the coefficients and transcendence of $L$ imply non-algebraicity of the ordinary, exponential and half-scale remainder generating functions. The same limit also excludes finite-dimensional linear digit representations in every integer base: more generally, a rational-valued $q$-regular sequence with a finite limit after division by an integer power of $n$ has a rational limit. Separately, an explicit radial boundary condition R implies a natural boundary, non-P-recursiveness and necessary cancellation identities for mixed derivative--contraction relations. R is an additional hypothesis for the actual extremal sequence, not a consequence of its asymptotic limit. These results exclude specified classes of formulas, not all closed forms or efficient algorithms.
 
 \noindent Keywords: tournaments; Hamiltonian paths; extremal counting; generating functions; $q$-regular sequences.
 
@@ -57,7 +57,7 @@ the ratio of the maximal number of paths to the random average. The asymptotic t
 \[
 a_n\longrightarrow L=\frac{\cosh1}{\cos1}.
 \]
-We take this known limit as the starting point and do not reprove it.
+This known limit is the starting point of the analytic argument. Theorem 4 below also derives the stronger error $a_n=L+O(1/n)$ from the established matrix-moment and path-comparison estimates, with an explicit bridge to the formal sequence encoding.
 
 Define the generating function of the sequence $(a_n)$ by
 \[
@@ -124,13 +124,123 @@ The generating function of this sequence has a natural boundary, yet $s_n$ can b
 
 The scope of the results above is as follows.
 
-- \textbf{Proved from the cited asymptotic theorem:} the actual $A$, $E$ and $M$ are not algebraic, and $a_n,m_n,P(n)$ are not $q$-regular for any $q\ge2$. This uses the existing asymptotic theorem only and needs no additional classification of extremal tournaments.
+- \textbf{Proved for the actual extremal sequence:} the actual $A$, $E$ and $M$ are not algebraic, and $a_n,m_n,P(n)$ are not $q$-regular for any $q\ge2$. The graph-theoretic limit is both externally known and supplied by Theorem 4; no additional classification of extremal tournaments is needed. The formal non-algebraicity and normalized non-$q$-regularity applications retain the stated transcendence-theory input.
 
 - \textbf{Conditional on R:} the natural-boundary, non-P-recursiveness and contraction conclusions. The research notes contain a route to R whose upstream structural dependencies are specified in Appendix B; those dependencies are not all reverified here.
 
 - \textbf{Still open here:} whether $P(n)$ admits an exact closed form of some other kind, whether an efficient exact algorithm exists, and whether the actual remainder $M$ has a transcendental expression that can be evaluated independently.
 
-No NP-hardness statement or general algorithmic lower bound is obtained. Establishing R for the actual extremal sequence requires additional verified input. The limit and integrality alone do not suffice: for all sufficiently large $n$ set $Q_n=\lfloor L\mu_n\rfloor$ and $b_n=Q_n/\mu_n$, with arbitrary rational initial values. Then $b_n-L=O(2^n/n!)$, so $\sum_{n\ge1}b_nz^n=Lz/(1-z)+H(z)$ with $H$ entire. This is not an extremal tournament construction; it separates the known numerical asymptotic from the missing boundary information.
+No NP-hardness statement or general algorithmic lower bound is obtained. Establishing R for the actual extremal sequence requires additional verified input.
+
+\section{Sharp path asymptotics and the remaining structural gap}
+\textbf{Theorem 4 (uniform sharp bound and maximizer energy).}
+There exist $C,D\ge0$ and $N\ge2$ such that, for every $n\ge N$,
+\[
+ \left|\frac{P(n)}{\mu_n}-L\right|\le\frac Cn,
+ \qquad \frac{H(T)}{\mu_n}\le L+\frac Cn
+ \quad\hbox{for every $n$-vertex tournament }T.
+\]
+Every maximizing tournament of such order also satisfies
+\[
+ \tau(T):=\sum_i\left(\frac{s_i}{n-1}\right)^2\le\frac Dn,
+ \qquad s=S\mathbf1,
+ \qquad \sum_i s_i^2\le Dn.
+\]
+Here $S$ is the skew sign matrix and $s_i$ is outdegree minus indegree.
+The constants and threshold are independent of the tournament. No energy
+bound is asserted for arbitrary, nonmaximizing tournaments. The raw energy
+bound is linear, not bounded independently of $n$.
+
+\textbf{Traceable proof inputs.} The all-power input is
+\path{actual_all_integer_moments} in \path{lean/ReferenceMomentEndpoint.lean}; the spectral bridge is
+\path{SpectralMomentBridgeCandidate.paired_moments_le_transitive}, followed by
+\path{ActualSharpSpectralCandidate.actual_spectralRatio_upper_uniform}.
+The path, entrance and reference inputs are respectively
+\path{ActualCappedPathUpperCandidate.actual_capped_path_upper},
+\path{ActualExceptionalAssemblyCandidate.actual_maximizers_eventually_capped}, and
+\path{ActualMaxPathsLowerCandidate.actual_maxPaths_lower_uniform}.
+These are proved endpoints, not additional hypotheses. The resulting bounds are
+\path{ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform} and
+\path{ActualSharpPathEnergyCandidate.actual_maximizers_energy_O_inv}; the actual
+sequence connection is
+\path{ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic}.
+
+\textbf{Spectral comparison.} Let $T_n$ denote the transitive sign matrix.
+The established all-power Frobenius comparison for actual tournament matrices is
+\[
+ \|S^r\|_F^2\le\|T_n^r\|_F^2\qquad(r\in\mathbb N).
+\]
+To pass from this matrix statement to the spectral ratio, let $\lambda_j>0$
+be the positive skew frequencies, counted with multiplicity, and set
+$x_j=(\lambda_j/n)^2$. Unitary diagonalization and pairing the positive
+and negative frequencies give, for $r\ge1$,
+\[
+ \|S^r\|_F^2=2n^{2r}\sum_jx_j^r.
+\]
+Zero frequencies contribute zero here; the restriction $r\ge1$ is essential.
+Writing $y_j$ for the corresponding transitive masses, the matrix comparison
+therefore gives $\sum_jx_j^r\le\sum_jy_j^r$ for every positive integer $r$.
+The lists may have different lengths; multiplicities are retained.
+
+The previously proved operator bound gives $0\le x_j,y_j<1/2$.
+The actual determinant ratio has the paired-product expression
+\[
+ \rho(T)=\prod_j\frac{1+x_j}{1-x_j},\qquad
+ \log\frac{1+x}{1-x}=2\sum_{k\ge0}\frac{x^{2k+1}}{2k+1}\quad(0\le x<1).
+\]
+The series converges and its coefficients are positive. Finite summation
+and the positive odd-moment inequalities imply
+$\log\rho(T)\le\log\rho(T_n)$, hence $\rho(T)\le\rho(T_n)$.
+This argument uses power moments, not majorization of the ordered squared
+frequencies. The actual transitive determinant-ratio estimate gives
+$|\rho(T_n)-L|\le C_s/n$ eventually. Thus the old packing upper constant
+$U>L$ can be replaced by $L+C_s/n$ at the spectral step.
+
+\textbf{Path and energy closure.} The established reference lower bound is
+$P(n)/\mu_n\ge L-C_r/n$. Actual maximizers eventually satisfy the fixed
+score cap and logarithmic energy entrance needed for the strong path estimate
+\[
+ \frac{H(T)}{\mu_n}\le\rho(T)e^{-\tau(T)/2}+\frac{C_p}{n}.
+\]
+These entrance conditions are conclusions, not extra assumptions on the
+maximizer. Since $e^{-\tau/2}\le1$, the sharp spectral estimate yields
+\[
+ L-\frac{C_r}{n}\le\frac{P(n)}{\mu_n}
+ \le L e^{-\tau(T)/2}+\frac{C_p+C_s}{n}.
+\]
+Dropping the exponential proves the uniform absolute error bound; every
+other tournament inherits the upper bound from the finite maximum.
+Put $B=C_r+C_p+C_s$. For $B/(Ln)\le1/2$ the same inequality gives
+$e^{-\tau/2}\ge1-B/(Ln)$ and
+$\tau\le-2\log(1-B/(Ln))\le4B/(Ln)$.
+Finally $\sum_i s_i^2=(n-1)^2\tau\le Dn$. This proves the stated bounds
+from the established moment, reference and path-comparison ingredients.
+
+\textbf{Connecting the formal sequence encodings.} The path-bound development
+uses actual tournaments, while the generating-function development uses a
+redundant orientation encoding. Each orientation defines an actual tournament,
+and every tournament has a representing orientation. Their Hamiltonian orders
+are the same vertex permutations, so both path counts and their finite maxima
+coincide, including at order zero. For $n>0$, the rational coefficient in the
+second development is therefore exactly $P(n)/\mu_n$. The zero constant-term
+convention changes no limit. The real constant $L$ maps to the same complex
+constant used in the analytic argument. The uniform error bound consequently
+proves the actual \texttt{ExtremalAsymptotic} interface rather than assuming it.
+
+The new interface directly supplies the asymptotic argument in the existing
+non-algebraicity theorems for $A$, $E$ and $M$, and in the non-$q$-regularity
+theorems for $a_n$ and $m_n$. Their formal proofs still require
+\texttt{FourExponentialIndependence}, the stated Lindemann--Weierstrass input.
+For the raw counts $P(n)$, the separate conclusion is that no constants
+$C_0,D_0\ge0$ bound all terms by $C_0D_0^n$; this growth obstruction has
+no external asymptotic or transcendence premise. These are distinct claims
+about normalized coefficients and unnormalized counts.
+
+Neither the sharp scalar error nor linear raw energy establishes zero diamonds,
+a canonical extremizer classification, the all-order expansions F, or the
+common all-multiples jump J. The new scalar estimate supplies only the
+order-zero expansion. The conditional R conclusions remain conditional.
+The current theorem does not supply the higher coefficients or structural information needed for J and R.
 
 \section*{Appendix A. Complete proof of the unconditional results}
 This appendix proves Results 1--3 of the main text. We keep the notation $A,E,M$ of the main text and write $\Theta=z\frac{d}{dz}$.
@@ -232,7 +342,7 @@ A finite Fourier decomposition writes the explicit part as a finite linear combi
 
 The remainder coefficients are $O_r(n^{-2r-2})$, which is absolutely summable after $2r$ differentiations, so that derivative has a finite radial limit. On the other hand the $2r$-th derivative of $\operatorname{Li}_{2r+1}(x)$ is $-\log(1-x)+O(1)$, while all lower derivatives are finite; this follows directly from $\Theta^{2r}\operatorname{Li}_{2r+1}=\operatorname{Li}_1=-\log(1-x)$ and from the relation between the Euler operator and ordinary derivatives. Thus the leading coefficient is $\kappa_r/q=C2^{r^2-1}$, which is R. The finitely many initial terms only add a polynomial. \qed
 
-\textbf{Relation to the research notes.} The research notes [7], fixed at commit \texttt{c049e040}, provide a route for the actual sequence: the common-expansion and resonant-jump statements F/J in \texttt{round96core} have $\kappa_r=2^{r(r+1)}L$ for $r\ge4$, and \texttt{round98sources} derives the radial condition from those inputs. Thus accepting the stated structural and exact-recovery inputs gives R with $C=L$ and $r_0=4$. The analytic implication F/J $\Rightarrow$ R has been checked for this revision. Recent isolated results establish the actual recovery, tail and maximizer-entrance estimates needed for the coarse two-constant bound. They do not establish the zero-diamond structural window, depth-induction conclusions, or the actual fixed-valuation F and common all-multiples J required by this route to R. The abstract analytic implication remains distinct from its application to the extremal sequence. The notes therefore contain a proof route, rather than no argument, but this manuscript does not present that entire route as an independently certified unconditional theorem. Its applications in Appendices C and D retain R explicitly; Appendix A does not depend on this chain.
+\textbf{Relation to the research notes.} The research notes [7], fixed at commit \texttt{c049e040}, provide a route for the actual sequence: the common-expansion and resonant-jump statements F/J in \texttt{round96core} have $\kappa_r=2^{r(r+1)}L$ for $r\ge4$, and \texttt{round98sources} derives the radial condition from those inputs. Thus accepting the stated structural and exact-recovery inputs gives R with $C=L$ and $r_0=4$. The analytic implication F/J $\Rightarrow$ R has been checked for this revision. Recent isolated results establish the actual recovery, tail and maximizer-entrance estimates used in the path-bound argument, now sharpened by Theorem 4. They do not establish the zero-diamond structural window, depth-induction conclusions, or the actual fixed-valuation F and common all-multiples J required by this route to R. The abstract analytic implication remains distinct from its application to the extremal sequence. The notes therefore contain a proof route, rather than no argument, but this manuscript does not present that entire route as an independently certified unconditional theorem. Its applications in Appendices C and D retain R explicitly; Appendix A does not depend on this chain.
 
 \section*{Appendix C. Ruling out contraction relations}
 A germ is D-finite if it satisfies a nonzero linear differential equation with polynomial coefficients. This appendix first establishes the natural boundary and then uses the exact divergence coefficients in R to study contractions.
@@ -327,33 +437,13 @@ The main text also mentions the generating function of $1/n$. Term-by-term integ
 \section*{Research status and licence}
 This is a research draft, not an externally peer-reviewed result. AI tools assisted with derivation organisation, translation, typesetting and consistency checks; the author remains responsible for the final content.
 
-A separate, isolated integration snapshot passed fresh compilation of all 557 modules and type/axiom auditing of all 7,907 declarations on 10 November 2026 at 08:20:17 UTC. It contains the 413 unchanged baseline modules and 144 new modules. Each project module was compiled by direct Lean invocation in topological order into an isolated object directory, followed by an imported-kernel inventory equality check and full declaration type/axiom auditing; this was not a new Lake build. No historical project objects were reused; interrupted checkpoints from this same fresh run were hash-verified before resumption. The independent audit found no nonstandard axioms or provenance/coverage errors. This verifies that exact integration snapshot, not an update to GitHub or publication of the canonical source tree. The copied \path{lean/verification} directory remains the historical 413-module record; the fresh integration has a separate verification record.
+A separate, isolated integration snapshot passed fresh compilation of all 557 modules and type/axiom auditing of all 7,907 declarations on 10 November 2026 at 08:20:17 UTC. It contains the 413 unchanged baseline modules and 144 new modules. Each project module was compiled by direct Lean invocation in topological order into an isolated object directory, followed by an imported-kernel inventory equality check and full declaration type/axiom auditing; this was not a new Lake build. No historical project objects were reused; interrupted checkpoints from this same fresh run were hash-verified before resumption. The independent audit found no nonstandard axioms or provenance/coverage errors. That certificate refers to the exact snapshot at that time. Subsequently, 30 comment-corrected modules were recompiled and the 557-module tree was audited again before publication at commit \texttt{88ef91e}. Commit \texttt{17821c9} subsequently rebuilt only the two PDFs; its Markdown and TeX sources are unchanged. These historical checks are distinct from the six-module sharp extension and its combined-tree audit below. The copied \path{lean/verification} directory remains the historical 413-module record; the fresh integration has a separate verification record.
 
 In addition to the non-algebraicity conclusions of Appendix A.4, they formalise the non-$q$-regularity of the actual sequences $a_n$ and $m_n$ for every integer $q\ge2$, using the finite-dimensional complex span of the $q$-kernel as the definition. For $P(n)$ they formalise the growth obstruction and exclude fixed finite-alphabet continuous-linear digit transitions with a fixed linear output, including finite-dimensional complex matrix models. The equivalence between this representation and the $q$-kernel definition is not formalised in that application.
 
-The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules \texttt{RationalRadial}, \texttt{RationalLinearDescent}, \texttt{RationalSeriesLimit} and \texttt{QRegularRationalLimit} supply the additional bridges and endpoint. The hypotheses \texttt{ExtremalAsymptotic} and \texttt{FourExponentialIndependence} remain explicit external inputs: the graph-theoretic asymptotic theorem and the required Lindemann--Weierstrass consequence are not proved in Lean here. The growth argument for $P(n)$ needs only the former input. The abstract implication from F and common all-multiples J to radial asymptotics is formalised. Its hypotheses have not been established for the actual extremal sequence; full Condition R and the complete downstream arguments of Appendices C--E are not certified here. The historical and fresh integration verification records must be distinguished as above; source files alone do not certify a successful verification run.
+The general rational-limit assertion of Theorem A.5 is also formalised in full: for a rational-valued $q$-regular sequence, convergence after division by an integral nonnegative power of the index forces the limit to be rational. The modules \texttt{RationalRadial}, \texttt{RationalLinearDescent}, \texttt{RationalSeriesLimit} and \texttt{QRegularRationalLimit} supply the additional bridges and endpoint. The new encoding bridge proves \texttt{ExtremalAsymptotic}. Its direct wrappers for $A$ and $a_n$, and direct instantiation of the existing theorems for $E$, $M$ and $m_n$, retain only \texttt{FourExponentialIndependence}, the required Lindemann--Weierstrass input. The raw-count theorem excluding every exponential upper bound has no external asymptotic or transcendence premise. The abstract implication from F and common all-multiples J to radial asymptotics is formalised. Its hypotheses have not been established for the actual extremal sequence; full Condition R and the complete downstream arguments of Appendices C--E are not certified here. The historical and fresh integration verification records must be distinguished as above; source files alone do not certify a successful verification run.
 
-\paragraph{Actual coarse bounds in the verified integration.}
-Put
-\[
- L=\frac{\cosh1}{\cos1},\qquad
- U=\frac{3\pi^4+4\pi^2-32}{\pi^4+4\pi^2-32}.
-\]
-There exist $C\ge0$ and $N\ge2$ such that, for every $n\ge N$,
-\[
- (L-C/n)\mu_n\le P(n)\le(U+C/n)\mu_n.
-\]
-The upper bound also holds for $H(T)$ for every tournament of order $n$.
-For $s=S\mathbf1$ and $\tau(T)=\sum_i(s_i/(n-1))^2$, there exist
-$D\ge0$ and a common size threshold such that every actual maximizer satisfies
-\[
- \tau(T)\le2\log(U/L)+D/n.
-\]
-The final endpoints require no external path-comparison, score-cap,
-log-energy or spectral-cap hypothesis. These endpoints are included in the verified isolated integration snapshot. Here $U>L$. These results
-give bounded normalized score energy, not $\tau=O(1/n)$, a sharp-$L$
-asymptotic theorem, structural classification, or the actual sequence's
-F/J or R.
+\paragraph{Sharp endpoints and their provenance.} Theorem 4 strengthens the two-constant result of the historical 557-module snapshot. Six new modules, containing 63 kernel declarations, were independently freshly compiled over hash-verified 557-module objects and fully audited. This was not a fresh rebuild of all 563 modules. The combined integration passed on 10 November 2026 at 10:23 UTC: the six new modules and updated EndpointCheck were freshly compiled, with 556 unchanged, hash-verified upstream objects reused. All 563 modules and 7,970 kernel declarations underwent complete type/axiom auditing. Global kernel names, raw expression types, universes, declaration kinds and axioms agree exactly with the 7,907 old and 63 independently checked new declarations. Ten generated declarations changed only module attribution, and 46 pretty-printed displays differed without any underlying type change. Both exact-instantiation drivers for $E,M,m_n$ passed, retaining the explicit Lindemann--Weierstrass input. The final check validated 2,302 evidence-file hashes. This was not a full 563-source rebuild or a new Lake build. The sharp bounds and actual sequence interface require no external graph-asymptotic input. Structural classification and actual F/J/R remain unproved.
 
 A separate group of checked upstream lemmas covers finite ordered cancellation, shortest color-word swaps and zero-diamond tournament repair, vector weak majorization for actual tournament matrices, and Frobenius-norm comparisons for all nonnegative integer powers. The all-ones source-energy series and the actual resolvent identity are proved for $q\ge0$ with $q(n-1)^2<1$, including $q=1/n^2$ for $n>0$, with convergence and two-sided invertibility established internally. The exact even-subset convolution S1 and zero-diamond two-permanent average use this repository's actual Hamiltonian path count. Ordered strongly connected component reconstruction also gives, for $n\ge4$, $D>0$ and $24D\le n^2$, the finite small-defect bound $6n^2D\le\lVert T_n^3\rVert_F^2-\lVert S^3\rVert_F^2$. Here $S$ is the original skew sign matrix, $T_n$ is transitive, and $D$ counts unordered four-vertex diamonds.
 
@@ -371,7 +461,7 @@ This bound follows from an explicit inverse-entry formula and a Euclidean operat
 \frac{\left|b^{\mathsf T}(I+(w/n)^2S^2)^{-1}b\right|}{n^2}
 \le\frac{KC_R^2}{n}.
 \]
-The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption. 
+The score-energy identity and the passage from the Hermitian inner product to this ordinary bilinear source are formalised. Zero-diamond status alone does not imply the energy assumption. Theorem 4 supplies the energy bound eventually for actual maximizers, but does not supply the zero-diamond hypothesis needed to apply these analytic results to them. 
 
 For the branch-defined Gaussian/source factor, put
 \[
@@ -681,7 +771,7 @@ For $n>0$, replacing $bI$ by $b\Pi$, $\Pi=I-J/n$, in both off-diagonal blocks gi
 \]
 The existing scalar source difference is exactly $\mathbf1^{\mathsf T}T\mathbf1/2$. At $f=a$, $b=av$, these kernels are identified with the old actual covariances. There is no division by $b$; at $b=0$, $G=I_2$ and $T=0$. The generic identities retain the $D,G$ invertibility assumptions. On a fixed disk these assumptions are now derived: for $n\ge24$, real skew $S$ with $|S_{ij}|\le1$, real $|v|\le1$ and $|z|\le5/4$, take $f=z/n$, $b=zv/n$. The actual raw and projected systems are invertible, with both Euclidean inverse operator norms at most $16$; this also implies that $D$ and $G$ are invertible. For real $|\sigma|\le1$ and complex $|t-1|\le1/8$, the substitution $z=tn/(n+\sigma)$, $f=t/(n+\sigma)$, $b=f\sigma$ lies in that disk and gives the same projected inverse bound. No separate numerical bound for $D^{-1}$ or $G^{-1}$ is asserted. The normalized projected interaction, before multiplication by $z$, has $Q_\Pi\mathbf1=(s/n,-s/n)$, $s=S\mathbf1$: projection removes the constant parameter contribution, not the actual score source. No score hypothesis is needed for this coarse inverse estimate, which does not supply the finer entrywise projection or activity kernel-change errors.
 
-The fixed-depth derivative identification at $1$ is complete, but no new uniform recovery error on a larger disk or arbitrary-matrix, all-radius raw recovery theorem is asserted. Infinite activity convergence, uniformity in growing depth or order, an edit-Lipschitz remainder and a closed Euler-operator polynomial identity remain outside this result. Quantitative projected recovery and structural classification remain outside this result. Separate isolated developments now establish actual maximizer entrance and the coarse bounds stated above.
+The fixed-depth derivative identification at $1$ is complete, but no new uniform recovery error on a larger disk or arbitrary-matrix, all-radius raw recovery theorem is asserted. Infinite activity convergence, uniformity in growing depth or order, an edit-Lipschitz remainder and a closed Euler-operator polynomial identity remain outside this result. Quantitative projected recovery and structural classification remain outside this result. Separate isolated developments now establish actual maximizer entrance and the sharp bounds of Theorem 4.
 
 Two further modules supply finite inputs to the global entry arguments G1/G2. For any actual tournament with sign matrix $S$, row scores $s_i$, energy $E=\sum_i s_i^2$, and deleted vertex set $D$ of size $k$, let $E_{-D}$ be the squared row-sum energy of the actual principal submatrix on $D^c$. The verified bounds are
 \[
@@ -729,7 +819,7 @@ hold without assuming the mass error small. Explicitly, $|f_0-1|\le4B_\nu/n$, $|
  \frac{128L_0^4\tau}{n}+\frac{512L_0^4B_\nu^2}{n^2}.
  \end{gathered}
 \]
-Consequently, for separately chosen $I,J$ of size $t$ with $2t\le n$, the actual normalized deletion mass satisfies $|\kappa|\le4t\widehat\delta+2(16L_0^2+1)t^2/n$. These are derived actual-matrix estimates; exact total mass does not mean exact row or column normalization. The local scaling theorem below is conditional on an actual centered spectral gap. Subsequent isolated results establish the nonprincipal recovery and exceptional-set estimates needed for the coarse actual bounds, including an eventual fixed score cap and bounded normalized energy for actual maximizers. These do not establish the sharper linear raw-score energy window or structural classification.
+Consequently, for separately chosen $I,J$ of size $t$ with $2t\le n$, the actual normalized deletion mass satisfies $|\kappa|\le4t\widehat\delta+2(16L_0^2+1)t^2/n$. These are derived actual-matrix estimates; exact total mass does not mean exact row or column normalization. The local scaling theorem below is conditional on an actual centered spectral gap. The sharp extension gives actual maximizers $\tau\le D/n$, hence raw score energy $\sum_i s_i^2=O(n)$, in addition to the recovery and eventual fixed-cap entrance estimates. Structural classification and zero-diamond status of arbitrary maximizers remain unproved.
 
 \subsection*{Local scaling with a fixed spectral gap}
 Let $M$ be a nonnegative real $m\times m$ matrix, $m\ge1$. Write
@@ -778,7 +868,7 @@ For $|s|\le2a$, $(e^s-1)s\ge e^{-2a}s^2$. On balanced vectors the model quadrati
 Finally $M_{ij}^2\le(C/m)M_{ij}$, $|e^s-1|\le e^{2a}|s|$ and $(x_i+y_j)^2\le2(x_i^2+y_j^2)$ give
 $\|N-M\|_F^2\le2CS e^{4a}\|z\|_2^2/m$ by finite summation. Substitute the root-energy bound. A finite Schur estimate gives the operator bound from absolute row and column sums. Since $N$ is doubly stochastic, $N-P=\Pi N\Pi$. The threshold gives $KS(e^{2a}-1)\le1/4$, while $K(1-q)\ge128$; hence the spectral increment is at most $(1-q)/512$, which implies the stated fixed gap.
 
-This local matrix theorem retains its stated density, marginal and centered spectral assumptions. The separate actual coarse route discharges the recovery and entrance inputs needed for its final bounds; structural classification and the actual sequence's F and common all-multiples J remain unproved.
+This local matrix theorem retains its stated density, marginal and centered spectral assumptions. The separate actual path-bound route discharges the recovery and entrance inputs needed for its final bounds; structural classification and the actual sequence's F and common all-multiples J remain unproved.
 
 Five abstract analytic modules supply further F/J components. Their F, all-multiples J and periodic-jump predicates are interfaces, not theorems about the extremal sequence. For $b>0$, a $b$-periodic sequence and a primitive root of order $2b$, finite half-period pairing proves the first resonance $-\kappa/(2b)$. Bounded complex coefficients give genuine identities for every real radial derivative inside $0<x<1$. Summable falling-factorial moments give finite derivative limits at $1$; a global positive-index bound $|c_n|\le Cn^{-k-2}$ supplies these moments for $h\le k$ by the majorant $C/n^2$. No unknown function-level remainder is differentiated.
 
@@ -795,11 +885,11 @@ gives finite left limits of all actual unweighted radial derivatives through the
 The first identity holds for $|z|<1$ and the limit as $x\uparrow1$. The abstract bridge from F and common all-multiples J to true radial asymptotics is now proved. For $r\ge1$, a primitive $2^{r+1}$-st root $\omega$, a fixed-valuation expansion F and the uniform jump hypothesis J with coefficient $2^{r(r+1)}L$, every derivative of order $h<2r$ has a finite radial limit, while the derivative of order $2r$ minus $L2^{r^2-1}\log(1-x)$ has a finite limit as $x\uparrow1$. J concerns all sufficiently large positive multiples of $2^r$, not just one exact valuation class. The proof includes falling-factorial correction, sparse logarithmic derivatives, Laurent assembly, periodic jumps and finite valuation gluing. This endpoint allows $L=0$; nonzero logarithmic singularity requires the additional input $L\ne0$. The actual extremal sequence's F and common all-multiples J are still unproved, so full Condition R remains open.
 
 
-\paragraph{Verification of the local extensions.} The local scaling endpoint, abstract radial bridge, actual coarse MainBound and bounded-normalized-energy endpoint are covered by the verified 557-module isolated integration snapshot described above. PDF acceptance and publication remain separate from Lean verification; no remote publication is asserted here.
+\paragraph{Verification of the local extensions.} The local scaling endpoint, abstract radial bridge, actual coarse MainBound and bounded-normalized-energy endpoint are covered by the verified 557-module isolated integration snapshot described above. The additional six-module sharp extension has its own complete independent compilation and audit record; the combined-tree verification status is stated above. PDF acceptance and publication remain separate from Lean verification.
 
 Earlier manuscripts are in \path{historical/formula-restrictions}. Notes [7] give a route to R; Proposition B.1 distinguishes its verified implication from remaining upstream obligations.
 
-© 2026 Xingchen Liu. Text and source files are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
+The article byline identifies Xingchen Liu as its author. Repository copyright and attribution are governed by the root LICENSE, which credits Xingchen Liu and Xiangyu Ye. The repository is licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 \section*{References}
 \begingroup\small

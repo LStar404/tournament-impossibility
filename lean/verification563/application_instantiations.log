@@ -1,0 +1,42 @@
+NonAlgebraicity.extremal_exponential_generating_function_nonalgebraic
+  ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic : NonAlgebraicity.FourExponentialIndependence →
+  Not (@NonAlgebraicity.HasPolynomialRelation.{0} Complex Complex.instField NonAlgebraicity.exponentialFormalSeries)
+NonAlgebraicity.halfScale_nonalgebraic
+  ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic : NonAlgebraicity.FourExponentialIndependence →
+  Not
+    (@NonAlgebraicity.HasPolynomialRelation.{0} Complex Complex.instField
+      (@DFunLike.coe.{1, 1, 1}
+        (@RingHom.{0, 0} (PowerSeries.{0} Rat) (PowerSeries.{0} Complex)
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Rat)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Rat Rat.semiring))
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Complex)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Complex Complex.instSemiring)))
+        (PowerSeries.{0} Rat) (fun x => PowerSeries.{0} Complex)
+        (@RingHom.instFunLike.{0, 0} (PowerSeries.{0} Rat) (PowerSeries.{0} Complex)
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Rat)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Rat Rat.semiring))
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Complex)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Complex Complex.instSemiring)))
+        (@PowerSeries.map.{0, 0} Rat Rat.semiring Complex Complex.instSemiring
+          (@Algebra.algebraMap.{0, 0} Rat Complex Rat.commSemiring
+            (@Ring.toSemiring.{0} Complex
+              (@DivisionRing.toRing.{0} Complex (@Field.toDivisionRing.{0} Complex Complex.instField)))
+            (@DivisionRing.toRatAlgebra.{0} Complex (@Field.toDivisionRing.{0} Complex Complex.instField)
+              Complex.instCharZero)))
+        NonAlgebraicity.halfScaleSeries))
+fun q hq =>
+  NonAlgebraicity.halfScaleRemainder_not_qRegular q hq
+    ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic : ∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    NonAlgebraicity.FourExponentialIndependence →
+      Not
+        (NonAlgebraicity.IsQRegular q fun n =>
+          @Rat.cast.{0} Complex Complex.instRatCast (NonAlgebraicity.halfScaleRemainder n))
+'NonAlgebraicity.extremal_exponential_generating_function_nonalgebraic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+'NonAlgebraicity.halfScale_nonalgebraic' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'NonAlgebraicity.halfScaleRemainder_not_qRegular' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

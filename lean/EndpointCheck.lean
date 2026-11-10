@@ -327,6 +327,12 @@ import OrderedCancellation
 import QRegularApplications
 import PathCountGrowth
 import QRegularRationalLimit
+import ActualMomentAdapterCandidate
+import OddMomentRatioComparisonCandidate
+import SpectralMomentBridgeCandidate
+import ActualSharpSpectralCandidate
+import ActualSharpPathEnergyCandidate
+import ActualExtremalAsymptoticCandidate
 
 /-! Independent endpoint checks. These examples pin the public statements to
 actual tournament quantities and to the full q-kernel, not a substituted
@@ -1452,3 +1458,33 @@ example {n : ℕ} (o : NonAlgebraicity.Orientation (n+1))
 #print axioms RawScalingSynthesis.rawK_gap_product
 #print axioms RawScalingSynthesis.spectral_increment_bound
 #print axioms RawScalingSynthesis.exists_controlled_scaling
+
+/-! Sharp actual extremal endpoints. The actual asymptotic limit is unconditional.
+Nonalgebraicity and q-regularity still require FourExponentialIndependence.
+These checks do not assert full Condition R, actual F/J, or classification. -/
+#check ActualMomentAdapterCandidate.actual_frobenius_moments_le_transitive
+#print axioms ActualMomentAdapterCandidate.actual_frobenius_moments_le_transitive
+#check OddMomentRatioComparisonCandidate.ratio_product_le_of_odd_moments
+#print axioms OddMomentRatioComparisonCandidate.ratio_product_le_of_odd_moments
+#check SpectralMomentBridgeCandidate.paired_moments_le_transitive
+#print axioms SpectralMomentBridgeCandidate.paired_moments_le_transitive
+#check ActualSharpSpectralCandidate.actual_spectralRatio_le_transitive
+#print axioms ActualSharpSpectralCandidate.actual_spectralRatio_le_transitive
+#check ActualSharpSpectralCandidate.actual_spectralRatio_upper_uniform
+#print axioms ActualSharpSpectralCandidate.actual_spectralRatio_upper_uniform
+#check ActualSharpPathEnergyCandidate.actual_all_pathCount_upper_uniform
+#print axioms ActualSharpPathEnergyCandidate.actual_all_pathCount_upper_uniform
+#check ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform
+#print axioms ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform
+#check ActualSharpPathEnergyCandidate.actual_maximizers_energy_O_inv
+#print axioms ActualSharpPathEnergyCandidate.actual_maximizers_energy_O_inv
+#check ActualExtremalAsymptoticCandidate.actual_maxPaths_normalized_tendsto
+#print axioms ActualExtremalAsymptoticCandidate.actual_maxPaths_normalized_tendsto
+#check ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic
+#print axioms ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic
+#check ActualExtremalAsymptoticCandidate.actual_generating_function_nonalgebraic
+#print axioms ActualExtremalAsymptoticCandidate.actual_generating_function_nonalgebraic
+#check ActualExtremalAsymptoticCandidate.actual_normalizedCoefficient_not_qRegular
+#print axioms ActualExtremalAsymptoticCandidate.actual_normalizedCoefficient_not_qRegular
+#check ActualExtremalAsymptoticCandidate.actual_maximalPathCount_not_exponentially_bounded
+#print axioms ActualExtremalAsymptoticCandidate.actual_maximalPathCount_not_exponentially_bounded

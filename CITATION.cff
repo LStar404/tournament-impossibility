@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 message: "If you use this formalization or paper, please cite this work and the underlying asymptotic theorem (Divoux & Wang, 2026)."
 type: software
-title: "Non-algebraicity and Formula Restrictions for Tournament Hamiltonian Path Maxima (with Lean 4 Formalization)"
+title: "Non-algebraicity of the Extremal Hamiltonian Path Sequence and Formula Restrictions"
 authors:
   - family-names: "Liu"
     given-names: "Xingchen"
+    affiliation: "School of Mathematics, Sichuan University"
 version: "0.4.0"
-date-released: "2026-11-08"
+date-released: "2026-11-10"
 url: "https://github.com/LStar404/tournament-impossibility"
 license: "CC-BY-4.0"
-abstract: "Lean 4 formalization of the unconditional transcendence (over C(z)) of the ordinary, exponential, and half-scale remainder generating functions for extremal Hamiltonian path and cycle counts in tournaments, together with the accompanying mathematical paper."
+abstract: "Bilingual paper and Lean 4 formalization for extremal Hamiltonian path counts in tournaments. Spectral moment comparison and a positive log-ratio expansion yield a uniform normalized maximum error O(1/n) about cosh(1)/cos(1), and raw score energy O(n) for maximizers. The actual sequence encoding is connected to this asymptotic without an external graph-asymptotic premise. Formal non-algebraicity and normalized non-q-regularity applications retain FourExponentialIndependence as an explicit input. Raw path counts have no exponential upper bound without that input. Actual all-order expansions, the common jump condition, Condition R and extremizer classification remain unproved."

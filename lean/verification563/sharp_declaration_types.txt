@@ -1,0 +1,2067 @@
+Module: ActualMomentAdapterCandidate
+Name: ActualMomentAdapterCandidate.actual_frobenius_cube_le_transitive
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n),
+  @LE.le.{0} Real Real.instLE
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n T) (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n (TournamentHamiltonian.transitiveTournament n))
+            (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3))) i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+
+Module: ActualMomentAdapterCandidate
+Name: ActualMomentAdapterCandidate.actual_frobenius_moments_le_transitive
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n) (r : Nat),
+  @LE.le.{0} Real Real.instLE
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n T) r i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n (TournamentHamiltonian.transitiveTournament n)) r i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+
+Module: ActualMomentAdapterCandidate
+Name: ActualMomentAdapterCandidate.transitiveOrbit_eq_signMatrix
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (n : Nat),
+  @Eq.{1} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) (TransitiveOrbit.T n)
+    (@TournamentHamiltonian.signMatrix n (TournamentHamiltonian.transitiveTournament n))
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.hasSum_log_ratio
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {x : Real}
+  (h0 : @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+  (h1 : @LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))),
+  @HasSum.{0, 0} Real Nat Real.instAddCommMonoid
+    (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+    (fun (k : Nat) =>
+      @HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+        (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+          (@OfNat.ofNat.{0} Real (nat_lit 2)
+            (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+              (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+          (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+            (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+            (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+              (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                (@OfNat.ofNat.{0} Real (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+                    (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                      (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+                (@Nat.cast.{0} Real Real.instNatCast k))
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))))
+        (@HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x
+          (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+            (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))))
+    (Real.log (TournamentHamiltonian.ratio x)) (SummationFilter.unconditional.{0} Nat)
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.hasSum_log_ratio_product
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (xs : List.{0} Real)
+  (hx :
+    ∀ (x : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) xs x →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+          (@LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))),
+  @HasSum.{0, 0} Real Nat Real.instAddCommMonoid
+    (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+    (fun (k : Nat) =>
+      @HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+        (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+          (@OfNat.ofNat.{0} Real (nat_lit 2)
+            (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+              (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+          (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+            (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))
+            (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+              (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                (@OfNat.ofNat.{0} Real (nat_lit 2)
+                  (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+                    (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                      (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+                (@Nat.cast.{0} Real Real.instNatCast k))
+              (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))))
+        (@List.sum.{0} Real Real.instAdd Real.instZero
+          (@List.map.{0, 0} Real Real
+            (fun (x : Real) =>
+              @HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            xs)))
+    (Real.log
+      (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio xs)))
+    (SummationFilter.unconditional.{0} Nat)
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.ratio_list_prod_pos
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (xs : List.{0} Real)
+  (hx :
+    ∀ (x : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) xs x →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+          (@LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne)))),
+  @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+    (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio xs))
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.ratio_pos_of_mem_interval
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {x : Real}
+  (h0 : @LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+  (h1 : @LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))),
+  @LT.lt.{0} Real Real.instLT (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero))
+    (TournamentHamiltonian.ratio x)
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.ratio_product_le_of_odd_moments
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (xs ys : List.{0} Real)
+  (hx :
+    ∀ (x : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) xs x →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+          (@LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  (hy :
+    ∀ (y : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) ys y →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) y)
+          (@LT.lt.{0} Real Real.instLT y (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  (hmom :
+    ∀ (k : Nat),
+      @LE.le.{0} Real Real.instLE
+        (@List.sum.{0} Real Real.instAdd Real.instZero
+          (@List.map.{0, 0} Real Real
+            (fun (x : Real) =>
+              @HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            xs))
+        (@List.sum.{0} Real Real.instAdd Real.instZero
+          (@List.map.{0, 0} Real Real
+            (fun (y : Real) =>
+              @HPow.hPow.{0, 0, 0} Real Nat Real
+                (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) y
+                (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+                  (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                    (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+                  (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))))
+            ys))),
+  @LE.le.{0} Real Real.instLE
+    (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio xs))
+    (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio ys))
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.ratio_product_le_of_positive_moments
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (xs ys : List.{0} Real)
+  (hx :
+    ∀ (x : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) xs x →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) x)
+          (@LT.lt.{0} Real Real.instLT x (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  (hy :
+    ∀ (y : Real),
+      @Membership.mem.{0, 0} Real (List.{0} Real) (@List.instMembership.{0} Real) ys y →
+        And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) y)
+          (@LT.lt.{0} Real Real.instLT y (@OfNat.ofNat.{0} Real (nat_lit 1) (@One.toOfNat1.{0} Real Real.instOne))))
+  (hmom :
+    ∀ (r : Nat),
+      @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) r →
+        @LE.le.{0} Real Real.instLE
+          (@List.sum.{0} Real Real.instAdd Real.instZero
+            (@List.map.{0, 0} Real Real
+              (fun (x : Real) =>
+                @HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x r)
+              xs))
+          (@List.sum.{0} Real Real.instAdd Real.instZero
+            (@List.map.{0, 0} Real Real
+              (fun (y : Real) =>
+                @HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) y r)
+              ys))),
+  @LE.le.{0} Real Real.instLE
+    (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio xs))
+    (@List.prod.{0} Real Real.instMul Real.instOne (@List.map.{0, 0} Real Real TournamentHamiltonian.ratio ys))
+
+Module: OddMomentRatioComparisonCandidate
+Name: OddMomentRatioComparisonCandidate.ratio_product_le_of_positive_moments._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (k : Nat),
+  Not
+      (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))
+        (@HAdd.hAdd.{0, 0, 0} Nat Nat Nat (@instHAdd.{0} Nat instAddNat)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) k)
+          (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))))) →
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.frequency_even_moment_pairing
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n) (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r),
+  @Eq.{1} Real
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @HPow.hPow.{0, 0, 0} Real Nat Real
+        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+        (@TournamentHamiltonian.skewFrequency n T i)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r))
+    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+      (@OfNat.ofNat.{0} Real (nat_lit 2)
+        (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+          (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+            (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+      (@Multiset.sum.{0} Real Real.instAddCommMonoid
+        (@Multiset.map.{0, 0} Real Real
+          (fun (x : Real) =>
+            @HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x
+              (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+                (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r))
+          (@TournamentHamiltonian.positiveSkewFrequencies n T))))
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.frobenius_power_eq_frequency
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n) (r : Nat),
+  @Eq.{1} Real
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n T) r i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @HPow.hPow.{0, 0, 0} Real Nat Real
+        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+        (@TournamentHamiltonian.skewFrequency n T i)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r))
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.frobenius_power_eq_paired_moment
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n)
+  (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n) (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r),
+  @Eq.{1} Real
+    (@Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+      fun (i : Fin n) =>
+      @Finset.sum.{0, 0} (Fin n) Real Real.instAddCommMonoid (@Finset.univ.{0} (Fin n) (Fin.fintype n))
+        fun (j : Fin n) =>
+        @HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+              (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                  (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                    (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+            (@TournamentHamiltonian.signMatrix n T) r i j)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))))
+    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+      (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+        (@OfNat.ofNat.{0} Real (nat_lit 2)
+          (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+            (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+              (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))))))
+        (@HPow.hPow.{0, 0, 0} Real Nat Real
+          (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+          (@Nat.cast.{0} Real Real.instNatCast n)
+          (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+            (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r)))
+      (@List.sum.{0} Real Real.instAdd Real.instZero
+        (@List.map.{0, 0} Real Real
+          (fun (x : Real) =>
+            @HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x r)
+          (@TournamentHamiltonian.pairedMasses n T))))
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.paired_moments_le_transitive
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n)
+  (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n) (r : Nat)
+  (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r),
+  @LE.le.{0} Real Real.instLE
+    (@List.sum.{0} Real Real.instAdd Real.instZero
+      (@List.map.{0, 0} Real Real
+        (fun (x : Real) =>
+          @HPow.hPow.{0, 0, 0} Real Nat Real
+            (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x r)
+        (@TournamentHamiltonian.pairedMasses n T)))
+    (@List.sum.{0} Real Real.instAdd Real.instZero
+      (@List.map.{0, 0} Real Real
+        (fun (x : Real) =>
+          @HPow.hPow.{0, 0, 0} Real Nat Real
+            (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x r)
+        (@TournamentHamiltonian.pairedMasses n (TournamentHamiltonian.transitiveTournament n))))
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.complex_pow_entry
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n) (r : Nat) (i j : Fin n),
+  @Eq.{1} Complex
+    (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex)
+      (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex) Nat
+        (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex)
+          (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex)
+            (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Complex)
+              (@Matrix.semiring.{0, 0} (Fin n) Complex Complex.instSemiring (Fin.fintype n) (instDecidableEqFin n))))))
+      (@TournamentHamiltonian.complexSignMatrix n T) r i j)
+    (Complex.ofReal
+      (@HPow.hPow.{0, 0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+        (@instHPow.{0, 0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real) Nat
+          (@NPow.toPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+            (@Monoid.toNPow.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+              (@Semiring.toMonoid.{0} (Matrix.{0, 0, 0} (Fin n) (Fin n) Real)
+                (@Matrix.semiring.{0, 0} (Fin n) Real Real.semiring (Fin.fintype n) (instDecidableEqFin n))))))
+        (@TournamentHamiltonian.signMatrix n T) r i j))
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n)
+  (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n) (r : Nat),
+  @Eq.{1} Real
+    (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+      (@HPow.hPow.{0, 0, 0} Real Nat Real
+        (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid)))
+        (@Nat.cast.{0} Real Real.instNatCast n)
+        (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+          (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r))
+      (@List.sum.{0} Real Real.instAdd Real.instZero
+        (@List.map.{0, 0} Real Real
+          (fun (x : Real) =>
+            @HPow.hPow.{0, 0, 0} Real Nat Real
+              (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x r)
+          (@TournamentHamiltonian.pairedMasses n T))))
+    (@Multiset.sum.{0} Real Real.instAddCommMonoid
+      (@Multiset.map.{0, 0} Real Real
+        (fun (x : Real) =>
+          @HPow.hPow.{0, 0, 0} Real Nat Real
+            (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) x
+            (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+              (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r))
+        (@TournamentHamiltonian.positiveSkewFrequencies n T)))
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.trace_conjugation
+Kind: theorem
+Universes: u_1
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {ι : Type u_1} [inst : Fintype.{u_1} ι] [inst_1 : DecidableEq.{u_1 + 1} ι]
+  (U :
+    @Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+      @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+        (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+        (@SetLike.instMembership.{u_1, u_1}
+          (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+          (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+        (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+              Complex.instStarRing)))
+        x)
+  (M : Matrix.{u_1, u_1, 0} ι ι Complex),
+  @Eq.{1} Complex
+    (@Matrix.trace.{u_1, 0} ι Complex inst Complex.instAddCommMonoid
+      (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+        (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+          (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+          (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                  (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                  Complex.instStarRing))))
+          (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                  (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                  Complex.instStarRing)))))
+        (Matrix.{u_1, u_1, 0} ι ι Complex)
+        (fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) => Matrix.{u_1, u_1, 0} ι ι Complex)
+        (@StarAlgEquiv.instFunLike.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (Matrix.{u_1, u_1, 0} ι ι Complex)
+          (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+          (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+          (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+          (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                  (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                  Complex.instStarRing))))
+          (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                  (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                    (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                  Complex.instStarRing)))))
+        (@DFunLike.coe.{u_1 + 1, u_1 + 1, u_1 + 1}
+          (@MonoidHom.{u_1, u_1}
+            (@Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+              @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                (@SetLike.instMembership.{u_1, u_1}
+                  (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                  (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+                (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))
+                x)
+            (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing))))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))))
+            (@MulOneClass.toMulOne.{u_1}
+              (@Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+                @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                  (@SetLike.instMembership.{u_1, u_1}
+                    (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                    (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+                  (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing)))
+                  x)
+              (@Submonoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))))
+            (@MulOneClass.toMulOne.{u_1}
+              (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing))))
+                (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing)))))
+              (@Monoid.toMulOneClass.{u_1}
+                (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                  (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                  (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                        (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                          Complex.instStarRing))))
+                  (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                        (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                          Complex.instStarRing)))))
+                (@DivInvMonoid.toMonoid.{u_1}
+                  (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                    (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                    (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                        (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                          (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                            Complex.instStarRing))))
+                    (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                        (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                          (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                            Complex.instStarRing)))))
+                  (@Group.toDivInvMonoid.{u_1}
+                    (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing))))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing)))))
+                    (@StarAlgEquiv.aut.{0, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing))))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex
+                        (@instSMulOfMul.{0} Complex Complex.instMul))))))))
+          (@Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+            @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+              (@SetLike.instMembership.{u_1, u_1}
+                (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+              (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                      (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                  (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                      (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                    Complex.instStarRing)))
+              x)
+          (fun
+              (x :
+                @Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+                  @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                    (@SetLike.instMembership.{u_1, u_1}
+                      (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                      (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+                    (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                      (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                        (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                          Complex.instStarRing)))
+                    x) =>
+            @StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing))))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))))
+          (@MonoidHom.instFunLike.{u_1, u_1}
+            (@Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+              @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                (@SetLike.instMembership.{u_1, u_1}
+                  (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                  (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+                (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))
+                x)
+            (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing))))
+              (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))))
+            (@MulOneClass.toMulOne.{u_1}
+              (@Subtype.{u_1 + 1} (Matrix.{u_1, u_1, 0} ι ι Complex) fun (x : Matrix.{u_1, u_1, 0} ι ι Complex) =>
+                @Membership.mem.{u_1, u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                  (@SetLike.instMembership.{u_1, u_1}
+                    (@Submonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))))
+                    (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Submonoid.instSetLike.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))))
+                  (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing)))
+                  x)
+              (@Submonoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Monoid.toMulOneClass.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@unitary.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Semiring.toMonoid.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1))
+                  (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                    (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                        (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                      Complex.instStarRing)))))
+            (@MulOneClass.toMulOne.{u_1}
+              (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing))))
+                (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                      (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                          (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                        Complex.instStarRing)))))
+              (@Monoid.toMulOneClass.{u_1}
+                (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (Matrix.{u_1, u_1, 0} ι ι Complex)
+                  (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                  (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                  (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                  (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                        (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                          Complex.instStarRing))))
+                  (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                        (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                            (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                          Complex.instStarRing)))))
+                (@DivInvMonoid.toMonoid.{u_1}
+                  (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (Matrix.{u_1, u_1, 0} ι ι Complex)
+                    (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                    (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                    (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                    (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                        (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                          (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                            Complex.instStarRing))))
+                    (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                        (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                          (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                              (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                            Complex.instStarRing)))))
+                  (@Group.toDivInvMonoid.{u_1}
+                    (@StarAlgEquiv.{0, u_1, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing))))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing)))))
+                    (@StarAlgEquiv.aut.{0, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+                      (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@Distrib.toAdd.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                      (@InvolutiveStar.toStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                        (@StarMul.toInvolutiveStar.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                          (@Distrib.toMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@instDistribOfSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)))
+                          (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                            (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                              (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+                            (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                                (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                              Complex.instStarRing))))
+                      (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex
+                        (@instSMulOfMul.{0} Complex Complex.instMul))))))))
+          (@Unitary.conjStarAlgAut.{0, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex)
+            (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)
+            (@StarRing.toStarMul.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+              (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{u_1} (Matrix.{u_1, u_1, 0} ι ι Complex)
+                (@Matrix.nonUnitalSemiring.{0, u_1} ι Complex
+                  (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring) inst))
+              (@Matrix.instStarRing.{0, u_1} ι Complex inst
+                (@NonUnitalSemiring.toNonUnitalNonAssocSemiring.{0} Complex
+                  (@Semiring.toNonUnitalSemiring.{0} Complex Complex.instSemiring))
+                Complex.instStarRing))
+            (@Matrix.smul.{0, u_1, u_1, 0} ι ι Complex Complex (@instSMulOfMul.{0} Complex Complex.instMul))
+            (@IsScalarTower.right.{0, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) Complex.instCommSemiring
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)
+              (@Matrix.instAlgebra.{u_1, 0, 0} ι Complex Complex inst inst_1 Complex.instCommSemiring
+                Complex.instSemiring (@Algebra.id.{0} Complex Complex.instCommSemiring)))
+            (@Algebra.to_smulCommClass.{0, u_1} Complex (Matrix.{u_1, u_1, 0} ι ι Complex) Complex.instCommSemiring
+              (@Matrix.semiring.{0, u_1} ι Complex Complex.instSemiring inst inst_1)
+              (@Matrix.instAlgebra.{u_1, 0, 0} ι Complex Complex inst inst_1 Complex.instCommSemiring
+                Complex.instSemiring (@Algebra.id.{0} Complex Complex.instCommSemiring))))
+          U)
+        M))
+    (@Matrix.trace.{u_1, 0} ι Complex inst Complex.instAddCommMonoid M)
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.frequency_even_moment_pairing._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (r : Nat) (hr : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r),
+  @Eq.{1} Nat
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat)
+        (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) r)
+      (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) →
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: SpectralMomentBridgeCandidate.frequency_even_moment_pairing._simp_1_2
+Kind: theorem
+Universes: u_1
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ {α : Type u_1} {p : α → Prop} [inst : @DecidablePred.{u_1 + 1} α p] {a : α} {s : Multiset.{u_1} α},
+  @Eq.{1} Prop
+    (@Membership.mem.{u_1, u_1} α (Multiset.{u_1} α) (@Multiset.instMembership.{u_1} α)
+      (@Multiset.filter.{u_1} α p inst s) a)
+    (And (@Membership.mem.{u_1, u_1} α (Multiset.{u_1} α) (@Multiset.instMembership.{u_1} α) s a) (p a))
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_1
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 2) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 2) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_2
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 3) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 3) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_3
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 4) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 4) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_4
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {M₀ : Type u_1} [inst : Mul.{u_1} M₀] [inst_1 : Zero.{u_1} M₀] [@NoZeroDivisors.{u_1} M₀ inst inst_1] {a b : M₀}
+  (ha : @Ne.{u_1 + 1} M₀ a (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1)))
+  (hb : @Ne.{u_1 + 1} M₀ b (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1))),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} M₀ (@HMul.hMul.{u_1, u_1, u_1} M₀ M₀ M₀ (@instHMul.{u_1} M₀ inst) a b)
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1)))
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_5
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {M₀ : Type u_1} [inst : MonoidWithZero.{u_1} M₀] {a : M₀}
+  [@IsReduced.{u_1} M₀
+      (@MulZeroClass.toZero.{u_1} M₀
+        (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst)))
+      (@NPow.toPow.{u_1} M₀ (@Monoid.toNPow.{u_1} M₀ (@MonoidWithZero.toMonoid.{u_1} M₀ inst)))]
+  (n : Nat)
+  (h :
+    @Ne.{u_1 + 1} M₀ a
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} M₀
+          (@MulZeroClass.toZero.{u_1} M₀
+            (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst)))))),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} M₀
+      (@HPow.hPow.{u_1, 0, u_1} M₀ Nat M₀
+        (@instHPow.{u_1, 0} M₀ Nat
+          (@NPow.toPow.{u_1} M₀ (@Monoid.toNPow.{u_1} M₀ (@MonoidWithZero.toMonoid.{u_1} M₀ inst))))
+        a n)
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} M₀
+          (@MulZeroClass.toZero.{u_1} M₀
+            (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst))))))
+    False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_6
+Kind: theorem
+Universes: u_3
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {G₀ : Type u_3} [inst : GroupWithZero.{u_3} G₀] {a : G₀} (n : Int),
+  @Ne.{u_3 + 1} G₀ a
+      (@OfNat.ofNat.{u_3} G₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_3} G₀
+          (@MulZeroClass.toZero.{u_3} G₀
+            (@MulZeroOneClass.toMulZeroClass.{u_3} G₀
+              (@MonoidWithZero.toMulZeroOneClass.{u_3} G₀ (@GroupWithZero.toMonoidWithZero.{u_3} G₀ inst)))))) →
+    @Eq.{1} Prop
+      (@Eq.{u_3 + 1} G₀
+        (@HPow.hPow.{u_3, 0, u_3} G₀ Int G₀
+          (@instHPow.{u_3, 0} G₀ Int
+            (@ZPow.toPow.{u_3} G₀ (@DivInvMonoid.toZPow.{u_3} G₀ (@GroupWithZero.toDivInvMonoid.{u_3} G₀ inst))))
+          a n)
+        (@OfNat.ofNat.{u_3} G₀ (nat_lit 0)
+          (@Zero.toOfNat0.{u_3} G₀
+            (@MulZeroClass.toZero.{u_3} G₀
+              (@MulZeroOneClass.toMulZeroClass.{u_3} G₀
+                (@MonoidWithZero.toMulZeroOneClass.{u_3} G₀ (@GroupWithZero.toMonoidWithZero.{u_3} G₀ inst)))))))
+      False
+
+Module: SpectralMomentBridgeCandidate
+Name: _private.SpectralMomentBridgeCandidate.0.SpectralMomentBridgeCandidate.paired_moment_scale._simp_1_7
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {R : Type u_1} [inst : AddMonoidWithOne.{u_1} R] [@CharZero.{u_1} R inst] (n : Nat),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} R
+      (@HAdd.hAdd.{u_1, u_1, u_1} R R R
+        (@instHAdd.{u_1} R
+          (@AddSemigroup.toAdd.{u_1} R
+            (@AddMonoid.toAddSemigroup.{u_1} R (@AddMonoidWithOne.toAddMonoid.{u_1} R inst))))
+        (@Nat.cast.{u_1} R (@AddMonoidWithOne.toNatCast.{u_1} R inst) n)
+        (@OfNat.ofNat.{u_1} R (nat_lit 1) (@One.toOfNat1.{u_1} R (@AddMonoidWithOne.toOne.{u_1} R inst))))
+      (@OfNat.ofNat.{u_1} R (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} R
+          (@AddZero.toZero.{u_1} R
+            (@AddZeroClass.toAddZero.{u_1} R
+              (@AddMonoid.toAddZeroClass.{u_1} R (@AddMonoidWithOne.toAddMonoid.{u_1} R inst)))))))
+    False
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.actual_spectralRatio_le_transitive
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n)
+  (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n),
+  @LE.le.{0} Real Real.instLE (@TournamentHamiltonian.spectralRatio n T)
+    (@TournamentHamiltonian.spectralRatio n (TournamentHamiltonian.transitiveTournament n))
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.actual_spectralRatio_upper_uniform
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Exists.{1} Nat fun (N : Nat) =>
+      And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) N)
+        (∀ (n : Nat),
+          @LE.le.{0} Nat instLENat N n →
+            ∀ (T : TournamentHamiltonian.Tournament n),
+              @LE.le.{0} Real Real.instLE (@TournamentHamiltonian.spectralRatio n T)
+                (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                  TournamentHamiltonian.lowerConstant
+                  (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                    (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+                    (@Nat.cast.{0} Real Real.instNatCast n)))))
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.transitive_spectralRatio_eq
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (n : Nat) (hn : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n),
+  @Eq.{1} Complex
+    (Complex.ofReal (@TournamentHamiltonian.spectralRatio n (TournamentHamiltonian.transitiveTournament n)))
+    (TournamentHamiltonian.transitiveRatio n)
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.transitive_spectralRatio_error_bound
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Exists.{1} Nat fun (N : Nat) =>
+      And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) N)
+        (∀ (n : Nat),
+          @LE.le.{0} Nat instLENat N n →
+            @LE.le.{0} Real Real.instLE
+              (@abs.{0} Real Real.lattice Real.instAddGroup
+                (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                  (@TournamentHamiltonian.spectralRatio n (TournamentHamiltonian.transitiveTournament n))
+                  TournamentHamiltonian.lowerConstant))
+              (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+                (@Nat.cast.{0} Real Real.instNatCast n))))
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.actual_spectralRatio_le_transitive._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (r : Nat) (hr : @LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) r),
+  Not (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) r) → False
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.actual_spectralRatio_upper_uniform._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (N : Nat) (hN : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) N) (n : Nat)
+  (hn : @LE.le.{0} Nat instLENat N n),
+  Not (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n) → False
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.transitive_spectralRatio_error_bound._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (N : Nat) (hN : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1))) N) (n : Nat)
+  (hn : @LE.le.{0} Nat instLENat N n),
+  Not (@LT.lt.{0} Nat instLTNat (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))) n) → False
+
+Module: ActualSharpSpectralCandidate
+Name: ActualSharpSpectralCandidate.transitive_spectralRatio_error_bound._simp_1_2
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (r s : Real),
+  @Eq.{1} Complex
+    (@HSub.hSub.{0, 0, 0} Complex Complex Complex (@instHSub.{0} Complex Complex.instSub) (Complex.ofReal r)
+      (Complex.ofReal s))
+    (Complex.ofReal (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub) r s))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_all_pathCount_upper_uniform
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Filter.Eventually.{0} Nat
+      (fun (n : Nat) =>
+        ∀ (T : TournamentHamiltonian.Tournament n),
+          @LE.le.{0} Real Real.instLE
+            (@HDiv.hDiv.{0, 0, 0} Real Real Real
+              (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+              (@Nat.cast.{0} Real Real.instNatCast (@TournamentHamiltonian.pathCount n T))
+              (TournamentHamiltonian.meanPaths n))
+            (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd) TournamentHamiltonian.lowerConstant
+              (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+                (@Nat.cast.{0} Real Real.instNatCast n))))
+      (@Filter.atTop.{0} Nat Nat.instPreorder))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Exists.{1} Nat fun (N : Nat) =>
+      And (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) N)
+        (∀ (n : Nat),
+          @LE.le.{0} Nat instLENat N n →
+            @LE.le.{0} Real Real.instLE
+              (@abs.{0} Real Real.lattice Real.instAddGroup
+                (@HSub.hSub.{0, 0, 0} Real Real Real (@instHSub.{0} Real Real.instSub)
+                  (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                    (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                    (@Nat.cast.{0} Real Real.instNatCast (TournamentHamiltonian.maxPaths n))
+                    (TournamentHamiltonian.meanPaths n))
+                  TournamentHamiltonian.lowerConstant))
+              (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+                (@Nat.cast.{0} Real Real.instNatCast n))))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maxPaths_upper_uniform
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Filter.Eventually.{0} Nat
+      (fun (n : Nat) =>
+        @LE.le.{0} Real Real.instLE
+          (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+            (@Nat.cast.{0} Real Real.instNatCast (TournamentHamiltonian.maxPaths n))
+            (TournamentHamiltonian.meanPaths n))
+          (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd) TournamentHamiltonian.lowerConstant
+            (@HDiv.hDiv.{0, 0, 0} Real Real Real
+              (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+              (@Nat.cast.{0} Real Real.instNatCast n))))
+      (@Filter.atTop.{0} Nat Nat.instPreorder))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maximizers_energy_O_inv
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (D : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) D)
+    (@Filter.Eventually.{0} Nat
+      (fun (n : Nat) =>
+        ∀ (T : TournamentHamiltonian.Tournament n),
+          @Eq.{1} Nat (@TournamentHamiltonian.pathCount n T) (TournamentHamiltonian.maxPaths n) →
+            @LE.le.{0} Real Real.instLE
+              (@TournamentPrescalingMassBound.tau n (@ActualTournamentPrescalingBounds.normalizedScore n T))
+              (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) D
+                (@Nat.cast.{0} Real Real.instNatCast n)))
+      (@Filter.atTop.{0} Nat Nat.instPreorder))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maximizers_strong_upper_uniform
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Exists.{1} Real fun (C : Real) =>
+  And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+    (@Filter.Eventually.{0} Nat
+      (fun (n : Nat) =>
+        ∀ (T : TournamentHamiltonian.Tournament n),
+          @Eq.{1} Nat (@TournamentHamiltonian.pathCount n T) (TournamentHamiltonian.maxPaths n) →
+            @LE.le.{0} Real Real.instLE
+              (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                (@Nat.cast.{0} Real Real.instNatCast (@TournamentHamiltonian.pathCount n T))
+                (TournamentHamiltonian.meanPaths n))
+              (@HAdd.hAdd.{0, 0, 0} Real Real Real (@instHAdd.{0} Real Real.instAdd)
+                (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul)
+                  TournamentHamiltonian.lowerConstant
+                  (Real.exp
+                    (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                      (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+                      (@Neg.neg.{0} Real Real.instNeg
+                        (@TournamentPrescalingMassBound.tau n (@ActualTournamentPrescalingBounds.normalizedScore n T)))
+                      (@OfNat.ofNat.{0} Real (nat_lit 2)
+                        (@instOfNatAtLeastTwo.{0} Real (nat_lit 2) Real.instNatCast
+                          (@Nat.instAtLeastTwoHAddOfNat (@OfNat.ofNat.{0} Nat (nat_lit 1) (instOfNatNat (nat_lit 1)))
+                            (@Nat.instNeZeroSucc (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0))))))))))
+                (@HDiv.hDiv.{0, 0, 0} Real Real Real
+                  (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid)) C
+                  (@Nat.cast.{0} Real Real.instNatCast n))))
+      (@Filter.atTop.{0} Nat Nat.instPreorder))
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform._proof_1_1
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (NL : Nat) (hNL : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) NL)
+  (NU : Nat),
+  Not
+      (@LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
+        (@Max.max.{0} Nat Nat.instMax NL
+          (@Max.max.{0} Nat Nat.instMax NU (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))) →
+    False
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform._proof_1_2
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (NL NU n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat
+      (@Max.max.{0} Nat Nat.instMax NL
+        (@Max.max.{0} Nat Nat.instMax NU (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      n),
+  Not (@LE.le.{0} Nat instLENat NL n) → False
+
+Module: ActualSharpPathEnergyCandidate
+Name: ActualSharpPathEnergyCandidate.actual_maxPaths_abs_error_uniform._proof_1_3
+Kind: theorem
+Universes: 
+Axioms: propext, Quot.sound
+Exact kernel type:
+∀ (NL : Nat) (hNL : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) NL)
+  (NU n : Nat)
+  (hn :
+    @LE.le.{0} Nat instLENat
+      (@Max.max.{0} Nat Nat.instMax NL
+        (@Max.max.{0} Nat Nat.instMax NU (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))))
+      n),
+  Not (@LE.le.{0} Nat (@Preorder.toLE.{0} Nat Nat.instPreorder) NU n) → False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.actual_ExtremalAsymptotic
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+NonAlgebraicity.ExtremalAsymptotic
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.actual_generating_function_nonalgebraic
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (lw : NonAlgebraicity.FourExponentialIndependence),
+  Not
+    (@NonAlgebraicity.HasPolynomialRelation.{0} Complex Complex.instField
+      (@DFunLike.coe.{1, 1, 1}
+        (@RingHom.{0, 0} (PowerSeries.{0} Rat) (PowerSeries.{0} Complex)
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Rat)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Rat Rat.semiring))
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Complex)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Complex Complex.instSemiring)))
+        (PowerSeries.{0} Rat) (fun (x : PowerSeries.{0} Rat) => PowerSeries.{0} Complex)
+        (@RingHom.instFunLike.{0, 0} (PowerSeries.{0} Rat) (PowerSeries.{0} Complex)
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Rat)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Rat Rat.semiring))
+          (@Semiring.toNonAssocSemiring.{0} (PowerSeries.{0} Complex)
+            (@MvPowerSeries.instSemiring.{0, 0} Unit Complex Complex.instSemiring)))
+        (@PowerSeries.map.{0, 0} Rat Rat.semiring Complex Complex.instSemiring
+          (@Algebra.algebraMap.{0, 0} Rat Complex Rat.commSemiring
+            (@Ring.toSemiring.{0} Complex
+              (@DivisionRing.toRing.{0} Complex (@Field.toDivisionRing.{0} Complex Complex.instField)))
+            (@DivisionRing.toRatAlgebra.{0} Complex (@Field.toDivisionRing.{0} Complex Complex.instField)
+              Complex.instCharZero)))
+        NonAlgebraicity.extremalFormalSeries))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.actual_maxPaths_normalized_tendsto
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Filter.Tendsto.{0, 0} Nat Real
+  (fun (n : Nat) =>
+    @HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+      (@Nat.cast.{0} Real Real.instNatCast (TournamentHamiltonian.maxPaths n)) (TournamentHamiltonian.meanPaths n))
+  (@Filter.atTop.{0} Nat Nat.instPreorder)
+  (@nhds.{0} Real
+    (@UniformSpace.toTopologicalSpace.{0} Real (@PseudoMetricSpace.toUniformSpace.{0} Real Real.pseudoMetricSpace))
+    TournamentHamiltonian.lowerConstant)
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.actual_maximalPathCount_not_exponentially_bounded
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+Not
+  (@Exists.{1} Real fun (C : Real) =>
+    @Exists.{1} Real fun (D : Real) =>
+      And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) C)
+        (And (@LE.le.{0} Real Real.instLE (@OfNat.ofNat.{0} Real (nat_lit 0) (@Zero.toOfNat0.{0} Real Real.instZero)) D)
+          (∀ (n : Nat),
+            @LE.le.{0} Real Real.instLE (@Nat.cast.{0} Real Real.instNatCast (NonAlgebraicity.maximalPathCount n))
+              (@HMul.hMul.{0, 0, 0} Real Real Real (@instHMul.{0} Real Real.instMul) C
+                (@HPow.hPow.{0, 0, 0} Real Nat Real
+                  (@instHPow.{0, 0} Real Nat (@NPow.toPow.{0} Real (@Monoid.toNPow.{0} Real Real.instMonoid))) D n)))))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.actual_normalizedCoefficient_not_qRegular
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (q : Nat) (hq : @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q)
+  (lw : NonAlgebraicity.FourExponentialIndependence),
+  Not
+    (NonAlgebraicity.IsQRegular q fun (n : Nat) =>
+      @Rat.cast.{0} Complex Complex.instRatCast (NonAlgebraicity.normalizedCoefficient n))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.lowerConstant_complex_eq
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Eq.{1} Complex (Complex.ofReal TournamentHamiltonian.lowerConstant) NonAlgebraicity.extremalConstant
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.maximalPathCount_eq_maxPaths
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ (n : Nat), @Eq.{1} Nat (NonAlgebraicity.maximalPathCount n) (TournamentHamiltonian.maxPaths n)
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (hn : @Ne.{1} Nat n (@OfNat.ofNat.{0} Nat (nat_lit 0) (instOfNatNat (nat_lit 0)))),
+  @Eq.{1} Real (@Rat.cast.{0} Real Real.instRatCast (NonAlgebraicity.normalizedCoefficient n))
+    (@HDiv.hDiv.{0, 0, 0} Real Real Real (@instHDiv.{0} Real (@DivInvMonoid.toDiv.{0} Real Real.instDivInvMonoid))
+      (@Nat.cast.{0} Real Real.instNatCast (TournamentHamiltonian.maxPaths n)) (TournamentHamiltonian.meanPaths n))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.orientationTournament
+Kind: definition
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+{n : Nat} → (o : NonAlgebraicity.Orientation n) → TournamentHamiltonian.Tournament n
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.orientation_pathCount_eq
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (o : NonAlgebraicity.Orientation n),
+  @Eq.{1} Nat (@TournamentHamiltonian.pathCount n (@ActualExtremalAsymptoticCandidate.orientationTournament n o))
+    (@NonAlgebraicity.hamiltonianPathCount n o)
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_1
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 2) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 2) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_2
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 3) (instOfNatNat (nat_lit 3)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 3) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 3) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_3
+Kind: theorem
+Universes: u_2
+Axioms: propext
+Exact kernel type:
+∀ {α : Type u_2} [inst : Zero.{u_2} α]
+  [inst_1 : OfNat.{u_2} α (@OfNat.ofNat.{0} Nat (nat_lit 4) (instOfNatNat (nat_lit 4)))]
+  [@NeZero.{u_2} α inst (@OfNat.ofNat.{u_2} α (nat_lit 4) inst_1)],
+  @Eq.{1} Prop
+    (@Eq.{u_2 + 1} α (@OfNat.ofNat.{u_2} α (nat_lit 4) inst_1)
+      (@OfNat.ofNat.{u_2} α (nat_lit 0) (@Zero.toOfNat0.{u_2} α inst)))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_4
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {M₀ : Type u_1} [inst : Mul.{u_1} M₀] [inst_1 : Zero.{u_1} M₀] [@NoZeroDivisors.{u_1} M₀ inst inst_1] {a b : M₀}
+  (ha : @Ne.{u_1 + 1} M₀ a (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1)))
+  (hb : @Ne.{u_1 + 1} M₀ b (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1))),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} M₀ (@HMul.hMul.{u_1, u_1, u_1} M₀ M₀ M₀ (@instHMul.{u_1} M₀ inst) a b)
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0) (@Zero.toOfNat0.{u_1} M₀ inst_1)))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_5
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {M₀ : Type u_1} [inst : MonoidWithZero.{u_1} M₀] {a : M₀}
+  [@IsReduced.{u_1} M₀
+      (@MulZeroClass.toZero.{u_1} M₀
+        (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst)))
+      (@NPow.toPow.{u_1} M₀ (@Monoid.toNPow.{u_1} M₀ (@MonoidWithZero.toMonoid.{u_1} M₀ inst)))]
+  (n : Nat)
+  (h :
+    @Ne.{u_1 + 1} M₀ a
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} M₀
+          (@MulZeroClass.toZero.{u_1} M₀
+            (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst)))))),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} M₀
+      (@HPow.hPow.{u_1, 0, u_1} M₀ Nat M₀
+        (@instHPow.{u_1, 0} M₀ Nat
+          (@NPow.toPow.{u_1} M₀ (@Monoid.toNPow.{u_1} M₀ (@MonoidWithZero.toMonoid.{u_1} M₀ inst))))
+        a n)
+      (@OfNat.ofNat.{u_1} M₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} M₀
+          (@MulZeroClass.toZero.{u_1} M₀
+            (@MulZeroOneClass.toMulZeroClass.{u_1} M₀ (@MonoidWithZero.toMulZeroOneClass.{u_1} M₀ inst))))))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_6
+Kind: theorem
+Universes: u_3
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {G₀ : Type u_3} [inst : GroupWithZero.{u_3} G₀] {a : G₀} (n : Int),
+  @Ne.{u_3 + 1} G₀ a
+      (@OfNat.ofNat.{u_3} G₀ (nat_lit 0)
+        (@Zero.toOfNat0.{u_3} G₀
+          (@MulZeroClass.toZero.{u_3} G₀
+            (@MulZeroOneClass.toMulZeroClass.{u_3} G₀
+              (@MonoidWithZero.toMulZeroOneClass.{u_3} G₀ (@GroupWithZero.toMonoidWithZero.{u_3} G₀ inst)))))) →
+    @Eq.{1} Prop
+      (@Eq.{u_3 + 1} G₀
+        (@HPow.hPow.{u_3, 0, u_3} G₀ Int G₀
+          (@instHPow.{u_3, 0} G₀ Int
+            (@ZPow.toPow.{u_3} G₀ (@DivInvMonoid.toZPow.{u_3} G₀ (@GroupWithZero.toDivInvMonoid.{u_3} G₀ inst))))
+          a n)
+        (@OfNat.ofNat.{u_3} G₀ (nat_lit 0)
+          (@Zero.toOfNat0.{u_3} G₀
+            (@MulZeroClass.toZero.{u_3} G₀
+              (@MulZeroOneClass.toMulZeroClass.{u_3} G₀
+                (@MonoidWithZero.toMulZeroOneClass.{u_3} G₀ (@GroupWithZero.toMonoidWithZero.{u_3} G₀ inst)))))))
+      False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.normalizedCoefficient_real_eq._simp_1_7
+Kind: theorem
+Universes: u_1
+Axioms: propext
+Exact kernel type:
+∀ {R : Type u_1} [inst : AddMonoidWithOne.{u_1} R] [@CharZero.{u_1} R inst] (n : Nat),
+  @Eq.{1} Prop
+    (@Eq.{u_1 + 1} R
+      (@HAdd.hAdd.{u_1, u_1, u_1} R R R
+        (@instHAdd.{u_1} R
+          (@AddSemigroup.toAdd.{u_1} R
+            (@AddMonoid.toAddSemigroup.{u_1} R (@AddMonoidWithOne.toAddMonoid.{u_1} R inst))))
+        (@Nat.cast.{u_1} R (@AddMonoidWithOne.toNatCast.{u_1} R inst) n)
+        (@OfNat.ofNat.{u_1} R (nat_lit 1) (@One.toOfNat1.{u_1} R (@AddMonoidWithOne.toOne.{u_1} R inst))))
+      (@OfNat.ofNat.{u_1} R (nat_lit 0)
+        (@Zero.toOfNat0.{u_1} R
+          (@AddZero.toZero.{u_1} R
+            (@AddZeroClass.toAddZero.{u_1} R
+              (@AddMonoid.toAddZeroClass.{u_1} R (@AddMonoidWithOne.toAddMonoid.{u_1} R inst)))))))
+    False
+
+Module: ActualExtremalAsymptoticCandidate
+Name: ActualExtremalAsymptoticCandidate.orientationTournament._proof_1
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (o : NonAlgebraicity.Orientation n),
+  And (∀ (i : Fin n), @Eq.{1} Bool (@NonAlgebraicity.edge n o i i) Bool.false)
+    (∀ (i j : Fin n),
+      @Ne.{1} (Fin n) i j → @Eq.{1} Bool (@NonAlgebraicity.edge n o i j) (Bool.not (@NonAlgebraicity.edge n o j i)))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: NonAlgebraicity.extremalConstant.eq_1
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+@Eq.{1} Complex NonAlgebraicity.extremalConstant
+  (@HDiv.hDiv.{0, 0, 0} Complex Complex Complex
+    (@instHDiv.{0} Complex (@DivInvMonoid.toDiv.{0} Complex Complex.instDivInvMonoid))
+    (Complex.cosh (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne)))
+    (Complex.cos (@OfNat.ofNat.{0} Complex (nat_lit 1) (@One.toOfNat1.{0} Complex Complex.instOne))))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: NonAlgebraicity.hamiltonianPathCount.eq_1
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (o : NonAlgebraicity.Orientation n),
+  @Eq.{1} Nat (@NonAlgebraicity.hamiltonianPathCount n o)
+    (@Finset.card.{0} (Equiv.Perm.{1} (Fin n))
+      (@Finset.filter.{0} (Equiv.Perm.{1} (Fin n)) (@NonAlgebraicity.IsHamiltonianOrder n o)
+        (fun (a : Equiv.Perm.{1} (Fin n)) => Classical.propDecidable (@NonAlgebraicity.IsHamiltonianOrder n o a))
+        (@Finset.univ.{0} (Equiv.Perm.{1} (Fin n))
+          (@Equiv.instFintype.{0, 0} (Fin n) (Fin n) (instDecidableEqFin n) (instDecidableEqFin n) (Fin.fintype n)
+            (Fin.fintype n)))))
+
+Module: ActualExtremalAsymptoticCandidate
+Name: TournamentHamiltonian.pathCount.eq_1
+Kind: theorem
+Universes: 
+Axioms: propext, Classical.choice, Quot.sound
+Exact kernel type:
+∀ {n : Nat} (T : TournamentHamiltonian.Tournament n),
+  @Eq.{1} Nat (@TournamentHamiltonian.pathCount n T)
+    (@Finset.card.{0} (Equiv.Perm.{1} (Fin n))
+      (@Finset.filter.{0} (Equiv.Perm.{1} (Fin n)) (@TournamentHamiltonian.IsHamiltonian n T)
+        (fun (a : Equiv.Perm.{1} (Fin n)) => Classical.propDecidable (@TournamentHamiltonian.IsHamiltonian n T a))
+        (@Finset.univ.{0} (Equiv.Perm.{1} (Fin n))
+          (@Equiv.instFintype.{0, 0} (Fin n) (Fin n) (instDecidableEqFin n) (instDecidableEqFin n) (Fin.fintype n)
+            (Fin.fintype n)))))

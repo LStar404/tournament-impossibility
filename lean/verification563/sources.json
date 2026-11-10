@@ -1,0 +1,5412 @@
+{
+  "module_count": 563,
+  "modules": [
+    {
+      "module": "Abel",
+      "path": "lean/Abel.lean",
+      "sha256": "5ba1a8ebf28b64bc6c4b6db441c275ac01530883b6a678fabcf28991a66de47f",
+      "imports": [
+        "Mathlib.Analysis.Complex.AbelLimit",
+        "Mathlib.Analysis.Normed.Group.Bounded",
+        "Mathlib.Tactic.LinearCombination"
+      ]
+    },
+    {
+      "module": "Constant",
+      "path": "lean/Constant.lean",
+      "sha256": "733e6627ea86e57330add01a46b58e2f279654478866bfe887a4de24daf227c6",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic",
+        "Mathlib.RingTheory.Algebraic.Basic",
+        "Mathlib.RingTheory.Algebraic.Integral",
+        "Mathlib.Tactic.FinCases",
+        "Mathlib.Tactic.LinearCombination",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    {
+      "module": "TournamentSequence",
+      "path": "lean/TournamentSequence.lean",
+      "sha256": "b499312419fae1a7506e435df4d9c3ef24f19eb2c0c7fd0a6b30bc50c5373921",
+      "imports": [
+        "Mathlib.Data.Fintype.Perm",
+        "Mathlib.Data.Fintype.Pi",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.Data.Rat.Defs",
+        "Mathlib.Data.Nat.Factorial.Basic"
+      ]
+    },
+    {
+      "module": "Application",
+      "path": "lean/Application.lean",
+      "sha256": "b945d3da58ccf0575b98e912e579e33d3548df413d77f8550c9c76c4e69596a1",
+      "imports": [
+        "Abel",
+        "Constant",
+        "TournamentSequence"
+      ]
+    },
+    {
+      "module": "Descent",
+      "path": "lean/Descent.lean",
+      "sha256": "7d50e8d10489287d99c22bc9c72c135fedf005d9ab8a7f1d903a831f8573ecad",
+      "imports": [
+        "Mathlib.RingTheory.PowerSeries.Basic",
+        "Mathlib.LinearAlgebra.Dual.Lemmas",
+        "Mathlib.Analysis.Complex.Basic",
+        "Mathlib.Tactic.Push"
+      ]
+    },
+    {
+      "module": "Radial",
+      "path": "lean/Radial.lean",
+      "sha256": "df3c13b3cd7f8ea0eb5046681e5e2656a3361a1a94ff7433b4789ac5de218d1b",
+      "imports": [
+        "Mathlib.Topology.Algebra.Polynomial",
+        "Mathlib.RingTheory.Algebraic.Defs",
+        "Mathlib.Algebra.Polynomial.Div",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    {
+      "module": "Normalization",
+      "path": "lean/Normalization.lean",
+      "sha256": "07461dc83604e8c006a4cc8f1064e7bc1c3e2cbd1181d6ea04ad46af575a388c",
+      "imports": [
+        "Radial",
+        "Mathlib.Algebra.Polynomial.Bivariate",
+        "Mathlib.RingTheory.Polynomial.ScaleRoots"
+      ]
+    },
+    {
+      "module": "Evaluation",
+      "path": "lean/Evaluation.lean",
+      "sha256": "a99ec4e63819c457f28b3eca7901bddb2742869550ec8f65784aa1029e8fc658",
+      "imports": [
+        "Descent",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum",
+        "Mathlib.Tactic.Ring"
+      ]
+    },
+    {
+      "module": "StandardAlgebraicity",
+      "path": "lean/StandardAlgebraicity.lean",
+      "sha256": "41232ea9f5346cdc297df7118933f184e007c1333c5f162da78080fae554f4a0",
+      "imports": [
+        "Descent",
+        "Mathlib.RingTheory.Algebraic.Basic",
+        "Mathlib.Algebra.Polynomial.Eval.Degree"
+      ]
+    },
+    {
+      "module": "Main",
+      "path": "lean/Main.lean",
+      "sha256": "2598f2877dcb2225a2f240d4b41767a1bc6283a3584d018d31dcab156b77064c",
+      "imports": [
+        "Application",
+        "Evaluation",
+        "Radial",
+        "Normalization",
+        "StandardAlgebraicity"
+      ]
+    },
+    {
+      "module": "WeightedAbel",
+      "path": "lean/WeightedAbel.lean",
+      "sha256": "bc8e25fb2bd3da4c32e0ac7254f457fb8b01ab1dddc3bd5dee5edd2444e5ae0d",
+      "imports": [
+        "Descent",
+        "Abel",
+        "Mathlib.Tactic.Ring",
+        "Mathlib.Tactic.NormNum"
+      ]
+    },
+    {
+      "module": "Corollaries",
+      "path": "lean/Corollaries.lean",
+      "sha256": "1fd64ddedf51e47e43656fa14052671d473465f2e3b8edbed6abb2290f220d42",
+      "imports": [
+        "Main",
+        "WeightedAbel"
+      ]
+    },
+    {
+      "module": "QuadraticAbel",
+      "path": "lean/QuadraticAbel.lean",
+      "sha256": "1b00b835e72f756634e532e051ff69b3060bdd0a06e0277286550608125f3f83",
+      "imports": [
+        "Abel",
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Topology.Algebra.Order.LiminfLimsup",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "Remainder",
+      "path": "lean/Remainder.lean",
+      "sha256": "f7b72857e8ba3713d052804c2da9f2a33dbe00743b4f83a2514234701170cb83",
+      "imports": [
+        "Main",
+        "QuadraticAbel"
+      ]
+    },
+    {
+      "module": "QRegular",
+      "path": "lean/QRegular.lean",
+      "sha256": "e267823ec1d4a6d089a71fa8b4e9ca806fa0c50f005f6454788f947a12662104",
+      "imports": [
+        "Mathlib.LinearAlgebra.FiniteDimensional.Basic",
+        "Mathlib.LinearAlgebra.Matrix.ToLin",
+        "Mathlib.LinearAlgebra.Dimension.Free",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    {
+      "module": "MatrixPowerSeries",
+      "path": "lean/MatrixPowerSeries.lean",
+      "sha256": "9662e5f67db2b59acd6ecbc997ac75bee706a40df39c94e878aae1372caeb581",
+      "imports": [
+        "StandardAlgebraicity",
+        "Mathlib.LinearAlgebra.Matrix.Adjugate"
+      ]
+    },
+    {
+      "module": "QRegularApplications",
+      "path": "lean/QRegularApplications.lean",
+      "sha256": "245ba30ac07415dfd9c6dc16d01457ee3cc6d0e9eacfd9ef1038d0819f37a690",
+      "imports": [
+        "QRegular",
+        "MatrixPowerSeries",
+        "Remainder"
+      ]
+    },
+    {
+      "module": "PathCountGrowth",
+      "path": "lean/PathCountGrowth.lean",
+      "sha256": "3e7f4567614bfcbe3d247dded4d8a61898be240c0b43fe543d82e7c69ef38919",
+      "imports": [
+        "Application",
+        "Mathlib.Topology.Algebra.Order.Floor",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "RationalRadial",
+      "path": "lean/RationalRadial.lean",
+      "sha256": "d19b160bb90ee03d661ab46eec70d6d6a5cb9fa70fd26cbf1435b96a5b04ee6b",
+      "imports": [
+        "Radial",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "RationalLinearDescent",
+      "path": "lean/RationalLinearDescent.lean",
+      "sha256": "50d648740ec656ad0d16f768aa716ca41004c07e02e011eae32e7a9af6f4de3a",
+      "imports": [
+        "Descent",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "RationalSeriesLimit",
+      "path": "lean/RationalSeriesLimit.lean",
+      "sha256": "02e0373b1a41ad1c1db706174cf610d08767bcb915d6723356ace79f9bfc3c1f",
+      "imports": [
+        "Mathlib.RingTheory.PowerSeries.Trunc",
+        "Main",
+        "RationalRadial"
+      ]
+    },
+    {
+      "module": "QRegularRationalLimit",
+      "path": "lean/QRegularRationalLimit.lean",
+      "sha256": "860b0ec40f9e65f844ed27b09e39085750bc805050c740a7f7524fd53226d473",
+      "imports": [
+        "QRegular",
+        "MatrixPowerSeries",
+        "RationalLinearDescent",
+        "RationalSeriesLimit"
+      ]
+    },
+    {
+      "module": "OrderedCancellation",
+      "path": "lean/OrderedCancellation.lean",
+      "sha256": "9670bbbaeb4226703c806b563830d46ba3743ab0075991635a89974fa9b0c471",
+      "imports": [
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "ColorEnergy",
+      "path": "lean/ColorEnergy.lean",
+      "sha256": "722ab22d1758fd22bb840e4ec01c74525d4499e7a150754114ce25d1fdece779",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ColorTransport",
+      "path": "lean/ColorTransport.lean",
+      "sha256": "01634a7d7b19278b869aa985be3f0259cd58030a5de68bdc187066e404ba13c4",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "DiamondGap",
+      "path": "lean/DiamondGap.lean",
+      "sha256": "090b4f39a81cb7bfd98b328e78459ba33d1df2ff5a745885c1e3a534d9833167",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ColorTransportExact",
+      "path": "lean/ColorTransportExact.lean",
+      "sha256": "bf3c63a7b3dd6b23f250e5f8396be194c5459ffcb13ab93ea6fd289ee04e8ddd",
+      "imports": [
+        "ColorTransport",
+        "ColorEnergy"
+      ]
+    },
+    {
+      "module": "ColorGraphRepair",
+      "path": "lean/ColorGraphRepair.lean",
+      "sha256": "3645d5f7340085984deb77d063de979e19746c113d36030c488a50f07cb6b85f",
+      "imports": [
+        "ColorTransportExact"
+      ]
+    },
+    {
+      "module": "ColorCutNormalization",
+      "path": "lean/ColorCutNormalization.lean",
+      "sha256": "c748087b6c3fb0489f4a8c5d2ecf23c38c15b1e96e1a1c70a92ab94561cbb356",
+      "imports": [
+        "ColorGraphRepair"
+      ]
+    },
+    {
+      "module": "ColorTargetModels",
+      "path": "lean/ColorTargetModels.lean",
+      "sha256": "835f9e2fbe15c3b817c74625cdb7761789396e10b10019e6987d9fcbcb7422c7",
+      "imports": [
+        "ColorGraphRepair"
+      ]
+    },
+    {
+      "module": "TournamentColorEnumeration",
+      "path": "lean/TournamentColorEnumeration.lean",
+      "sha256": "265967fabd46a617fa262977a61d856ebb1ea0e7a79518dbe81c390df1af4979",
+      "imports": [
+        "DiamondGap",
+        "ColorGraphRepair"
+      ]
+    },
+    {
+      "module": "DiamondFreeRepresentation",
+      "path": "lean/DiamondFreeRepresentation.lean",
+      "sha256": "719584251aaa6c6c0e6cc885041b4479309958de79cf97410132ee40b9bee7d5",
+      "imports": [
+        "DiamondGap",
+        "ColorGraphRepair",
+        "TournamentColorEnumeration"
+      ]
+    },
+    {
+      "module": "FiniteGraphEditTransport",
+      "path": "lean/FiniteGraphEditTransport.lean",
+      "sha256": "6191b27f9ce700b8014e16cabeb58b65744b618dfee6f2a3c05e3f63ed57e7bc",
+      "imports": [
+        "ColorGraphRepair"
+      ]
+    },
+    {
+      "module": "ZeroDiamondRepair",
+      "path": "lean/ZeroDiamondRepair.lean",
+      "sha256": "b0b600f5eac752480c8654d3027857b1c3e7e14c8e19b163c6e5346b8c847f91",
+      "imports": [
+        "DiamondFreeRepresentation",
+        "ColorCutNormalization",
+        "ColorTargetModels",
+        "FiniteGraphEditTransport"
+      ]
+    },
+    {
+      "module": "VectorWeakMajorization",
+      "path": "lean/VectorWeakMajorization.lean",
+      "sha256": "9d2826d88b678b196c3bdb2ce98d0e935f1fc5ab4e01afffe443ec6a4f5e7b8f",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "MajorizationCone",
+      "path": "lean/MajorizationCone.lean",
+      "sha256": "403b41e58a40766559c958376f40838d2aa0b82356ca4e4482fa0278550d7a9e",
+      "imports": [
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "SelectedWeight",
+      "path": "lean/SelectedWeight.lean",
+      "sha256": "7f66cc1f7d53d0a73b8cb029c73f775c9bcb73afb7ad95c34a2672dc50306eb4",
+      "imports": [
+        "MajorizationCone"
+      ]
+    },
+    {
+      "module": "BalancedSignCounts",
+      "path": "lean/BalancedSignCounts.lean",
+      "sha256": "4d7e2e550593d3a98cd92efac489480d493b574da9acf4bbfa92128b4ce39b38",
+      "imports": [
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "SelectedSignPairs",
+      "path": "lean/SelectedSignPairs.lean",
+      "sha256": "f1bb38a386d195975dabba0c53e3566617ac30c11403e71339e5d25fec38c435",
+      "imports": [
+        "BalancedSignCounts"
+      ]
+    },
+    {
+      "module": "SelectedRowOptimization",
+      "path": "lean/SelectedRowOptimization.lean",
+      "sha256": "1211dacc5e94d974031d5ddc11c6c1a054451eec2e9d7d242e2282c51af013f4",
+      "imports": [
+        "SelectedWeight",
+        "SelectedSignPairs"
+      ]
+    },
+    {
+      "module": "TournamentEnvelope",
+      "path": "lean/TournamentEnvelope.lean",
+      "sha256": "6b5411768924fae05d3542ec1912d09c10879e7b7f5a31a6669cc94249cdcff4",
+      "imports": [
+        "SelectedSignPairs",
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "TournamentSwitching",
+      "path": "lean/TournamentSwitching.lean",
+      "sha256": "b2a43bdb248404a06c8e32807dc94113b95e627dce296b5d2f2a58f5b36348a2",
+      "imports": [
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "TopAbsoluteSelection",
+      "path": "lean/TopAbsoluteSelection.lean",
+      "sha256": "cac30d639cb3a96325491b8962cd4cfcbcf6b3e69ec98257368f31b65e3d0cac",
+      "imports": [
+        "TournamentSwitching"
+      ]
+    },
+    {
+      "module": "SelectedTournamentMajorization",
+      "path": "lean/SelectedTournamentMajorization.lean",
+      "sha256": "17287ec2450763666d7fb42149dd16a713374f4477d3cf40e61296e330d04c87",
+      "imports": [
+        "TournamentEnvelope",
+        "SelectedRowOptimization",
+        "TopAbsoluteSelection"
+      ]
+    },
+    {
+      "module": "VectorMajorizationEndpoint",
+      "path": "lean/VectorMajorizationEndpoint.lean",
+      "sha256": "afe5237dd02721231cb8a2d85cbc9596e4b62711d8d82781cfc7e0a10e69c12b",
+      "imports": [
+        "SelectedTournamentMajorization"
+      ]
+    },
+    {
+      "module": "IteratedVectorMajorization",
+      "path": "lean/IteratedVectorMajorization.lean",
+      "sha256": "7eb77c42d2d2d264575b05b8fad29fb76d634f4a40652a0941661d26a6f56a75",
+      "imports": [
+        "SelectedTournamentMajorization"
+      ]
+    },
+    {
+      "module": "TournamentPowerComparison",
+      "path": "lean/TournamentPowerComparison.lean",
+      "sha256": "8b4e8985c5b28d6baad54dc576163a485c72375eb391e9ad2fa85b4c363cf722",
+      "imports": [
+        "IteratedVectorMajorization"
+      ]
+    },
+    {
+      "module": "ReferenceSquare",
+      "path": "lean/ReferenceSquare.lean",
+      "sha256": "ef3dc7eca55273f26c3d97377cbec2d0d02420015c49007cd499ddffc3026a8d",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TransitiveOrbit",
+      "path": "lean/TransitiveOrbit.lean",
+      "sha256": "ed5ead913bff9a28c21c239024790f59a0fadef2e7bb1789c4da5d74043bc5cf",
+      "imports": [
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "KMatrixIdentification",
+      "path": "lean/KMatrixIdentification.lean",
+      "sha256": "2f99990c03ea9b2f8f7eed734f9593f997ce9dc0ee4a6d0f1d3c7c2e6498d5ae",
+      "imports": [
+        "ReferenceSquare",
+        "IteratedVectorMajorization"
+      ]
+    },
+    {
+      "module": "ZigzagReference",
+      "path": "lean/ZigzagReference.lean",
+      "sha256": "5bd60b0d6d55c9084bff9310e06684189a98d9a7396def6ce93140cd542e1bcc",
+      "imports": [
+        "ReferenceSquare"
+      ]
+    },
+    {
+      "module": "SignedConjugacy",
+      "path": "lean/SignedConjugacy.lean",
+      "sha256": "6a97a74e719535f6c75089e4278e8bdadbdb16dc62ba543b8f32386bb903fa22",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ReferenceDiagonal",
+      "path": "lean/ReferenceDiagonal.lean",
+      "sha256": "45b5d4f32cc5080cf1d8dad9679bc832f34b217901bf3301667072084e72b3ba",
+      "imports": [
+        "ReferenceSquare"
+      ]
+    },
+    {
+      "module": "SignedReferenceConjugacy",
+      "path": "lean/SignedReferenceConjugacy.lean",
+      "sha256": "395e75211a8b140078b0a6d5f0223ee386fad74fafc924030e6b3750e9708fc7",
+      "imports": [
+        "ReferenceDiagonal",
+        "ZigzagReference"
+      ]
+    },
+    {
+      "module": "BasisReference",
+      "path": "lean/BasisReference.lean",
+      "sha256": "a39049bf0528515c20dee41111ca42099877c229337ced0fec6ed1311a11597f",
+      "imports": [
+        "TournamentPowerComparison"
+      ]
+    },
+    {
+      "module": "ReferenceMomentComparison",
+      "path": "lean/ReferenceMomentComparison.lean",
+      "sha256": "794182136f6f490930b02d47596da76c4b21ec4955275976470cead4643bdd60",
+      "imports": [
+        "SignedReferenceConjugacy",
+        "SignedConjugacy",
+        "TransitiveOrbit",
+        "KMatrixIdentification",
+        "BasisReference"
+      ]
+    },
+    {
+      "module": "ReferenceMomentEndpoint",
+      "path": "lean/ReferenceMomentEndpoint.lean",
+      "sha256": "60534fa318f0aac356bf2d02bbec798a9d274f1c767eaf4d0472dccc43dc9848",
+      "imports": [
+        "ReferenceMomentComparison"
+      ]
+    },
+    {
+      "module": "SignedVectorOrbit",
+      "path": "lean/SignedVectorOrbit.lean",
+      "sha256": "048c73cffbf84c2efc910567b37024c162c7e64632211b84e46019b1358f97d6",
+      "imports": [
+        "SignedConjugacy"
+      ]
+    },
+    {
+      "module": "SignedCycleOnes",
+      "path": "lean/SignedCycleOnes.lean",
+      "sha256": "ac62d37341c5ab3f913ff95b2f118d43077a631315555cdc3beba7370748979b",
+      "imports": [
+        "TransitiveOrbit"
+      ]
+    },
+    {
+      "module": "ZigzagOnes",
+      "path": "lean/ZigzagOnes.lean",
+      "sha256": "477898434179c94060d5f12714c56e14bb86a0e958a3dcf1d43e21bd28f58505",
+      "imports": [
+        "SignedReferenceConjugacy",
+        "SignedVectorOrbit"
+      ]
+    },
+    {
+      "module": "ReferenceOnesOrbit",
+      "path": "lean/ReferenceOnesOrbit.lean",
+      "sha256": "33aa2ade0c2ee164681ec2dc9ac7f8040f072204820a588a7bb30781ede9fd0f",
+      "imports": [
+        "ZigzagOnes",
+        "SignedCycleOnes",
+        "ReferenceMomentComparison"
+      ]
+    },
+    {
+      "module": "TournamentEnergySeries",
+      "path": "lean/TournamentEnergySeries.lean",
+      "sha256": "2318a948c8f5a08bc180d5e24049b1b88385c04fbb60bf23986f3a15a0029c7d",
+      "imports": [
+        "ReferenceOnesOrbit"
+      ]
+    },
+    {
+      "module": "TournamentEnergyConvergence",
+      "path": "lean/TournamentEnergyConvergence.lean",
+      "sha256": "78c7eb0f643f59f475b6fa833524eb331d9f5038f87735fa01a548c2a54c1b9d",
+      "imports": [
+        "TournamentEnergySeries"
+      ]
+    },
+    {
+      "module": "TournamentEnergyRowDomain",
+      "path": "lean/TournamentEnergyRowDomain.lean",
+      "sha256": "231e7cfacb265d36d17b36828d7541bbaeaa98c735ae4b3a2b252a156005ad30",
+      "imports": [
+        "TournamentEnergyConvergence"
+      ]
+    },
+    {
+      "module": "OnesEnergyEndpoint",
+      "path": "lean/OnesEnergyEndpoint.lean",
+      "sha256": "d406229ec8a3e839f82cd1f4d89941655574040ba8704d0a69b2c7b778f6077d",
+      "imports": [
+        "TournamentEnergyRowDomain"
+      ]
+    },
+    {
+      "module": "TournamentGramGeometric",
+      "path": "lean/TournamentGramGeometric.lean",
+      "sha256": "b9f5c2c380268e8059650001d8f01c60f0b6fa5638c55a8e0d640b20d6431c3e",
+      "imports": [
+        "TournamentEnergyRowDomain"
+      ]
+    },
+    {
+      "module": "ResolventSeriesIdentity",
+      "path": "lean/ResolventSeriesIdentity.lean",
+      "sha256": "38139b465883888507126489b78e7ba28845d25d7fae992535b51884386dd76f",
+      "imports": [
+        "TournamentEnergySeries"
+      ]
+    },
+    {
+      "module": "TournamentSourceResolvent",
+      "path": "lean/TournamentSourceResolvent.lean",
+      "sha256": "75a14c95024fe9d47a4afefbac63b7f884739863cd08467487a2b4b80cd624f6",
+      "imports": [
+        "TournamentGramGeometric",
+        "ResolventSeriesIdentity"
+      ]
+    },
+    {
+      "module": "SourceResolventEndpoint",
+      "path": "lean/SourceResolventEndpoint.lean",
+      "sha256": "0f443e1d49a703bd81956e73a005a075df30005d508958a5d69b9d07f1311795",
+      "imports": [
+        "TournamentSourceResolvent"
+      ]
+    },
+    {
+      "module": "OrdinalSixthPolynomial",
+      "path": "lean/OrdinalSixthPolynomial.lean",
+      "sha256": "a25be6b6b972af937f7d130d4690f8e7f71382eb74490100601a45826ffbce96",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "OrdinalSixthPolynomialEndpoint",
+      "path": "lean/OrdinalSixthPolynomialEndpoint.lean",
+      "sha256": "e744d52f889fe1ddc0a89e8c788aebe22e5d02f80d93529c16ed3d0d6334099a",
+      "imports": [
+        "OrdinalSixthPolynomial"
+      ]
+    },
+    {
+      "module": "TwoBlockEnergy",
+      "path": "lean/TwoBlockEnergy.lean",
+      "sha256": "5d10c73fe4dd222acf88012ea3381ac11080a47d21c12a43d92fc2918c6c75ee",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RectangularFrobenius",
+      "path": "lean/RectangularFrobenius.lean",
+      "sha256": "c7285e0c2769887a5bbefb63340575c7827e11a923c7d4cd3bf230c2e19aa96f",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TwoBlockCubeGeneric",
+      "path": "lean/TwoBlockCubeGeneric.lean",
+      "sha256": "2d9c283e0e2d4c0f0d31c85dfdc9bba2846b32747904761090d95ac6378441e6",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TwoBlockSixthMoment",
+      "path": "lean/TwoBlockSixthMoment.lean",
+      "sha256": "ef070c993a2ba9081a19222987908b7a9cd95a357f6d86c5b6cc407b3e1eb7c4",
+      "imports": [
+        "TwoBlockCubeGeneric",
+        "TwoBlockEnergy",
+        "RectangularFrobenius"
+      ]
+    },
+    {
+      "module": "OrdinalMomentRecurrence",
+      "path": "lean/OrdinalMomentRecurrence.lean",
+      "sha256": "c956c580e8de749650513acf8621415ad67eece333165c04dc8d53ce261fa7fb",
+      "imports": [
+        "OrdinalSixthPolynomial"
+      ]
+    },
+    {
+      "module": "OrdinalBlockMatrix",
+      "path": "lean/OrdinalBlockMatrix.lean",
+      "sha256": "d208c12ac1aeecfad3b2091f522eeae76530526781ef3d591a688ac8409db253",
+      "imports": [
+        "TwoBlockEnergy",
+        "OrdinalMomentRecurrence"
+      ]
+    },
+    {
+      "module": "OrdinalSixthMatrixBridge",
+      "path": "lean/OrdinalSixthMatrixBridge.lean",
+      "sha256": "ff4108a78086f4039821c93b533077eb179db677cc01c733aecb59aea2754a68",
+      "imports": [
+        "OrdinalBlockMatrix",
+        "TwoBlockSixthMoment"
+      ]
+    },
+    {
+      "module": "OrdinalSixthMatrixEndpoint",
+      "path": "lean/OrdinalSixthMatrixEndpoint.lean",
+      "sha256": "f4600ab0a08a8c4f2ab8b3d9e67a22d032c9c5d2bcabb5df74d37efb7a49a6d7",
+      "imports": [
+        "OrdinalSixthMatrixBridge"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Packing",
+      "path": "lean/TournamentHamiltonian/Packing.lean",
+      "sha256": "5dbb12a36a9c199855f59c0ae2a658dfbc246add2d89fc459cb287daf17f4a32",
+      "imports": [
+        "Mathlib.Analysis.Real.Pi.Bounds",
+        "Mathlib.Tactic"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Definitions",
+      "path": "lean/TournamentHamiltonian/Definitions.lean",
+      "sha256": "27f18e9989758e93c7cf738b62a587cc8b12d1345233bd7c813ec0ce5fb31293",
+      "imports": [
+        "Mathlib.Data.Fintype.Perm",
+        "Mathlib.Data.Finset.Lattice.Fold",
+        "Mathlib.LinearAlgebra.Matrix.Permanent",
+        "TournamentHamiltonian.Packing"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PositiveDeterminant",
+      "path": "lean/TournamentHamiltonian/PositiveDeterminant.lean",
+      "sha256": "5e55b4b5eae6ff4a94a19c8281f85365769b57e11f09f2bd9999293b01f5c32b",
+      "imports": [
+        "TournamentHamiltonian.Definitions",
+        "Mathlib.LinearAlgebra.Matrix.Adjugate"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Hadamard",
+      "path": "lean/TournamentHamiltonian/Hadamard.lean",
+      "sha256": "b6b91b14897bf85c60d7f1ee517e5f192879b4481970644a1406019d81da656b",
+      "imports": [
+        "TournamentHamiltonian.PositiveDeterminant",
+        "Mathlib.Analysis.InnerProductSpace.Orientation",
+        "Mathlib.Analysis.MeanInequalities"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Orientation",
+      "path": "lean/TournamentHamiltonian/Orientation.lean",
+      "sha256": "d819a9147d774aacd7403f48e5d2337eec77c41583bb991122869da397f9ea72",
+      "imports": [
+        "TournamentHamiltonian.Definitions",
+        "Mathlib.Logic.Equiv.Prod"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PathConvolution",
+      "path": "lean/TournamentHamiltonian/PathConvolution.lean",
+      "sha256": "24be5c5636c8594feb764f5bcc0e3da721e1e3ae60997c6b4d404d9a57a5e014",
+      "imports": [
+        "TournamentHamiltonian.Hadamard",
+        "TournamentHamiltonian.Orientation",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Powerset"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PathConvolutionCoefficients",
+      "path": "lean/TournamentHamiltonian/PathConvolutionCoefficients.lean",
+      "sha256": "2ced15ee62a5307d950c3d7a4c8a6aedc7a3dd3b730a6c5a55582ccc95d50048",
+      "imports": [
+        "TournamentHamiltonian.Definitions",
+        "Mathlib.GroupTheory.Perm.Cycle.Factors",
+        "Mathlib.GroupTheory.Perm.Sign",
+        "Mathlib.GroupTheory.Perm.Cycle.Type",
+        "Mathlib.Algebra.BigOperators.Pi"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PathConvolutionGenerating",
+      "path": "lean/TournamentHamiltonian/PathConvolutionGenerating.lean",
+      "sha256": "94fb02741c2ec87b063d173adb824941fefca1d8556bcf3faf1e219d8b2508bf",
+      "imports": [
+        "TournamentHamiltonian.PathConvolution",
+        "TournamentHamiltonian.PathConvolutionCoefficients",
+        "Mathlib.GroupTheory.Perm.Fin"
+      ]
+    },
+    {
+      "module": "ActualPathConvolution",
+      "path": "lean/ActualPathConvolution.lean",
+      "sha256": "b3874e6d2dbb668dc28850727acd159981f550f472fb056fa9353d123b848a31",
+      "imports": [
+        "TournamentHamiltonian.PathConvolutionGenerating",
+        "TournamentSequence"
+      ]
+    },
+    {
+      "module": "TransitiveFirstEnergy",
+      "path": "lean/TransitiveFirstEnergy.lean",
+      "sha256": "f5eef087e29b255fc6f9653a45d944c5475cc73bc6c19afb6776d5f72d8cf619",
+      "imports": [
+        "TransitiveOrbit",
+        "TwoBlockEnergy"
+      ]
+    },
+    {
+      "module": "TournamentSourceEnergy",
+      "path": "lean/TournamentSourceEnergy.lean",
+      "sha256": "495af2d917e291b2b964382e1acd9217ef5e3bdb2019806ce1c0f3d81c8c93e7",
+      "imports": [
+        "VectorWeakMajorization",
+        "TournamentPowerComparison",
+        "TwoBlockEnergy"
+      ]
+    },
+    {
+      "module": "SmallBlockSixthEstimate",
+      "path": "lean/SmallBlockSixthEstimate.lean",
+      "sha256": "9f1f8e8a243f3222a88364cf395d59cd0dedb6ce3a8408556f74a7f61315278f",
+      "imports": [
+        "OrdinalSixthPolynomial"
+      ]
+    },
+    {
+      "module": "OrdinalTournamentDeficit",
+      "path": "lean/OrdinalTournamentDeficit.lean",
+      "sha256": "7d4afcf29f832c50721a83e504d118f7de55c9fe63191d3782e86acfde38597d",
+      "imports": [
+        "OrdinalSixthMatrixBridge",
+        "TournamentSourceEnergy",
+        "TransitiveFirstEnergy",
+        "SmallBlockSixthEstimate",
+        "TournamentEnergySeries",
+        "ReferenceMomentComparison"
+      ]
+    },
+    {
+      "module": "OrdinalTransitiveReference",
+      "path": "lean/OrdinalTransitiveReference.lean",
+      "sha256": "1bc757063f4ff76504022b1c76d8cdf8b282f373d828c50a74bc2f7197ecb449",
+      "imports": [
+        "OrdinalBlockMatrix",
+        "TwoBlockSixthMoment",
+        "TransitiveOrbit"
+      ]
+    },
+    {
+      "module": "OrdinalGlobalSixthDeficit",
+      "path": "lean/OrdinalGlobalSixthDeficit.lean",
+      "sha256": "b6fe5e9bc098c1c02b3190fe2719a6beb69af3b99a924b583c50df888dfed68c",
+      "imports": [
+        "OrdinalTournamentDeficit",
+        "OrdinalTransitiveReference"
+      ]
+    },
+    {
+      "module": "GlobalSixthDeficitEndpoint",
+      "path": "lean/GlobalSixthDeficitEndpoint.lean",
+      "sha256": "42ee15800de82fef1974a38d8f6db27128c5de80d8945ade45d468e45bf567ce",
+      "imports": [
+        "OrdinalGlobalSixthDeficit"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.TransitiveDeterminant",
+      "path": "lean/TournamentHamiltonian/TransitiveDeterminant.lean",
+      "sha256": "e507f222af5459ce3f96b55c95b5d84c99e34f70305bbcd48e5d8b416623c320",
+      "imports": [
+        "TournamentHamiltonian.Definitions",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+        "Mathlib.LinearAlgebra.Matrix.Block",
+        "Mathlib.Algebra.Ring.GeomSum"
+      ]
+    },
+    {
+      "module": "DiamondFreeDeterminant",
+      "path": "lean/DiamondFreeDeterminant.lean",
+      "sha256": "589c1f3acd2c71e6f526125adaa74458303c41be0b848d1ee2f9aa02e97103fc",
+      "imports": [
+        "DiamondFreeRepresentation",
+        "TournamentHamiltonian.TransitiveDeterminant",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "PermanentDiagonalExpansion",
+      "path": "lean/PermanentDiagonalExpansion.lean",
+      "sha256": "9e6e562662b7b5ed91b44f9dddf4bf77e7bb1d098de4328b411d5324244d4598",
+      "imports": [
+        "TournamentHamiltonian.PathConvolutionGenerating"
+      ]
+    },
+    {
+      "module": "DiamondFreePathAverage",
+      "path": "lean/DiamondFreePathAverage.lean",
+      "sha256": "b449edd2b2ed4691b5453c0a01bd53cae316ae38660536303703bac9fe1a7e31",
+      "imports": [
+        "ActualPathConvolution",
+        "PermanentDiagonalExpansion",
+        "DiamondFreeDeterminant"
+      ]
+    },
+    {
+      "module": "DiamondTriangleIncidence",
+      "path": "lean/DiamondTriangleIncidence.lean",
+      "sha256": "5c7efad3206384aa2a95047d8572df3fa27a8480379fb3ca500341a9eb1c47c1",
+      "imports": [
+        "DiamondGap"
+      ]
+    },
+    {
+      "module": "TriangleCountBridge",
+      "path": "lean/TriangleCountBridge.lean",
+      "sha256": "82f7175b89a69ab7d85f9f1253cdd88a7982f10a605d4c38dfb4fd15318979fe",
+      "imports": [
+        "DiamondTriangleIncidence",
+        "TournamentSourceEnergy"
+      ]
+    },
+    {
+      "module": "StrongTournamentTriangles",
+      "path": "lean/StrongTournamentTriangles.lean",
+      "sha256": "2790d972ed40a0dfee81a17e34fee127acc96a831b8105b98afc67c9f93f0a54",
+      "imports": [
+        "TournamentSourceEnergy"
+      ]
+    },
+    {
+      "module": "OrdinalTriangleAdditivity",
+      "path": "lean/OrdinalTriangleAdditivity.lean",
+      "sha256": "416b70fe4c5138a0cb4c0098bdd5a80153db97a6b49522959075250e7ccef6cf",
+      "imports": [
+        "OrdinalBlockMatrix",
+        "TournamentSourceEnergy"
+      ]
+    },
+    {
+      "module": "DiamondLinkAverage",
+      "path": "lean/DiamondLinkAverage.lean",
+      "sha256": "05df00d94ff6ac4eef0997ce8da55c17baa875f7d75133cf7f25187a62e5baf6",
+      "imports": [
+        "DiamondFreeRepresentation"
+      ]
+    },
+    {
+      "module": "PivotCycleLink",
+      "path": "lean/PivotCycleLink.lean",
+      "sha256": "8fd2c50905303aad46864517e0c52cc326d49b734bfa5e86245331f5abb14270",
+      "imports": [
+        "DiamondLinkAverage",
+        "DiamondTriangleIncidence"
+      ]
+    },
+    {
+      "module": "PivotSmallDiamond",
+      "path": "lean/PivotSmallDiamond.lean",
+      "sha256": "409f40b4edc4600336c3c75788929e6fa5c4331ff272dbfa00a3e64e18df8d27",
+      "imports": [
+        "PivotCycleLink",
+        "DiamondTriangleIncidence"
+      ]
+    },
+    {
+      "module": "IntegerCycleSumBridge",
+      "path": "lean/IntegerCycleSumBridge.lean",
+      "sha256": "95c11733e4f7688a5b6d1ac1e75cdaf383c86d93e3b071b68cd82a12b167bdee",
+      "imports": [
+        "OrdinalTriangleAdditivity",
+        "TriangleCountBridge"
+      ]
+    },
+    {
+      "module": "PivotMomentInvariant",
+      "path": "lean/PivotMomentInvariant.lean",
+      "sha256": "4ed524b44ec4f87692cbe1c6f4db4f6edeb6a16451ad98120bb0737aba0672d3",
+      "imports": [
+        "PivotCycleLink",
+        "IntegerCycleSumBridge",
+        "SignedConjugacy",
+        "TwoBlockSixthMoment"
+      ]
+    },
+    {
+      "module": "TournamentComponents",
+      "path": "lean/TournamentComponents.lean",
+      "sha256": "0d2b55efbb3219be0570f91d95c4fd9f66d62a4fab2743513bca7ac3c7ef0788",
+      "imports": [
+        "VectorWeakMajorization"
+      ]
+    },
+    {
+      "module": "TournamentComponentBlocks",
+      "path": "lean/TournamentComponentBlocks.lean",
+      "sha256": "41506bed5ee2c0db023866735423a9992b974d632af258c163d000f3802f0bf1",
+      "imports": [
+        "TournamentComponents",
+        "StrongTournamentTriangles"
+      ]
+    },
+    {
+      "module": "SmallDiamondPivotReduction",
+      "path": "lean/SmallDiamondPivotReduction.lean",
+      "sha256": "e459e796f1a641e8ee066182a6b82ca945f9826431c9d7d7ce3fde90986bd2b0",
+      "imports": [
+        "PivotSmallDiamond",
+        "PivotMomentInvariant",
+        "TriangleCountBridge"
+      ]
+    },
+    {
+      "module": "SmallDiamondComponentReduction",
+      "path": "lean/SmallDiamondComponentReduction.lean",
+      "sha256": "876593787eea41f898bdc2e061f760a3a72b59ca860c6bf477dbcbe0291ad7ff",
+      "imports": [
+        "SmallDiamondPivotReduction",
+        "TournamentComponentBlocks"
+      ]
+    },
+    {
+      "module": "SmallDiamondGraphEndpoint",
+      "path": "lean/SmallDiamondGraphEndpoint.lean",
+      "sha256": "0be5a8ef2293f0d115b4465a0a648ab171ac8b7557de58c0756f53582f601e01",
+      "imports": [
+        "SmallDiamondComponentReduction"
+      ]
+    },
+    {
+      "module": "TournamentOrdinalReconstruction",
+      "path": "lean/TournamentOrdinalReconstruction.lean",
+      "sha256": "36f4de7c441e9828a30d2d1962923af4ecb3eef1391efed9ad8635bc36f910d8",
+      "imports": [
+        "TournamentComponentBlocks",
+        "OrdinalTransitiveReference",
+        "OrdinalTriangleAdditivity"
+      ]
+    },
+    {
+      "module": "ActualSmallDiamondSixth",
+      "path": "lean/ActualSmallDiamondSixth.lean",
+      "sha256": "54e13704fc25cf2ce1e89aece793648c310390c3a9f1636454a7a759d37acf5e",
+      "imports": [
+        "TournamentOrdinalReconstruction",
+        "OrdinalGlobalSixthDeficit",
+        "SmallDiamondPivotReduction"
+      ]
+    },
+    {
+      "module": "DiamondFreeKernelDeterminant",
+      "path": "lean/DiamondFreeKernelDeterminant.lean",
+      "sha256": "bc004d75159b765522b962e4b1bf0ef34df54dc0ffd8b6d7933ad957d0afcee5",
+      "imports": [
+        "DiamondFreeDeterminant"
+      ]
+    },
+    {
+      "module": "DiamondFreeKernelLimit",
+      "path": "lean/DiamondFreeKernelLimit.lean",
+      "sha256": "92ddc976819148a5e0599edf997832fd00d259a4e05a6fb29dc09e9948822a7f",
+      "imports": [
+        "DiamondFreeKernelDeterminant",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogBounds"
+      ]
+    },
+    {
+      "module": "DiamondFreeKernelUniform",
+      "path": "lean/DiamondFreeKernelUniform.lean",
+      "sha256": "ade0fe5222e2eb07f444fe872114e504f6dabf309b77ab19e2572824d3a7035e",
+      "imports": [
+        "DiamondFreeKernelLimit",
+        "Mathlib.Topology.UniformSpace.LocallyUniformConvergence"
+      ]
+    },
+    {
+      "module": "DiamondFreeComplexResolvent",
+      "path": "lean/DiamondFreeComplexResolvent.lean",
+      "sha256": "ac5831e604e449e024c851133df97c7554b90a52e4abbdf9cd075863a00fdb4a",
+      "imports": [
+        "DiamondFreeKernelLimit"
+      ]
+    },
+    {
+      "module": "ComplexBinomialRate",
+      "path": "lean/ComplexBinomialRate.lean",
+      "sha256": "59f2cccbf17d61392d0bef30e6d40ad5cee0ff31149b6b0e6751461e95e02857",
+      "imports": [
+        "DiamondFreeKernelUniform"
+      ]
+    },
+    {
+      "module": "ComplexOperatorResolventBound",
+      "path": "lean/ComplexOperatorResolventBound.lean",
+      "sha256": "e4fcc6fb9da2023c8c1c5e3702cff86c2ccfab780a12723241adbc1a6abf2130",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TransitiveKernelInverse",
+      "path": "lean/TransitiveKernelInverse.lean",
+      "sha256": "e90e101bd5ab96f258ca77e0321e8f926df26158d4d3dab34c4ec358e1b4aaae",
+      "imports": [
+        "TournamentHamiltonian.TransitiveDeterminant",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "MatrixEuclideanEntryBound",
+      "path": "lean/MatrixEuclideanEntryBound.lean",
+      "sha256": "d8cee59b8477d5d2b1acf27a4751b755c31d35cd0c773f936cfeadb8596b3e59",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "TransitiveKernelInverseBounds",
+      "path": "lean/TransitiveKernelInverseBounds.lean",
+      "sha256": "ccb75e909e5baf6c93c043ea9cafe9d1571f0f8830e1f7a5a5976547f76ab1b8",
+      "imports": [
+        "TransitiveKernelInverse",
+        "MatrixEuclideanEntryBound",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "DiamondFreeKernelInverseTransfer",
+      "path": "lean/DiamondFreeKernelInverseTransfer.lean",
+      "sha256": "e62e1a7b9f0599d2c7d57f4d6af1774f340697c1413e1ad086808909f61f9378",
+      "imports": [
+        "DiamondFreeKernelDeterminant"
+      ]
+    },
+    {
+      "module": "DiamondFreeKernelOperatorBound",
+      "path": "lean/DiamondFreeKernelOperatorBound.lean",
+      "sha256": "e04c27a58d286fb2e889e829b9761f1daf8a8fcf9437a7e28094663633f32658",
+      "imports": [
+        "DiamondFreeKernelInverseTransfer",
+        "TransitiveKernelInverseBounds",
+        "MatrixEuclideanEntryBound"
+      ]
+    },
+    {
+      "module": "ComplexKernelDiskLower",
+      "path": "lean/ComplexKernelDiskLower.lean",
+      "sha256": "f1556e34d5b0956fd26852d60f308cc0657403c002ef6c0d77f831592dfdeb73",
+      "imports": [
+        "ComplexBinomialRate"
+      ]
+    },
+    {
+      "module": "DiamondFreeDiskResolvent",
+      "path": "lean/DiamondFreeDiskResolvent.lean",
+      "sha256": "c4f27ef10e5b69d537d56bc659975be12574afa0f246599dd6e9347af352cd0a",
+      "imports": [
+        "DiamondFreeKernelOperatorBound",
+        "ComplexKernelDiskLower",
+        "DiamondFreeComplexResolvent"
+      ]
+    },
+    {
+      "module": "ActualComplexScoreSource",
+      "path": "lean/ActualComplexScoreSource.lean",
+      "sha256": "306822f123a9ca3485beed3b68ec911255fe239398caf17b3b8ab150d02f8582",
+      "imports": [
+        "DiamondFreeDiskResolvent"
+      ]
+    },
+    {
+      "module": "GaussianParameterBranch",
+      "path": "lean/GaussianParameterBranch.lean",
+      "sha256": "9225fc25875e38d0eee488c43f46ec01c251b7a6ab6482ff6aad6ed74bc611ea",
+      "imports": [
+        "ComplexBinomialRate",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogDeriv"
+      ]
+    },
+    {
+      "module": "GaussianSourceExponent",
+      "path": "lean/GaussianSourceExponent.lean",
+      "sha256": "4762f4be9c1265f0902b8399e306a1d2529675b45c0d074fd68e91afbaf1ff72",
+      "imports": [
+        "ComplexBinomialRate"
+      ]
+    },
+    {
+      "module": "ComplexResolventAnalytic",
+      "path": "lean/ComplexResolventAnalytic.lean",
+      "sha256": "7cd7dcc868ded7714f9070316fc3b3a71c8c3ae26f170442c455cf7505b1597a",
+      "imports": [
+        "ActualComplexScoreSource"
+      ]
+    },
+    {
+      "module": "ComplexCauchyErrorTransfer",
+      "path": "lean/ComplexCauchyErrorTransfer.lean",
+      "sha256": "95984f6721d6077f8ebf7f1f5fa82fbcf1875f2c1b0f207354872bf9435cb923",
+      "imports": [
+        "Mathlib.Analysis.Complex.Liouville",
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas"
+      ]
+    },
+    {
+      "module": "GaussianScalarFactor",
+      "path": "lean/GaussianScalarFactor.lean",
+      "sha256": "e50aa55df2548090cf90f6960e1405f4c4049102a28c95aca63bdd1ae2d999e3",
+      "imports": [
+        "GaussianParameterBranch",
+        "GaussianSourceExponent",
+        "ComplexKernelDiskLower"
+      ]
+    },
+    {
+      "module": "ActualGaussianSourceExponent",
+      "path": "lean/ActualGaussianSourceExponent.lean",
+      "sha256": "cc5b5982e750f465a8abacc24e00e8263d194495f42aaeeb3bd2053a9591d4dd",
+      "imports": [
+        "GaussianSourceExponent",
+        "GaussianParameterBranch",
+        "ActualComplexScoreSource"
+      ]
+    },
+    {
+      "module": "GaussianDeterminantBranch",
+      "path": "lean/GaussianDeterminantBranch.lean",
+      "sha256": "9759ff38e4efdf86df8ce1f9cc5d36b08e3e1cb831443948000cfcc745ed13ba",
+      "imports": [
+        "GaussianScalarFactor",
+        "DiamondFreeComplexResolvent"
+      ]
+    },
+    {
+      "module": "GaussianSourceProduct",
+      "path": "lean/GaussianSourceProduct.lean",
+      "sha256": "b40135bf39e0e27aaa2d73d2cbb510b0bd55d76797516e546935f887bae13ba2",
+      "imports": [
+        "GaussianScalarFactor",
+        "ActualGaussianSourceExponent"
+      ]
+    },
+    {
+      "module": "GaussianSourceAnalytic",
+      "path": "lean/GaussianSourceAnalytic.lean",
+      "sha256": "9d5e2ccd8163d7fd0238423b8df83ef29e7b6244c46102bb992bdd1f993b42e3",
+      "imports": [
+        "GaussianSourceProduct",
+        "ComplexResolventAnalytic"
+      ]
+    },
+    {
+      "module": "GaussianSourceDerivative",
+      "path": "lean/GaussianSourceDerivative.lean",
+      "sha256": "13eab1c5469ddd61b1f8fa8fa963aba4b46da12c114f6b5b0e99d8760d3cf3ca",
+      "imports": [
+        "GaussianSourceProduct",
+        "GaussianSourceAnalytic",
+        "ComplexCauchyErrorTransfer"
+      ]
+    },
+    {
+      "module": "ComplexSkewSourceIdentity",
+      "path": "lean/ComplexSkewSourceIdentity.lean",
+      "sha256": "7f79ef56b9a486b8e7eab71329473fa735f61fabb82e2b9d4f427891ba9d92b4",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "BlockGaussianDeterminant",
+      "path": "lean/BlockGaussianDeterminant.lean",
+      "sha256": "b019125713c97daa7b90f8260f40fed147cdb9adeedef4da5593051cde7c1bb7",
+      "imports": [
+        "GaussianDeterminantBranch"
+      ]
+    },
+    {
+      "module": "BlockGaussianSourceElimination",
+      "path": "lean/BlockGaussianSourceElimination.lean",
+      "sha256": "7e89c4ee8b838f46f291ac79c6980afb2b4fd9913b0a932b16448712e1cb358f",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RawBlockSourceIdentity",
+      "path": "lean/RawBlockSourceIdentity.lean",
+      "sha256": "090f6bf05b9e4f29f65b8ed69119c16cb380dbdde7b80d966164d037e436ee3e",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RawGaussianSourceScalar",
+      "path": "lean/RawGaussianSourceScalar.lean",
+      "sha256": "ed3eb803b7e2246141dfcbca776746a796a3d54fdff824e1c6e3ff3748ade806",
+      "imports": [
+        "GaussianSourceExponent",
+        "ActualGaussianSourceExponent"
+      ]
+    },
+    {
+      "module": "ActualBlockGaussianSource",
+      "path": "lean/ActualBlockGaussianSource.lean",
+      "sha256": "ddae941a7f5906ee1fd4041981479d1c4053788c915b0dbc43068d3ba5b6aff5",
+      "imports": [
+        "BlockGaussianDeterminant",
+        "BlockGaussianSourceElimination",
+        "ComplexSkewSourceIdentity",
+        "RawBlockSourceIdentity",
+        "RawGaussianSourceScalar",
+        "GaussianSourceProduct"
+      ]
+    },
+    {
+      "module": "BipartitePairingPermanent",
+      "path": "lean/BipartitePairingPermanent.lean",
+      "sha256": "ab14352befbf922582278d39b463639852185e55b52136f3ef2bb10552e12fa9",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Permanent",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Basic"
+      ]
+    },
+    {
+      "module": "WickPairingZero",
+      "path": "lean/WickPairingZero.lean",
+      "sha256": "d7405ba94d018ca895f6845ef90704cbe94f048e49c7b6ef070a848e4f896ab8",
+      "imports": [
+        "BipartitePairingPermanent",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "WickBipartiteEquiv",
+      "path": "lean/WickBipartiteEquiv.lean",
+      "sha256": "a776389691f35ff037ba7aeea3e87cd94e8196d058cf79c2fca700acbfc66526",
+      "imports": [
+        "WickPairingZero"
+      ]
+    },
+    {
+      "module": "WickPairingPermanent",
+      "path": "lean/WickPairingPermanent.lean",
+      "sha256": "272abcc70f288084793e4e79654673d3f8f421b0914953588a32a4a17e79cdb7",
+      "imports": [
+        "WickBipartiteEquiv"
+      ]
+    },
+    {
+      "module": "RectangularPairing",
+      "path": "lean/RectangularPairing.lean",
+      "sha256": "ddb0ae94f2a166601777211079763bd9852873d867e9cae3835a870f81b0d0fb",
+      "imports": [
+        "WickPairingPermanent"
+      ]
+    },
+    {
+      "module": "FinitePairingTransport",
+      "path": "lean/FinitePairingTransport.lean",
+      "sha256": "cf2e8425de97f828e81081cdae351f621d3a69faac4572875ac29cc79ad9390c",
+      "imports": [
+        "RectangularPairing"
+      ]
+    },
+    {
+      "module": "FinitePairingPermanent",
+      "path": "lean/FinitePairingPermanent.lean",
+      "sha256": "a34d9032862903d27c03dc4a6d0e56488d1e1f7e66f934ca92031479317b5079",
+      "imports": [
+        "FinitePairingTransport"
+      ]
+    },
+    {
+      "module": "SubsetPairingPermanent",
+      "path": "lean/SubsetPairingPermanent.lean",
+      "sha256": "bd5f05bfc4776a8cb9e31cce7624bb5a8e8dfac2d66895780f823ded6b1082c3",
+      "imports": [
+        "FinitePairingPermanent"
+      ]
+    },
+    {
+      "module": "SubsetPairingScaling",
+      "path": "lean/SubsetPairingScaling.lean",
+      "sha256": "c6f7b0368f5ace90100ca15545ee21e8a3101f0cf7765c009398c1b4225c1125",
+      "imports": [
+        "SubsetPairingPermanent"
+      ]
+    },
+    {
+      "module": "FrozenPartialPairingPolynomial",
+      "path": "lean/FrozenPartialPairingPolynomial.lean",
+      "sha256": "503c9cbdc732f54ad84bdf8e79566aa4710aa5ace69aaf39b1a06967ea66e4b4",
+      "imports": [
+        "SubsetPairingScaling",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Powerset",
+        "Mathlib.Algebra.Polynomial.Eval.Defs"
+      ]
+    },
+    {
+      "module": "ShiftedProductSubsetExpansion",
+      "path": "lean/ShiftedProductSubsetExpansion.lean",
+      "sha256": "a9d952cb96f2a6a75f9fb805a25ab34f01402f41a3ace184a54c8a8905d48071",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SquarefreePairingContraction",
+      "path": "lean/SquarefreePairingContraction.lean",
+      "sha256": "576b3f08a6fec9d0c9b3edbf50c573b12fb049db92877806b3e9ad762b3a1aba",
+      "imports": [
+        "FrozenPartialPairingPolynomial",
+        "ShiftedProductSubsetExpansion"
+      ]
+    },
+    {
+      "module": "FrozenPairingEndpoints",
+      "path": "lean/FrozenPairingEndpoints.lean",
+      "sha256": "b340364af123f1716c1969296cb85f5e40c8d98da8c473d55a540739e9e15561",
+      "imports": [
+        "FrozenPartialPairingPolynomial",
+        "Mathlib.Algebra.Polynomial.BigOperators"
+      ]
+    },
+    {
+      "module": "RepeatedLabelPairing",
+      "path": "lean/RepeatedLabelPairing.lean",
+      "sha256": "e755343ff6eb51b84038a70183524f2d510208cb51461257142c22947016c5e7",
+      "imports": [
+        "WickPairingPermanent"
+      ]
+    },
+    {
+      "module": "FullFourthMoment",
+      "path": "lean/FullFourthMoment.lean",
+      "sha256": "2385e80b47daafbac1f685c3e26a4c6f6ca3c34ae5713f4f9ad2d3116d6aacff",
+      "imports": [
+        "RepeatedLabelPairing"
+      ]
+    },
+    {
+      "module": "SymmetricPairingTransport",
+      "path": "lean/SymmetricPairingTransport.lean",
+      "sha256": "11f1de5fafbbe13abb128d60520625189305e34d371b16b836e02e340c970459",
+      "imports": [
+        "FinitePairingTransport",
+        "Mathlib.Data.Sym.Sym2"
+      ]
+    },
+    {
+      "module": "PairingRepresentativeBridge",
+      "path": "lean/PairingRepresentativeBridge.lean",
+      "sha256": "2a438da79c2f3faab9eed564d2ade507ea6a107dc02da3d5ed6f8a5a8496d3a7",
+      "imports": [
+        "SymmetricPairingTransport",
+        "RepeatedLabelPairing"
+      ]
+    },
+    {
+      "module": "OccurrenceWickPolynomial",
+      "path": "lean/OccurrenceWickPolynomial.lean",
+      "sha256": "d0dd9ab8d71d5d789f5e6f94c09bf428cc0692ca3a05280538345acb415645b0",
+      "imports": [
+        "PairingRepresentativeBridge",
+        "Mathlib.LinearAlgebra.Finsupp.LinearCombination"
+      ]
+    },
+    {
+      "module": "OccurrenceSquarefreeEquiv",
+      "path": "lean/OccurrenceSquarefreeEquiv.lean",
+      "sha256": "2192ee8d78a34252a8b37d8428aaf047c4e5582eb1a37edcd38abf5a0fd06c24",
+      "imports": [
+        "OccurrenceWickPolynomial",
+        "SquarefreePairingContraction"
+      ]
+    },
+    {
+      "module": "OrderedUnorderedSubsetPairing",
+      "path": "lean/OrderedUnorderedSubsetPairing.lean",
+      "sha256": "a4c3c11eb2ed28250a47af8b9930066f46b7c5e20d9e8005ec90dc5c1783ac3c",
+      "imports": [
+        "PairingRepresentativeBridge",
+        "SubsetPairingScaling"
+      ]
+    },
+    {
+      "module": "FullWickSquarefreeCompatibility",
+      "path": "lean/FullWickSquarefreeCompatibility.lean",
+      "sha256": "071491539f6400d9307336d88f554368841403b18857a233d9b87da931e78afb",
+      "imports": [
+        "OccurrenceSquarefreeEquiv",
+        "OrderedUnorderedSubsetPairing"
+      ]
+    },
+    {
+      "module": "PairingDeletion",
+      "path": "lean/PairingDeletion.lean",
+      "sha256": "7b23dbc1dcb5e7e6e2d660c950698b0758ba95e374f316fe58f4a0b0fc82b743",
+      "imports": [
+        "SymmetricPairingTransport"
+      ]
+    },
+    {
+      "module": "PairingMomentRecurrence",
+      "path": "lean/PairingMomentRecurrence.lean",
+      "sha256": "d7b0cfb9c8bf59925cbbc019fa12fe8001a6ac0f6a3bbbeee022d9e69e322eef",
+      "imports": [
+        "PairingDeletion"
+      ]
+    },
+    {
+      "module": "PairingMomentParity",
+      "path": "lean/PairingMomentParity.lean",
+      "sha256": "624812e5c081409ba29eadde15371204ef3db45eea654d8fa0ee04b220568ff8",
+      "imports": [
+        "PairingMomentRecurrence",
+        "Mathlib.Combinatorics.SimpleGraph.Matching"
+      ]
+    },
+    {
+      "module": "ConstantPairingMoments",
+      "path": "lean/ConstantPairingMoments.lean",
+      "sha256": "d346619b9def2f02db66dd7c8418123832858ff37df599774b62a641fbb59233",
+      "imports": [
+        "PairingMomentParity"
+      ]
+    },
+    {
+      "module": "ConstantPairingCount",
+      "path": "lean/ConstantPairingCount.lean",
+      "sha256": "99e10e30884c0c9391370a9f99370180d8f7a4b9d17e0c4f44fc1edfa3ee7097",
+      "imports": [
+        "ConstantPairingMoments"
+      ]
+    },
+    {
+      "module": "ConstantPairingFormalExponential",
+      "path": "lean/ConstantPairingFormalExponential.lean",
+      "sha256": "07bbea389282cd512cd5484bfe166f16a28a3acc0a2f2d89860813a942b76a28",
+      "imports": [
+        "ConstantPairingMoments",
+        "Mathlib.RingTheory.PowerSeries.Exp",
+        "Mathlib.RingTheory.PowerSeries.Expand"
+      ]
+    },
+    {
+      "module": "ScalarWickFormalExponential",
+      "path": "lean/ScalarWickFormalExponential.lean",
+      "sha256": "a1983772cef61e0a9525bed17185ed76231252b7aa9faf1bea05ff66907523b8",
+      "imports": [
+        "ConstantPairingFormalExponential",
+        "OccurrenceWickPolynomial"
+      ]
+    },
+    {
+      "module": "LinearSourceOccurrences",
+      "path": "lean/LinearSourceOccurrences.lean",
+      "sha256": "1f46d0f42cd3d839ba2b2f3cad45305857a08c4321b582764bf5c101b5452694",
+      "imports": [
+        "OccurrenceWickPolynomial",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "LinearSourceExpansion",
+      "path": "lean/LinearSourceExpansion.lean",
+      "sha256": "d8b112841eb27dd621025cfa2e7cced2677cae975967192ac038a7d0e10421dc",
+      "imports": [
+        "LinearSourceOccurrences",
+        "Mathlib.Algebra.MvPolynomial.Basic"
+      ]
+    },
+    {
+      "module": "PairingEndpointEquiv",
+      "path": "lean/PairingEndpointEquiv.lean",
+      "sha256": "9c5f34e12d2d4294f0cd80d53861eb117f2698a71da32ae3a52741118ba16c27",
+      "imports": [
+        "PairingRepresentativeBridge"
+      ]
+    },
+    {
+      "module": "LinearSourcePairingFactor",
+      "path": "lean/LinearSourcePairingFactor.lean",
+      "sha256": "a8b80e63c23f4a78c3489be9e33fdbed31fee0233e8419c6f4313fa7c4dfb9ab",
+      "imports": [
+        "PairingEndpointEquiv",
+        "LinearSourceExpansion"
+      ]
+    },
+    {
+      "module": "MultivariateLinearFormalExponential",
+      "path": "lean/MultivariateLinearFormalExponential.lean",
+      "sha256": "a02f9cd1ac47e4e19d83be00e4660198336cec7ba983e5605165796b85e34750",
+      "imports": [
+        "LinearSourcePairingFactor",
+        "ConstantPairingFormalExponential"
+      ]
+    },
+    {
+      "module": "RankOneQuadraticCoefficients",
+      "path": "lean/RankOneQuadraticCoefficients.lean",
+      "sha256": "1a0e64fb25d4a0747a74ea9acd6789e58bdd0f64c0eb1c7f9988e37a59048616",
+      "imports": [
+        "MultivariateLinearFormalExponential",
+        "Mathlib.RingTheory.PowerSeries.Derivative"
+      ]
+    },
+    {
+      "module": "RankOneQuadraticODE",
+      "path": "lean/RankOneQuadraticODE.lean",
+      "sha256": "eabc878fb679e506618dffb1ac36e115902d56944cc7187c279c93e69c6c479e",
+      "imports": [
+        "RankOneQuadraticCoefficients"
+      ]
+    },
+    {
+      "module": "RankOneQuadraticUnitBranch",
+      "path": "lean/RankOneQuadraticUnitBranch.lean",
+      "sha256": "ab733dbd107278f43ace570c0171f268c3e3013f4272b032875e837bad86651a",
+      "imports": [
+        "RankOneQuadraticODE"
+      ]
+    },
+    {
+      "module": "RankOneQuadraticDeterminant",
+      "path": "lean/RankOneQuadraticDeterminant.lean",
+      "sha256": "a3cee339128e51f8d16b52eadfbd341710a056f2fa06cd06bc1825216f63187f",
+      "imports": [
+        "RankOneQuadraticUnitBranch",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    {
+      "module": "AssignmentDeletionExponent",
+      "path": "lean/AssignmentDeletionExponent.lean",
+      "sha256": "36073ed67feba31ce994980a13c332470e4b0d328a1a544b42e19a5e53b924c5",
+      "imports": [
+        "LinearSourceOccurrences"
+      ]
+    },
+    {
+      "module": "OptionPairingDeletion",
+      "path": "lean/OptionPairingDeletion.lean",
+      "sha256": "a90690467c23b66e41f28a44df76af0a6aa609b8b142de49423fb3d0804fa352",
+      "imports": [
+        "AssignmentDeletionExponent",
+        "PairingMomentRecurrence"
+      ]
+    },
+    {
+      "module": "FullWickMonomialRecurrence",
+      "path": "lean/FullWickMonomialRecurrence.lean",
+      "sha256": "59470a09861d3cc75e2e5ddea1a047de60e9c907be160a2f21670b380e00e752",
+      "imports": [
+        "OptionPairingDeletion"
+      ]
+    },
+    {
+      "module": "FullWickPolynomialIBP",
+      "path": "lean/FullWickPolynomialIBP.lean",
+      "sha256": "2f3c35a26b2d5160cb3f4f5f755348f92080fd1cad5ed1ea858fbd695414a40a",
+      "imports": [
+        "FullWickMonomialRecurrence",
+        "Mathlib.Algebra.MvPolynomial.PDeriv"
+      ]
+    },
+    {
+      "module": "FormalLinearLift",
+      "path": "lean/FormalLinearLift.lean",
+      "sha256": "1b28c36439ba95382cc85ce04a8d3d504005952a15369fd5bedc664abc59b809",
+      "imports": [
+        "FullWickPolynomialIBP",
+        "Mathlib.RingTheory.PowerSeries.Exp",
+        "Mathlib.RingTheory.PowerSeries.Expand"
+      ]
+    },
+    {
+      "module": "FormalDividedPowers",
+      "path": "lean/FormalDividedPowers.lean",
+      "sha256": "4ff31de2a25ed94effaf8b9d6a3ec87358e48ecc84b5ca78debab6582ad4d38f",
+      "imports": [
+        "FormalLinearLift"
+      ]
+    },
+    {
+      "module": "FormalMixedExponential",
+      "path": "lean/FormalMixedExponential.lean",
+      "sha256": "63248f6592447840943f1163aa95cd2407611eb743ee147033f2c8fd31601917",
+      "imports": [
+        "FormalDividedPowers"
+      ]
+    },
+    {
+      "module": "MixedSourcePolynomials",
+      "path": "lean/MixedSourcePolynomials.lean",
+      "sha256": "7f2bbd095210e6bbb55dbfbdf7a3ea61f0c51d558c0d5831ae9f024cbc99754b",
+      "imports": [
+        "FormalMixedExponential",
+        "LinearSourceExpansion"
+      ]
+    },
+    {
+      "module": "FormalWickInsertion",
+      "path": "lean/FormalWickInsertion.lean",
+      "sha256": "28ae10c7b96c4749f35bc9eacba87fa9e765b5d742ddfba73605da86fac43110",
+      "imports": [
+        "MixedSourcePolynomials"
+      ]
+    },
+    {
+      "module": "ActualMixedSourceWard",
+      "path": "lean/ActualMixedSourceWard.lean",
+      "sha256": "0ed077cf31c0074f2a76f5fe21d1eadd0799d634d9c166dac2670f40aa846be2",
+      "imports": [
+        "FormalWickInsertion"
+      ]
+    },
+    {
+      "module": "ActualMixedWardMatrix",
+      "path": "lean/ActualMixedWardMatrix.lean",
+      "sha256": "43f35de6cdbf74f0c644022e454ea0efc12160474c230eb0e2e19892562fd54f",
+      "imports": [
+        "ActualMixedSourceWard",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    {
+      "module": "MixedWardUnit",
+      "path": "lean/MixedWardUnit.lean",
+      "sha256": "5982f44c3ebad315783c701ded4f1010ca215727e4573a81072c50b339a1f353",
+      "imports": [
+        "ActualMixedWardMatrix"
+      ]
+    },
+    {
+      "module": "MixedFormalTimeDerivative",
+      "path": "lean/MixedFormalTimeDerivative.lean",
+      "sha256": "f458e62f3e6bc3ad68fc7a3c75ab5a32410824958e6a0b572d8203e5bfcda59c",
+      "imports": [
+        "ActualMixedSourceWard",
+        "Mathlib.RingTheory.PowerSeries.Derivative"
+      ]
+    },
+    {
+      "module": "MixedWardSolution",
+      "path": "lean/MixedWardSolution.lean",
+      "sha256": "ca98a05695eaf496a62cafb85993662c0cdf0b8693aa82a7514cfb58895d7d07",
+      "imports": [
+        "MixedWardUnit"
+      ]
+    },
+    {
+      "module": "ActualMixedSourceTimeODE",
+      "path": "lean/ActualMixedSourceTimeODE.lean",
+      "sha256": "ceeb7b5449bb6ed0e5877578abeec972281f0c02146148d6f912bf6b98825efd",
+      "imports": [
+        "MixedFormalTimeDerivative",
+        "MixedWardSolution",
+        "PairingMomentParity"
+      ]
+    },
+    {
+      "module": "DerivationFiniteProduct",
+      "path": "lean/DerivationFiniteProduct.lean",
+      "sha256": "0ed1363d6f691e95e6fcc89965fc7cf8720bfb4267b5eef924a5776df8a53ebd",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "DerivationDeterminantColumns",
+      "path": "lean/DerivationDeterminantColumns.lean",
+      "sha256": "c674f8f06994e433ff6139e6c795a80a1f523b65b2f5cf83423696845267683f",
+      "imports": [
+        "DerivationFiniteProduct"
+      ]
+    },
+    {
+      "module": "FullJacobiDerivation",
+      "path": "lean/FullJacobiDerivation.lean",
+      "sha256": "54c7f9f23283f3b71199108f1a1e0466ade3b4bd50c27fa6c44df4e4c112717e",
+      "imports": [
+        "DerivationDeterminantColumns"
+      ]
+    },
+    {
+      "module": "FormalFirstOrderUniqueness",
+      "path": "lean/FormalFirstOrderUniqueness.lean",
+      "sha256": "4f2262d76670ce377cd09ca4b2d7fde41c915dfffcabd46e6cd17ca558e68bff",
+      "imports": [
+        "ActualMixedSourceTimeODE"
+      ]
+    },
+    {
+      "module": "NormalizedDeterminantBranch",
+      "path": "lean/NormalizedDeterminantBranch.lean",
+      "sha256": "ed3bc207e871066cc364b58638caabf537dcfb4b8f71cedefc03c785dec048d3",
+      "imports": [
+        "MixedWardUnit",
+        "Mathlib.RingTheory.PowerSeries.Binomial",
+        "Mathlib.RingTheory.PowerSeries.Substitution"
+      ]
+    },
+    {
+      "module": "ActualMixedDeterminantJacobi",
+      "path": "lean/ActualMixedDeterminantJacobi.lean",
+      "sha256": "0f0947bf0cb613c7db1622bdc8c9749c84b88dc466bbcee934763bdd0f36c0fb",
+      "imports": [
+        "FullJacobiDerivation",
+        "NormalizedDeterminantBranch"
+      ]
+    },
+    {
+      "module": "ActualDeterminantBranchDerivative",
+      "path": "lean/ActualDeterminantBranchDerivative.lean",
+      "sha256": "33cd8ccd8a84403095d2fdd90f587b335573def65fcecde3a9bbfd4c05d6a93e",
+      "imports": [
+        "ActualMixedDeterminantJacobi"
+      ]
+    },
+    {
+      "module": "MatrixDerivationInverse",
+      "path": "lean/MatrixDerivationInverse.lean",
+      "sha256": "0f4f64108611a35377985bccaa08f4d0d6201e55ac4f914b1c9e2f059ad0a029",
+      "imports": [
+        "FullJacobiDerivation"
+      ]
+    },
+    {
+      "module": "MixedCovarianceSymmetry",
+      "path": "lean/MixedCovarianceSymmetry.lean",
+      "sha256": "641b2d896514225cbc27d0be525784648efb993051dc62ef10f116010ad161ab",
+      "imports": [
+        "MixedWardSolution"
+      ]
+    },
+    {
+      "module": "MixedCovarianceDerivative",
+      "path": "lean/MixedCovarianceDerivative.lean",
+      "sha256": "b704e1da06999665ea9ed456d151fbdc574e7c3f94f24128a28a6a90860f4a4e",
+      "imports": [
+        "MixedCovarianceSymmetry",
+        "MatrixDerivationInverse"
+      ]
+    },
+    {
+      "module": "MixedSourceQuadraticDerivative",
+      "path": "lean/MixedSourceQuadraticDerivative.lean",
+      "sha256": "97b9eb193d793433bcb3e74f272a33610893495feebe7f92caa83a2819370532",
+      "imports": [
+        "MixedCovarianceDerivative"
+      ]
+    },
+    {
+      "module": "MixedDeterminantCandidateODE",
+      "path": "lean/MixedDeterminantCandidateODE.lean",
+      "sha256": "32314e82f2e6b6d97db14063d6ba8000f0031806d469b6008b6e2ff786f3569a",
+      "imports": [
+        "ActualDeterminantBranchDerivative",
+        "MixedSourceQuadraticDerivative",
+        "FormalFirstOrderUniqueness"
+      ]
+    },
+    {
+      "module": "ActualMixedDeterminantFormula",
+      "path": "lean/ActualMixedDeterminantFormula.lean",
+      "sha256": "5aefecb47272c3f6ac84fd4977c66fcb925f4821f2dcbdd69c1d9dbf0ef882b6",
+      "imports": [
+        "MixedDeterminantCandidateODE"
+      ]
+    },
+    {
+      "module": "MixedEvenMatrix",
+      "path": "lean/MixedEvenMatrix.lean",
+      "sha256": "abea6098c22da0d88dbedd5dbce79ecb1caff55bd8314979bc1721b6fc24af8c",
+      "imports": [
+        "ActualMixedDeterminantFormula"
+      ]
+    },
+    {
+      "module": "MixedEvenCandidate",
+      "path": "lean/MixedEvenCandidate.lean",
+      "sha256": "da3e29ef7f6a1b45c8bcff56cd59f73e66005e4d565f2762575cdc1c80203eab",
+      "imports": [
+        "MixedEvenMatrix"
+      ]
+    },
+    {
+      "module": "ActualMixedEvenDescent",
+      "path": "lean/ActualMixedEvenDescent.lean",
+      "sha256": "44c69219b8d0fd342a07b608c89da9049c1b9145f47be8f286f27c591289e497",
+      "imports": [
+        "MixedEvenCandidate"
+      ]
+    },
+    {
+      "module": "RawFormalMixedSpecialization",
+      "path": "lean/RawFormalMixedSpecialization.lean",
+      "sha256": "977eca6c84fbe9afe4987b639a091628e3802703dfdb2f0491f8161e79ff03ce",
+      "imports": [
+        "ActualMixedEvenDescent"
+      ]
+    },
+    {
+      "module": "TournamentRawFormalWick",
+      "path": "lean/TournamentRawFormalWick.lean",
+      "sha256": "e8e637ccc9200ef1008408b44137148f4156b5dd76ad35ffecbe2d8384fc379c",
+      "imports": [
+        "RawFormalMixedSpecialization",
+        "BlockGaussianDeterminant"
+      ]
+    },
+    {
+      "module": "AnalyticNormalizedBranch",
+      "path": "lean/AnalyticNormalizedBranch.lean",
+      "sha256": "2d85334591442128a72fe4dc3658f8c14dd913ed2f35674421e4bfbe27d9c7e8",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "AnalyticTaylorArithmetic",
+      "path": "lean/AnalyticTaylorArithmetic.lean",
+      "sha256": "5cf554f40007a0321434b556d9ad54d45ec73fbfd59414b1d3a76f18ab4dc6a3",
+      "imports": [
+        "AnalyticNormalizedBranch"
+      ]
+    },
+    {
+      "module": "AnalyticTaylorFinite",
+      "path": "lean/AnalyticTaylorFinite.lean",
+      "sha256": "3031f9bd57717a25fa161c82b127eb3e2eeb0c2534b347906252a89304bb6109",
+      "imports": [
+        "AnalyticTaylorArithmetic"
+      ]
+    },
+    {
+      "module": "AnalyticTaylorInverse",
+      "path": "lean/AnalyticTaylorInverse.lean",
+      "sha256": "d0601a04ed65b671ea7ca59b157d18f1e9114b76d8f56508b09d90bd20e28c86",
+      "imports": [
+        "AnalyticTaylorFinite"
+      ]
+    },
+    {
+      "module": "AffineMatrixTaylorBridge",
+      "path": "lean/AffineMatrixTaylorBridge.lean",
+      "sha256": "651203e76c064c32a6bf604f7c9e99901dbbcc7d61e3b264d9f9cfcf57d27277",
+      "imports": [
+        "AnalyticTaylorInverse"
+      ]
+    },
+    {
+      "module": "AnalyticTaylorBranch",
+      "path": "lean/AnalyticTaylorBranch.lean",
+      "sha256": "fd6b2c3c99f3a86b3480bec35fef2827fba548beb6c94d2bd704844b896efed0",
+      "imports": [
+        "AffineMatrixTaylorBridge",
+        "NormalizedDeterminantBranch"
+      ]
+    },
+    {
+      "module": "ActualGaussianTaylorBranch",
+      "path": "lean/ActualGaussianTaylorBranch.lean",
+      "sha256": "bdd6c1128cf05e66a8a3925f67fe9f34c5355fcfe6e2cb3be2569751da008765",
+      "imports": [
+        "AnalyticTaylorBranch",
+        "ActualBlockGaussianSource"
+      ]
+    },
+    {
+      "module": "TaylorDerivativeExponential",
+      "path": "lean/TaylorDerivativeExponential.lean",
+      "sha256": "43d37f556351ccd15623412c90f5628a15ec63961f4c9a1c7cd8efa0e61dee0a",
+      "imports": [
+        "AnalyticTaylorBranch",
+        "FormalFirstOrderUniqueness"
+      ]
+    },
+    {
+      "module": "RawSourceTaylorBridge",
+      "path": "lean/RawSourceTaylorBridge.lean",
+      "sha256": "e564d6971c7513b6d6ed8c9ebb8ea457a8524ffe9e6fdb41aa1b682367beab5a",
+      "imports": [
+        "AffineMatrixTaylorBridge",
+        "RawFormalMixedSpecialization"
+      ]
+    },
+    {
+      "module": "TournamentRawWickAnalytic",
+      "path": "lean/TournamentRawWickAnalytic.lean",
+      "sha256": "9c2490b321324f72331e0703b0dbc093c748ca6fd13ecaa7aae587c2942cbe35",
+      "imports": [
+        "RawSourceTaylorBridge",
+        "TaylorDerivativeExponential",
+        "ActualGaussianTaylorBranch",
+        "TournamentRawFormalWick"
+      ]
+    },
+    {
+      "module": "ActualProductWickGerm",
+      "path": "lean/ActualProductWickGerm.lean",
+      "sha256": "440550d0d012ce065f7ccfff24df3fd27ea430a7bf3d2022fa08ad2afe944209",
+      "imports": [
+        "TournamentRawWickAnalytic"
+      ]
+    },
+    {
+      "module": "WickAnalyticDiskTransfer",
+      "path": "lean/WickAnalyticDiskTransfer.lean",
+      "sha256": "88e0317285e63cd85312969e982c5a5e2dd69498ea7c2c5e77f65f5511260435",
+      "imports": [
+        "ActualProductWickGerm",
+        "Mathlib.Analysis.Complex.TaylorSeries"
+      ]
+    },
+    {
+      "module": "ActualWickUniformDisk",
+      "path": "lean/ActualWickUniformDisk.lean",
+      "sha256": "2547384905bdcb85c696c38ceabccc869af6ca2f3046dc287d1080228f1d4c86",
+      "imports": [
+        "WickAnalyticDiskTransfer",
+        "GaussianSourceAnalytic"
+      ]
+    },
+    {
+      "module": "WickCoefficientCauchy",
+      "path": "lean/WickCoefficientCauchy.lean",
+      "sha256": "da74906c111e9f4eee978a6f790fb5150153554becf975b5d521a2f9ec34474d",
+      "imports": [
+        "WickAnalyticDiskTransfer",
+        "Mathlib.Analysis.Complex.Liouville"
+      ]
+    },
+    {
+      "module": "ActualWickCoefficientBounds",
+      "path": "lean/ActualWickCoefficientBounds.lean",
+      "sha256": "b8667118a865e077d017f222bf916f1573583509eeb0c9fccc9f9fdf2d2213af",
+      "imports": [
+        "ActualWickUniformDisk",
+        "WickCoefficientCauchy"
+      ]
+    },
+    {
+      "module": "WickGeometricTruncation",
+      "path": "lean/WickGeometricTruncation.lean",
+      "sha256": "e4b65cb6e5976775e8fffbfac90fea1a0ba9ec1220d3219bc3a09203cc28f07e",
+      "imports": [
+        "ActualWickCoefficientBounds"
+      ]
+    },
+    {
+      "module": "ActualWickTruncation",
+      "path": "lean/ActualWickTruncation.lean",
+      "sha256": "8a1eed8fbb6b61d6ffd0d3b1679682e8fe84e9884f5e41be3e40e5ddf1f67e3f",
+      "imports": [
+        "WickGeometricTruncation"
+      ]
+    },
+    {
+      "module": "PolynomialInsertionWard",
+      "path": "lean/PolynomialInsertionWard.lean",
+      "sha256": "992af58541affc687dec9ceac26d09e8fcbbeff38829cc3117b5441290f48639",
+      "imports": [
+        "MixedWardSolution"
+      ]
+    },
+    {
+      "module": "PolynomialTiltedRecurrence",
+      "path": "lean/PolynomialTiltedRecurrence.lean",
+      "sha256": "141beca19c01235a98ab8c443aeded5390afefdeada6543b2e2149c2d229b826",
+      "imports": [
+        "PolynomialInsertionWard",
+        "ActualMixedSourceTimeODE"
+      ]
+    },
+    {
+      "module": "PhysicalTiltedCovariance",
+      "path": "lean/PhysicalTiltedCovariance.lean",
+      "sha256": "42f7d80a1b45f04ff612ed5758ac94e578a3d30313a3b3f51c1e4221b2b4cc73",
+      "imports": [
+        "MixedEvenMatrix",
+        "PolynomialTiltedRecurrence"
+      ]
+    },
+    {
+      "module": "OccurrenceWordDerivative",
+      "path": "lean/OccurrenceWordDerivative.lean",
+      "sha256": "cf3537f88490d2a2fc142a897ddf62409a0851abfc0ec294a5b75d4c6fc864cd",
+      "imports": [
+        "PolynomialTiltedRecurrence",
+        "Mathlib.Algebra.BigOperators.Ring.List"
+      ]
+    },
+    {
+      "module": "PhysicalWordRecurrence",
+      "path": "lean/PhysicalWordRecurrence.lean",
+      "sha256": "c906c3eae87664f4f45725a04cd217deffd283f82fd88c4b2d0ef335351278e8",
+      "imports": [
+        "OccurrenceWordDerivative",
+        "PhysicalTiltedCovariance"
+      ]
+    },
+    {
+      "module": "PhysicalWordEvenDescent",
+      "path": "lean/PhysicalWordEvenDescent.lean",
+      "sha256": "f6b23bf623bce1a1d0a7fa10fadea3cc414f6099302e004cb2f4a118db78455b",
+      "imports": [
+        "PhysicalWordRecurrence"
+      ]
+    },
+    {
+      "module": "PhysicalWordCoefficientOrder",
+      "path": "lean/PhysicalWordCoefficientOrder.lean",
+      "sha256": "215d6426a0234ff449f6a146c94f4c8c1d519435d36856fdd4c21ed618b9cd34",
+      "imports": [
+        "PhysicalWordEvenDescent"
+      ]
+    },
+    {
+      "module": "AlgebraFormalExponential",
+      "path": "lean/AlgebraFormalExponential.lean",
+      "sha256": "c998ab12ea21cba068ad2bd0dde5557a5c1429a30b1532d17965af3ffc4c6098",
+      "imports": [
+        "MixedFormalTimeDerivative"
+      ]
+    },
+    {
+      "module": "FactorizedResidualIdentity",
+      "path": "lean/FactorizedResidualIdentity.lean",
+      "sha256": "29f270dcf66093a21ea65186faa7986f88d8c91035e2fe13ecab1c086c6a9e3f",
+      "imports": [
+        "AlgebraFormalExponential"
+      ]
+    },
+    {
+      "module": "ResidualLowCoefficients",
+      "path": "lean/ResidualLowCoefficients.lean",
+      "sha256": "648a929882dcde28facf69c23792c1ce525ecd8581883f149246d0c9efac67ab",
+      "imports": [
+        "FactorizedResidualIdentity"
+      ]
+    },
+    {
+      "module": "ResidualInsertionConvolution",
+      "path": "lean/ResidualInsertionConvolution.lean",
+      "sha256": "032f797ee7c3e5722a4a037bb78e571562349387fc333e86a4d865c65b36c710",
+      "imports": [
+        "FactorizedResidualIdentity",
+        "PolynomialTiltedRecurrence"
+      ]
+    },
+    {
+      "module": "FrozenSeriesGrouping",
+      "path": "lean/FrozenSeriesGrouping.lean",
+      "sha256": "15ac093eac99a718157b85a54462237ec4aafa501c056a055d66b9f38c3e330d",
+      "imports": [
+        "FrozenPartialPairingPolynomial",
+        "Mathlib.RingTheory.PowerSeries.Basic"
+      ]
+    },
+    {
+      "module": "ShiftedWickFrozenSeries",
+      "path": "lean/ShiftedWickFrozenSeries.lean",
+      "sha256": "d9f489d52230b2004bbb1ea3726408f0d1c3ab2d9c1b8386a2abab995da9a5a0",
+      "imports": [
+        "FrozenSeriesGrouping",
+        "FullWickSquarefreeCompatibility",
+        "FactorizedResidualIdentity"
+      ]
+    },
+    {
+      "module": "EvenUnitResidualDescent",
+      "path": "lean/EvenUnitResidualDescent.lean",
+      "sha256": "3d76547c9193562cbdb940b5d7ce17db9a8ca096a33a4e8b07caaaef9b00b20f",
+      "imports": [
+        "PolynomialTiltedRecurrence"
+      ]
+    },
+    {
+      "module": "ActualResidualFrozenFactorization",
+      "path": "lean/ActualResidualFrozenFactorization.lean",
+      "sha256": "0bfaeaf714c8a8fb29a94dc826d82405442e3b6d4a9110cd825f21ab410fa9a8",
+      "imports": [
+        "ShiftedWickFrozenSeries",
+        "EvenUnitResidualDescent",
+        "ResidualInsertionConvolution",
+        "RawFormalMixedSpecialization"
+      ]
+    },
+    {
+      "module": "ResidualHomogeneity",
+      "path": "lean/ResidualHomogeneity.lean",
+      "sha256": "f6bc4cf7b6056bef6cbbe607b1582c33b858f1ddb896936f5ae41cc1f5d96959",
+      "imports": [
+        "ResidualLowCoefficients"
+      ]
+    },
+    {
+      "module": "PhysicalLowMoments",
+      "path": "lean/PhysicalLowMoments.lean",
+      "sha256": "956b272ef7be29d945c2be381861e067c7b6f8a59739cad62277a76a976a376c",
+      "imports": [
+        "PhysicalWordCoefficientOrder"
+      ]
+    },
+    {
+      "module": "ResidualDegreeAssignments",
+      "path": "lean/ResidualDegreeAssignments.lean",
+      "sha256": "08bbeeea5aebc71570ad9d707e508668dd5185eb6ba167c0d872d4f6d9106bec",
+      "imports": [
+        "ResidualHomogeneity",
+        "PhysicalWordCoefficientOrder"
+      ]
+    },
+    {
+      "module": "ResidualPhysicalAssignments",
+      "path": "lean/ResidualPhysicalAssignments.lean",
+      "sha256": "56fc932bbf5dc7030f706d3e80712d741652020abdf374e5d173f6ff8661fd60",
+      "imports": [
+        "ResidualDegreeAssignments",
+        "ActualResidualFrozenFactorization"
+      ]
+    },
+    {
+      "module": "ResidualScalarActivities",
+      "path": "lean/ResidualScalarActivities.lean",
+      "sha256": "f95d236c994c2a7c38c56f97805b12543e6edbbce758b84c573d02af501cb980",
+      "imports": [
+        "ResidualDegreeAssignments"
+      ]
+    },
+    {
+      "module": "ResidualLogarithm",
+      "path": "lean/ResidualLogarithm.lean",
+      "sha256": "92eb5932a8144c2aa30bd75385a6c98d6cd88d93eefeffc131cc8aafb0f5b565",
+      "imports": [
+        "ResidualScalarActivities",
+        "FormalFirstOrderUniqueness"
+      ]
+    },
+    {
+      "module": "ResidualLogFiniteVertices",
+      "path": "lean/ResidualLogFiniteVertices.lean",
+      "sha256": "1c67d4e99f5dfc20b58f0f0303158e3d8f77d322d5ddbbb6c6ec110e25437a6b",
+      "imports": [
+        "ResidualLogarithm"
+      ]
+    },
+    {
+      "module": "ResidualFirstCoefficient",
+      "path": "lean/ResidualFirstCoefficient.lean",
+      "sha256": "897316a17f2e718edfb69d1468169bd6fd86e266ccdb9b9c8146fc67c479bfb7",
+      "imports": [
+        "ResidualPhysicalAssignments",
+        "ResidualScalarActivities"
+      ]
+    },
+    {
+      "module": "PhysicalCovarianceInitial",
+      "path": "lean/PhysicalCovarianceInitial.lean",
+      "sha256": "20156027e8dda6c3e1fe57c942d5f18135080d48e54bbc8ddbdb4c1929dade52",
+      "imports": [
+        "PhysicalLowMoments"
+      ]
+    },
+    {
+      "module": "ResidualSingleAssignment",
+      "path": "lean/ResidualSingleAssignment.lean",
+      "sha256": "f3b35c97017cd56562a254929f03cc5e5d09b1a825ee31c271123b9eee3351a3",
+      "imports": [
+        "ResidualFirstCoefficient",
+        "PhysicalCovarianceInitial"
+      ]
+    },
+    {
+      "module": "BipartiteResidualSecondZero",
+      "path": "lean/BipartiteResidualSecondZero.lean",
+      "sha256": "907a11642cba13f369b06d1182bfa9356e0e1930edfaf43ac9c484470090db93",
+      "imports": [
+        "ResidualSingleAssignment"
+      ]
+    },
+    {
+      "module": "AffineWickWord",
+      "path": "lean/AffineWickWord.lean",
+      "sha256": "f74c7984a04607a037009d482a4eb6b77f2c2fbda9f089fc4aaa8cffbbf6e9f5",
+      "imports": [
+        "PhysicalWordCoefficientOrder"
+      ]
+    },
+    {
+      "module": "PartialMatchingAffine",
+      "path": "lean/PartialMatchingAffine.lean",
+      "sha256": "1c9223d2c34d1e84aa6e552d7b53e85993ff1c65895bb0b391ecad09603b39b8",
+      "imports": [
+        "AffineWickWord",
+        "LinearSourceExpansion"
+      ]
+    },
+    {
+      "module": "PhysicalPartialMatching",
+      "path": "lean/PhysicalPartialMatching.lean",
+      "sha256": "d0f523b4de238bbee5b0523cade8388f17eae30afeed75eb6a47c727e9434a6a",
+      "imports": [
+        "PartialMatchingAffine"
+      ]
+    },
+    {
+      "module": "PartialMatchingInvolution",
+      "path": "lean/PartialMatchingInvolution.lean",
+      "sha256": "8ba514677b4d6c81d66d7314b77afff4a7916d7e3d86c44e1cd62032355a1055",
+      "imports": [
+        "PartialMatchingAffine"
+      ]
+    },
+    {
+      "module": "StructuralPartialMatchingCounts",
+      "path": "lean/StructuralPartialMatchingCounts.lean",
+      "sha256": "4091a0cfca51b3850597344bd8161b5aa6ac32c4a8790813f450e9cce0a85c68",
+      "imports": [
+        "PartialMatchingInvolution"
+      ]
+    },
+    {
+      "module": "ResidualPartialMatchingExpansion",
+      "path": "lean/ResidualPartialMatchingExpansion.lean",
+      "sha256": "43c08c3c394f819fb4791ffd69376a15bccf79908f07289ae2b3f7c0691d938a",
+      "imports": [
+        "PhysicalPartialMatching",
+        "ResidualPhysicalAssignments"
+      ]
+    },
+    {
+      "module": "PairingEdgeCard",
+      "path": "lean/PairingEdgeCard.lean",
+      "sha256": "239d60ac1497480e8fcb08e202d76d72dbf1c9b2e0bf74523d1f0201e63f28a6",
+      "imports": [
+        "StructuralPartialMatchingCounts"
+      ]
+    },
+    {
+      "module": "PartialMatchingWeightOrder",
+      "path": "lean/PartialMatchingWeightOrder.lean",
+      "sha256": "b36943ee848d3d74432510903d3443fce3a1547fb11579e98179bb66febb0c8c",
+      "imports": [
+        "PairingEdgeCard",
+        "PhysicalPartialMatching"
+      ]
+    },
+    {
+      "module": "PhysicalActivityOrder",
+      "path": "lean/PhysicalActivityOrder.lean",
+      "sha256": "5f07f630ca3e532b68487a0e3c6499e11c17916ac5f01cb5b82b5f4858605642",
+      "imports": [
+        "PartialMatchingWeightOrder"
+      ]
+    },
+    {
+      "module": "ZeroConstantFormalExp",
+      "path": "lean/ZeroConstantFormalExp.lean",
+      "sha256": "236e22f130996b549fe50796787bed4313ed11014132a4908a8ded412e888820",
+      "imports": [
+        "AlgebraFormalExponential",
+        "Mathlib.RingTheory.PowerSeries.Exp"
+      ]
+    },
+    {
+      "module": "GlobalResidualLog",
+      "path": "lean/GlobalResidualLog.lean",
+      "sha256": "884c0345a2b5f9bb465cd9cc136f3e6be0e5174d6ce39300a289839c3eabb590",
+      "imports": [
+        "ZeroConstantFormalExp",
+        "ResidualLogFiniteVertices",
+        "ResidualHomogeneity"
+      ]
+    },
+    {
+      "module": "GlobalLogFiniteVertices",
+      "path": "lean/GlobalLogFiniteVertices.lean",
+      "sha256": "5dda8c0be1a23629a55b76a0ce709ac597dc688e01ee9ec24ad3d147465bfaa0",
+      "imports": [
+        "GlobalResidualLog"
+      ]
+    },
+    {
+      "module": "GlobalLogDegreeAssignments",
+      "path": "lean/GlobalLogDegreeAssignments.lean",
+      "sha256": "ba6b6bcc1df9126525b295b5357888c7efbef9ea80016519b4095b92020acb8b",
+      "imports": [
+        "GlobalLogFiniteVertices"
+      ]
+    },
+    {
+      "module": "OrderedVertexWord",
+      "path": "lean/OrderedVertexWord.lean",
+      "sha256": "11c504a9957b17b5123363374fd9971dac16cd00348d3dd2021e31e088ff399b",
+      "imports": [
+        "GlobalLogDegreeAssignments",
+        "ResidualPhysicalAssignments",
+        "PhysicalPartialMatching",
+        "PhysicalActivityOrder"
+      ]
+    },
+    {
+      "module": "OrderedResidualPolynomial",
+      "path": "lean/OrderedResidualPolynomial.lean",
+      "sha256": "d866dfe909e0dc529c4cad3a7db98d479f8973a8631da47efd43ec10eee3ccb3",
+      "imports": [
+        "OrderedVertexWord"
+      ]
+    },
+    {
+      "module": "OrderedResidualTilted",
+      "path": "lean/OrderedResidualTilted.lean",
+      "sha256": "a91c92858ef3f6f56c41993b5e70c5510a418bfa901dbbd7a7973642835ff120",
+      "imports": [
+        "OrderedResidualPolynomial"
+      ]
+    },
+    {
+      "module": "PartialMatchingActivityGrouping",
+      "path": "lean/PartialMatchingActivityGrouping.lean",
+      "sha256": "167d445bc8ef7a6c14a10972104418a0bc3e3a2547255aed7e72fda22c607713",
+      "imports": [
+        "OrderedResidualTilted"
+      ]
+    },
+    {
+      "module": "OrderedResidualActivities",
+      "path": "lean/OrderedResidualActivities.lean",
+      "sha256": "9cb98e71059dbcb47f15fb62cf5eec2b7622e05daa89ece3059fe83fd294a9da",
+      "imports": [
+        "PartialMatchingActivityGrouping"
+      ]
+    },
+    {
+      "module": "GlobalActivityFiniteRegroup",
+      "path": "lean/GlobalActivityFiniteRegroup.lean",
+      "sha256": "82c31d3573751c1cea8e3c172dd4cb6970ce28690d7364ed18796b0577679c8f",
+      "imports": [
+        "OrderedResidualActivities"
+      ]
+    },
+    {
+      "module": "WeightedCoefficientNorm",
+      "path": "lean/WeightedCoefficientNorm.lean",
+      "sha256": "5838451f9748921a7d7aca24e6e45b3513ffd9f782a4a4dcf0b5059a7353da05",
+      "imports": [
+        "WickCoefficientCauchy",
+        "Mathlib.Analysis.Normed.Ring.InfiniteSum"
+      ]
+    },
+    {
+      "module": "WeightedCoefficientProducts",
+      "path": "lean/WeightedCoefficientProducts.lean",
+      "sha256": "a6f40a46499f9539335939bf6bc72605c59bdfa4cfdff77ca054e28f6d4aade3",
+      "imports": [
+        "WeightedCoefficientNorm"
+      ]
+    },
+    {
+      "module": "PartialMatchingWeightedBound",
+      "path": "lean/PartialMatchingWeightedBound.lean",
+      "sha256": "f990b548591b734c30852eaf607de5223bf4666b6a4911099c4667130a519208",
+      "imports": [
+        "WeightedCoefficientProducts",
+        "PhysicalActivityOrder"
+      ]
+    },
+    {
+      "module": "EuclideanBilinearContraction",
+      "path": "lean/EuclideanBilinearContraction.lean",
+      "sha256": "5d2d3f84847e7cc0ccc676b80dec3c6e8b20d59ef223553e97d8e6f30a5ea128",
+      "imports": [
+        "MatrixEuclideanEntryBound"
+      ]
+    },
+    {
+      "module": "RawResolventEntryBound",
+      "path": "lean/RawResolventEntryBound.lean",
+      "sha256": "82fbab9f06b2a1bd0127692798e13155270341a78cea7b8d3f066657cae8f4d6",
+      "imports": [
+        "EuclideanBilinearContraction"
+      ]
+    },
+    {
+      "module": "RawResolventMeanBound",
+      "path": "lean/RawResolventMeanBound.lean",
+      "sha256": "d0f80f6395b0581a8ca3f4d45810ab523efe1282966072ab77b5fa389c6cf291",
+      "imports": [
+        "RawResolventEntryBound"
+      ]
+    },
+    {
+      "module": "RawBlockInverseScaling",
+      "path": "lean/RawBlockInverseScaling.lean",
+      "sha256": "6aa307257e8bf2b804b553d83b74685a127fee13156e96b5ba9678cf87218c47",
+      "imports": [
+        "RawResolventMeanBound"
+      ]
+    },
+    {
+      "module": "RawBlockNeumannInverse",
+      "path": "lean/RawBlockNeumannInverse.lean",
+      "sha256": "b6a31a64c39f1600f3dfedb01b61a1397468095d3a739cad3cd6c724e4e54ca7",
+      "imports": [
+        "RawBlockInverseScaling"
+      ]
+    },
+    {
+      "module": "BalancedTensorScores",
+      "path": "lean/BalancedTensorScores.lean",
+      "sha256": "4b3421a9d56e9ad454ebfc496dfb2ff7e385587b2f0f55095fcf4883184bb64e",
+      "imports": [
+        "RawBlockInverseScaling"
+      ]
+    },
+    {
+      "module": "RawCoordinateTaylor",
+      "path": "lean/RawCoordinateTaylor.lean",
+      "sha256": "1bcb708a76ec109c914fc00fa8134b496a0748fb2dd3c32d45f75a8fcb148c22",
+      "imports": [
+        "AffineMatrixTaylorBridge",
+        "PhysicalTiltedCovariance",
+        "RawFormalMixedSpecialization"
+      ]
+    },
+    {
+      "module": "RawCoordinateDisk",
+      "path": "lean/RawCoordinateDisk.lean",
+      "sha256": "584273183ed969dbbf455c3f02e25b03fd19a954ccbe927e2660beffae452fad",
+      "imports": [
+        "RawCoordinateTaylor",
+        "RawBlockNeumannInverse"
+      ]
+    },
+    {
+      "module": "RawPhysicalWeightedNorm",
+      "path": "lean/RawPhysicalWeightedNorm.lean",
+      "sha256": "00c504c47ba6ada0bfcd67802a483eb3c5547f1cbac065a1b932b80fdcc08816",
+      "imports": [
+        "RawCoordinateDisk",
+        "WeightedCoefficientProducts"
+      ]
+    },
+    {
+      "module": "RawActivityLabelNorm",
+      "path": "lean/RawActivityLabelNorm.lean",
+      "sha256": "7da4e686d9131701dba306fd9a14399bdd1a2fe3b326885456cc7619fe69cad1",
+      "imports": [
+        "RawPhysicalWeightedNorm",
+        "PartialMatchingWeightedBound"
+      ]
+    },
+    {
+      "module": "SkewLagrangeBound",
+      "path": "lean/SkewLagrangeBound.lean",
+      "sha256": "e777f712fbac1f5d707fa9750b21116770080e18527e78c97d9c12b94a12f073",
+      "imports": [
+        "EuclideanBilinearContraction",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "ComplexifiedSkewBound",
+      "path": "lean/ComplexifiedSkewBound.lean",
+      "sha256": "84dab02059a1ee012656ae940a6a7f62f6678b9e2de696c047e55a89fa5bd29d",
+      "imports": [
+        "SkewLagrangeBound"
+      ]
+    },
+    {
+      "module": "TournamentSkewMargin",
+      "path": "lean/TournamentSkewMargin.lean",
+      "sha256": "1aaaf6cb502077797b7f340abd1815ba027414129570550fea2ed02af6cafc97",
+      "imports": [
+        "ComplexifiedSkewBound",
+        "RawBlockNeumannInverse"
+      ]
+    },
+    {
+      "module": "BipartiteOperatorBound",
+      "path": "lean/BipartiteOperatorBound.lean",
+      "sha256": "a21b6caa2a609ed1e3d91e25169acd31242974ddec1975def0f243bd686079b4",
+      "imports": [
+        "TournamentSkewMargin"
+      ]
+    },
+    {
+      "module": "BinaryBalancedTensor",
+      "path": "lean/BinaryBalancedTensor.lean",
+      "sha256": "b4a3aa339f16c5f8ebc7d4c1e95da6091e4ed693523346d03239f97c8ebf98e4",
+      "imports": [
+        "BalancedTensorScores"
+      ]
+    },
+    {
+      "module": "TournamentRawWeighted",
+      "path": "lean/TournamentRawWeighted.lean",
+      "sha256": "3e1bb9b26f17310730b2ee5f621ad0bac845997855641420c2807c027b990d46",
+      "imports": [
+        "BipartiteOperatorBound",
+        "RawPhysicalWeightedNorm"
+      ]
+    },
+    {
+      "module": "BinaryGraphTransport",
+      "path": "lean/BinaryGraphTransport.lean",
+      "sha256": "c5fbb018c40ac8da5110cf27c2aa2b9f4fcff087c204cf02ace164a607815f70",
+      "imports": [
+        "BinaryBalancedTensor",
+        "TournamentRawWeighted"
+      ]
+    },
+    {
+      "module": "BinaryRawGraphWeighted",
+      "path": "lean/BinaryRawGraphWeighted.lean",
+      "sha256": "89ab223cfb487d5e8631017cc4e374d80d0633af3c41c31ebe48657061742452",
+      "imports": [
+        "BinaryGraphTransport"
+      ]
+    },
+    {
+      "module": "PartialMatchingFiberCount",
+      "path": "lean/PartialMatchingFiberCount.lean",
+      "sha256": "48d4ace8442dc473cf3ccff1af3576715d0290c0df10fe573bc8178e08d27eba",
+      "imports": [
+        "StructuralPartialMatchingCounts",
+        "ConstantPairingCount",
+        "Mathlib.Data.Finset.Powerset",
+        "Mathlib.Data.Nat.Choose.Bounds"
+      ]
+    },
+    {
+      "module": "ActivityFactorialSuppression",
+      "path": "lean/ActivityFactorialSuppression.lean",
+      "sha256": "27e13fa5dcde41d7892f1a0ca5f83d6bcf0473ac8389d9bc0c9cb2056fa4ac33",
+      "imports": [
+        "OrderedResidualPolynomial",
+        "Mathlib.Analysis.Complex.Exponential"
+      ]
+    },
+    {
+      "module": "OrderedDegreeCompositionCount",
+      "path": "lean/OrderedDegreeCompositionCount.lean",
+      "sha256": "9c3b650f407a376c301473153089bec51612175fe264addcaa619d2c7ca12c62",
+      "imports": [
+        "Mathlib.Combinatorics.Enumerative.Composition",
+        "OrderedResidualPolynomial"
+      ]
+    },
+    {
+      "module": "StructuralActivitySeries",
+      "path": "lean/StructuralActivitySeries.lean",
+      "sha256": "98c67a6614db5e98fdcb13b20d6eeb7058378080b33560ff1964a8343dc21f2d",
+      "imports": [
+        "GlobalActivityFiniteRegroup"
+      ]
+    },
+    {
+      "module": "ActualFiniteActivity",
+      "path": "lean/ActualFiniteActivity.lean",
+      "sha256": "aef06b412166a5bcd77f19ae395a8c5df5fbff452282de17610e88571751689d",
+      "imports": [
+        "StructuralActivitySeries"
+      ]
+    },
+    {
+      "module": "WeightedCoefficientSums",
+      "path": "lean/WeightedCoefficientSums.lean",
+      "sha256": "8e0a25c87a19d4eefbb5d214f7110477211d9904b60f56ba339239bfe22efc74",
+      "imports": [
+        "WeightedCoefficientProducts"
+      ]
+    },
+    {
+      "module": "StructuralActivityCount",
+      "path": "lean/StructuralActivityCount.lean",
+      "sha256": "c3c2dec5bee6e963ddb128334685d019fda0ab97619ed821e5c58b125ec926b0",
+      "imports": [
+        "PartialMatchingFiberCount"
+      ]
+    },
+    {
+      "module": "StructuralActivityWeighted",
+      "path": "lean/StructuralActivityWeighted.lean",
+      "sha256": "137f20da85aed47be390991929b1e4b2eb4396a74e7ea90768e2dd6abbc4c3e4",
+      "imports": [
+        "StructuralActivitySeries",
+        "StructuralActivityCount",
+        "WeightedCoefficientSums",
+        "PartialMatchingWeightedBound",
+        "ActivityFactorialSuppression"
+      ]
+    },
+    {
+      "module": "ActivityNumericalBound",
+      "path": "lean/ActivityNumericalBound.lean",
+      "sha256": "22f5e5e61d11d0ca24b7550acc4cf62e8522040c7259423436a5e2e87903d7d3",
+      "imports": [
+        "ActivityFactorialSuppression"
+      ]
+    },
+    {
+      "module": "ActualDegreeAssignmentCount",
+      "path": "lean/ActualDegreeAssignmentCount.lean",
+      "sha256": "d101f7eeb9fd7b48ffb6ddd13a5e6e636d265780a930f4fa2fb2f10a610438b6",
+      "imports": [
+        "OrderedDegreeCompositionCount",
+        "StructuralActivityWeighted"
+      ]
+    },
+    {
+      "module": "QuantitativeFixedActivity",
+      "path": "lean/QuantitativeFixedActivity.lean",
+      "sha256": "0d41b81e8640df6c085eadf3756701af0e34cd0815cb5b9f300788fbace38e11",
+      "imports": [
+        "ActualDegreeAssignmentCount",
+        "ActivityNumericalBound",
+        "ActualFiniteActivity"
+      ]
+    },
+    {
+      "module": "BinaryGraphActivityBound",
+      "path": "lean/BinaryGraphActivityBound.lean",
+      "sha256": "9a0e49dca761ab3bb8057abf1e984d5d708d734a358a1fda72412dd0fc205d12",
+      "imports": [
+        "QuantitativeFixedActivity",
+        "BinaryRawGraphWeighted"
+      ]
+    },
+    {
+      "module": "ActivityZeroNormalization",
+      "path": "lean/ActivityZeroNormalization.lean",
+      "sha256": "bbe3301273f8c42aebe1c2eea190ef831e4ac3e63cbd597fc0d4215db4f6183a",
+      "imports": [
+        "ActualFiniteActivity"
+      ]
+    },
+    {
+      "module": "FiniteFactorialRecovery",
+      "path": "lean/FiniteFactorialRecovery.lean",
+      "sha256": "933eb98335ede8b4239f655ff2ac10376cc0d874e2f79a6b3d814599deeed99f",
+      "imports": [
+        "WeightedCoefficientNorm",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Data.Nat.Factorial.Basic"
+      ]
+    },
+    {
+      "module": "RecoveryHomogeneousList",
+      "path": "lean/RecoveryHomogeneousList.lean",
+      "sha256": "a48762e08ab57b09e3ae6c07b2caaf1457bc14868bc0b6df784bca458325bc89",
+      "imports": [
+        "FiniteFactorialRecovery"
+      ]
+    },
+    {
+      "module": "RecoveryHomogeneousEvaluation",
+      "path": "lean/RecoveryHomogeneousEvaluation.lean",
+      "sha256": "249ab12129582bfdcd06985d10548b26564ecd39ae0357892631e5c55f2a62ca",
+      "imports": [
+        "RecoveryHomogeneousList"
+      ]
+    },
+    {
+      "module": "RecoveryFiniteOrderRemainder",
+      "path": "lean/RecoveryFiniteOrderRemainder.lean",
+      "sha256": "a110790572767cecb11faac10925a4d50a54292e3a095db79da51f5d43dd1292",
+      "imports": [
+        "RecoveryHomogeneousEvaluation"
+      ]
+    },
+    {
+      "module": "WeightedPolynomialMultiplier",
+      "path": "lean/WeightedPolynomialMultiplier.lean",
+      "sha256": "59a4d76c7f235cc7bff096af9ea2d91993c1e4e306a7ab42b7a697bc1d4fefd2",
+      "imports": [
+        "WeightedCoefficientSums",
+        "Mathlib.Analysis.SpecificLimits.Normed"
+      ]
+    },
+    {
+      "module": "FactorialWeightedRemainder",
+      "path": "lean/FactorialWeightedRemainder.lean",
+      "sha256": "cd44f66f0807a14c12e5ea7726be21729458e010f0b4d3a8cc70618c6df52d8d",
+      "imports": [
+        "RecoveryFiniteOrderRemainder",
+        "WeightedPolynomialMultiplier"
+      ]
+    },
+    {
+      "module": "ActivityFactorialMultiplier",
+      "path": "lean/ActivityFactorialMultiplier.lean",
+      "sha256": "21a9d0438fcab125aed7b2b76cfa99ececd60dc5d23b44f6c6912c53fd583f2a",
+      "imports": [
+        "FactorialWeightedRemainder",
+        "BinaryGraphActivityBound",
+        "ActivityZeroNormalization"
+      ]
+    },
+    {
+      "module": "FactorialLinearWindow",
+      "path": "lean/FactorialLinearWindow.lean",
+      "sha256": "9449f560a9027a76421269ca20500f42afe17158bb76d06659154171dd6176b8",
+      "imports": [
+        "ActivityFactorialMultiplier"
+      ]
+    },
+    {
+      "module": "PermanentPolynomialCircleTail",
+      "path": "lean/PermanentPolynomialCircleTail.lean",
+      "sha256": "2c98a063cbaadc6ab503ad19f2dfe26ac7b8806e4a3be1959ab171014583aced",
+      "imports": [
+        "Mathlib.Analysis.Polynomial.Fourier",
+        "Mathlib.LinearAlgebra.Matrix.Permanent",
+        "Mathlib.Analysis.SpecificLimits.Basic"
+      ]
+    },
+    {
+      "module": "PermanentSpectralFrame",
+      "path": "lean/PermanentSpectralFrame.lean",
+      "sha256": "9c2907f1c74179a5488ff827c909cac4baf356e2f866c60f282e611088c67302",
+      "imports": [
+        "Mathlib.Analysis.Matrix.Spectrum",
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.LinearAlgebra.Matrix.DotProduct"
+      ]
+    },
+    {
+      "module": "PermanentSpectralFactors",
+      "path": "lean/PermanentSpectralFactors.lean",
+      "sha256": "fc0c05deb40bfc300cd2884e8fae38bd0b695c6970b4ff256b12585ce04eafd3",
+      "imports": [
+        "PermanentSpectralFrame"
+      ]
+    },
+    {
+      "module": "PermanentPositiveMoments",
+      "path": "lean/PermanentPositiveMoments.lean",
+      "sha256": "6aaa8a71a1c6bdbafea7b130e41e5cdcd4ad3a9be84b49ef457abf46c8c2ba66",
+      "imports": [
+        "Mathlib.Analysis.SpecialFunctions.Gamma.Basic",
+        "Mathlib.Analysis.Fourier.AddCircle",
+        "Mathlib.MeasureTheory.Integral.Pi"
+      ]
+    },
+    {
+      "module": "PermanentPhasePowers",
+      "path": "lean/PermanentPhasePowers.lean",
+      "sha256": "2529a4437fb7d19bd05559a1bf82e50f50558181f94f2651919656d36fbc036d",
+      "imports": [
+        "PermanentPositiveMoments"
+      ]
+    },
+    {
+      "module": "PermanentRadialPhaseMoment",
+      "path": "lean/PermanentRadialPhaseMoment.lean",
+      "sha256": "b94d45c8ff421459ca3c9c4577163fb0df588fda0593a30cb703f0c2dc1884ed",
+      "imports": [
+        "PermanentPhasePowers",
+        "Mathlib.MeasureTheory.Integral.Prod",
+        "Mathlib.MeasureTheory.Function.LocallyIntegrable"
+      ]
+    },
+    {
+      "module": "PermanentFiniteMixedIntegral",
+      "path": "lean/PermanentFiniteMixedIntegral.lean",
+      "sha256": "1ef3cec62ce00102e4c29369a36bc7a9cc45228d386321eea26b680de615138d",
+      "imports": [
+        "PermanentRadialPhaseMoment"
+      ]
+    },
+    {
+      "module": "PermanentLinearProductIntegral",
+      "path": "lean/PermanentLinearProductIntegral.lean",
+      "sha256": "96e437621283612100f3bf8621da528039364791f900e283372734895e3b32cd",
+      "imports": [
+        "PermanentFiniteMixedIntegral",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "PermanentAssignmentFiberCount",
+      "path": "lean/PermanentAssignmentFiberCount.lean",
+      "sha256": "169c7315b4958a2244595d118234e8aec2759fc3ae086b4dbd9144d75289f1a7",
+      "imports": [
+        "PermanentLinearProductIntegral",
+        "Mathlib.Data.Fintype.Perm",
+        "Mathlib.Logic.Equiv.Basic"
+      ]
+    },
+    {
+      "module": "PermanentPolarization",
+      "path": "lean/PermanentPolarization.lean",
+      "sha256": "a8f8b337aa809399577c60aee9865db6f8050d97508f63323b3c154a1599b8e6",
+      "imports": [
+        "PermanentAssignmentFiberCount",
+        "Mathlib.LinearAlgebra.Matrix.Permanent"
+      ]
+    },
+    {
+      "module": "PermanentFactorEnergy",
+      "path": "lean/PermanentFactorEnergy.lean",
+      "sha256": "e61546901bb1721b0db1a18720a36e1527f567af37cbd71f06b197d57c6f380c",
+      "imports": [
+        "PermanentSpectralFactors",
+        "Mathlib.Analysis.Complex.Basic"
+      ]
+    },
+    {
+      "module": "PermanentPointwiseAMGM",
+      "path": "lean/PermanentPointwiseAMGM.lean",
+      "sha256": "ae8556f1da4b746800a0e3077d4df17f34d02b88b8a015657d3a6f9211f8dac7",
+      "imports": [
+        "PermanentFactorEnergy",
+        "PermanentPolarization",
+        "Mathlib.Analysis.MeanInequalities"
+      ]
+    },
+    {
+      "module": "PermanentEnergyIntegral",
+      "path": "lean/PermanentEnergyIntegral.lean",
+      "sha256": "bb41fcd1ac62e8521c9c5e4c5d61874d7c1869d541fa7754b7f508f4e93c1d93",
+      "imports": [
+        "PermanentPointwiseAMGM",
+        "Mathlib.Data.Nat.Choose.Multinomial"
+      ]
+    },
+    {
+      "module": "PermanentSpectralBound",
+      "path": "lean/PermanentSpectralBound.lean",
+      "sha256": "65c9186d17f703bb842eab0605b7a1f0c9046a27edac146b6352fcbb25751b1f",
+      "imports": [
+        "PermanentEnergyIntegral"
+      ]
+    },
+    {
+      "module": "PermanentCircleSpectralCoordinates",
+      "path": "lean/PermanentCircleSpectralCoordinates.lean",
+      "sha256": "74d85438b77c8a7f89adbebc261909e040e9c991755e03241c3a149d1cb6e738",
+      "imports": [
+        "PermanentFactorEnergy",
+        "Mathlib.Analysis.CStarAlgebra.Matrix"
+      ]
+    },
+    {
+      "module": "PermanentCircleRankOne",
+      "path": "lean/PermanentCircleRankOne.lean",
+      "sha256": "610533fb7f4a83e3ff29c7c3d6c54688c86476b6925940f456f3572d431c74bc",
+      "imports": [
+        "PermanentCircleSpectralCoordinates"
+      ]
+    },
+    {
+      "module": "PermanentCircleCentering",
+      "path": "lean/PermanentCircleCentering.lean",
+      "sha256": "c484cc5c33794bab400352fad65d0dfe4f4e6b5c642c9289e80917693303124c",
+      "imports": [
+        "PermanentCircleRankOne",
+        "Mathlib.Analysis.InnerProductSpace.Adjoint"
+      ]
+    },
+    {
+      "module": "PermanentCircleSpectralFrobenius",
+      "path": "lean/PermanentCircleSpectralFrobenius.lean",
+      "sha256": "16ee88f067a7f049859422d5e5d835ada7d097d510e55634ad5a159ec8f6748c",
+      "imports": [
+        "PermanentCircleSpectralCoordinates"
+      ]
+    },
+    {
+      "module": "PermanentCircleExceptional",
+      "path": "lean/PermanentCircleExceptional.lean",
+      "sha256": "ac012429cad4c1a6aeec62bb4b4db37b4943da6e82aa009b3e98d0da0f178d7a",
+      "imports": [
+        "PermanentCircleRankOne"
+      ]
+    },
+    {
+      "module": "PermanentCircleRootSum",
+      "path": "lean/PermanentCircleRootSum.lean",
+      "sha256": "158f7970ffa52cfa9494e31c893c380fb6bdda588df9e9533a5d3e52c80f2144",
+      "imports": [
+        "PermanentCircleSpectralFrobenius",
+        "Mathlib.Analysis.Real.Sqrt"
+      ]
+    },
+    {
+      "module": "PermanentHomogeneousEnvelope",
+      "path": "lean/PermanentHomogeneousEnvelope.lean",
+      "sha256": "7ea76181f26bda056eb068589bcc5eb3f30dd030152a5fbccefbc93376ceb7fe",
+      "imports": [
+        "PermanentSpectralBound",
+        "Mathlib.Algebra.Order.Field.GeomSum",
+        "Mathlib.Analysis.Complex.Exponential"
+      ]
+    },
+    {
+      "module": "PermanentCircleActualCentering",
+      "path": "lean/PermanentCircleActualCentering.lean",
+      "sha256": "fd79ba5b5022104efbace44f040ddbfd4d291788009af792a76aaffe955356d2",
+      "imports": [
+        "PermanentCircleCentering",
+        "MatrixEuclideanEntryBound"
+      ]
+    },
+    {
+      "module": "PermanentCircleEnvelope",
+      "path": "lean/PermanentCircleEnvelope.lean",
+      "sha256": "7808dcdc624563216c20c6e84542e50a97ccd00bcd03c8559769593a6738bd08",
+      "imports": [
+        "PermanentCircleActualCentering",
+        "PermanentCircleExceptional",
+        "PermanentCircleRootSum",
+        "PermanentHomogeneousEnvelope"
+      ]
+    },
+    {
+      "module": "PermanentCirclePolynomialDecay",
+      "path": "lean/PermanentCirclePolynomialDecay.lean",
+      "sha256": "43d6e8070769a13e1d9bb66c816d62f2057bf1336ae0d83e364521fac65a209a",
+      "imports": [
+        "PermanentPolynomialCircleTail",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+        "Mathlib.Algebra.Order.Floor.Semiring"
+      ]
+    },
+    {
+      "module": "PermanentActualCircleTail",
+      "path": "lean/PermanentActualCircleTail.lean",
+      "sha256": "f2bc98b3346980b943eca4d31d61719ae7d66e4f8dc41497d35cd151b088b708",
+      "imports": [
+        "PermanentCircleEnvelope",
+        "PermanentCirclePolynomialDecay"
+      ]
+    },
+    {
+      "module": "BinaryGraphPermanentCircle",
+      "path": "lean/BinaryGraphPermanentCircle.lean",
+      "sha256": "9c4272b45f616eddf91d0f0bbe493f9e635cdf2322aa5bb894f8cd5f25dd0c0e",
+      "imports": [
+        "BinaryRawGraphWeighted",
+        "PermanentCircleEnvelope"
+      ]
+    },
+    {
+      "module": "BinaryGraphPermanentTail",
+      "path": "lean/BinaryGraphPermanentTail.lean",
+      "sha256": "343db03da1aa81b4baafde66cbc974156e5226f58303fb1d224e470a0dbab935",
+      "imports": [
+        "BinaryGraphPermanentCircle",
+        "PermanentActualCircleTail"
+      ]
+    },
+    {
+      "module": "PermanentSubsetMinorBridge",
+      "path": "lean/PermanentSubsetMinorBridge.lean",
+      "sha256": "04077014fefaa8951740d3b7c384920401ca86a4e20704e8bf7733a27b25ab75",
+      "imports": [
+        "FrozenPartialPairingPolynomial",
+        "Mathlib.Logic.Equiv.Fintype"
+      ]
+    },
+    {
+      "module": "CoreActivityFactorialBridge",
+      "path": "lean/CoreActivityFactorialBridge.lean",
+      "sha256": "9900cb58fc2ef769e6a6e48dabbcbeb637f6834dbc4ffc353b87ef8eb441b262",
+      "imports": [
+        "ActivityFactorialMultiplier"
+      ]
+    },
+    {
+      "module": "PermanentFrozenCoefficientExpansion",
+      "path": "lean/PermanentFrozenCoefficientExpansion.lean",
+      "sha256": "e9171f063c3f84c70a690146caeb7ac27e501957f5ed889b78e1d8b74acb4eec",
+      "imports": [
+        "PermanentPolynomialCircleTail",
+        "FrozenPartialPairingPolynomial",
+        "FiniteFactorialRecovery"
+      ]
+    },
+    {
+      "module": "PermanentRestrictionFiber",
+      "path": "lean/PermanentRestrictionFiber.lean",
+      "sha256": "a41ca3b7647aa865185b09be033bbed45f4b8bc74983fde316b5da9832f7f1c6",
+      "imports": [
+        "Mathlib.Logic.Equiv.Sum",
+        "Mathlib.Logic.Equiv.Fintype",
+        "Mathlib.Data.Fintype.Perm",
+        "Mathlib.Data.Fintype.Sigma",
+        "Mathlib.Data.Fintype.BigOperators",
+        "Mathlib.Algebra.BigOperators.Group.Finset.Sigma",
+        "Mathlib.Data.Fintype.EquivFin",
+        "Mathlib.Algebra.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "PermanentFrozenCoefficientBridge",
+      "path": "lean/PermanentFrozenCoefficientBridge.lean",
+      "sha256": "0c8389581508203012cfff0602b7ab451d3d7ee2ad57e259ca7a7c3666ad7372",
+      "imports": [
+        "PermanentFrozenCoefficientExpansion",
+        "PermanentRestrictionFiber",
+        "PermanentSubsetMinorBridge"
+      ]
+    },
+    {
+      "module": "PermanentNormalizedFrozenBridge",
+      "path": "lean/PermanentNormalizedFrozenBridge.lean",
+      "sha256": "4e7935abbbf4bf387550d7faf78b5547d192de68fe47c916393fb8521a3f37f8",
+      "imports": [
+        "PermanentFrozenCoefficientBridge",
+        "PermanentCircleCentering"
+      ]
+    },
+    {
+      "module": "CoreActivityFiniteProjection",
+      "path": "lean/CoreActivityFiniteProjection.lean",
+      "sha256": "6363d69f903bc6002532a8aaa936e347742d8fafeef24836c8f69da208b2e3e1",
+      "imports": [
+        "BinaryGraphActivityBound",
+        "ActivityZeroNormalization",
+        "PermanentSubsetMinorBridge"
+      ]
+    },
+    {
+      "module": "PermanentNormalizedTailBridge",
+      "path": "lean/PermanentNormalizedTailBridge.lean",
+      "sha256": "65091f90dd4bf3821ba63d74ff47819b7e1c3d720b195803fc94cca785c7c56a",
+      "imports": [
+        "PermanentNormalizedFrozenBridge",
+        "BinaryGraphPermanentTail"
+      ]
+    },
+    {
+      "module": "PermanentCoreFiniteRecovery",
+      "path": "lean/PermanentCoreFiniteRecovery.lean",
+      "sha256": "764942a164ac541ca20b3f2abd549471b6f559316b2975826e17d8c2e119460c",
+      "imports": [
+        "PermanentNormalizedFrozenBridge",
+        "CoreActivityFiniteProjection",
+        "CoreActivityFactorialBridge"
+      ]
+    },
+    {
+      "module": "WeightedFormalExponential",
+      "path": "lean/WeightedFormalExponential.lean",
+      "sha256": "e089a67dad0e3b74fee7f29c8343a63fb91acc1bfdf2f869d307e3ae3d5a7abb",
+      "imports": [
+        "WeightedCoefficientSums",
+        "ZeroConstantFormalExp",
+        "Mathlib.Analysis.Complex.Exponential",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real"
+      ]
+    },
+    {
+      "module": "ActualCoreTracePrimitive",
+      "path": "lean/ActualCoreTracePrimitive.lean",
+      "sha256": "5647d5843489e18326d6ec4f585aa09658785ff5bfac59e99d2dc0c82d8c6abc",
+      "imports": [
+        "PhysicalTiltedCovariance",
+        "RawFormalMixedSpecialization",
+        "FullJacobiDerivation",
+        "ZeroConstantFormalExp",
+        "FormalFirstOrderUniqueness"
+      ]
+    },
+    {
+      "module": "ActualCoreWeightedBound",
+      "path": "lean/ActualCoreWeightedBound.lean",
+      "sha256": "3372a6fe817a37b58fad9dfc3f2f478da8707773e874b4b014c4fa613b0fb548",
+      "imports": [
+        "WeightedFormalExponential",
+        "ActualCoreTracePrimitive",
+        "BinaryGraphActivityBound"
+      ]
+    },
+    {
+      "module": "ActivityFiniteWindowBound",
+      "path": "lean/ActivityFiniteWindowBound.lean",
+      "sha256": "3d2cc80b7e7dcf11e963d25d760f61773abf32bfa8e9e9b4dd63e3037f931f6c",
+      "imports": [
+        "ActivityNumericalBound",
+        "Mathlib.Algebra.BigOperators.Intervals",
+        "Mathlib.Algebra.Order.Floor.Semiring"
+      ]
+    },
+    {
+      "module": "ActualGraphCoreRecovery",
+      "path": "lean/ActualGraphCoreRecovery.lean",
+      "sha256": "60b6163a0ec6f24bde2ea1fec76af428c028e5e6edc9e9029cfbb747e81638a8",
+      "imports": [
+        "ActualCoreWeightedBound",
+        "PermanentCoreFiniteRecovery",
+        "FactorialLinearWindow",
+        "ActivityFiniteWindowBound"
+      ]
+    },
+    {
+      "module": "PermanentTruncatedRecoveryAlgebra",
+      "path": "lean/PermanentTruncatedRecoveryAlgebra.lean",
+      "sha256": "f43970b4654a0f26127ca437bc22ef8d940e4655f9770a5ae0d4490d3f522fb9",
+      "imports": [
+        "PermanentCoreFiniteRecovery",
+        "PermanentNormalizedTailBridge",
+        "Mathlib.Algebra.BigOperators.Intervals",
+        "Mathlib.Algebra.Polynomial.Eval.Degree"
+      ]
+    },
+    {
+      "module": "ActualTruncatedPermanentRecovery",
+      "path": "lean/ActualTruncatedPermanentRecovery.lean",
+      "sha256": "3dbedeb4ddc222c9d00b4510a7d7eb77b52323b93911c39fbab803c21e609eab",
+      "imports": [
+        "ActualGraphCoreRecovery",
+        "PermanentTruncatedRecoveryAlgebra"
+      ]
+    },
+    {
+      "module": "WeightedRecoveryMultiplier",
+      "path": "lean/WeightedRecoveryMultiplier.lean",
+      "sha256": "361970f71bc6c1c342d13458f38a6365ca39e702b1b245beac5f08f99d2ae757",
+      "imports": [
+        "ActualGraphCoreRecovery",
+        "PermanentTruncatedRecoveryAlgebra"
+      ]
+    },
+    {
+      "module": "RecoveryMomentTail",
+      "path": "lean/RecoveryMomentTail.lean",
+      "sha256": "f3ab3ee630d6b4135e174e7dbefd7e852faa82899e902de4af15a772e62e6e96",
+      "imports": [
+        "WeightedRecoveryMultiplier",
+        "Mathlib.Topology.Algebra.InfiniteSum.Real"
+      ]
+    },
+    {
+      "module": "WeightedRecoveryClosure",
+      "path": "lean/WeightedRecoveryClosure.lean",
+      "sha256": "56d42307462fd3f2d0574d9daa7c28d81d8ac482cf5d02f4daab26806a6bd433",
+      "imports": [
+        "RecoveryMomentTail"
+      ]
+    },
+    {
+      "module": "ActualWeightedUntruncatedRecovery",
+      "path": "lean/ActualWeightedUntruncatedRecovery.lean",
+      "sha256": "6266e391123e64088432ee457d04a822b87cdda6180787a90b3529f5a803f1d4",
+      "imports": [
+        "WeightedRecoveryClosure",
+        "ActualTruncatedPermanentRecovery"
+      ]
+    },
+    {
+      "module": "FormalSeriesDerivativeAtOne",
+      "path": "lean/FormalSeriesDerivativeAtOne.lean",
+      "sha256": "428d3961f71a4c2c8dfa33aef8a2965dc1cd57fb38c8626b33fbdc4b3b5ee818",
+      "imports": [
+        "WeightedRecoveryClosure",
+        "Mathlib.Analysis.Calculus.SmoothSeries",
+        "Mathlib.Analysis.Calculus.IteratedDeriv.Lemmas",
+        "Mathlib.Analysis.Normed.Module.Connected"
+      ]
+    },
+    {
+      "module": "RecoveryApproximationOuterRadius",
+      "path": "lean/RecoveryApproximationOuterRadius.lean",
+      "sha256": "a1d7e127d0d08b4f01bc5bd15e015efdd6d0829c1c009b7ad4ec2eca850bd6bf",
+      "imports": [
+        "FormalSeriesDerivativeAtOne",
+        "ActualWeightedUntruncatedRecovery"
+      ]
+    },
+    {
+      "module": "ActualRecoveryDerivativeBridge",
+      "path": "lean/ActualRecoveryDerivativeBridge.lean",
+      "sha256": "8049338c7c7bb29a1952bb8abb99c056b3377ec13b18ce902830c9eb13465b88",
+      "imports": [
+        "RecoveryApproximationOuterRadius"
+      ]
+    },
+    {
+      "module": "ActualTournamentDeletionEnergy",
+      "path": "lean/ActualTournamentDeletionEnergy.lean",
+      "sha256": "00bfb55c1f1a522eb44a75330cd575687029a0b6fcfed3f709e7aa83054004f0",
+      "imports": [
+        "ActualPathConvolution",
+        "TournamentSourceEnergy"
+      ]
+    },
+    {
+      "module": "TournamentPrescalingMass",
+      "path": "lean/TournamentPrescalingMass.lean",
+      "sha256": "1ff0da9a4252a1142d8df290a0baf30402f7ff38393f5537175b03f9a93e21c2",
+      "imports": [
+        "ActualTournamentDeletionEnergy"
+      ]
+    },
+    {
+      "module": "BinaryCanonicalNumbering",
+      "path": "lean/BinaryCanonicalNumbering.lean",
+      "sha256": "9aba1056d2c9ea9f40842fd43789a5bec4d0c89ef2e0900885adbd319976163a",
+      "imports": [
+        "BinaryRawGraphWeighted",
+        "ColorTargetModels",
+        "Mathlib.Data.Fin.Rev",
+        "Mathlib.Logic.Equiv.Fin.Basic"
+      ]
+    },
+    {
+      "module": "CanonicalGraphRecovery",
+      "path": "lean/CanonicalGraphRecovery.lean",
+      "sha256": "6598bef24c3952ce979df45476520bd5f1f8268da0707ba6dff54b289556c94f",
+      "imports": [
+        "BinaryCanonicalNumbering",
+        "ActualRecoveryDerivativeBridge"
+      ]
+    },
+    {
+      "module": "TournamentPrescalingMassBound",
+      "path": "lean/TournamentPrescalingMassBound.lean",
+      "sha256": "499dcc6f24086f5dfb8ece06905ba37831ecd0c5e0118d5f81334efbf76808f3",
+      "imports": [
+        "TournamentPrescalingMass"
+      ]
+    },
+    {
+      "module": "IndependentDeletionMass",
+      "path": "lean/IndependentDeletionMass.lean",
+      "sha256": "ff9044162b7b6f2c48c9758b28f658425e05dc939b1cb9ab91ea98198cd899c8",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RawFourBlockResolvent",
+      "path": "lean/RawFourBlockResolvent.lean",
+      "sha256": "420009f4fff0b742e14ac8aff6317c7a248c3cf35280671e6325270edcb41a7c",
+      "imports": [
+        "RawCoordinateTaylor",
+        "BlockGaussianSourceElimination",
+        "RawBlockSourceIdentity"
+      ]
+    },
+    {
+      "module": "ProjectedTwoColorWoodbury",
+      "path": "lean/ProjectedTwoColorWoodbury.lean",
+      "sha256": "b320b8ca99c5866e081206779d4e3c775e993890d3cc5e5176f791e0104a8dc0",
+      "imports": [
+        "RawFourBlockResolvent",
+        "PermanentCircleCentering",
+        "Mathlib.LinearAlgebra.Matrix.NonsingularInverse"
+      ]
+    },
+    {
+      "module": "ActualTournamentPrescalingBounds",
+      "path": "lean/ActualTournamentPrescalingBounds.lean",
+      "sha256": "33aaafc52e7a7cecbcf3828d2c597d8ef93505dfdf18a110944df494c90627e9",
+      "imports": [
+        "TournamentPrescalingMassBound"
+      ]
+    },
+    {
+      "module": "ActualPrescalingNormalization",
+      "path": "lean/ActualPrescalingNormalization.lean",
+      "sha256": "f36eaab704e06956223f667be91778c8842cc0165fb573f3a733aa3d1b59dbe2",
+      "imports": [
+        "ActualTournamentPrescalingBounds",
+        "IndependentDeletionMass"
+      ]
+    },
+    {
+      "module": "FJRadialFinite",
+      "path": "lean/FJRadialFinite.lean",
+      "sha256": "8848a20a551d2dca0ce86ac607317e469c992f1fdc6c3155c791c5b3ab15120b",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FJSparseHarmonic",
+      "path": "lean/FJSparseHarmonic.lean",
+      "sha256": "b2e381bafbfdc99e86fae22efc3c380e927f5b6006e6f95f001bf0950a9ff1a3",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FJAntiperiodicRational",
+      "path": "lean/FJAntiperiodicRational.lean",
+      "sha256": "9f2d1adb11b287de7c9fa7c10cd9aca19f3dafcc285ac1daf79d050441ba7bab",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FJAntiperiodicAbel",
+      "path": "lean/FJAntiperiodicAbel.lean",
+      "sha256": "b75d4b20d6be2bab4122bf7d4e79867b5fab42be7bd0239872fc08d4c6e74989",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FJRadialTail",
+      "path": "lean/FJRadialTail.lean",
+      "sha256": "57fd65d86d383f4d73ccfd3fa935bd4bb9f9d8a71ecf6021928efbcc659d45e4",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ProjectedTournamentDisk",
+      "path": "lean/ProjectedTournamentDisk.lean",
+      "sha256": "8c914920bb62072fd9a1e0579e5795bfefb4c8f901d3219508cef7f1ab48b610",
+      "imports": [
+        "ProjectedTwoColorWoodbury",
+        "BipartiteOperatorBound",
+        "PermanentCircleActualCentering",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    {
+      "module": "DenseResolventRowBound",
+      "path": "lean/DenseResolventRowBound.lean",
+      "sha256": "75eb6d9b560307068e35209d218b9d966956bb0a6c70568a104899f2bab69c5f",
+      "imports": [
+        "RawBlockNeumannInverse",
+        "RawResolventMeanBound"
+      ]
+    },
+    {
+      "module": "BalancedHessianInverse",
+      "path": "lean/BalancedHessianInverse.lean",
+      "sha256": "9ec3f14f0aea08006594dd472e3b1287cbe8291202644ab5aae2f6b86392f29d",
+      "imports": [
+        "DenseResolventRowBound",
+        "BipartiteOperatorBound"
+      ]
+    },
+    {
+      "module": "MatrixScalingMassPotential",
+      "path": "lean/MatrixScalingMassPotential.lean",
+      "sha256": "ec1c98823497347a7d344f52b32d64f7517c5f0c8fde2f1cdf88b31a74aac566",
+      "imports": [
+        "IndependentDeletionMass",
+        "Mathlib.Analysis.Convex.DoublyStochasticMatrix"
+      ]
+    },
+    {
+      "module": "DiagonalScalingPermanent",
+      "path": "lean/DiagonalScalingPermanent.lean",
+      "sha256": "cd54d29f6b5eae26ec82c41a6d194e9aba481ebc7bb0aaaade54b73b2ff26d84",
+      "imports": [
+        "MatrixScalingMassPotential"
+      ]
+    },
+    {
+      "module": "FJFallingCorrection",
+      "path": "lean/FJFallingCorrection.lean",
+      "sha256": "a3d591d55d10aaeb690ec7d306464194db8f340ae36a0abeec0b595889bb44ee",
+      "imports": [
+        "FJRadialTail",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FJSparseRadialLog",
+      "path": "lean/FJSparseRadialLog.lean",
+      "sha256": "02d524bea48af8f405186f4cf3d771c7ccb0fb9a47b00b192bb0035afe50ff3b",
+      "imports": [
+        "FJFallingCorrection",
+        "FJSparseHarmonic",
+        "FJRadialTail"
+      ]
+    },
+    {
+      "module": "FJLaurentRadial",
+      "path": "lean/FJLaurentRadial.lean",
+      "sha256": "f181be49f7b15690e0a437561ea11568a9984732fdf92e836fd59fcd831b8376",
+      "imports": [
+        "FJFallingCorrection",
+        "FJAntiperiodicRational",
+        "FJAntiperiodicAbel",
+        "FJRadialTail"
+      ]
+    },
+    {
+      "module": "FJPeriodicJumpRadial",
+      "path": "lean/FJPeriodicJumpRadial.lean",
+      "sha256": "0eee750edaea80ffa449fce637356bef66fbb195ce9c5a57871e6e1a109731b0",
+      "imports": [
+        "FJLaurentRadial",
+        "FJSparseRadialLog",
+        "FJRadialFinite"
+      ]
+    },
+    {
+      "module": "FJFiniteValuationGlue",
+      "path": "lean/FJFiniteValuationGlue.lean",
+      "sha256": "85fc8774cbc0b41f42302ebeea5d2ddd380179fe84bbf6e9bbdbc86b0a69d8e1",
+      "imports": [
+        "FJPeriodicJumpRadial",
+        "FJRadialFinite"
+      ]
+    },
+    {
+      "module": "RealGaugeSolution",
+      "path": "lean/RealGaugeSolution.lean",
+      "sha256": "845528aa71f8596358af0f16ea9da74479fdee899fc4896b533fab74b81f68e2",
+      "imports": [
+        "BalancedHessianInverse"
+      ]
+    },
+    {
+      "module": "RealGaugeOperator",
+      "path": "lean/RealGaugeOperator.lean",
+      "sha256": "5be899977ec5638de8ffe0258c15c080af7849f3fd1c9d56f63bf69d336a6a0f",
+      "imports": [
+        "RealGaugeSolution"
+      ]
+    },
+    {
+      "module": "ActualHessianFinite",
+      "path": "lean/ActualHessianFinite.lean",
+      "sha256": "aa742e1a413677bc159e37c94deffd2fe1e846a547d6f1c233701b6778e1628e",
+      "imports": [
+        "BalancedHessianInverse"
+      ]
+    },
+    {
+      "module": "ActualHessianComplex",
+      "path": "lean/ActualHessianComplex.lean",
+      "sha256": "bd0352ea983ffd386a45304671ef5f6d559908faa4b642b6aab514fa1417680c",
+      "imports": [
+        "ActualHessianFinite"
+      ]
+    },
+    {
+      "module": "ExpRemainderLipschitz",
+      "path": "lean/ExpRemainderLipschitz.lean",
+      "sha256": "e18deb9129fa177ff375025273dba80e3486cfba81eada6ccff17653e8290417",
+      "imports": [
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Analysis.SpecialFunctions.ExpDeriv"
+      ]
+    },
+    {
+      "module": "ActualMarginalRemainder",
+      "path": "lean/ActualMarginalRemainder.lean",
+      "sha256": "7467d1499c9e85edebd75229239d7f0398bc15818b7cd7f8133512a19b2f766e",
+      "imports": [
+        "ExpRemainderLipschitz",
+        "Mathlib.Analysis.Normed.Module.FiniteDimension",
+        "Mathlib.Analysis.Normed.Group.Constructions",
+        "Mathlib.Analysis.Matrix.Normed"
+      ]
+    },
+    {
+      "module": "ActualScalingContraction",
+      "path": "lean/ActualScalingContraction.lean",
+      "sha256": "12adbfb2718ce3433ec0748dcbc2172991f8ff1ccbe98906679354fc791e492c",
+      "imports": [
+        "ActualMarginalRemainder",
+        "Mathlib.Topology.MetricSpace.Contracting"
+      ]
+    },
+    {
+      "module": "RawMatrixScalingExistence",
+      "path": "lean/RawMatrixScalingExistence.lean",
+      "sha256": "da9dec5e9b11862c4b1e6dcd88e20246b03493e0371c0b4af4bfa55c6a381a40",
+      "imports": [
+        "ActualScalingContraction",
+        "ActualHessianComplex",
+        "RealGaugeOperator"
+      ]
+    },
+    {
+      "module": "ScalingEpsilonThreshold",
+      "path": "lean/ScalingEpsilonThreshold.lean",
+      "sha256": "a12fcf8cd86c3d1d8130475ba15b79f811e29fc2e4d495b5df6dc3082eab9a28",
+      "imports": [
+        "BalancedHessianInverse"
+      ]
+    },
+    {
+      "module": "RawScalingThreshold",
+      "path": "lean/RawScalingThreshold.lean",
+      "sha256": "c907c21a27e0fb35a6ee62edf7dd5c7f5eb09b8fbe49149a5e4f924f4cd59189",
+      "imports": [
+        "RawMatrixScalingExistence",
+        "ScalingEpsilonThreshold"
+      ]
+    },
+    {
+      "module": "FiniteSymmetricQuadratic",
+      "path": "lean/FiniteSymmetricQuadratic.lean",
+      "sha256": "94031e619d4bba90ec29024703ad6a7d73fcbb1fd2d7ba47e5f5c91b8b8aae71",
+      "imports": [
+        "ActualHessianFinite",
+        "Mathlib.Analysis.Real.Sqrt"
+      ]
+    },
+    {
+      "module": "ActualRootEnergy",
+      "path": "lean/ActualRootEnergy.lean",
+      "sha256": "0c60c21c89d7697601e822f4ccdd088406b7b854b2fb274e3fe9fd870fbced72",
+      "imports": [
+        "FiniteSymmetricQuadratic"
+      ]
+    },
+    {
+      "module": "ActualRootCoercivity",
+      "path": "lean/ActualRootCoercivity.lean",
+      "sha256": "b31640ffdfaab63e2156be1ae52654f7dd510cca9bf3f0a747aa3b951f73aa2f",
+      "imports": [
+        "ActualRootEnergy"
+      ]
+    },
+    {
+      "module": "ScalingDensityFrobenius",
+      "path": "lean/ScalingDensityFrobenius.lean",
+      "sha256": "edec365bbf3b96c72cf3d97fc9068c3f61512b2709b7d781d7cefaa642119972",
+      "imports": [
+        "MatrixScalingMassPotential",
+        "Mathlib.Analysis.Calculus.MeanValue",
+        "Mathlib.Analysis.SpecialFunctions.ExpDeriv"
+      ]
+    },
+    {
+      "module": "FiniteSchurBound",
+      "path": "lean/FiniteSchurBound.lean",
+      "sha256": "3af33685b9d754b56651d3b84757e72ebe1de14ae5f71e22048b6d9548d5d197",
+      "imports": [
+        "ActualHessianComplex",
+        "Mathlib.Algebra.Order.BigOperators.Ring.Finset"
+      ]
+    },
+    {
+      "module": "ScalingOperatorPerturbation",
+      "path": "lean/ScalingOperatorPerturbation.lean",
+      "sha256": "449d279544ab18b57e3fb43f12d3d0cf5abead0e07cb5a032bc3dfea1d402325",
+      "imports": [
+        "FiniteSchurBound",
+        "ScalingDensityFrobenius"
+      ]
+    },
+    {
+      "module": "ScalingCenteredGap",
+      "path": "lean/ScalingCenteredGap.lean",
+      "sha256": "bf4282c55d9360ffe99676ffae07b3d0454fd8f7c4c98d41bed4552ba6ea43f9",
+      "imports": [
+        "ScalingOperatorPerturbation",
+        "PermanentCircleActualCentering"
+      ]
+    },
+    {
+      "module": "RawScalingSynthesis",
+      "path": "lean/RawScalingSynthesis.lean",
+      "sha256": "72f9d97ac74e50b58992a504329595b0ebb2e648b96eb371838f22ba7f0afa2d",
+      "imports": [
+        "RawScalingThreshold",
+        "ActualRootCoercivity",
+        "ScalingDensityFrobenius",
+        "ScalingCenteredGap"
+      ]
+    },
+    {
+      "module": "EndpointCheck",
+      "path": "lean/EndpointCheck.lean",
+      "sha256": "da478c045259f08260ce8807a6006c98873d657767f9a364de41516862a4a427",
+      "imports": [
+        "DenseResolventRowBound",
+        "BalancedHessianInverse",
+        "MatrixScalingMassPotential",
+        "DiagonalScalingPermanent",
+        "FJFallingCorrection",
+        "FJSparseRadialLog",
+        "FJLaurentRadial",
+        "FJPeriodicJumpRadial",
+        "FJFiniteValuationGlue",
+        "RealGaugeSolution",
+        "RealGaugeOperator",
+        "ActualHessianFinite",
+        "ActualHessianComplex",
+        "ExpRemainderLipschitz",
+        "ActualMarginalRemainder",
+        "ActualScalingContraction",
+        "RawMatrixScalingExistence",
+        "ScalingEpsilonThreshold",
+        "RawScalingThreshold",
+        "FiniteSymmetricQuadratic",
+        "ActualRootEnergy",
+        "ActualRootCoercivity",
+        "ScalingDensityFrobenius",
+        "FiniteSchurBound",
+        "ScalingOperatorPerturbation",
+        "ScalingCenteredGap",
+        "RawScalingSynthesis",
+        "ActualTournamentPrescalingBounds",
+        "ActualPrescalingNormalization",
+        "FJRadialFinite",
+        "FJSparseHarmonic",
+        "FJAntiperiodicRational",
+        "FJAntiperiodicAbel",
+        "FJRadialTail",
+        "ProjectedTournamentDisk",
+        "BinaryCanonicalNumbering",
+        "CanonicalGraphRecovery",
+        "TournamentPrescalingMassBound",
+        "IndependentDeletionMass",
+        "RawFourBlockResolvent",
+        "ProjectedTwoColorWoodbury",
+        "FormalSeriesDerivativeAtOne",
+        "RecoveryApproximationOuterRadius",
+        "ActualRecoveryDerivativeBridge",
+        "ActualTournamentDeletionEnergy",
+        "TournamentPrescalingMass",
+        "WeightedRecoveryMultiplier",
+        "RecoveryMomentTail",
+        "WeightedRecoveryClosure",
+        "ActualWeightedUntruncatedRecovery",
+        "WeightedFormalExponential",
+        "ActualCoreTracePrimitive",
+        "ActualCoreWeightedBound",
+        "ActivityFiniteWindowBound",
+        "ActualGraphCoreRecovery",
+        "PermanentTruncatedRecoveryAlgebra",
+        "ActualTruncatedPermanentRecovery",
+        "PermanentSubsetMinorBridge",
+        "CoreActivityFactorialBridge",
+        "PermanentFrozenCoefficientExpansion",
+        "PermanentRestrictionFiber",
+        "PermanentFrozenCoefficientBridge",
+        "PermanentNormalizedFrozenBridge",
+        "CoreActivityFiniteProjection",
+        "PermanentNormalizedTailBridge",
+        "PermanentCoreFiniteRecovery",
+        "PermanentCircleSpectralCoordinates",
+        "PermanentCircleRankOne",
+        "PermanentCircleCentering",
+        "PermanentCircleSpectralFrobenius",
+        "PermanentCircleExceptional",
+        "PermanentCircleRootSum",
+        "PermanentHomogeneousEnvelope",
+        "PermanentCircleActualCentering",
+        "PermanentCircleEnvelope",
+        "PermanentCirclePolynomialDecay",
+        "PermanentActualCircleTail",
+        "BinaryGraphPermanentCircle",
+        "BinaryGraphPermanentTail",
+        "PermanentPositiveMoments",
+        "PermanentPhasePowers",
+        "PermanentRadialPhaseMoment",
+        "PermanentFiniteMixedIntegral",
+        "PermanentLinearProductIntegral",
+        "PermanentAssignmentFiberCount",
+        "PermanentPolarization",
+        "PermanentFactorEnergy",
+        "PermanentPointwiseAMGM",
+        "PermanentEnergyIntegral",
+        "PermanentSpectralBound",
+        "FiniteFactorialRecovery",
+        "RecoveryHomogeneousList",
+        "RecoveryHomogeneousEvaluation",
+        "RecoveryFiniteOrderRemainder",
+        "WeightedPolynomialMultiplier",
+        "FactorialWeightedRemainder",
+        "ActivityFactorialMultiplier",
+        "FactorialLinearWindow",
+        "PermanentPolynomialCircleTail",
+        "PermanentSpectralFrame",
+        "PermanentSpectralFactors",
+        "PartialMatchingFiberCount",
+        "ActivityFactorialSuppression",
+        "OrderedDegreeCompositionCount",
+        "StructuralActivitySeries",
+        "ActualFiniteActivity",
+        "WeightedCoefficientSums",
+        "StructuralActivityCount",
+        "StructuralActivityWeighted",
+        "ActivityNumericalBound",
+        "ActualDegreeAssignmentCount",
+        "QuantitativeFixedActivity",
+        "BinaryGraphActivityBound",
+        "ActivityZeroNormalization",
+        "SkewLagrangeBound",
+        "ComplexifiedSkewBound",
+        "TournamentSkewMargin",
+        "BipartiteOperatorBound",
+        "BinaryBalancedTensor",
+        "TournamentRawWeighted",
+        "BinaryGraphTransport",
+        "BinaryRawGraphWeighted",
+        "RawBlockNeumannInverse",
+        "BalancedTensorScores",
+        "RawCoordinateTaylor",
+        "RawCoordinateDisk",
+        "RawPhysicalWeightedNorm",
+        "RawActivityLabelNorm",
+        "WeightedCoefficientNorm",
+        "WeightedCoefficientProducts",
+        "PartialMatchingWeightedBound",
+        "EuclideanBilinearContraction",
+        "RawResolventEntryBound",
+        "RawResolventMeanBound",
+        "RawBlockInverseScaling",
+        "OrderedVertexWord",
+        "OrderedResidualPolynomial",
+        "OrderedResidualTilted",
+        "PartialMatchingActivityGrouping",
+        "OrderedResidualActivities",
+        "GlobalActivityFiniteRegroup",
+        "PairingEdgeCard",
+        "PartialMatchingWeightOrder",
+        "PhysicalActivityOrder",
+        "ZeroConstantFormalExp",
+        "GlobalResidualLog",
+        "GlobalLogFiniteVertices",
+        "GlobalLogDegreeAssignments",
+        "AffineWickWord",
+        "PartialMatchingAffine",
+        "PhysicalPartialMatching",
+        "PartialMatchingInvolution",
+        "StructuralPartialMatchingCounts",
+        "ResidualPartialMatchingExpansion",
+        "ResidualLogarithm",
+        "ResidualLogFiniteVertices",
+        "ResidualFirstCoefficient",
+        "PhysicalCovarianceInitial",
+        "ResidualSingleAssignment",
+        "BipartiteResidualSecondZero",
+        "ResidualHomogeneity",
+        "PhysicalLowMoments",
+        "ResidualDegreeAssignments",
+        "ResidualPhysicalAssignments",
+        "ResidualScalarActivities",
+        "FrozenSeriesGrouping",
+        "ShiftedWickFrozenSeries",
+        "EvenUnitResidualDescent",
+        "ActualResidualFrozenFactorization",
+        "AlgebraFormalExponential",
+        "FactorizedResidualIdentity",
+        "ResidualLowCoefficients",
+        "ResidualInsertionConvolution",
+        "PhysicalTiltedCovariance",
+        "OccurrenceWordDerivative",
+        "PhysicalWordRecurrence",
+        "PhysicalWordEvenDescent",
+        "PhysicalWordCoefficientOrder",
+        "ActualWickCoefficientBounds",
+        "WickGeometricTruncation",
+        "ActualWickTruncation",
+        "PolynomialInsertionWard",
+        "PolynomialTiltedRecurrence",
+        "WickAnalyticDiskTransfer",
+        "ActualWickUniformDisk",
+        "WickCoefficientCauchy",
+        "TaylorDerivativeExponential",
+        "RawSourceTaylorBridge",
+        "TournamentRawWickAnalytic",
+        "ActualProductWickGerm",
+        "AnalyticNormalizedBranch",
+        "AnalyticTaylorArithmetic",
+        "AnalyticTaylorFinite",
+        "AnalyticTaylorInverse",
+        "AffineMatrixTaylorBridge",
+        "AnalyticTaylorBranch",
+        "ActualGaussianTaylorBranch",
+        "MixedEvenMatrix",
+        "MixedEvenCandidate",
+        "ActualMixedEvenDescent",
+        "RawFormalMixedSpecialization",
+        "TournamentRawFormalWick",
+        "DerivationFiniteProduct",
+        "DerivationDeterminantColumns",
+        "FullJacobiDerivation",
+        "FormalFirstOrderUniqueness",
+        "NormalizedDeterminantBranch",
+        "ActualMixedDeterminantJacobi",
+        "ActualDeterminantBranchDerivative",
+        "MatrixDerivationInverse",
+        "MixedCovarianceSymmetry",
+        "MixedCovarianceDerivative",
+        "MixedSourceQuadraticDerivative",
+        "MixedDeterminantCandidateODE",
+        "ActualMixedDeterminantFormula",
+        "MixedWardUnit",
+        "MixedFormalTimeDerivative",
+        "MixedWardSolution",
+        "ActualMixedSourceTimeODE",
+        "FormalLinearLift",
+        "FormalDividedPowers",
+        "FormalMixedExponential",
+        "MixedSourcePolynomials",
+        "FormalWickInsertion",
+        "ActualMixedSourceWard",
+        "ActualMixedWardMatrix",
+        "AssignmentDeletionExponent",
+        "OptionPairingDeletion",
+        "FullWickMonomialRecurrence",
+        "FullWickPolynomialIBP",
+        "RankOneQuadraticCoefficients",
+        "RankOneQuadraticODE",
+        "RankOneQuadraticUnitBranch",
+        "RankOneQuadraticDeterminant",
+        "LinearSourceOccurrences",
+        "LinearSourceExpansion",
+        "PairingEndpointEquiv",
+        "LinearSourcePairingFactor",
+        "MultivariateLinearFormalExponential",
+        "ConstantPairingMoments",
+        "ConstantPairingCount",
+        "ConstantPairingFormalExponential",
+        "ScalarWickFormalExponential",
+        "OccurrenceSquarefreeEquiv",
+        "OrderedUnorderedSubsetPairing",
+        "FullWickSquarefreeCompatibility",
+        "PairingDeletion",
+        "PairingMomentRecurrence",
+        "PairingMomentParity",
+        "RepeatedLabelPairing",
+        "FullFourthMoment",
+        "SymmetricPairingTransport",
+        "PairingRepresentativeBridge",
+        "OccurrenceWickPolynomial",
+        "SubsetPairingScaling",
+        "FrozenPartialPairingPolynomial",
+        "ShiftedProductSubsetExpansion",
+        "SquarefreePairingContraction",
+        "FrozenPairingEndpoints",
+        "RectangularPairing",
+        "FinitePairingTransport",
+        "FinitePairingPermanent",
+        "SubsetPairingPermanent",
+        "BipartitePairingPermanent",
+        "WickPairingZero",
+        "WickBipartiteEquiv",
+        "WickPairingPermanent",
+        "ComplexSkewSourceIdentity",
+        "BlockGaussianDeterminant",
+        "BlockGaussianSourceElimination",
+        "RawBlockSourceIdentity",
+        "RawGaussianSourceScalar",
+        "ActualBlockGaussianSource",
+        "GaussianParameterBranch",
+        "GaussianSourceExponent",
+        "ComplexResolventAnalytic",
+        "ComplexCauchyErrorTransfer",
+        "GaussianScalarFactor",
+        "ActualGaussianSourceExponent",
+        "GaussianDeterminantBranch",
+        "GaussianSourceProduct",
+        "GaussianSourceAnalytic",
+        "GaussianSourceDerivative",
+        "TransitiveKernelInverse",
+        "MatrixEuclideanEntryBound",
+        "TransitiveKernelInverseBounds",
+        "DiamondFreeKernelInverseTransfer",
+        "DiamondFreeKernelOperatorBound",
+        "ComplexKernelDiskLower",
+        "DiamondFreeDiskResolvent",
+        "ActualComplexScoreSource",
+        "ComplexBinomialRate",
+        "ComplexOperatorResolventBound",
+        "DiamondFreeKernelLimit",
+        "DiamondFreeKernelUniform",
+        "DiamondFreeComplexResolvent",
+        "DiamondFreeKernelDeterminant",
+        "ActualSmallDiamondSixth",
+        "SmallDiamondGraphEndpoint",
+        "DiamondFreePathAverage",
+        "GlobalSixthDeficitEndpoint",
+        "ActualPathConvolution",
+        "OrdinalSixthMatrixEndpoint",
+        "OrdinalSixthPolynomialEndpoint",
+        "SourceResolventEndpoint",
+        "OnesEnergyEndpoint",
+        "ReferenceMomentEndpoint",
+        "VectorMajorizationEndpoint",
+        "MajorizationCone",
+        "SelectedWeight",
+        "BalancedSignCounts",
+        "SelectedSignPairs",
+        "SelectedRowOptimization",
+        "VectorWeakMajorization",
+        "ZeroDiamondRepair",
+        "FiniteGraphEditTransport",
+        "DiamondFreeRepresentation",
+        "TournamentColorEnumeration",
+        "ColorCutNormalization",
+        "ColorTargetModels",
+        "ColorGraphRepair",
+        "ColorTransportExact",
+        "DiamondGap",
+        "ColorTransport",
+        "ColorEnergy",
+        "OrderedCancellation",
+        "QRegularApplications",
+        "PathCountGrowth",
+        "QRegularRationalLimit",
+        "ActualMomentAdapterCandidate",
+        "OddMomentRatioComparisonCandidate",
+        "SpectralMomentBridgeCandidate",
+        "ActualSharpSpectralCandidate",
+        "ActualSharpPathEnergyCandidate",
+        "ActualExtremalAsymptoticCandidate"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PowerApproximation",
+      "path": "lean/TournamentHamiltonian/PowerApproximation.lean",
+      "sha256": "57e8ba3cd1b98beab3d30407d9112e31af8baff20413eada2b9c5b78fc0fee8d",
+      "imports": [
+        "TournamentHamiltonian.TransitiveDeterminant",
+        "Mathlib.Analysis.SpecialFunctions.Complex.LogBounds"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.AlternatingTournament",
+      "path": "lean/TournamentHamiltonian/AlternatingTournament.lean",
+      "sha256": "bc735088c5a155ca789f60539df4b5f1825febdb549e026c838f205ac842be8a",
+      "imports": [
+        "TournamentHamiltonian.PowerApproximation"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Carousel",
+      "path": "lean/TournamentHamiltonian/Carousel.lean",
+      "sha256": "c6354e2414e9180ca1b011f54d8c67f25cb1e3521eda2e55fc6bbc1e792f2497",
+      "imports": [
+        "TournamentHamiltonian.AlternatingTournament"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.SkewSpectrum",
+      "path": "lean/TournamentHamiltonian/SkewSpectrum.lean",
+      "sha256": "9c72f66fac77382b69dca92090badf4fcbe3373211ee17572b3148bf9b12c4e4",
+      "imports": [
+        "TournamentHamiltonian.Carousel",
+        "TournamentHamiltonian.PositiveDeterminant",
+        "Mathlib.Analysis.Matrix.Spectrum"
+      ]
+    },
+    {
+      "module": "OperatorCapFocused",
+      "path": "lean/OperatorCapFocused.lean",
+      "sha256": "63787f89382c3cdf15c4d853d2f5eb19d007309bc6affc125472f67515bf4e1f",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum",
+        "Mathlib.Analysis.CStarAlgebra.Matrix",
+        "Mathlib.Analysis.CStarAlgebra.Basic",
+        "Mathlib.LinearAlgebra.Matrix.PosDef",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.Bounds",
+        "Mathlib.Data.Finset.Sort",
+        "Mathlib.Order.Prod.Lex.Basic"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.Bregman",
+      "path": "lean/TournamentHamiltonian/Bregman.lean",
+      "sha256": "74b0bc6e11454d6f0a44e622aeb5cf2665178abdcb472de4ffe273a5de8125b6",
+      "imports": [
+        "TournamentHamiltonian.Definitions",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+        "Mathlib.Data.Fin.Tuple.Basic",
+        "Mathlib.Algebra.BigOperators.Fin"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.BregmanRanks",
+      "path": "lean/TournamentHamiltonian/BregmanRanks.lean",
+      "sha256": "34264ffc1978cab07e4fbfa498d39aafe74cecaabb79b5c62cde9340932ae146",
+      "imports": [
+        "TournamentHamiltonian.Bregman",
+        "Mathlib.Data.Finset.Sort",
+        "Mathlib.Data.Fin.Rev",
+        "Mathlib.Data.Nat.Factorial.BigOperators",
+        "Mathlib.Order.Interval.Finset.Fin"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.BregmanBound",
+      "path": "lean/TournamentHamiltonian/BregmanBound.lean",
+      "sha256": "7e5785e757b2669ba71a83bf5312eb4bc3602c2aad4f4732110bbabc575be117",
+      "imports": [
+        "TournamentHamiltonian.BregmanRanks",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Real"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.DegreeBalancing",
+      "path": "lean/TournamentHamiltonian/DegreeBalancing.lean",
+      "sha256": "e404d0e71dc343f3c8bfeae68f909fe24f9db64cd075eac4f9c896832270c13b",
+      "imports": [
+        "TournamentHamiltonian.BregmanBound",
+        "Mathlib.Analysis.SpecialFunctions.Stirling",
+        "Mathlib.Analysis.Complex.ExponentialBounds"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.DegreeVariance",
+      "path": "lean/TournamentHamiltonian/DegreeVariance.lean",
+      "sha256": "0fecfa0e764c21c4bc3ccbfdfa01f1d78914f19aa30aaa6d17bd3a03ab51cc0b",
+      "imports": [
+        "TournamentHamiltonian.DegreeBalancing"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.StirlingNormalization",
+      "path": "lean/TournamentHamiltonian/StirlingNormalization.lean",
+      "sha256": "cb9dd52aadf4c77ceca6e4ad2492db186a3b200fe13e3b8d78624dd41468d40c",
+      "imports": [
+        "TournamentHamiltonian.DegreeVariance"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.DegreeDeletion",
+      "path": "lean/TournamentHamiltonian/DegreeDeletion.lean",
+      "sha256": "d4243e6d9c4a23303c8aab0a92b8bc895eb2abe65bb7136617fa7513e28ed7d4",
+      "imports": [
+        "TournamentHamiltonian.StirlingNormalization",
+        "TournamentHamiltonian.PathConvolutionCoefficients"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.SubsetWeights",
+      "path": "lean/TournamentHamiltonian/SubsetWeights.lean",
+      "sha256": "7e71f11b89b1e3e40b238badd9ab542d66e044b219e45e8b74e1c32eceb01c28",
+      "imports": [
+        "TournamentHamiltonian.Hadamard",
+        "Mathlib.Analysis.SpecificLimits.Normed",
+        "Mathlib.Analysis.Complex.ExponentialBounds",
+        "Mathlib.Analysis.SpecialFunctions.Stirling"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.LongTail",
+      "path": "lean/TournamentHamiltonian/LongTail.lean",
+      "sha256": "ffc08f0bdd46f706a323c0760f0b61c278f4102d7dd9f623406d84f4000182c3",
+      "imports": [
+        "TournamentHamiltonian.SubsetWeights",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.NormalizedConvolution",
+      "path": "lean/TournamentHamiltonian/NormalizedConvolution.lean",
+      "sha256": "dd8ef8fbefb7501b700e74099f8a6b985a475b7a9585f6ce81c86768a2ea5b1e",
+      "imports": [
+        "TournamentHamiltonian.DegreeDeletion",
+        "TournamentHamiltonian.PathConvolutionGenerating",
+        "TournamentHamiltonian.LongTail"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.HighVariance",
+      "path": "lean/TournamentHamiltonian/HighVariance.lean",
+      "sha256": "1087bc032207e222f7dacdf62905259db9c87d22a52eaea07e9a76b431cbdd50",
+      "imports": [
+        "TournamentHamiltonian.NormalizedConvolution"
+      ]
+    },
+    {
+      "module": "MeetingConvolutionFinite",
+      "path": "lean/MeetingConvolutionFinite.lean",
+      "sha256": "c544df2aae1b98bf798a462eddbb969c965d0e94b6e61191d2d558d515b6e154",
+      "imports": [
+        "TournamentHamiltonian.HighVariance"
+      ]
+    },
+    {
+      "module": "PrincipalGeneratingFocused",
+      "path": "lean/PrincipalGeneratingFocused.lean",
+      "sha256": "ae229a53dc7275ebc0099737bb03fe0792ca8ee7919cf98ded568ae9ad2531f3",
+      "imports": [
+        "TournamentHamiltonian.Hadamard",
+        "Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff"
+      ]
+    },
+    {
+      "module": "GeneratingRankCore",
+      "path": "lean/GeneratingRankCore.lean",
+      "sha256": "a4cf10b84e32f4b6bf60bd2fcda0f07ba9d42086a1449b56ee4405562e2298ba",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum",
+        "TournamentHamiltonian.PathConvolution"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.SelectedPermanentBasic",
+      "path": "lean/TournamentHamiltonian/SelectedPermanentBasic.lean",
+      "sha256": "893f95d9c7847326a0838ddce2ccc95fbca9ae0a7c0f6839cf0a75993c951525",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.Permanent",
+        "Mathlib.Analysis.SpecialFunctions.Exp",
+        "Mathlib.Tactic",
+        "Mathlib.Logic.Equiv.Fintype",
+        "Mathlib.Algebra.BigOperators.Ring.Finset",
+        "Mathlib.Algebra.Polynomial.BigOperators"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.FourBlockPermanent",
+      "path": "lean/TournamentHamiltonian/FourBlockPermanent.lean",
+      "sha256": "ed8337450d10120250404bbb60ad1daec31786168c672edd49d288af063a4873",
+      "imports": [
+        "TournamentHamiltonian.SelectedPermanentBasic",
+        "TournamentHamiltonian.DegreeDeletion"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.CrossPermanentBounds",
+      "path": "lean/TournamentHamiltonian/CrossPermanentBounds.lean",
+      "sha256": "78394b99501fb34bdb88cb2007d74759631d6ba70877c4958342e19831ca084b",
+      "imports": [
+        "TournamentHamiltonian.FourBlockPermanent"
+      ]
+    },
+    {
+      "module": "ExceptionalGeneratingCandidate",
+      "path": "lean/ExceptionalGeneratingCandidate.lean",
+      "sha256": "683b737ad5adf86b0b17ac763e5da156142d0c8ffa956ffce4396bbc0c7d201f",
+      "imports": [
+        "GeneratingRankCore",
+        "PrincipalGeneratingFocused",
+        "TournamentHamiltonian.CrossPermanentBounds",
+        "TournamentHamiltonian.DegreeDeletion"
+      ]
+    },
+    {
+      "module": "WeightedPrincipalMassCandidate",
+      "path": "lean/WeightedPrincipalMassCandidate.lean",
+      "sha256": "febbb1bf704a6bfc1359e7c2acb9fa1a14c8baca652ed836c34ca3538af2ab99",
+      "imports": [
+        "MeetingConvolutionFinite",
+        "PrincipalGeneratingFocused",
+        "ExceptionalGeneratingCandidate"
+      ]
+    },
+    {
+      "module": "PrincipalPowerMoment",
+      "path": "lean/PrincipalPowerMoment.lean",
+      "sha256": "d9897fdd5c64e28e60aa8848fbede5c438f68e559fa5821c8365c29c8eb82b45",
+      "imports": [
+        "TournamentHamiltonian.NormalizedConvolution"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.CrossFactorialNormalization",
+      "path": "lean/TournamentHamiltonian/CrossFactorialNormalization.lean",
+      "sha256": "0830e5abc5ba973cfb7c15ff758cc12ddd8682c65be147a6dbc24ee41c845900",
+      "imports": [
+        "TournamentHamiltonian.CrossPermanentBounds"
+      ]
+    },
+    {
+      "module": "ExceptionalDeletionCandidate",
+      "path": "lean/ExceptionalDeletionCandidate.lean",
+      "sha256": "ef2329af9b6bb17c5f052ee40e00465869a82cfba8f613b9b9324bcc33f1f772",
+      "imports": [
+        "TournamentHamiltonian.CrossFactorialNormalization"
+      ]
+    },
+    {
+      "module": "WeightedQuadraticConvolutionCandidate",
+      "path": "lean/WeightedQuadraticConvolutionCandidate.lean",
+      "sha256": "a8bdc7081d7b6a1c90387bb87d578e51f13ec990a5e5969b05fd486a73daf304",
+      "imports": [
+        "WeightedPrincipalMassCandidate",
+        "PrincipalPowerMoment",
+        "ExceptionalDeletionCandidate"
+      ]
+    },
+    {
+      "module": "NonprincipalReconstructionCandidate",
+      "path": "lean/NonprincipalReconstructionCandidate.lean",
+      "sha256": "fcd863942c867b6780b4b405c3e1a1f644d631ddbe0e1eceed692fb5701521ab",
+      "imports": [
+        "DiagonalScalingPermanent",
+        "TournamentPrescalingMass"
+      ]
+    },
+    {
+      "module": "IndependentCenteredRestrictionCandidate",
+      "path": "lean/IndependentCenteredRestrictionCandidate.lean",
+      "sha256": "34a451b9acfaa27b974dda2e96b73e63248188f76419e0e0f04dd690c1f9c7e5",
+      "imports": [
+        "PermanentCircleActualCentering"
+      ]
+    },
+    {
+      "module": "ActualNormalizedCenteredGapCandidate",
+      "path": "lean/ActualNormalizedCenteredGapCandidate.lean",
+      "sha256": "cf450ce97e6c6069adbf9c2a25755ae1f6afbccd586c55f24e60e33c419c98cf",
+      "imports": [
+        "IndependentCenteredRestrictionCandidate",
+        "ActualPrescalingNormalization",
+        "TournamentSkewMargin"
+      ]
+    },
+    {
+      "module": "DeletionRenormalizationCandidate",
+      "path": "lean/DeletionRenormalizationCandidate.lean",
+      "sha256": "fd7852f1673971f5334e7cad869ad90e18503bb0a0d53901096bd60b7ce8045f",
+      "imports": [
+        "IndependentDeletionMass"
+      ]
+    },
+    {
+      "module": "NormalizedCenteredRestrictionCandidate",
+      "path": "lean/NormalizedCenteredRestrictionCandidate.lean",
+      "sha256": "2a26cd05881c540107823e7962d900edc6e3545a1afcd6d108e479dd419134f6",
+      "imports": [
+        "IndependentCenteredRestrictionCandidate",
+        "DeletionRenormalizationCandidate"
+      ]
+    },
+    {
+      "module": "DeletedScalingSynthesisCandidate",
+      "path": "lean/DeletedScalingSynthesisCandidate.lean",
+      "sha256": "2a2d0b324deb52955e162282c8792f4b0159e9983651f66af69a8b841f92087f",
+      "imports": [
+        "ActualNormalizedCenteredGapCandidate",
+        "NormalizedCenteredRestrictionCandidate",
+        "RawScalingSynthesis"
+      ]
+    },
+    {
+      "module": "ActualReconstructionBridgeCandidate",
+      "path": "lean/ActualReconstructionBridgeCandidate.lean",
+      "sha256": "8617cdec3e7d1d5c5ae232cfcef3a69f304773ab5f2c5a93bdd9e6c8e47bdc45",
+      "imports": [
+        "NonprincipalReconstructionCandidate",
+        "DeletedScalingSynthesisCandidate"
+      ]
+    },
+    {
+      "module": "ActualKappaBridgeCandidate",
+      "path": "lean/ActualKappaBridgeCandidate.lean",
+      "sha256": "776d3f44f6a64dd3f76f4a053b80b9b50d0707aa5a7a64e8fdafc6f599ec4c7d",
+      "imports": [
+        "ActualReconstructionBridgeCandidate"
+      ]
+    },
+    {
+      "module": "LogWindowErrorCandidate",
+      "path": "lean/LogWindowErrorCandidate.lean",
+      "sha256": "c9c043ea0a867c1b97e22dc85e7020cc3152c976a47578e43fd5bc661c400592",
+      "imports": [
+        "ActualNormalizedCenteredGapCandidate",
+        "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics"
+      ]
+    },
+    {
+      "module": "LogWindowScalarGateCandidate",
+      "path": "lean/LogWindowScalarGateCandidate.lean",
+      "sha256": "594e0cdcb775dab47f2bd6d237bd8115fb14c85f2fb6908e2ae2d954ac7b1caf",
+      "imports": [
+        "DeletedScalingSynthesisCandidate"
+      ]
+    },
+    {
+      "module": "LogWindowDeletionBudgetCandidate",
+      "path": "lean/LogWindowDeletionBudgetCandidate.lean",
+      "sha256": "b550c1b3243a074ad655013ec0802c5222f00028fb32dd6408313f73442851d8",
+      "imports": [
+        "LogWindowErrorCandidate",
+        "LogWindowScalarGateCandidate"
+      ]
+    },
+    {
+      "module": "ActualControlledReconstructionCandidate",
+      "path": "lean/ActualControlledReconstructionCandidate.lean",
+      "sha256": "b6e5de3df2c4a43f224d63f8233c22e595ab7a7af46377dc3360bc2472477194",
+      "imports": [
+        "ActualKappaBridgeCandidate",
+        "LogWindowDeletionBudgetCandidate"
+      ]
+    },
+    {
+      "module": "ActualRecoveryUpperCandidate",
+      "path": "lean/ActualRecoveryUpperCandidate.lean",
+      "sha256": "1cf93e67b15864cb28d104cb932d2ce70a14fe96a429b208df28d43d5ccea832",
+      "imports": [
+        "ActualControlledReconstructionCandidate"
+      ]
+    },
+    {
+      "module": "PhysicalMinorRecoveryCandidate",
+      "path": "lean/PhysicalMinorRecoveryCandidate.lean",
+      "sha256": "b2a7da685cd79c41e1ec36ab3a065a9eb761520cd824e5b5dd16a83d73368f35",
+      "imports": [
+        "ActualRecoveryUpperCandidate"
+      ]
+    },
+    {
+      "module": "NormalizationScalarsCandidate",
+      "path": "lean/NormalizationScalarsCandidate.lean",
+      "sha256": "7b3fd4a6d7e44161646546d1602406c1911af86d3691fc6f5b4e29e3fcc1a170",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ActualAffineLogDetCandidate",
+      "path": "lean/ActualAffineLogDetCandidate.lean",
+      "sha256": "26d7c5a8925dcff7ee31a3d1f7b9a7143e9eaa3e1959bad1df1e7db416c95838",
+      "imports": [
+        "FullJacobiDerivation",
+        "Mathlib.Algebra.Polynomial.Derivation",
+        "Mathlib.Analysis.Calculus.Deriv.Polynomial",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.LinearAlgebra.Matrix.PosDef"
+      ]
+    },
+    {
+      "module": "RealGramEndpoint",
+      "path": "lean/RealGramEndpoint.lean",
+      "sha256": "c8075943b2368b8531a385dddc448134c1f8994abb57a9aa1d804346388a3fce",
+      "imports": [
+        "ActualAffineLogDetCandidate",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "RealBilinearTrace",
+      "path": "lean/RealBilinearTrace.lean",
+      "sha256": "22d2e7d60c8a5b93a74ebea60fd4c9236f52d5ea1a7240d20009584582a89b7d",
+      "imports": [
+        "RealGramEndpoint",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SameRootFrobeniusCandidate",
+      "path": "lean/SameRootFrobeniusCandidate.lean",
+      "sha256": "ec0a9ae7ddcaa07285b79f58853d7eb2794ca797b4373b2e29288c33f8137038",
+      "imports": [
+        "ActualReconstructionBridgeCandidate"
+      ]
+    },
+    {
+      "module": "FiniteCenteredDisplacementCandidate",
+      "path": "lean/FiniteCenteredDisplacementCandidate.lean",
+      "sha256": "cc2b1fa2224e559bedf1c44ca68d1c416f40061ff429d762197ee968d9b42873",
+      "imports": [
+        "NormalizationScalarsCandidate",
+        "RealBilinearTrace",
+        "SameRootFrobeniusCandidate"
+      ]
+    },
+    {
+      "module": "LogWindowFrobeniusUniformCandidate",
+      "path": "lean/LogWindowFrobeniusUniformCandidate.lean",
+      "sha256": "d4fb45d91e43c8ae81cd134be3cbe0f8f8180a9a095a8fe0e04a2912d1ff8f54",
+      "imports": [
+        "SameRootFrobeniusCandidate",
+        "LogWindowDeletionBudgetCandidate"
+      ]
+    },
+    {
+      "module": "RectangularGramLossCandidate",
+      "path": "lean/RectangularGramLossCandidate.lean",
+      "sha256": "40d615552b967c0a349dec05e025186ef43c43aa68a8796cd04e4f449e22b41c",
+      "imports": [
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.LinearAlgebra.Matrix.Trace",
+        "Mathlib.Analysis.Complex.Norm"
+      ]
+    },
+    {
+      "module": "IndependentDeletionLossCandidate",
+      "path": "lean/IndependentDeletionLossCandidate.lean",
+      "sha256": "e26e6097e14245ac4e1d71d86b202537f4923371278a89f6d4eedf9bb746ce2b",
+      "imports": [
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement",
+        "RectangularGramLossCandidate",
+        "IndependentCenteredRestrictionCandidate",
+        "ActualTournamentPrescalingBounds"
+      ]
+    },
+    {
+      "module": "IndependentCenteringEnergyCandidate",
+      "path": "lean/IndependentCenteringEnergyCandidate.lean",
+      "sha256": "ef1da071d8264ebb797abca5d857c32df58702b6e9cd09a6b2b168ab93790965",
+      "imports": [
+        "IndependentDeletionLossCandidate",
+        "TournamentPrescalingMassBound"
+      ]
+    },
+    {
+      "module": "ActualTournamentDisplacementCandidate",
+      "path": "lean/ActualTournamentDisplacementCandidate.lean",
+      "sha256": "a96301462b1540d8d16a97d478d82f0244b118a63a657075fc5a97df5d8e7698",
+      "imports": [
+        "FiniteCenteredDisplacementCandidate",
+        "LogWindowFrobeniusUniformCandidate",
+        "IndependentCenteringEnergyCandidate"
+      ]
+    },
+    {
+      "module": "ActualNormalizationRateCandidate",
+      "path": "lean/ActualNormalizationRateCandidate.lean",
+      "sha256": "8691e4c6c007253e6c8f0aa21b06ad86880b68481faeb0ace0bce6bb093e9d97",
+      "imports": [
+        "ActualTournamentDisplacementCandidate"
+      ]
+    },
+    {
+      "module": "SameRootUniformCapsCandidate",
+      "path": "lean/SameRootUniformCapsCandidate.lean",
+      "sha256": "7d638db9f56a7315d697d9b25b7d73f8b913fac2c9431c99802a36d8a348e955",
+      "imports": [
+        "LogWindowFrobeniusUniformCandidate"
+      ]
+    },
+    {
+      "module": "SkewBaselineGramDifferenceCandidate",
+      "path": "lean/SkewBaselineGramDifferenceCandidate.lean",
+      "sha256": "8e130eb608493394396e85752b1409bbb5ce2333ce341b948bfa700ce1e06917",
+      "imports": [
+        "Mathlib.Analysis.Matrix.PosDef",
+        "Mathlib.Algebra.Order.Star.Real",
+        "Mathlib.LinearAlgebra.Matrix.Trace"
+      ]
+    },
+    {
+      "module": "PositiveGramLogDetCandidate",
+      "path": "lean/PositiveGramLogDetCandidate.lean",
+      "sha256": "2fb3a8e320a8df757ae60af153a02d361cffd6ec9e5052535ada1db72b736b0e",
+      "imports": [
+        "RealGramEndpoint",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SkewGaussianFactorCandidate",
+      "path": "lean/SkewGaussianFactorCandidate.lean",
+      "sha256": "a22b4a30f296698041a23214df5ef0a074a6ce36458bd5ef98e606e13b6f81ab",
+      "imports": [
+        "SkewBaselineGramDifferenceCandidate",
+        "PositiveGramLogDetCandidate"
+      ]
+    },
+    {
+      "module": "SkewGaussianActualNormCandidate",
+      "path": "lean/SkewGaussianActualNormCandidate.lean",
+      "sha256": "ea1b88831b797182b45f553e7c228c9ba4f9ee8f181948549ca6bddae5b55604",
+      "imports": [
+        "SkewGaussianFactorCandidate",
+        "TournamentSkewMargin",
+        "RawScalingSynthesis"
+      ]
+    },
+    {
+      "module": "SkewGaussianBaselineCandidate",
+      "path": "lean/SkewGaussianBaselineCandidate.lean",
+      "sha256": "6d45c58ed7b7d548454c1be8d3f6ba19c151ead77231d328c38cae8248dcf521",
+      "imports": [
+        "SkewGaussianActualNormCandidate"
+      ]
+    },
+    {
+      "module": "RealProjectionAggregationCandidate",
+      "path": "lean/RealProjectionAggregationCandidate.lean",
+      "sha256": "ed0f48d9bc9a231f7999566e1686d99da03fcc67152e710dafe815fdce389ebe",
+      "imports": [
+        "RealGramEndpoint",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    {
+      "module": "ActualTwoSidedCenteringCandidate",
+      "path": "lean/ActualTwoSidedCenteringCandidate.lean",
+      "sha256": "1b27eef3792a93f2ebb87a775241018014ff9c014df08e5ddd873e8046132018",
+      "imports": [
+        "RealProjectionAggregationCandidate",
+        "IndependentCenteringEnergyCandidate"
+      ]
+    },
+    {
+      "module": "RealIndependentRestrictionCandidate",
+      "path": "lean/RealIndependentRestrictionCandidate.lean",
+      "sha256": "9be4f615a2760289bc22c9b8dd93943f048474c41b3b78a790563c9d0524ab92",
+      "imports": [
+        "ActualTwoSidedCenteringCandidate"
+      ]
+    },
+    {
+      "module": "ActualDeletedCenteredGaussianCandidate",
+      "path": "lean/ActualDeletedCenteredGaussianCandidate.lean",
+      "sha256": "5b1dfdc11dbddf6ba24e94e5e77ccc40a6c0836b69123a0e05eb05fecb7f14f3",
+      "imports": [
+        "SkewGaussianBaselineCandidate",
+        "RealIndependentRestrictionCandidate"
+      ]
+    },
+    {
+      "module": "PolynomialLogDetCandidate",
+      "path": "lean/PolynomialLogDetCandidate.lean",
+      "sha256": "5b8768969a2239e3b4fe3b6b7a6eb976b96789b4c3f849169ce5b8ca512c90c4",
+      "imports": [
+        "FullJacobiDerivation",
+        "Mathlib.Algebra.Polynomial.Derivation",
+        "Mathlib.Analysis.Calculus.Deriv.Polynomial",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv",
+        "Mathlib.LinearAlgebra.Matrix.PosDef"
+      ]
+    },
+    {
+      "module": "QuadraticGramDerivative",
+      "path": "lean/QuadraticGramDerivative.lean",
+      "sha256": "8f49ede7e558ae67e1552d64d27de3b705407d112303efdb83071a47276de768",
+      "imports": [
+        "PolynomialLogDetCandidate",
+        "RealBilinearTrace",
+        "PositiveGramLogDetCandidate"
+      ]
+    },
+    {
+      "module": "GaussianDisplacement",
+      "path": "lean/GaussianDisplacement.lean",
+      "sha256": "07659d6f712b987f228a932ba95778a19d5ba13784d862c3ee8709ef01b882b9",
+      "imports": [
+        "QuadraticGramDerivative"
+      ]
+    },
+    {
+      "module": "ActualSameRootRateCandidate",
+      "path": "lean/ActualSameRootRateCandidate.lean",
+      "sha256": "52dcd37f7f4e0853777a505e8bf88d16e4ff37f1b9b5f8ba4410267290bf752d",
+      "imports": [
+        "ActualNormalizationRateCandidate",
+        "SameRootUniformCapsCandidate",
+        "ActualDeletedCenteredGaussianCandidate",
+        "GaussianDisplacement"
+      ]
+    },
+    {
+      "module": "DeletedCenteredGaussianRateCandidate",
+      "path": "lean/DeletedCenteredGaussianRateCandidate.lean",
+      "sha256": "06f0e69e230ef4c8f334c926dd2af8b532d3e83b6c6fb03bdb736d645859d9cb",
+      "imports": [
+        "ActualDeletedCenteredGaussianCandidate"
+      ]
+    },
+    {
+      "module": "ActualGaussianFinalRateCandidate",
+      "path": "lean/ActualGaussianFinalRateCandidate.lean",
+      "sha256": "4462be72079156fce82612d24574d2f74b60c103fc0cd925c1b0a1820638c5df",
+      "imports": [
+        "ActualSameRootRateCandidate",
+        "DeletedCenteredGaussianRateCandidate"
+      ]
+    },
+    {
+      "module": "GaussianExponentialCandidate",
+      "path": "lean/GaussianExponentialCandidate.lean",
+      "sha256": "6aadc573e2872d12a1ec804a6f13a09c71a9f3d929f82f3f7ab0a15d77d0092d",
+      "imports": [
+        "ActualGaussianFinalRateCandidate"
+      ]
+    },
+    {
+      "module": "ActualGaussianMainCandidate",
+      "path": "lean/ActualGaussianMainCandidate.lean",
+      "sha256": "4f45c14ff99e6fc535e894a2e6146d86041d4ea4c2df74a2f930ef47e795d12a",
+      "imports": [
+        "GaussianExponentialCandidate"
+      ]
+    },
+    {
+      "module": "BalancedRawData",
+      "path": "lean/BalancedRawData.lean",
+      "sha256": "3a05128265411c1cef68d7f3faa743adc862165b32d5526ddb96f4a6dd20c2d7",
+      "imports": [
+        "ActualHessianComplex",
+        "RawScalingSynthesis",
+        "ActualCoreTracePrimitive",
+        "ActualResidualFrozenFactorization",
+        "BinaryGraphActivityBound"
+      ]
+    },
+    {
+      "module": "GeneralBalancedWeighted",
+      "path": "lean/GeneralBalancedWeighted.lean",
+      "sha256": "026dcf7a0eb1d412c27d0f59463dd9a2d38aa6fc42252e31d4d05a183918850c",
+      "imports": [
+        "BalancedRawData",
+        "ActualCoreWeightedBound",
+        "RawPhysicalWeightedNorm"
+      ]
+    },
+    {
+      "module": "GeneralZerothWindow",
+      "path": "lean/GeneralZerothWindow.lean",
+      "sha256": "244bbe64e5b01b21ece7996da26b4593ee6f344567b66aa4b9adeaad25804601",
+      "imports": [
+        "GeneralBalancedWeighted",
+        "PermanentTruncatedRecoveryAlgebra",
+        "ActivityFiniteWindowBound"
+      ]
+    },
+    {
+      "module": "GeneralZerothTail",
+      "path": "lean/GeneralZerothTail.lean",
+      "sha256": "157afd5d369674d5bb81cc043fbd985f08eb50a63bb4be444dcb91bbf3f9c043",
+      "imports": [
+        "GeneralZerothWindow",
+        "PermanentNormalizedTailBridge",
+        "FormalSeriesDerivativeAtOne"
+      ]
+    },
+    {
+      "module": "WeightedSeriesEvaluation",
+      "path": "lean/WeightedSeriesEvaluation.lean",
+      "sha256": "b72ad35a2ae470ef8dc954202a4e2a18fc21dfe6fb63db1abfb07aceaf448015",
+      "imports": [
+        "FormalSeriesDerivativeAtOne"
+      ]
+    },
+    {
+      "module": "AffineDeterminantEvaluationCandidate",
+      "path": "lean/AffineDeterminantEvaluationCandidate.lean",
+      "sha256": "34756d4b597d7fd6b4b8b5cda22f5c4cdaee29633c6b182d0f9566bf6bf3dd31",
+      "imports": [
+        "WeightedSeriesEvaluation",
+        "MixedEvenCandidate",
+        "ActualCoreTracePrimitive"
+      ]
+    },
+    {
+      "module": "PositiveBranchEvaluationCandidate",
+      "path": "lean/PositiveBranchEvaluationCandidate.lean",
+      "sha256": "5b20fd64b79f78afa3d1fdffadd85f1c2569bfba88672cb5b9848fd97bf400d7",
+      "imports": [
+        "AffineDeterminantEvaluationCandidate",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ActualBalancedCoreDeterminantCandidate",
+      "path": "lean/ActualBalancedCoreDeterminantCandidate.lean",
+      "sha256": "7d99d1da644e27e4042371e06120c70012f1f28e2a6c58c195d5dd06392d5b1d",
+      "imports": [
+        "PositiveBranchEvaluationCandidate",
+        "GeneralBalancedWeighted",
+        "Mathlib.LinearAlgebra.Matrix.SchurComplement"
+      ]
+    },
+    {
+      "module": "GeneralBalancedPermanent",
+      "path": "lean/GeneralBalancedPermanent.lean",
+      "sha256": "6eb043f7645235a79876afecdb57a4f9bf42969a318c29f0834928298c9e1b2c",
+      "imports": [
+        "GeneralZerothTail",
+        "ActualBalancedCoreDeterminantCandidate"
+      ]
+    },
+    {
+      "module": "SameRootPermanentCandidate",
+      "path": "lean/SameRootPermanentCandidate.lean",
+      "sha256": "37e82a48185ed491a47a2191e943c09fa1d2d2a8fb11176251dc9ca3725ec58c",
+      "imports": [
+        "SameRootUniformCapsCandidate",
+        "GeneralBalancedPermanent"
+      ]
+    },
+    {
+      "module": "ActualPermanentExponentialCandidate",
+      "path": "lean/ActualPermanentExponentialCandidate.lean",
+      "sha256": "963c7358c5fa75bc1e27c48ab834719bd38ef6b958a5fa0c797ae4cb9d03cfd3",
+      "imports": [
+        "ActualGaussianMainCandidate",
+        "SameRootPermanentCandidate"
+      ]
+    },
+    {
+      "module": "ActualPhysicalExponentialCandidate",
+      "path": "lean/ActualPhysicalExponentialCandidate.lean",
+      "sha256": "5fa1f9d28da16bc7e9e698305a74872ae540d6cbadb71970c53c83341e8a5ccd",
+      "imports": [
+        "PhysicalMinorRecoveryCandidate",
+        "ActualPermanentExponentialCandidate"
+      ]
+    },
+    {
+      "module": "GeneralScalarRestorationCandidate",
+      "path": "lean/GeneralScalarRestorationCandidate.lean",
+      "sha256": "c126aa90638a4ef4b91b4f759366ac36b8a181a9fc279819e43b6774348003cd",
+      "imports": [
+        "ActualPhysicalExponentialCandidate"
+      ]
+    },
+    {
+      "module": "ActualCappedMinorUpperCandidate",
+      "path": "lean/ActualCappedMinorUpperCandidate.lean",
+      "sha256": "623c05fec46346e422f779b65a38337911ca0cb7ed1f5b41c6abc9f64e3bea5f",
+      "imports": [
+        "GeneralScalarRestorationCandidate",
+        "ActualPermanentExponentialCandidate",
+        "SameRootPermanentCandidate"
+      ]
+    },
+    {
+      "module": "ActualReferenceGaussianBridge",
+      "path": "lean/ActualReferenceGaussianBridge.lean",
+      "sha256": "716b2ddd8cea90b2e7daedcee69bf40f0636adc5b1cd3c2a059b8fe1a14ffe13",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum",
+        "GaussianExponentialCandidate",
+        "SkewBaselineGramDifferenceCandidate"
+      ]
+    },
+    {
+      "module": "ActualPrincipalBudgetCandidate",
+      "path": "lean/ActualPrincipalBudgetCandidate.lean",
+      "sha256": "7e11382a9e4357d5fcc810f06774f9703d3f4ac62fa2439ec7122c0d3298a2d2",
+      "imports": [
+        "ActualCappedMinorUpperCandidate",
+        "ActualReferenceGaussianBridge"
+      ]
+    },
+    {
+      "module": "ActualScoreWeightsCandidate",
+      "path": "lean/ActualScoreWeightsCandidate.lean",
+      "sha256": "619ff613986070ff8c1a0e40fa9894c55fd5f86eb0f8f50c8ba1708ee7d733d7",
+      "imports": [
+        "WeightedQuadraticConvolutionCandidate",
+        "ActualPrincipalBudgetCandidate"
+      ]
+    },
+    {
+      "module": "WeightedKernelInflationCandidate",
+      "path": "lean/WeightedKernelInflationCandidate.lean",
+      "sha256": "b95e9c72445ff5fed2963d344189b1ed317ac78c6ae93deb06ff45902ba19947",
+      "imports": [
+        "WeightedPrincipalMassCandidate"
+      ]
+    },
+    {
+      "module": "ActualGammaBoundsCandidate",
+      "path": "lean/ActualGammaBoundsCandidate.lean",
+      "sha256": "506eb602e992cca4ddbfd4e9fd105d230ca303e55ebca60182a87d61a9c0d8fb",
+      "imports": [
+        "NonprincipalReconstructionCandidate",
+        "ActualTournamentPrescalingBounds",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "GammaAbsorptionCandidate",
+      "path": "lean/GammaAbsorptionCandidate.lean",
+      "sha256": "8a2e30c0cce4bbe1434a3c7925e6146d2411137caf14e2037d1206d0887f7649",
+      "imports": [
+        "ActualGammaBoundsCandidate",
+        "GeneralScalarRestorationCandidate"
+      ]
+    },
+    {
+      "module": "SummedGammaAbsorptionCandidate",
+      "path": "lean/SummedGammaAbsorptionCandidate.lean",
+      "sha256": "579a77ed92b6779dc44429551eb1ebbd288996706242cdcd01231535f6b7885a",
+      "imports": [
+        "GammaAbsorptionCandidate"
+      ]
+    },
+    {
+      "module": "CappedSpectralConvolutionCandidate",
+      "path": "lean/CappedSpectralConvolutionCandidate.lean",
+      "sha256": "9037115ba6e3da0f162be7c7daa3337dfef07306794f54eec6533425c22984d9",
+      "imports": [
+        "ActualScoreWeightsCandidate",
+        "WeightedKernelInflationCandidate",
+        "ActualGammaBoundsCandidate",
+        "SummedGammaAbsorptionCandidate"
+      ]
+    },
+    {
+      "module": "CoreMinorThresholdScalarCandidate",
+      "path": "lean/CoreMinorThresholdScalarCandidate.lean",
+      "sha256": "d30d585e05028ea642c0371a996f351665d8c40f3a170530c441a9b2f6031988",
+      "imports": [
+        "ActualCappedMinorUpperCandidate",
+        "ActualReferenceGaussianBridge",
+        "ActualGammaBoundsCandidate"
+      ]
+    },
+    {
+      "module": "CoreMinorEnvelopeCandidate",
+      "path": "lean/CoreMinorEnvelopeCandidate.lean",
+      "sha256": "ecf87eb60b1463cfb13ba987ca47c10bca52bf33167c14963bfef962c0a44f30",
+      "imports": [
+        "CoreMinorThresholdScalarCandidate"
+      ]
+    },
+    {
+      "module": "LogWindowGammaAbsorptionCandidate",
+      "path": "lean/LogWindowGammaAbsorptionCandidate.lean",
+      "sha256": "ce9db7c3b434584da755c48a6c8468c83278df1efa89efd29a523a4c0b201afc",
+      "imports": [
+        "SummedGammaAbsorptionCandidate",
+        "CoreMinorEnvelopeCandidate"
+      ]
+    },
+    {
+      "module": "ActualPathFiniteSplitCandidate",
+      "path": "lean/ActualPathFiniteSplitCandidate.lean",
+      "sha256": "ad43a37536dba10a77eeb48e3dd559609d8e9e3862ec1a025101873cbef70292",
+      "imports": [
+        "ActualReconstructionBridgeCandidate",
+        "TournamentHamiltonian.PathConvolutionGenerating"
+      ]
+    },
+    {
+      "module": "CrudeSkewDetBound",
+      "path": "lean/CrudeSkewDetBound.lean",
+      "sha256": "c1b38fcaa980f94e216d05f9fa644dcf25251d4acb0a6ddd32370a59ff4b9da0",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum",
+        "Mathlib.Analysis.Complex.ExponentialBounds"
+      ]
+    },
+    {
+      "module": "ExceptionalDisjointCandidate",
+      "path": "lean/ExceptionalDisjointCandidate.lean",
+      "sha256": "9df54e37e205f3bd16a44938c516c0a1b01c9edffb9ee257397c831f82a01196",
+      "imports": [
+        "ExceptionalGeneratingCandidate",
+        "ExceptionalDeletionCandidate",
+        "MeetingConvolutionFinite",
+        "CrudeSkewDetBound"
+      ]
+    },
+    {
+      "module": "GlobalEntryFiniteCandidate",
+      "path": "lean/GlobalEntryFiniteCandidate.lean",
+      "sha256": "fbdb16b123c15b7835c06d2c70ef402ae160e4e5623a06382b7b7afc421262b9",
+      "imports": [
+        "TournamentHamiltonian.HighVariance",
+        "ActualTournamentPrescalingBounds"
+      ]
+    },
+    {
+      "module": "ExceptionalCoreGeometryCandidate",
+      "path": "lean/ExceptionalCoreGeometryCandidate.lean",
+      "sha256": "404b2d8292d8065c6ce99e62171f33b7cf624b10f4cb780b92d95ae1622512fb",
+      "imports": [
+        "GlobalEntryFiniteCandidate"
+      ]
+    },
+    {
+      "module": "ExceptionalMeetingSmall",
+      "path": "lean/ExceptionalMeetingSmall.lean",
+      "sha256": "c72c0b79727d5b215a86e48e924a5027f16dd2fde93141788982f183040911b1",
+      "imports": [
+        "MeetingConvolutionFinite",
+        "ExceptionalCoreGeometryCandidate",
+        "LogWindowErrorCandidate"
+      ]
+    },
+    {
+      "module": "ExceptionalFiniteMarginCandidate",
+      "path": "lean/ExceptionalFiniteMarginCandidate.lean",
+      "sha256": "5666028519d3c0b26e903ab579613a07a8d6d2c92013a5718e4f6b511188bafe",
+      "imports": [
+        "ExceptionalDisjointCandidate",
+        "ExceptionalMeetingSmall",
+        "LogWindowErrorCandidate"
+      ]
+    },
+    {
+      "module": "ActualCappedPathUpperCandidate",
+      "path": "lean/ActualCappedPathUpperCandidate.lean",
+      "sha256": "a9bb816dc51588d0029fae2ddd1e546235e09999a7c1cc470af64df97f78ddec",
+      "imports": [
+        "CappedSpectralConvolutionCandidate",
+        "LogWindowGammaAbsorptionCandidate",
+        "ActualPathFiniteSplitCandidate",
+        "ExceptionalFiniteMarginCandidate"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.PairedCrossProducts",
+      "path": "lean/TournamentHamiltonian/PairedCrossProducts.lean",
+      "sha256": "b333530c8d18ffe6c07e456ab890b157042a303f11b6a32d4c78ab2a9d36d086",
+      "imports": [
+        "TournamentHamiltonian.CrossPermanentBounds"
+      ]
+    },
+    {
+      "module": "TournamentHamiltonian.FourBlockBounds",
+      "path": "lean/TournamentHamiltonian/FourBlockBounds.lean",
+      "sha256": "c3015193cd1d8d15e0cbf3c861828dc088011a42a5fbe7f82be380f9219c977b",
+      "imports": [
+        "TournamentHamiltonian.CrossFactorialNormalization",
+        "TournamentHamiltonian.PairedCrossProducts"
+      ]
+    },
+    {
+      "module": "ExceptionalCrossBudgetCandidate",
+      "path": "lean/ExceptionalCrossBudgetCandidate.lean",
+      "sha256": "999001399e50434bbf514504e9ed0bdfcbd3055d7bc284f578b518d8ab03817c",
+      "imports": [
+        "ExceptionalCoreGeometryCandidate"
+      ]
+    },
+    {
+      "module": "AmbientCoreWeightsCandidate",
+      "path": "lean/AmbientCoreWeightsCandidate.lean",
+      "sha256": "a615b06baf7dc02744063234e634e491b77a9fbac5fee7a4214d2e158d19dcf1",
+      "imports": [
+        "ExceptionalCrossBudgetCandidate"
+      ]
+    },
+    {
+      "module": "ExceptionalCrossProfileCandidate",
+      "path": "lean/ExceptionalCrossProfileCandidate.lean",
+      "sha256": "bf99293f04d6928e28ba45a4bca6a8c548f13e42cdf6aeb4c07f5229d9bcff11",
+      "imports": [
+        "ExceptionalCoreGeometryCandidate",
+        "TournamentHamiltonian.PairedCrossProducts"
+      ]
+    },
+    {
+      "module": "ActualExceptionalCrossCandidate",
+      "path": "lean/ActualExceptionalCrossCandidate.lean",
+      "sha256": "342ec06e238220ab45f219c2bafe20b17a4163f19e63b0fe333a0e6c03ac6388",
+      "imports": [
+        "AmbientCoreWeightsCandidate",
+        "ExceptionalCrossProfileCandidate"
+      ]
+    },
+    {
+      "module": "DeletedExceptionalFourBlockCandidate",
+      "path": "lean/DeletedExceptionalFourBlockCandidate.lean",
+      "sha256": "0843a3f2b1c92720049f66296a4d95e86747821d9129fec5074963c99159c446",
+      "imports": [
+        "TournamentHamiltonian.FourBlockBounds",
+        "ActualExceptionalCrossCandidate"
+      ]
+    },
+    {
+      "module": "InducedSelectedAdapter",
+      "path": "lean/InducedSelectedAdapter.lean",
+      "sha256": "9221776f60f546299b66eefd55483463752eb102c4bcdbe662c27cc51dfa24ca",
+      "imports": [
+        "TournamentHamiltonian.FourBlockPermanent"
+      ]
+    },
+    {
+      "module": "SelectedPhysicalMinorBridge",
+      "path": "lean/SelectedPhysicalMinorBridge.lean",
+      "sha256": "abf3e1df6bc05d7c8be097fe1f57577bd45206e67e5e65dc2986ce3c9455dd13",
+      "imports": [
+        "TournamentHamiltonian.FourBlockPermanent",
+        "ActualPathFiniteSplitCandidate",
+        "PhysicalMinorRecoveryCandidate"
+      ]
+    },
+    {
+      "module": "CoreMinorThresholdCandidate",
+      "path": "lean/CoreMinorThresholdCandidate.lean",
+      "sha256": "57b000731a17eb4ccd2b213d77c35b1939c39789bff2538ba4f9596bfe38267d",
+      "imports": [
+        "CoreMinorEnvelopeCandidate"
+      ]
+    },
+    {
+      "module": "RootPotentialUpperCandidate",
+      "path": "lean/RootPotentialUpperCandidate.lean",
+      "sha256": "67b072cdcf4611a999f2dfb81e8a6528792eb178ae874bfd348ffa6420461a6a",
+      "imports": [
+        "ActualRootEnergy",
+        "MatrixScalingMassPotential"
+      ]
+    },
+    {
+      "module": "SameRootPotentialCandidate",
+      "path": "lean/SameRootPotentialCandidate.lean",
+      "sha256": "10969db4a8d524c28a00e425ba2931dbcb66c275103a0321c79897558a486afe",
+      "imports": [
+        "RootPotentialUpperCandidate",
+        "SameRootFrobeniusCandidate",
+        "PhysicalMinorRecoveryCandidate"
+      ]
+    },
+    {
+      "module": "ActualSameRootPotentialCandidate",
+      "path": "lean/ActualSameRootPotentialCandidate.lean",
+      "sha256": "4fda8d565747a74811c671b7863cab435bd0cf888135bd311684a01fee9f2085",
+      "imports": [
+        "SameRootPotentialCandidate",
+        "ActualTournamentDisplacementCandidate"
+      ]
+    },
+    {
+      "module": "UnitScorePrefactorCandidate",
+      "path": "lean/UnitScorePrefactorCandidate.lean",
+      "sha256": "1c02dbebfdb910bb69004ed8a4d4174bc01beace37ec95bc50b96ea07475ebde",
+      "imports": [
+        "ActualSameRootPotentialCandidate",
+        "ActualGammaBoundsCandidate"
+      ]
+    },
+    {
+      "module": "UnitScoreEnvelopesCandidate",
+      "path": "lean/UnitScoreEnvelopesCandidate.lean",
+      "sha256": "fa2f1d18a09aa39210850f6d3c3e0cdc9b9c791286b033d80077164b618c105f",
+      "imports": [
+        "UnitScorePrefactorCandidate",
+        "ActualTournamentDisplacementCandidate"
+      ]
+    },
+    {
+      "module": "UnitScoreLogFactorCandidate",
+      "path": "lean/UnitScoreLogFactorCandidate.lean",
+      "sha256": "2f740054356b84567e00cf71b69fb029f77e710df3ef587eee7140f52fadfb32",
+      "imports": [
+        "UnitScoreEnvelopesCandidate"
+      ]
+    },
+    {
+      "module": "UnitScorePotentialBudgetCandidate",
+      "path": "lean/UnitScorePotentialBudgetCandidate.lean",
+      "sha256": "946d9a6dd998c7b6e4c5ad26b45ea57140000d53b05302101e8975fc299db6c7",
+      "imports": [
+        "UnitScoreLogFactorCandidate"
+      ]
+    },
+    {
+      "module": "ActualUnitScorePrefactorCandidate",
+      "path": "lean/ActualUnitScorePrefactorCandidate.lean",
+      "sha256": "70e83ba59af68cd258094f5ef2e107048826e5ed1c8beb15b115bcaa833f11ec",
+      "imports": [
+        "UnitScorePotentialBudgetCandidate"
+      ]
+    },
+    {
+      "module": "MinorNormalizationCandidate",
+      "path": "lean/MinorNormalizationCandidate.lean",
+      "sha256": "f5fded5cd8479892583e834151c910ed300bdcd6901e2580bf15f1bc21de7b16",
+      "imports": [
+        "ActualUnitScorePrefactorCandidate"
+      ]
+    },
+    {
+      "module": "SignedMinorScalarCandidate",
+      "path": "lean/SignedMinorScalarCandidate.lean",
+      "sha256": "3ba5c522ab836fad1a77d44eaf2985c3226d071d433235f40b6060035411c20e",
+      "imports": [
+        "MinorNormalizationCandidate"
+      ]
+    },
+    {
+      "module": "ActualPrincipalPathRecoveryCandidate",
+      "path": "lean/ActualPrincipalPathRecoveryCandidate.lean",
+      "sha256": "4c3e5fab9f393e8aae76afcd29718c504f3d6aaf35a62e6e6bfea8f1f185defd",
+      "imports": [
+        "ActualPhysicalExponentialCandidate",
+        "ActualPathFiniteSplitCandidate"
+      ]
+    },
+    {
+      "module": "UnitMinorErrorBudgetCandidate",
+      "path": "lean/UnitMinorErrorBudgetCandidate.lean",
+      "sha256": "bf8c9bc74ead23718ff11e5edd53e3713b2fd36380a0e1066f9e165d99650bd9",
+      "imports": [
+        "SignedMinorScalarCandidate",
+        "ActualPrincipalPathRecoveryCandidate"
+      ]
+    },
+    {
+      "module": "ActualUnitMinorLowerCandidate",
+      "path": "lean/ActualUnitMinorLowerCandidate.lean",
+      "sha256": "8e3d653e01ea881ce51c8b5aedc9cb7d504c99bb43ede8b17264176fe46369ce",
+      "imports": [
+        "UnitMinorErrorBudgetCandidate",
+        "ActualReferenceGaussianBridge"
+      ]
+    },
+    {
+      "module": "PrincipalMassDefinitions",
+      "path": "lean/PrincipalMassDefinitions.lean",
+      "sha256": "468b6b41ad76d89b0fc979fcd6dbfd3d369ba69052c039178b6e75ca1a592ac9",
+      "imports": [
+        "TournamentHamiltonian.NormalizedConvolution"
+      ]
+    },
+    {
+      "module": "PrincipalLowerMomentsFocused",
+      "path": "lean/PrincipalLowerMomentsFocused.lean",
+      "sha256": "90a23322674d6e5936611d63a25903b3251403aebe5e158c0e28f7a01c666387",
+      "imports": [
+        "PrincipalMassDefinitions",
+        "PrincipalPowerMoment",
+        "PrincipalGeneratingFocused"
+      ]
+    },
+    {
+      "module": "ReferenceLowerHelpers",
+      "path": "lean/ReferenceLowerHelpers.lean",
+      "sha256": "72956acd63b776982ed5204c9ec4bb189bebb5203fb312aa957a79777cc03561",
+      "imports": [
+        "TournamentHamiltonian.HighVariance",
+        "PrincipalLowerMomentsFocused",
+        "TournamentHamiltonian.SkewSpectrum"
+      ]
+    },
+    {
+      "module": "LowerDeletionFactorialFocused",
+      "path": "lean/LowerDeletionFactorialFocused.lean",
+      "sha256": "9b8005594047cd5687ef9f76b9f09928041cb29d44d677f4691a7e04142aa9c8",
+      "imports": [
+        "TournamentHamiltonian.NormalizedConvolution"
+      ]
+    },
+    {
+      "module": "GeneralScoreLowerConvolutionFocused",
+      "path": "lean/GeneralScoreLowerConvolutionFocused.lean",
+      "sha256": "e90bf49a83ecbec2134a8c46d5c0f4e243ad3947edd5990399d6cc09207563f0",
+      "imports": [
+        "ReferenceLowerHelpers",
+        "LowerDeletionFactorialFocused"
+      ]
+    },
+    {
+      "module": "ActualCutoffMinorLowerCandidate",
+      "path": "lean/ActualCutoffMinorLowerCandidate.lean",
+      "sha256": "614284250d9dd86cb3f174a8769c0b4590162a20607ccae4157c4f2c85f23b30",
+      "imports": [
+        "ActualUnitMinorLowerCandidate",
+        "GeneralScoreLowerConvolutionFocused"
+      ]
+    },
+    {
+      "module": "SmallScoreGeneratingLowerFocused",
+      "path": "lean/SmallScoreGeneratingLowerFocused.lean",
+      "sha256": "1eca6c9048f7f1e2d9c42c7aec3aaaa0ec63b46a3fdb9e3a4bbae79aa8920831",
+      "imports": [
+        "GeneratingRankCore",
+        "Mathlib.Analysis.SpecialFunctions.Log.Basic"
+      ]
+    },
+    {
+      "module": "UnitGeneratingAdditive",
+      "path": "lean/UnitGeneratingAdditive.lean",
+      "sha256": "ff6d234c75a6f8594280e311187671304fd46a461d73b371c1de3375fd91a76f",
+      "imports": [
+        "SmallScoreGeneratingLowerFocused",
+        "CrudeSkewDetBound"
+      ]
+    },
+    {
+      "module": "ActualUnitPathLowerCandidate",
+      "path": "lean/ActualUnitPathLowerCandidate.lean",
+      "sha256": "0742292c0d6c0505319ce972dc68a2529d2bf3f32a3f1b480c0caae96e5c64ed",
+      "imports": [
+        "ActualCutoffMinorLowerCandidate",
+        "UnitGeneratingAdditive"
+      ]
+    },
+    {
+      "module": "CarouselPathLowerFocused",
+      "path": "lean/CarouselPathLowerFocused.lean",
+      "sha256": "9c504a76a993961ef976874cf75016bf5294a55cba4b980ae55db2f10ec6a73b",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum"
+      ]
+    },
+    {
+      "module": "ActualMaxPathsLowerCandidate",
+      "path": "lean/ActualMaxPathsLowerCandidate.lean",
+      "sha256": "250d9016a3604e2f2209e5763218925e1b7c68e6207f54849bceffedb1ef65fa",
+      "imports": [
+        "ActualUnitPathLowerCandidate",
+        "CarouselPathLowerFocused"
+      ]
+    },
+    {
+      "module": "ActualMaximizerEntryCandidate",
+      "path": "lean/ActualMaximizerEntryCandidate.lean",
+      "sha256": "d9079d0036ac02742dfbb1791f3da1d9c64459621c09e1312b6eb5f2827cbf92",
+      "imports": [
+        "GlobalEntryFiniteCandidate",
+        "ActualMaxPathsLowerCandidate",
+        "Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp"
+      ]
+    },
+    {
+      "module": "ActualExceptionalAssemblyCandidate",
+      "path": "lean/ActualExceptionalAssemblyCandidate.lean",
+      "sha256": "55dc0a4ea2b9a2921058ffaf2055a92ec2349ca9a5487c674edd5fe08868eb92",
+      "imports": [
+        "ExceptionalFiniteMarginCandidate",
+        "DeletedExceptionalFourBlockCandidate",
+        "InducedSelectedAdapter",
+        "SelectedPhysicalMinorBridge",
+        "CoreMinorThresholdCandidate",
+        "ActualMaximizerEntryCandidate"
+      ]
+    },
+    {
+      "module": "ActualCoarseUpperClosureCandidate",
+      "path": "lean/ActualCoarseUpperClosureCandidate.lean",
+      "sha256": "030cb27db59a0520cc3fa2858a01225683b100e1b7c0879a28e3a56cacddce7d",
+      "imports": [
+        "OperatorCapFocused",
+        "ActualCappedPathUpperCandidate",
+        "ActualExceptionalAssemblyCandidate",
+        "ActualMaxPathsLowerCandidate"
+      ]
+    },
+    {
+      "module": "EnergyMarginCandidate",
+      "path": "lean/EnergyMarginCandidate.lean",
+      "sha256": "a18d871653c6ef21c6cd61f82338042aedbee1af8650284e35296e7ce2701b6b",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "ActualMaximizerEnergyCandidate",
+      "path": "lean/ActualMaximizerEnergyCandidate.lean",
+      "sha256": "90db8e40600fd89f9467bc053068b92ea0b5cba3b673300804b7afda0f4bb84a",
+      "imports": [
+        "EnergyMarginCandidate",
+        "ActualCappedPathUpperCandidate",
+        "ActualExceptionalAssemblyCandidate",
+        "ActualMaxPathsLowerCandidate",
+        "ActualMaximizerEntryCandidate",
+        "OperatorCapFocused"
+      ]
+    },
+    {
+      "module": "ActualMomentAdapterCandidate",
+      "path": "lean/ActualMomentAdapterCandidate.lean",
+      "sha256": "68f8172e84dc8e32f819de75dad9b6f464fba5401185dbd76c2bf17b98a3ec5c",
+      "imports": [
+        "ReferenceMomentEndpoint",
+        "TournamentHamiltonian.TransitiveDeterminant"
+      ]
+    },
+    {
+      "module": "OddMomentRatioComparisonCandidate",
+      "path": "lean/OddMomentRatioComparisonCandidate.lean",
+      "sha256": "76d589e6f27fa5baa52baa0149c13799580e657a90988f779cce96dfc72fd991",
+      "imports": [
+        "TournamentHamiltonian.Packing",
+        "Mathlib.Analysis.SpecialFunctions.Log.Deriv"
+      ]
+    },
+    {
+      "module": "SpectralMomentBridgeCandidate",
+      "path": "lean/SpectralMomentBridgeCandidate.lean",
+      "sha256": "b0812875177957fc9eed25e314b3178b2f84e745b27b2ee6f77cec9d98b98880",
+      "imports": [
+        "TournamentHamiltonian.SkewSpectrum",
+        "ActualMomentAdapterCandidate"
+      ]
+    },
+    {
+      "module": "ActualSharpSpectralCandidate",
+      "path": "lean/ActualSharpSpectralCandidate.lean",
+      "sha256": "7b4f9e81792f90d035a5bc80146cc327d14a465313b68eaae168863eac189a8a",
+      "imports": [
+        "SpectralMomentBridgeCandidate",
+        "OddMomentRatioComparisonCandidate",
+        "OperatorCapFocused"
+      ]
+    },
+    {
+      "module": "ActualSharpPathEnergyCandidate",
+      "path": "lean/ActualSharpPathEnergyCandidate.lean",
+      "sha256": "78b003867b8079eb94b665698e95cf471e40379e06fa708a30500986f7f25559",
+      "imports": [
+        "ActualSharpSpectralCandidate",
+        "ActualCoarseUpperClosureCandidate",
+        "ActualMaximizerEnergyCandidate"
+      ]
+    },
+    {
+      "module": "ActualExtremalAsymptoticCandidate",
+      "path": "lean/ActualExtremalAsymptoticCandidate.lean",
+      "sha256": "321854a9d0487c71b1a5406844fa1dff512abbefdff93897be758955c74f8b2b",
+      "imports": [
+        "ActualSharpPathEnergyCandidate",
+        "QRegularApplications",
+        "PathCountGrowth"
+      ]
+    }
+  ],
+  "configuration": {
+    "lakefile.toml": "56ca950f07c37d4d35e344b5aa16b99b020581ee8e2b4f5a3b7a5718b7303b72",
+    "lake-manifest.json": "abd871edb365292f42e9ffc194ade6277eace4148c4b0c63bccdf6f56c0633a8",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c"
+  },
+  "expected_declarations": 7970,
+  "tooling": {
+    "tools/FullTreeAuditSupportFast.lean": "cb4a40328192e00bd808156207a4d24b0b5aa9ed1f791c90f702ce28732b9d58",
+    "tools/ExactKernelTypes.lean": "94c491d1e84b5c7ee5a3f224d12b99f1caf5b14671945877e28ea515ab32c413",
+    "tools/SharpApplicationInstantiations.lean": "3a5c416b1b89447c3806f01dfe2037e9bcb015d90963be6f943b72667aa2fb7c",
+    "tools/SharpApplicationFullyApplied.lean": "b9f4bcccfd2fbd213299e052b6e98aa9fad31f34129d8e89554eeb61ff31aab8"
+  }
+}
