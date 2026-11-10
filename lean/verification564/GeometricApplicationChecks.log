@@ -1,0 +1,30 @@
+NonAlgebraicity.qRegular_geometric_limit_rational : ∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (d : Nat) (L : Complex),
+      (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n)) →
+        @Filter.Tendsto.{0, 0} Nat Complex
+            (fun e =>
+              @HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+                (@HPow.hPow.{0, 0, 0} Complex Int Complex
+                  (@instHPow.{0, 0} Complex Int
+                    (@ZPow.toPow.{0} Complex (@DivInvMonoid.toZPow.{0} Complex Complex.instDivInvMonoid)))
+                  (@Nat.cast.{0} Complex Complex.instNatCast q)
+                  (@Neg.neg.{0} Int Int.instNegInt
+                    (@Nat.cast.{0} Int instNatCastInt
+                      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) d e))))
+                (@Rat.cast.{0} Complex Complex.instRatCast
+                  (a
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))))
+            (@Filter.atTop.{0} Nat Nat.instPreorder)
+            (@nhds.{0} Complex
+              (@UniformSpace.toTopologicalSpace.{0} Complex
+                (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                  (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                    (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                      (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                        (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+              L) →
+          @Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L
+COROLLARY_TYPE_DEFINITIONALLY_EQUAL
+GEOMETRIC_APPLICATION_CHECKS_PASSED

@@ -1,0 +1,196 @@
+NonAlgebraicity.geometric_normalization_eq_zpow
+∀ (q d e : Nat) (a : Nat → Rat),
+  @Eq.{1} Complex
+    (@Rat.cast.{0} Complex Complex.instRatCast
+      (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+        (a
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))
+        (@HPow.hPow.{0, 0, 0} Rat Nat Rat (@instHPow.{0, 0} Rat Nat Rat.instPowNat)
+          (@Nat.cast.{0} Rat Rat.instNatCast
+            (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+              (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))
+          d)))
+    (@HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+      (@HPow.hPow.{0, 0, 0} Complex Int Complex
+        (@instHPow.{0, 0} Complex Int
+          (@ZPow.toPow.{0} Complex (@DivInvMonoid.toZPow.{0} Complex Complex.instDivInvMonoid)))
+        (@Nat.cast.{0} Complex Complex.instNatCast q)
+        (@Neg.neg.{0} Int Int.instNegInt
+          (@Nat.cast.{0} Int instNatCastInt (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) d e))))
+      (@Rat.cast.{0} Complex Complex.instRatCast
+        (a
+          (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+            (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))))
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.not_qRegular_of_scaled_limit_not_rational
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (d : Nat) (L : Complex),
+      @Filter.Tendsto.{0, 0} Nat Complex
+          (fun n =>
+            @Rat.cast.{0} Complex Complex.instRatCast
+              (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv) (a n)
+                (@HPow.hPow.{0, 0, 0} Rat Nat Rat (@instHPow.{0, 0} Rat Nat Rat.instPowNat)
+                  (@Nat.cast.{0} Rat Rat.instNatCast n) d)))
+          (@Filter.atTop.{0} Nat Nat.instPreorder)
+          (@nhds.{0} Complex
+            (@UniformSpace.toTopologicalSpace.{0} Complex
+              (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                  (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                    (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                      (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+            L) →
+        Not (@Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L) →
+          Not (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n))
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.qRegular_geometric_limit_rational
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (d : Nat) (L : Complex),
+      (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n)) →
+        @Filter.Tendsto.{0, 0} Nat Complex
+            (fun e =>
+              @HMul.hMul.{0, 0, 0} Complex Complex Complex (@instHMul.{0} Complex Complex.instMul)
+                (@HPow.hPow.{0, 0, 0} Complex Int Complex
+                  (@instHPow.{0, 0} Complex Int
+                    (@ZPow.toPow.{0} Complex (@DivInvMonoid.toZPow.{0} Complex Complex.instDivInvMonoid)))
+                  (@Nat.cast.{0} Complex Complex.instNatCast q)
+                  (@Neg.neg.{0} Int Int.instNegInt
+                    (@Nat.cast.{0} Int instNatCastInt
+                      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) d e))))
+                (@Rat.cast.{0} Complex Complex.instRatCast
+                  (a
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))))
+            (@Filter.atTop.{0} Nat Nat.instPreorder)
+            (@nhds.{0} Complex
+              (@UniformSpace.toTopologicalSpace.{0} Complex
+                (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                  (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                    (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                      (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                        (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+              L) →
+          @Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.qRegular_geometric_scaled_limit_rational
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (d : Nat) (L : Complex),
+      (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n)) →
+        @Filter.Tendsto.{0, 0} Nat Complex
+            (fun e =>
+              @Rat.cast.{0} Complex Complex.instRatCast
+                (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv)
+                  (a
+                    (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                      (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))
+                  (@HPow.hPow.{0, 0, 0} Rat Nat Rat (@instHPow.{0, 0} Rat Nat Rat.instPowNat)
+                    (@Nat.cast.{0} Rat Rat.instNatCast
+                      (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                        (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e))
+                    d)))
+            (@Filter.atTop.{0} Nat Nat.instPreorder)
+            (@nhds.{0} Complex
+              (@UniformSpace.toTopologicalSpace.{0} Complex
+                (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                  (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                    (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                      (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                        (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+              L) →
+          @Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.qRegular_geometric_unscaled_limit_rational
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (L : Complex),
+      (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n)) →
+        @Filter.Tendsto.{0, 0} Nat Complex
+            (fun e =>
+              @Rat.cast.{0} Complex Complex.instRatCast
+                (a
+                  (@HPow.hPow.{0, 0, 0} Nat Nat Nat
+                    (@instHPow.{0, 0} Nat Nat (@NPow.toPow.{0} Nat (@Monoid.toNPow.{0} Nat Nat.instMonoid))) q e)))
+            (@Filter.atTop.{0} Nat Nat.instPreorder)
+            (@nhds.{0} Complex
+              (@UniformSpace.toTopologicalSpace.{0} Complex
+                (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                  (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                    (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                      (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                        (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+              L) →
+          @Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.qRegular_scaled_limit_rational_from_geometric
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    ∀ (a : Nat → Rat) (d : Nat) (L : Complex),
+      (NonAlgebraicity.IsQRegular q fun n => @Rat.cast.{0} Complex Complex.instRatCast (a n)) →
+        @Filter.Tendsto.{0, 0} Nat Complex
+            (fun n =>
+              @Rat.cast.{0} Complex Complex.instRatCast
+                (@HDiv.hDiv.{0, 0, 0} Rat Rat Rat (@instHDiv.{0} Rat Rat.instDiv) (a n)
+                  (@HPow.hPow.{0, 0, 0} Rat Nat Rat (@instHPow.{0, 0} Rat Nat Rat.instPowNat)
+                    (@Nat.cast.{0} Rat Rat.instNatCast n) d)))
+            (@Filter.atTop.{0} Nat Nat.instPreorder)
+            (@nhds.{0} Complex
+              (@UniformSpace.toTopologicalSpace.{0} Complex
+                (@PseudoMetricSpace.toUniformSpace.{0} Complex
+                  (@SeminormedRing.toPseudoMetricSpace.{0} Complex
+                    (@SeminormedCommRing.toSeminormedRing.{0} Complex
+                      (@NormedCommRing.toSeminormedCommRing.{0} Complex
+                        (@NormedField.toNormedCommRing.{0} Complex Complex.instNormedField))))))
+              L) →
+          @Exists.{1} Rat fun r => @Eq.{1} Complex (@Rat.cast.{0} Complex Complex.instRatCast r) L
+Axioms: propext, Classical.choice, Quot.sound
+
+NonAlgebraicity.geometric_normalization_eq_zpow._simp_1_1
+∀ {M : Type u_2} [inst : Monoid.{u_2} M] (a : M) (m n : Nat),
+  @Eq.{u_2 + 1} M
+    (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst)))
+      (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst))) a
+        m)
+      n)
+    (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst))) a
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) m n))
+Axioms: 
+
+NonAlgebraicity.qRegular_geometric_scaled_limit_rational._simp_1_1
+∀ {M : Type u_2} [inst : Monoid.{u_2} M] (a : M) (m n : Nat),
+  @Eq.{u_2 + 1} M
+    (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst)))
+      (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst))) a
+        m)
+      n)
+    (@HPow.hPow.{u_2, 0, u_2} M Nat M (@instHPow.{u_2, 0} M Nat (@NPow.toPow.{u_2} M (@Monoid.toNPow.{u_2} M inst))) a
+      (@HMul.hMul.{0, 0, 0} Nat Nat Nat (@instHMul.{0} Nat instMulNat) m n))
+Axioms: 
+
+NonAlgebraicity.qRegular_scaled_limit_rational_from_geometric._proof_1_1
+∀ (q : Nat),
+  @LE.le.{0} Nat instLENat (@OfNat.ofNat.{0} Nat (nat_lit 2) (instOfNatNat (nat_lit 2))) q →
+    Not
+        (@LT.lt.{0} Nat
+          (@Preorder.toLT.{0} Nat
+            (@PartialOrder.toPreorder.{0} Nat
+              (@SemilatticeInf.toPartialOrder.{0} Nat
+                (@Lattice.toSemilatticeInf.{0} Nat
+                  (@DistribLattice.toLattice.{0} Nat (@instDistribLatticeOfLinearOrder.{0} Nat Nat.instLinearOrder))))))
+          (@OfNat.ofNat.{0} Nat (nat_lit 1)
+            (@One.toOfNat1.{0} Nat
+              (@AddMonoidWithOne.toOne.{0} Nat
+                (@AddCommMonoidWithOne.toAddMonoidWithOne.{0} Nat
+                  (@NonAssocSemiring.toAddCommMonoidWithOne.{0} Nat
+                    (@Semiring.toNonAssocSemiring.{0} Nat Nat.instSemiring))))))
+          q) →
+      False
+Axioms: propext, Quot.sound

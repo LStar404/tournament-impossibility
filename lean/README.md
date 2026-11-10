@@ -1,12 +1,14 @@
 # 竞赛图极值生成函数的非代数性
 
-> 当前状态：563 个项目模块、7,970 条声明的完整审计已通过。本轮新编译六个 sharp 模块与 EndpointCheck，复用并逐一校验556个未改模块对象，不是全563源码重编。精确范围、源码哈希和复现入口见 `verification563/README.md`。原557/367记录保留为历史证据。
+> 当前状态：0.4.1 的 564 个项目模块、7,979 条声明完整审计通过。本轮仅新编译 QRegularGeometricLimit 与 EndpointCheck，复用并核验 562 个未改模块对象，不是全 564 源码重编。当前入口为 `verification564/README.md` 与 `../tools/verify564.py`。原 563/557/367 记录保留为历史证据。
 
 证明来源：刘星辰，`tournament-paths-research-notes` 的
 [非代数性论文附录 A](https://github.com/LStar404/tournament-paths-research-notes/blob/b8cc8eb251c0c85ba9d177ec9e9ba612c11ca582/docs/nonalgebra_zh.md)。
 本目录是独立的 Lean 4 工程，不修改原论文或同步参考文件。
 
 ## 准确范围
+
+新增 `NonAlgebraicity.qRegular_geometric_limit_rational` 精确覆盖附录 A.5 的几何子序列命题，只假设 `q^(-d e)u(q^e)` 收敛；不要求全序列收敛或 LW。0.4.0 的旧接口证明全序列版本，本补丁保留该定理并补齐更一般的接口，不改变原实际应用。
 
 主对象是 `A(z) = ∑_{n≥1} 2^(n−1) P(n) / n! · z^n`。
 `TournamentSequence.lean` 将 P(n) 定义为全体 n 阶竞赛图上、满足相邻有向边条件的顶点排列数的最大值。
@@ -23,7 +25,7 @@
 
 旧通用定理保留 `ExtremalAsymptotic` 参数，新实际端点已提供它。A、E、M 的非代数性及归一化序列非 q-regular 应用仍显式需要 `FourExponentialIndependence`，即四个指数值在代数数系数下线性无关的 Lindemann–Weierstrass 特例。该前提没有被声明成新增公理，也未在本工程内重新证明。E/M/m_n 的具体代入检查见 `../tools/SharpApplicationFullyApplied.lean`。实际原始计数无统一指数上界不需要超越性输入。
 
-本轮没有证明结构分类、实际 F/J、完整条件 R、自然边界、非 D-finite 或一般闭式不存在。下文历史模块和阶段说明中的旧计数与尚缺接口以本节及 `verification563/` 新证书为准；`verification557/` 和 `verification/` 保留原始历史字节。
+本轮没有证明结构分类、实际 F/J、完整条件 R、自然边界、非 D-finite 或一般闭式不存在。下文历史模块和阶段说明中的旧计数与尚缺接口以本节及 `verification564/` 新证书为准；`verification557/` 和 `verification/` 保留原始历史字节。
 
 ## 模块
 
@@ -53,14 +55,15 @@
 
 ```text
 lake exe cache get
+(cd .lake/packages/Cli && lake build Cli)
 lake build
 ```
 
 当前可移植脚本从仓库根目录按依赖顺序全新编译、导出原始类型并审计；其全量复现尚未实际运行，已完成的本轮核验范围见开头：
 
 ```text
-python3 tools/verify563.py --check-sources-only
-python3 tools/verify563.py --output /tmp/tournament563-new
+python3 tools/verify564.py --check-sources-only
+python3 tools/verify564.py --output /tmp/tournament564-new
 ```
 
 `check.py` 通过环境变量 `LEAN_BIN` 与 `MATHLIB_PACKAGES` 定位 Lean 与 mathlib；

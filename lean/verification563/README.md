@@ -56,8 +56,11 @@ Lindemann-Weierstrass input has not been discharged.
 - ../verification557/ and ../verification/ remain unchanged historical evidence.
 
 For a separate fresh full-source reproduction, install Lean4.35.0 and obtain the
-pinned dependency cache from lean/ with `lake exe cache get`. From the repository
-root run:
+pinned dependency cache from lean/ with `lake exe cache get`, then build the
+locked Cli package with `(cd .lake/packages/Cli && lake build Cli)`. Plain
+mathlib cache get does not include Cli, while this verifier requires each
+locked package's build-library directory. From the repository
+root of the original 0.4.0 source ZIP or exact ca4633 snapshot run:
 
 ```sh
 python3 tools/verify563.py --check-sources-only
@@ -72,3 +75,8 @@ not been run: the completed evidence above belongs to the isolated incremental
 integration run, whose complete raw logs, objects, dependency hashes and raw
 Expr exports were retained separately. The current source/configuration hashes
 are in this directory; the historical verify557.py targets its older config.
+
+The historical verify563.py and its configuration hashes apply only to that
+original 0.4.0 ZIP / exact ca4633 snapshot. Current main has 564 configured
+modules and must use tools/verify564.py; do not run this historical verifier
+against the corrected 564-module configuration.

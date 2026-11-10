@@ -333,6 +333,7 @@ import SpectralMomentBridgeCandidate
 import ActualSharpSpectralCandidate
 import ActualSharpPathEnergyCandidate
 import ActualExtremalAsymptoticCandidate
+import QRegularGeometricLimit
 
 /-! Independent endpoint checks. These examples pin the public statements to
 actual tournament quantities and to the full q-kernel, not a substituted
@@ -1488,3 +1489,19 @@ These checks do not assert full Condition R, actual F/J, or classification. -/
 #print axioms ActualExtremalAsymptoticCandidate.actual_normalizedCoefficient_not_qRegular
 #check ActualExtremalAsymptoticCandidate.actual_maximalPathCount_not_exponentially_bounded
 #print axioms ActualExtremalAsymptoticCandidate.actual_maximalPathCount_not_exponentially_bounded
+
+/-! Version 0.4.1: exact geometric-subsequence A.5 endpoint.
+Only geometric convergence is required by qRegular_geometric_limit_rational.
+The full-sequence result is a corollary. None of these endpoints assumes LW. -/
+#check NonAlgebraicity.geometric_normalization_eq_zpow
+#print axioms NonAlgebraicity.geometric_normalization_eq_zpow
+#check NonAlgebraicity.qRegular_geometric_scaled_limit_rational
+#print axioms NonAlgebraicity.qRegular_geometric_scaled_limit_rational
+#check NonAlgebraicity.qRegular_geometric_limit_rational
+#print axioms NonAlgebraicity.qRegular_geometric_limit_rational
+#check NonAlgebraicity.qRegular_scaled_limit_rational_from_geometric
+#print axioms NonAlgebraicity.qRegular_scaled_limit_rational_from_geometric
+#check NonAlgebraicity.qRegular_geometric_unscaled_limit_rational
+#print axioms NonAlgebraicity.qRegular_geometric_unscaled_limit_rational
+#check NonAlgebraicity.not_qRegular_of_scaled_limit_not_rational
+#print axioms NonAlgebraicity.not_qRegular_of_scaled_limit_not_rational
